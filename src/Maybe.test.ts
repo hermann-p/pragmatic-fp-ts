@@ -1,7 +1,5 @@
 import { just, maybe, nothing, Maybe } from "./Maybe";
 
-// import { Transducer } from "./types";
-
 describe("Maybe", () => {
   const five = just(5);
   const throwError = (_: any): string => {
@@ -18,12 +16,14 @@ describe("Maybe", () => {
     expect(maybe(null).isMaybe()).toBe(true);
     expect(maybe(just(5)).getValue()).toBe(5);
     expect(maybe(nothing()).isNothing()).toBe(true);
+    expect(just(1).isMonad()).toBe(true);
+    expect(nothing().isMonad()).toBe(true);
   });
 
   it("composes", () => {
     expect(
       maybe(5)
-        .bind((x) => x + 1)
+        .bind<number>((x: number) => x + 1)
         .getValue()
     ).toBe(6);
   });
@@ -33,14 +33,14 @@ describe("Maybe", () => {
     expect(maybe<any>(null).getValueOr(7)).toBe(7);
     expect(
       just(5)
-        .bind((_) => (null as any) as number)
+        .bind<number>(() => (null as any) as number)
         .getValueOr(7)
     ).toBe(7);
 
     expect(() => nothing().getValue()).toThrow();
     expect(
       nothing()
-        .bind(() => (null as any) as number)
+        .bind<number>(() => (null as any) as number)
         .getValueOr(7)
     ).toBe(7);
 
@@ -67,7 +67,6 @@ describe("Maybe", () => {
 
   it("matches return cases", () => {
     expect(five.match(matchers).getValue()).toEqual("success");
-    console.log(five.bind(throwError).match(matchers));
     expect(
       five
         .bind(throwError)
