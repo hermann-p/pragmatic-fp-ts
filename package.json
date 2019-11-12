@@ -1,0 +1,31 @@
+{
+  "name": "lambdats",
+  "version": "0.1.0",
+  "description": "Typed functional programming library",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "build": "tsc",
+    "dev": "ts-node-dev --respawn src/main.ts"
+  },
+  "keywords": [
+    "fp",
+    "ramda",
+    "typescript",
+    "sanctuary",
+    "monads",
+    "maybe"
+  ],
+  "author": "hermann-p",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^24.0.22",
+    "@typescript-eslint/eslint-plugin": "^2.6.1",
+    "@typescript-eslint/parser": "^2.6.1",
+    "@typescript-eslint/typescript-estree": "^2.6.1",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.1.0",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "typescript": "^3.7.2"
+  }
+}
