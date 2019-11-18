@@ -24,6 +24,7 @@
     "@typescript-eslint/parser": "^2.6.1",
     "@typescript-eslint/typescript-estree": "^2.6.1",
     "jest": "^24.9.0",
+    "mori": "^0.3.2",
     "ts-jest": "^24.1.0",
     "ts-node-dev": "^1.0.0-pre.44",
     "typescript": "^3.7.2"

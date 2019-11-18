@@ -3,3 +3,5 @@ export type Mappable<A, B> = (input: A) => B;
 export type Predicate<T> = (input: T) => boolean;
 
 export type MatchPattern<T> = { [key: string]: any };
+
+export type Dictionary = { [key: string]: any; [key: number]: any };

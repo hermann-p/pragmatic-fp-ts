@@ -1,24 +1,27 @@
-import { isNil } from "./predicates";
-import { getMonadValue } from "./tools";
-import { Transducer } from "./types";
-
+import { Mappable } from "./types";
 import { Monad } from "./Monad";
+import { Predicate } from "./types.d";
+import { getMonadValue } from "./tools";
+import { isNil } from "./predicates";
+import m from "mori";
 
 export type Maybe<T> = Just<T> | Nothing<T>;
-export type MaybePattern<A, B, C> = {
+export type MaybePattern<A, B> = {
   just: (value: A) => B;
-  nothing: () => C;
+  nothing: () => B;
 };
 
 export class Just<T> extends Monad<T> {
   private value: T;
-  constructor(value: T | Just<T>) {
+  private isMori: boolean;
+  constructor(value: T | Just<T>, isMori: boolean = false) {
     super();
     this.value = getMonadValue<T>(value) as T;
+    this.isMori = isMori;
   }
 
   getValue(): T {
-    return this.value;
+    return this.isMori ? m.toJS(this.value) : this.value;
   }
   getValueOr(_: T): T {
     return this.getValue();
@@ -35,7 +38,7 @@ export class Just<T> extends Monad<T> {
   isMaybe() {
     return true;
   }
-  bind<B>(fn: Transducer<T, B>): Maybe<B> {
+  bind<B>(fn: Mappable<T, B>): Maybe<B> {
     try {
       const result = fn(this.value);
       return isNil(result) ? nothing<B>() : just(result);
@@ -43,12 +46,15 @@ export class Just<T> extends Monad<T> {
       return nothing<B>();
     }
   }
-  match<U, V>(match: MaybePattern<T, U, V>): Maybe<any> {
+  match<U>(match: MaybePattern<T, U>): Maybe<U> {
     try {
       return just(match.just(this.value));
     } catch (err) {
-      return nothing<T>();
+      return nothing<U>();
     }
+  }
+  filter(pred: Predicate<T>): Maybe<T> {
+    return pred(this.value) ? this : nothing();
   }
 }
 
@@ -71,15 +77,18 @@ export class Nothing<T> implements Monad<T> {
   isMaybe() {
     return true;
   }
-  bind<B>(_: Transducer<T, B>): Maybe<B> {
+  bind<B>(_: Mappable<T, B>): Maybe<B> {
     return (this as Nothing<any>) as Nothing<B>; // prefer ugly code over `new Nothing<B>()`
   }
-  match<U, V>(match: MaybePattern<T, U, V>): Maybe<any> {
+  match<U>(match: MaybePattern<T, U>): Maybe<U> {
     try {
       return just(match.nothing());
     } catch {
-      return nothing<T>();
+      return nothing<U>();
     }
+  }
+  filter(_: Predicate<T>): Maybe<T> {
+    return this;
   }
 }
 
@@ -88,6 +97,6 @@ export const nothing = <T>() => new Nothing<T>();
 export const maybe = <T>(value: T | Maybe<T>): Maybe<T> =>
   value instanceof Just || value instanceof Nothing
     ? value
-    : isNil(value) || isNaN((value as any) as number)
+    : isNil(value) || (typeof value === "number" && isNaN((value as any) as number))
     ? nothing()
     : just(value);
