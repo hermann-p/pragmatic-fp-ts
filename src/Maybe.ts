@@ -1,9 +1,8 @@
 import { Mappable } from "./types";
+import { MaybeType, Predicate } from "./types.d";
 import { Monad } from "./Monad";
-import { Predicate } from "./types.d";
 import { getMonadValue } from "./tools";
 import { isNil } from "./predicates";
-import m from "mori";
 
 export type Maybe<T> = Just<T> | Nothing<T>;
 export type MaybePattern<A, B> = {
@@ -13,15 +12,13 @@ export type MaybePattern<A, B> = {
 
 export class Just<T> extends Monad<T> {
   private value: T;
-  private isMori: boolean;
-  constructor(value: T | Just<T>, isMori: boolean = false) {
+  constructor(value: T | Just<T>) {
     super();
     this.value = getMonadValue<T>(value) as T;
-    this.isMori = isMori;
   }
 
   getValue(): T {
-    return this.isMori ? m.toJS(this.value) : this.value;
+    return this.value;
   }
   getValueOr(_: T): T {
     return this.getValue();
@@ -100,3 +97,15 @@ export const maybe = <T>(value: T | Maybe<T>): Maybe<T> =>
     : isNil(value) || (typeof value === "number" && isNaN((value as any) as number))
     ? nothing()
     : just(value);
+
+export const maybeFalsy = <T>(value: MaybeType<T>): Maybe<T> => {
+  const _value: T = (value instanceof Just ? value.getValue() : value) as T;
+  return value instanceof Nothing || !_value ? nothing() : just(_value);
+};
+
+export const maybeIf = <T>(predicate: MaybeType<Predicate<T>>) => (value: MaybeType<T>) => {
+  const pred = maybe(predicate)
+    .filter((fn) => typeof fn === "function")
+    .getValueOr((_: any) => false);
+  return maybe(value).filter(pred);
+};

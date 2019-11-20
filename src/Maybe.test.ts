@@ -1,4 +1,5 @@
-import { just, maybe, nothing, Maybe } from "./Maybe";
+import { Just, Maybe, Nothing, just, maybe, maybeFalsy, maybeIf, nothing } from "./Maybe";
+import { Predicate } from "./types.d";
 
 describe("Maybe", () => {
   const five = just(5);
@@ -18,6 +19,27 @@ describe("Maybe", () => {
     expect(maybe(nothing()).isNothing()).toBe(true);
     expect(just(1).isMonad()).toBe(true);
     expect(nothing().isMonad()).toBe(true);
+    expect(maybeFalsy(0)).toBeInstanceOf(Nothing);
+    expect(maybeFalsy(null)).toBeInstanceOf(Nothing);
+    expect(maybeFalsy(undefined)).toBeInstanceOf(Nothing);
+    expect(maybeFalsy("")).toBeInstanceOf(Nothing);
+    expect(maybeFalsy(1)).toBeInstanceOf(Just);
+    expect(maybeFalsy("foo")).toBeInstanceOf(Just);
+    expect(maybeFalsy({})).toBeInstanceOf(Just);
+    expect(maybeFalsy(just(0))).toBeInstanceOf(Nothing);
+    expect(maybeFalsy(just(""))).toBeInstanceOf(Nothing);
+    expect(maybeFalsy(just(null))).toBeInstanceOf(Nothing);
+    expect(maybeFalsy(just(undefined))).toBeInstanceOf(Nothing);
+    expect(maybeFalsy(nothing())).toBeInstanceOf(Nothing);
+
+    const pred = (x: number) => (typeof x === "number" && x < 0) || x % 2 === 0;
+    expect(maybeIf(pred)(5)).toBeInstanceOf(Nothing);
+    expect(maybeIf(pred)(4)).toBeInstanceOf(Just);
+    expect(maybeIf(pred)(null as any)).toBeInstanceOf(Nothing);
+    expect(maybeIf(pred)(just(5))).toBeInstanceOf(Nothing);
+    expect(maybeIf(pred)(just(4))).toBeInstanceOf(Just);
+    expect(maybeIf(nothing<Predicate<any>>())(just(5))).toBeInstanceOf(Nothing);
+    expect(maybeIf(null as any)(5)).toBeInstanceOf(Nothing);
   });
 
   it("composes", () => {
