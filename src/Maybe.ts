@@ -58,6 +58,9 @@ export class Just<T> extends Monad<T> {
     fn(value);
     return this;
   }
+  toString(): string {
+    return `Just(${JSON.stringify(this.value)})`;
+  }
 }
 
 export class Nothing<T> implements Monad<T> {
@@ -94,6 +97,9 @@ export class Nothing<T> implements Monad<T> {
   }
   effect(_: Effect<T>): Maybe<T> {
     return this;
+  }
+  toString() {
+    return "Nothing";
   }
 }
 
