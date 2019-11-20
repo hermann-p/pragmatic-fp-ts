@@ -10,3 +10,5 @@ export type MatchPattern<T> = { [key: string]: any };
 export type Dictionary = { [key: string]: any; [key: number]: any };
 
 export type MaybeType<T> = T | Maybe<T>;
+
+export type Effect<T> = (value: T) => void;

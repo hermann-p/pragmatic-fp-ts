@@ -139,7 +139,7 @@ export const mapJust = <A, B>(fn: Mappable<A, B>) => (coll: MaybeType<A[]>): May
           for (let i = 0; i < c.length; ++i) {
             maybe(c[i])
               .bind(fn)
-              .bind((value) => arr.push(value));
+              .effect((value) => arr.push(value));
           }
           return arr;
         })

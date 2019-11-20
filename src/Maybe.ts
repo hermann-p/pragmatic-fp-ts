@@ -1,5 +1,5 @@
+import { Effect, MaybeType, Predicate } from "./types.d";
 import { Mappable } from "./types";
-import { MaybeType, Predicate } from "./types.d";
 import { Monad } from "./Monad";
 import { getMonadValue } from "./tools";
 import { isNil } from "./predicates";
@@ -53,6 +53,11 @@ export class Just<T> extends Monad<T> {
   filter(pred: Predicate<T>): Maybe<T> {
     return pred(this.value) ? this : nothing();
   }
+  effect(fn: Effect<T>): Maybe<T> {
+    const { value } = this;
+    fn(value);
+    return this;
+  }
 }
 
 export class Nothing<T> implements Monad<T> {
@@ -85,6 +90,9 @@ export class Nothing<T> implements Monad<T> {
     }
   }
   filter(_: Predicate<T>): Maybe<T> {
+    return this;
+  }
+  effect(_: Effect<T>): Maybe<T> {
     return this;
   }
 }
