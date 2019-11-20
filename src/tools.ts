@@ -3,7 +3,7 @@ import { Monad } from "./Monad";
 
 export const getMonadValue = <T>(input: Monad<T> | T, alternate?: T): T => {
   if (isNil(input)) {
-    throw new Error("Can not get value of " + input);
+    return (null as any) as T;
   } else if (isFunction((input as Monad<T>).getValue)) {
     return typeof alternate === "undefined"
       ? (input as Monad<T>).getValue()
