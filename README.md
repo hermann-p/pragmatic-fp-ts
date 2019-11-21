@@ -133,18 +133,19 @@ Almost identical to the Maybe monad
 ``` javascript
 const e = l.either(5)
 
-m.bind:          chain value with unary function
-m.effect         execute side-effect on value
-m.filter         when predicate fails on value, return Left, else this
-m.getValue
-m.getValueOr     default value for Left
-m.isEither
-m.isLeft
-m.isMonad
-m.isRight
-m.match          monadic branching {right: value => result, left: () => result}
-m.toMaybe
-m.toString
+e.bind:          chain value with unary function
+e.effect         execute side-effect on value
+e.filter         when predicate fails on value, return Left, else this
+e.getReason      get reason why Either turned to Left branch
+e.getValue
+e.getValueOr     default value for Left
+e.isEither
+e.isLeft
+e.isMonad
+e.isRight
+e.match          monadic branching {right: value => result, left: () => result}
+e.toMaybe
+e.toString
 
 ```
 
