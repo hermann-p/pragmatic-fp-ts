@@ -1,8 +1,14 @@
 {
-  "name": "lambdats",
+  "name": "pragmatic-fp-ts",
   "version": "0.1.0",
-  "description": "Typed functional programming library",
-  "main": "index.js",
+  "description": "Oppinionated functional programming library with easy use in mind",
+  "main": "lib/main.js",
+  "files": [
+    "lib"
+  ],
+  "directories": {
+    "lib": "lib"
+  },
   "scripts": {
     "test": "jest --coverage",
     "build": "tsc",
@@ -20,13 +26,14 @@
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^24.0.22",
+    "@types/node": "^12.12.8",
     "@typescript-eslint/eslint-plugin": "^2.6.1",
     "@typescript-eslint/parser": "^2.6.1",
     "@typescript-eslint/typescript-estree": "^2.6.1",
     "jest": "^24.9.0",
-    "mori": "^0.3.2",
     "ts-jest": "^24.1.0",
     "ts-node-dev": "^1.0.0-pre.44",
     "typescript": "^3.7.2"
-  }
+  },
+  "dependencies": {}
 }

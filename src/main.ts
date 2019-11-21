@@ -1,6 +1,7 @@
-import { Maybe, Just, Nothing } from "./Maybe";
-import { Monad } from './Monad';
-import { getMonadValue } from "./tools";
-import { isNil, isFunction } from "./predicates";
-
-export { Maybe, Just, Nothing, Monad, isFunction, isNil, getMonadValue };
+export * from "./Monad";
+export * from "./Maybe";
+export * from "./Either";
+export * from "./array";
+export * from "./object";
+export * from "./functools";
+export * from "./predicates";
