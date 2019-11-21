@@ -1,4 +1,5 @@
 import { Left, Right, either, eitherIf, eitherNullable, EitherPattern } from "./Either";
+import { just, nothing } from "./Maybe";
 
 describe("Either", () => {
   const throwError = (_: any) => {
@@ -22,6 +23,12 @@ describe("Either", () => {
     expect(eitherNullable(null)).toBeInstanceOf(Left);
 
     expect(eitherNullable(null).getReason()).toBeTruthy();
+
+    expect(either(just(5))).toBeInstanceOf(Right);
+    expect(either(nothing())).toBeInstanceOf(Left);
+
+    expect(just(5).toEither()).toBeInstanceOf(Right);
+    expect(nothing().toEither()).toBeInstanceOf(Left);
   });
 
   it("wraps values", () => {

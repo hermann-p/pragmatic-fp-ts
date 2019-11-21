@@ -1,5 +1,5 @@
 import { Effect, MaybeType, Predicate } from "./types.d";
-import { Either, Reason, left, right } from './Either';
+import { Either, Reason, left, right } from "./Either";
 import { Mappable } from "./types";
 import { Monad } from "./Monad";
 import { getMonadValue } from "./tools";
@@ -117,7 +117,7 @@ export const maybe = <T>(value: T | Monad<T>): Maybe<T> =>
     ? (value as Maybe<T>) // avoid re-casting monads
     : isMonad(value)
     ? isSome(value)
-      ? just(getMonadValue(value) as T)
+      ? maybe(getMonadValue(value) as T)
       : nothing()
     : isNil(value)
     ? nothing()

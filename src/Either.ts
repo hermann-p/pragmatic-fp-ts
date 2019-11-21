@@ -120,7 +120,9 @@ export const either = <L, R>(value: R | Monad<R>): Either<L, R> =>
   isEither(value)
     ? (value as Either<L, R>)
     : isMonad(value)
-    ? right((value as Monad<R>).getValue())
+    ? isSome(value)
+      ? right((value as Monad<R>).getValue())
+      : left("Converted from Left-like" as any)
     : right(value as R);
 
 export const eitherIf = <Reason, R>(pred: Predicate<R>) => (value: R | Monad<R>) => {

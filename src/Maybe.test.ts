@@ -1,5 +1,6 @@
 import { Just, Maybe, Nothing, just, maybe, maybeFalsy, maybeIf, nothing } from "./Maybe";
 import { Predicate } from "./types.d";
+import { either, eitherNullable } from "./Either";
 
 describe("Maybe", () => {
   const five = just(5);
@@ -40,6 +41,10 @@ describe("Maybe", () => {
     expect(maybeIf(pred)(just(4))).toBeInstanceOf(Just);
     expect(maybeIf(nothing<Predicate<any>>())(just(5))).toBeInstanceOf(Nothing);
     expect(maybeIf(null as any)(5)).toBeInstanceOf(Nothing);
+
+    expect(maybe(either(5))).toBeInstanceOf(Just);
+    expect(maybe(either(null))).toBeInstanceOf(Nothing);
+    expect(maybe(eitherNullable(null))).toBeInstanceOf(Nothing);
   });
 
   it("composes", () => {
