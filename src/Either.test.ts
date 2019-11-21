@@ -1,10 +1,6 @@
 import { Left, Right, either, eitherIf, eitherNullable, EitherPattern } from "./Either";
 
 describe("Either", () => {
-  it("will get implemented", () => {
-    expect(true).toBe(true);
-  });
-
   const throwError = (_: any) => {
     throw new Error("BOOM!");
   };
@@ -14,7 +10,7 @@ describe("Either", () => {
   const good = eitherNullable<string>("result");
   const bad = eitherNullable(null);
 
-  it("Can be constructed from different value", () => {
+  it("can be constructed from different value", () => {
     expect(either(1)).toBeInstanceOf(Right);
     expect(either(null)).toBeInstanceOf(Right);
 

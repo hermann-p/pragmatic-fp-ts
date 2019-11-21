@@ -1,4 +1,5 @@
 import { Just, Nothing } from "./Maybe";
+import { Left, Right } from "./Either";
 import { Predicate } from "./types.d";
 
 export const isNil: Predicate<any> = (value) => value === undefined || value === null;
@@ -30,4 +31,11 @@ export const isJust: Predicate<any> = (value) => value instanceof Just;
 export const isNothing: Predicate<any> = (value) => value instanceof Nothing;
 export const isMaybe: Predicate<any> = (value) => isJust(value) || isNothing(value);
 
-export const isSome: Predicate<any> = (value) => !isNil(value) && !isNothing(value);
+export const isRight: Predicate<any> = (value) => value instanceof Right;
+export const isLeft: Predicate<any> = (value) => value instanceof Left;
+export const isEither: Predicate<any> = (value) => isLeft(value) || isRight(value);
+
+export const isMonad: Predicate<any> = (value) => isMaybe(value) || isEither(value);
+
+export const isSome: Predicate<any> = (value) =>
+  !isNil(value) && !isNothing(value) && !isLeft(value);

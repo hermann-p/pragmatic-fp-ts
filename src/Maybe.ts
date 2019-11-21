@@ -1,8 +1,9 @@
 import { Effect, MaybeType, Predicate } from "./types.d";
+import { Either, Reason, left, right } from './Either';
 import { Mappable } from "./types";
 import { Monad } from "./Monad";
 import { getMonadValue } from "./tools";
-import { isNil } from "./predicates";
+import { isMaybe, isMonad, isNil, isSome } from "./predicates";
 
 export type Maybe<T> = Just<T> | Nothing<T>;
 export type MaybePattern<A, B> = {
@@ -58,6 +59,9 @@ export class Just<T> extends Monad<T> {
     fn(value);
     return this;
   }
+  toEither(): Either<Reason, T> {
+    return right<Reason, T>(this.value);
+  }
   toString(): string {
     return `Just(${JSON.stringify(this.value)})`;
   }
@@ -98,6 +102,9 @@ export class Nothing<T> implements Monad<T> {
   effect(_: Effect<T>): Maybe<T> {
     return this;
   }
+  toEither(): Either<Reason, T> {
+    return left("Cast from nothing");
+  }
   toString() {
     return "Nothing";
   }
@@ -105,17 +112,19 @@ export class Nothing<T> implements Monad<T> {
 
 export const just = <T>(value: T) => new Just(value);
 export const nothing = <T>() => new Nothing<T>();
-export const maybe = <T>(value: T | Maybe<T>): Maybe<T> =>
-  value instanceof Just || value instanceof Nothing
-    ? value
-    : isNil(value) || (typeof value === "number" && isNaN((value as any) as number))
+export const maybe = <T>(value: T | Monad<T>): Maybe<T> =>
+  isMaybe(value)
+    ? (value as Maybe<T>) // avoid re-casting monads
+    : isMonad(value)
+    ? isSome(value)
+      ? just(getMonadValue(value) as T)
+      : nothing()
+    : isNil(value)
     ? nothing()
-    : just(value);
+    : just(value as T);
 
-export const maybeFalsy = <T>(value: MaybeType<T>): Maybe<T> => {
-  const _value: T = (value instanceof Just ? value.getValue() : value) as T;
-  return value instanceof Nothing || !_value ? nothing() : just(_value);
-};
+export const maybeFalsy = <T>(value: MaybeType<T>): Maybe<T> =>
+  maybe(value).filter((v: any) => !!v);
 
 export const maybeIf = <T>(predicate: MaybeType<Predicate<T>>) => (value: MaybeType<T>) => {
   const pred = maybe(predicate)
