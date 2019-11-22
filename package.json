@@ -1,7 +1,8 @@
 {
   "name": "pragmatic-fp-ts",
-  "version": "0.1.0",
-  "description": "Oppinionated functional programming library with easy use in mind",
+  "version": "0.1.1",
+    "description": "Oppinionated functional programming library with easy use in mind",
+    "git-repository": "https://github.com/hermann-p/pragmatic-fp-ts",
   "main": "lib/main.js",
   "files": [
     "lib"

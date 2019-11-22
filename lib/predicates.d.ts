@@ -1,0 +1,18 @@
+import { Predicate } from "./types.d";
+export declare const isNil: Predicate<any>;
+export declare const isFunction: Predicate<any>;
+export declare const isNaN: Predicate<any>;
+export declare const isString: Predicate<any>;
+export declare const isArray: Predicate<any>;
+export declare const isNumber: Predicate<any>;
+export declare const isObject: Predicate<any>;
+export declare const isEmpty: Predicate<Array<any> | Object | string>;
+export declare const isNotEmpty: Predicate<Array<any> | Object | string>;
+export declare const isJust: Predicate<any>;
+export declare const isNothing: Predicate<any>;
+export declare const isMaybe: Predicate<any>;
+export declare const isRight: Predicate<any>;
+export declare const isLeft: Predicate<any>;
+export declare const isEither: Predicate<any>;
+export declare const isMonad: Predicate<any>;
+export declare const isSome: Predicate<any>;
