@@ -1,5 +1,4 @@
 import { Maybe } from "./Maybe";
-// import { Monad } from "./Monad";
 
 export type Mappable<A, B> = (input: A) => B;
 export type Isomorphism<A> = (input: A) => A;
