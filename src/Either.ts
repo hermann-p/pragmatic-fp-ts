@@ -34,6 +34,20 @@ export class Right<L, R> implements Monad<R> {
       return new Left<Reason, R2>(err) as any;
     }
   }
+  filter(predicate: Predicate<R>): Either<L, R> {
+    const { value } = this;
+    try {
+      return predicate(value)
+        ? this
+        : (left(
+            `<${typeof value}>${JSON.stringify(value, null, 2)} did not match predicate ${
+              predicate.name
+            }`
+          ) as any);
+    } catch (err) {
+      return left(err) as any;
+    }
+  }
   getValue() {
     return this.value;
   }
@@ -83,6 +97,9 @@ export class Left<L, R> implements Monad<R> {
     } catch (err) {
       return new Left<L, R2>(err as any);
     }
+  }
+  filter(_: Predicate<R>): Either<L, R> {
+    return this;
   }
   getValue(): any {
     throw new Error("Can't get value of Left");

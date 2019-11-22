@@ -5,6 +5,7 @@
     "moduleResolution": "node",
     "sourceMap": true,
     "outDir": "./lib",
+    "declaration": true,
     "strict": true,
     "strictNullChecks": true,
     "strictFunctionTypes": true,

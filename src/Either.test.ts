@@ -77,4 +77,12 @@ describe("Either", () => {
         .getValue()
     ).toEqual("left branch");
   });
+
+  it("can filter with predicates", () => {
+    const identity = (x: any) => x;
+    expect(good.filter((x: any) => x === null)).toBeInstanceOf(Left);
+    expect(bad.filter(identity)).toBeInstanceOf(Left);
+    expect(good.filter(identity)).toBeInstanceOf(Right);
+    expect(good.filter(throwError)).toBeInstanceOf(Left);
+  });
 });
