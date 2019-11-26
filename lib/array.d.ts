@@ -1,6 +1,5 @@
-import { Mappable, MaybeType } from "./types";
+import { Mappable, MaybeType, Predicate } from './types';
 import { Maybe } from "./Maybe";
-import { Predicate } from "./types";
 /**
  * returns first element of an array
  */
@@ -107,3 +106,4 @@ export declare const butLast: <A>(coll: MaybeType<A[]>) => Maybe<A[]>;
  */
 export declare function insertAt<A>(index: MaybeType<number>): (elem: MaybeType<A>) => (coll: MaybeType<A[]>) => Maybe<A[]>;
 export declare function removeAt<A>(n: MaybeType<number>): (coll: MaybeType<A[]>) => Maybe<A[]>;
+export declare function find<T>(predicate: Predicate<T>): (coll: T[]) => Maybe<T>;

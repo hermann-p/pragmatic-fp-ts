@@ -44,4 +44,4 @@ export declare const right: <L, R>(value: R | Monad<R>) => Right<L, R>;
 export declare const left: <L, R>(reason: L) => Left<L, R>;
 export declare const either: <L, R>(value: R | Monad<R>) => Either<L, R>;
 export declare const eitherIf: <Reason_1, R>(pred: Predicate<R>) => (value: R | Monad<R>) => Right<Reason_1, R> | Left<Reason_1, R>;
-export declare const eitherNullable: <R>(value: R | Monad<R>) => Right<unknown, any> | Left<unknown, any>;
+export declare const eitherNullable: <R>(value: R | Monad<R>) => Right<unknown, unknown> | Left<unknown, unknown>;
