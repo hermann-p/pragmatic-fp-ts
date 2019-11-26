@@ -6,6 +6,7 @@ import {
   cons,
   contains,
   filter,
+  find,
   head,
   insertAt,
   isIn,
@@ -278,6 +279,18 @@ describe("array functions", () => {
       expect(removeAt(1)([1, 2, 3]).getValue()).toEqual([1, 3]);
       expect(removeAt(1)([1, 2]).getValue()).toEqual([1]);
       expect(removeAt(0)([1])).toBeInstanceOf(Nothing);
+    });
+  });
+
+  describe("find()", () => {
+    it("finds array elements", () => {
+      const pred = (x: unknown) => x === 5;
+
+      expect(find(pred)([1, 2, 3, 4, 5]).getValue()).toBe(5);
+      expect(find(pred)([1, 2, 3])).toBeInstanceOf(Nothing);
+
+      expect(find(pred)(null as any)).toBeInstanceOf(Nothing);
+      expect(find(null as any)([1, 2, 3, 4, 5])).toBeInstanceOf(Nothing);
     });
   });
 });
