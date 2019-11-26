@@ -1,41 +1,51 @@
-import { Just, Nothing } from "./Maybe";
-import { Left, Right } from "./Either";
+import { Just, Nothing, Maybe } from "./Maybe";
+import { Left, Right, Either } from "./Either";
+import { Monad } from './Monad';
 import { Predicate } from "./types";
 
-export const isNil: Predicate<any> = (value) => value === undefined || value === null;
+export const isNil: Predicate<unknown> = (value) => value === undefined || value === null;
 
-export const isFunction: Predicate<any> = (value) => typeof value === "function";
+export const isFunction: Predicate<unknown> = (value): value is Function =>
+  typeof value === "function";
 
-export const isNaN: Predicate<any> = (value) => typeof value === "number" && window.isNaN(value);
+export const isNaN: Predicate<unknown> = (value) =>
+  typeof value === "number" && window.isNaN(value);
 
-export const isString: Predicate<any> = (value) => typeof value === "string";
+export const isString: Predicate<unknown> = (value): value is string => typeof value === "string";
 
-export const isArray: Predicate<any> = (value) => value instanceof Array;
+export const isArray: Predicate<unknown> = (value): value is unknown[] => value instanceof Array;
 
-export const isNumber: Predicate<any> = (value) =>
+export const isNumber: Predicate<unknown> = (value): value is number =>
   typeof value === "number" && !window.isNaN(value);
 
-export const isObject: Predicate<any> = (value) => typeof value === "object" && !isArray(value);
+export const isObject: Predicate<unknown> = (value): value is object =>
+  typeof value === "object" && !isArray(value);
 
-export const isEmpty: Predicate<Array<any> | Object | string> = (coll): boolean =>
+export const isEmpty: Predicate<Array<unknown> | Object | string> = (coll): boolean =>
   isNil(coll)
     ? false
-    : (isArray(coll) && (coll as Array<any>).length === 0) ||
+    : (isArray(coll) && (coll as Array<unknown>).length === 0) ||
       (isObject(coll) && Object.keys(coll).length === 0) ||
       (isString(coll) && (coll as string) === "");
 
-export const isNotEmpty: Predicate<Array<any> | Object | string> = (coll): boolean =>
+export const isNotEmpty: Predicate<Array<unknown> | Object | string> = (coll): boolean =>
   !isEmpty(coll);
 
-export const isJust: Predicate<any> = (value) => value instanceof Just;
-export const isNothing: Predicate<any> = (value) => value instanceof Nothing;
-export const isMaybe: Predicate<any> = (value) => isJust(value) || isNothing(value);
+export const isJust: Predicate<unknown> = (value): value is Maybe<unknown> => value instanceof Just;
+export const isNothing: Predicate<unknown> = (value): value is Maybe<unknown> =>
+  value instanceof Nothing;
+export const isMaybe: Predicate<unknown> = (value): value is Maybe<unknown> =>
+  isJust(value) || isNothing(value);
 
-export const isRight: Predicate<any> = (value) => value instanceof Right;
-export const isLeft: Predicate<any> = (value) => value instanceof Left;
-export const isEither: Predicate<any> = (value) => isLeft(value) || isRight(value);
+export const isRight: Predicate<unknown> = (value): value is Either<unknown, unknown> =>
+  value instanceof Right;
+export const isLeft: Predicate<unknown> = (value): value is Either<unknown, unknown> =>
+  value instanceof Left;
+export const isEither: Predicate<unknown> = (value): value is Either<unknown, unknown> =>
+  isLeft(value) || isRight(value);
 
-export const isMonad: Predicate<any> = (value) => isMaybe(value) || isEither(value);
+export const isMonad: Predicate<unknown> = (value): value is Monad<unknown> =>
+  isMaybe(value) || isEither(value);
 
-export const isSome: Predicate<any> = (value) =>
+export const isSome: Predicate<unknown> = (value) =>
   !isNil(value) && !isNothing(value) && !isLeft(value);
