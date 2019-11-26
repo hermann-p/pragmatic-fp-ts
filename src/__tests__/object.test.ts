@@ -1,5 +1,6 @@
 import { Dictionary } from "../types";
-import { get } from "../object";
+import { Nothing } from "../Maybe";
+import { get, keys, mapFilterValues, mapKeys, mapValues } from "../object";
 
 describe("object", () => {
   describe("get()()", () => {
@@ -24,6 +25,66 @@ describe("object", () => {
       expect(get((null as any) as Array<number>)((null as any) as Dictionary).isNothing()).toBe(
         true
       );
+    });
+  });
+
+  describe("keys()", () => {
+    it("safely gets object keys", () => {
+      expect(keys({ foo: 1, bar: 2 }).getValue()).toEqual(["foo", "bar"]);
+      expect(keys([1, 2, 3]).getValue()).toEqual(["0", "1", "2"]);
+      expect(keys({})).toBeInstanceOf(Nothing);
+
+      expect(keys(1 as any)).toBeInstanceOf(Nothing);
+      expect(keys(null as any)).toBeInstanceOf(Nothing);
+      expect(keys("test" as any)).toBeInstanceOf(Nothing);
+    });
+  });
+
+  const toUpper = (input: string) => input.toUpperCase();
+  describe("mapKeys()", () => {
+    it("safely maps over object keys", () => {
+      const obj = { foo: 1, bar: "hello" };
+
+      expect(mapKeys(toUpper)(obj).getValue()).toEqual({ FOO: 1, BAR: "hello" });
+      expect(mapKeys(toUpper)({})).toEqual({});
+
+      expect(mapKeys(toUpper)([1, 2, 3])).toBeInstanceOf(Nothing);
+      expect(mapKeys(toUpper)(null as any)).toBeInstanceOf(Nothing);
+      expect(mapKeys(null as any)(null as any)).toBeInstanceOf(Nothing);
+    });
+  });
+
+  describe("mapValues", () => {
+    it("safely maps values", () => {
+      expect(mapValues(toUpper)({ foo: "bar", baz: "foobar" }).getValue()).toEqual({
+        foo: "BAR",
+        baz: "FOOBAR",
+      });
+
+      expect(mapValues(toUpper)({ foo: "bar", baz: 1 }).getValue()).toEqual({ foo: "BAR", baz: 1 });
+
+      expect(mapValues(toUpper)({})).toBeInstanceOf(Nothing);
+      expect(mapValues(toUpper)(null as any)).toBeInstanceOf(Nothing);
+      expect(mapValues(null as any)({ foo: "bar" })).toBeInstanceOf(Nothing);
+      expect(mapValues(null as any)(null as any)).toBeInstanceOf(Nothing);
+    });
+  });
+
+  describe("mapFilterValues", () => {
+    it("safely maps values", () => {
+      expect(mapFilterValues(toUpper)({ foo: "bar", baz: "foobar" }).getValue()).toEqual({
+        foo: "BAR",
+        baz: "FOOBAR",
+      });
+
+      expect(mapFilterValues(toUpper)({ foo: "bar", baz: 1 }).getValue()).toEqual({
+        foo: "BAR",
+      });
+
+      expect(mapFilterValues(toUpper)({})).toBeInstanceOf(Nothing);
+      expect(mapFilterValues(toUpper)(null as any)).toBeInstanceOf(Nothing);
+      expect(mapFilterValues(null as any)({ foo: "bar" })).toBeInstanceOf(Nothing);
+      expect(mapFilterValues(null as any)(null as any)).toBeInstanceOf(Nothing);
     });
   });
 });

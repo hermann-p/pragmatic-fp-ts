@@ -5,7 +5,7 @@ describe("logic", () => {
   const even = (x: number) => x % 2 === 0;
   const preds = [gt2, even];
 
-  describe("somePass()()", () => {
+  describe("somePass()", () => {
     it("behaves well", () => {
       expect(somePass(preds)(1)).toBe(false);
       expect(somePass(preds)(2)).toBe(true);
@@ -15,4 +15,6 @@ describe("logic", () => {
       expect(somePass(null as any)(null as any)).toBe(false);
     });
   });
+
+  describe("some()", () => {});
 });
