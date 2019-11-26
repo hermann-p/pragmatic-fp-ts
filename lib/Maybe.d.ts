@@ -1,4 +1,4 @@
-import { Effect, MaybeType, Predicate } from "./types.d";
+import { Effect, MaybeType, Predicate } from "./types";
 import { Either, Reason } from "./Either";
 import { Mappable } from "./types";
 import { Monad } from "./Monad";

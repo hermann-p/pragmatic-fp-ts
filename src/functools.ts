@@ -1,4 +1,4 @@
-import { Isomorphism, Mappable, MaybeType, Predicate } from "./types.d";
+import { Isomorphism, Mappable, MaybeType, Predicate } from "./types";
 import { Maybe, maybe } from "./Maybe";
 
 /**

@@ -1,5 +1,5 @@
-import { Left, Right, either, eitherIf, eitherNullable, EitherPattern } from "./Either";
-import { just, nothing } from "./Maybe";
+import { Left, Right, either, eitherIf, eitherNullable, EitherPattern } from "../Either";
+import { just, nothing } from "../Maybe";
 
 describe("Either", () => {
   const throwError = (_: any) => {

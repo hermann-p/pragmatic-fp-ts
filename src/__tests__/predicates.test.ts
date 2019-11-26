@@ -1,4 +1,4 @@
-import { isEmpty } from "./predicates";
+import { isEmpty } from "../predicates";
 
 describe("predicates", () => {
   describe("isEmpty()", () => {

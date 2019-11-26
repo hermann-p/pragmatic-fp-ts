@@ -1,6 +1,6 @@
 import { Just, Nothing } from "./Maybe";
 import { Left, Right } from "./Either";
-import { Predicate } from "./types.d";
+import { Predicate } from "./types";
 
 export const isNil: Predicate<any> = (value) => value === undefined || value === null;
 

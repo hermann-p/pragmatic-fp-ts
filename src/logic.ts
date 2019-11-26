@@ -1,4 +1,4 @@
-import { MaybeType, Predicate } from "./types.d";
+import { MaybeType, Predicate } from "./types";
 import { getMonadValue } from "./tools";
 import { isFunction } from "./predicates";
 import { maybe } from "./Maybe";

@@ -1,4 +1,4 @@
-import { Mappable, MaybeType } from "./types.d";
+import { Mappable, MaybeType } from "./types";
 import { Maybe } from "./Maybe";
 import { Predicate } from "./types";
 /**
@@ -25,7 +25,7 @@ export declare const reverse: <T>(coll: T[] | import("./Maybe").Just<T[]> | impo
 /**
  * get n first elements from an array
  */
-export declare const take: (n: MaybeType<number>) => <T>(coll: T[] | import("./Maybe").Just<T[]> | import("./Maybe").Nothing<T[]>) => Maybe<T[]>;
+export declare const take: (n: number | import("./Maybe").Just<number> | import("./Maybe").Nothing<number>) => <T>(coll: T[] | import("./Maybe").Just<T[]> | import("./Maybe").Nothing<T[]>) => Maybe<T[]>;
 /**
  * take elements from array while pred is true
  */

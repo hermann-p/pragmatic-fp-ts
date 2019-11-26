@@ -1,4 +1,4 @@
-import { Mappable, MaybeType } from "./types.d";
+import { Mappable, MaybeType } from "./types";
 import { Maybe, maybe, nothing } from "./Maybe";
 import { Predicate } from "./types";
 import { getMonadValue } from "./tools";

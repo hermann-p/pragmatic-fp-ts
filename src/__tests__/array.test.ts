@@ -1,4 +1,4 @@
-import { Just, Nothing, maybe, nothing } from "./Maybe";
+import { Just, Nothing, maybe, nothing } from "../Maybe";
 import {
   append,
   butLast,
@@ -22,7 +22,7 @@ import {
   tail,
   take,
   takeWhile,
-} from "./array";
+} from "../array";
 
 describe("array functions", () => {
   describe("head()", () => {

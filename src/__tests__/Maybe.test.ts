@@ -1,6 +1,6 @@
-import { Just, Maybe, Nothing, just, maybe, maybeFalsy, maybeIf, nothing } from "./Maybe";
-import { Predicate } from "./types.d";
-import { either, eitherNullable } from "./Either";
+import { Just, Maybe, Nothing, just, maybe, maybeFalsy, maybeIf, nothing } from "../Maybe";
+import { Predicate } from "../types";
+import { either, eitherNullable } from "../Either";
 
 describe("Maybe", () => {
   const five = just(5);

@@ -1,4 +1,4 @@
-import { MaybeType, Predicate } from "./types.d";
+import { MaybeType, Predicate } from "./types";
 export declare const somePass: <T>(predicates: Predicate<T>[]) => (value: MaybeType<T>) => boolean;
 export declare const some: <T>(pred: Predicate<T>) => (coll: MaybeType<T[]>) => boolean;
 export declare const allPass: <T>(predicates: Predicate<T>[]) => (value: T) => boolean;

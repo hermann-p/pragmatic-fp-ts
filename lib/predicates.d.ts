@@ -1,4 +1,4 @@
-import { Predicate } from "./types.d";
+import { Predicate } from "./types";
 export declare const isNil: Predicate<any>;
 export declare const isFunction: Predicate<any>;
 export declare const isNaN: Predicate<any>;

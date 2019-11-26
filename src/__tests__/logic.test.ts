@@ -1,9 +1,10 @@
-import { somePass } from "./logic";
+import { somePass } from "../logic";
 
 describe("logic", () => {
   const gt2 = (x: number) => x > 2;
   const even = (x: number) => x % 2 === 0;
   const preds = [gt2, even];
+
   describe("somePass()()", () => {
     it("behaves well", () => {
       expect(somePass(preds)(1)).toBe(false);

@@ -1,5 +1,5 @@
-import { Dictionary } from "./types.d";
-import { get } from "./object";
+import { Dictionary } from "../types";
+import { get } from "../object";
 
 describe("object", () => {
   describe("get()()", () => {

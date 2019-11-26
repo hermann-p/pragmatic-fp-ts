@@ -1,4 +1,4 @@
-import { Isomorphism, Mappable, MaybeType, Predicate } from "./types.d";
+import { Isomorphism, Mappable, MaybeType, Predicate } from "./types";
 import { Maybe } from "./Maybe";
 /**
  * mathematical identity.
@@ -22,7 +22,7 @@ export declare const not: (val: any) => boolean;
 /**
  * Negate a number
  */
-export declare const negate: (val: MaybeType<number>) => Maybe<number>;
+export declare const negate: (val: number | import("./Maybe").Just<number> | import("./Maybe").Nothing<number>) => Maybe<number>;
 /**
  * Call fn with inverted arguments
  **/
