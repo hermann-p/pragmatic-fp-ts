@@ -1,6 +1,13 @@
 import { Dictionary } from "../types";
 import { Nothing } from "../Maybe";
-import { get, keys, mapFilterValues, mapKeys, mapValues } from "../object";
+import {
+  get,
+  keys,
+  mapFilterValues,
+  mapKeys,
+  mapValues,
+  pickBy
+} from '../object';
 
 describe("object", () => {
   describe("get()()", () => {
@@ -85,6 +92,13 @@ describe("object", () => {
       expect(mapFilterValues(toUpper)(null as any)).toBeInstanceOf(Nothing);
       expect(mapFilterValues(null as any)({ foo: "bar" })).toBeInstanceOf(Nothing);
       expect(mapFilterValues(null as any)(null as any)).toBeInstanceOf(Nothing);
+    });
+  });
+
+  describe("pickBy()", () => {
+    it("safely picks object keys", () => {
+      const obj = { foo: 1, bar: 2, foobar: 3 };
+      expect(pickBy((key) => key.length === 3)(obj).getValue()).toEqual({ foo: 1, bar: 2 });
     });
   });
 });

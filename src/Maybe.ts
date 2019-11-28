@@ -36,10 +36,10 @@ export class Just<T> extends Monad<T> {
   isMaybe() {
     return true;
   }
-  bind<B>(fn: Mappable<T, B>): Maybe<B> {
+  bind<B>(fn: Mappable<T, B | Maybe<B>>): Maybe<B> {
     try {
       const result = fn(this.value);
-      return isNil(result) ? nothing<B>() : just(result);
+      return maybe(result);
     } catch (err) {
       return nothing<B>();
     }
@@ -86,7 +86,7 @@ export class Nothing<T> implements Monad<T> {
   isMaybe() {
     return true;
   }
-  bind<B>(_: Mappable<T, B>): Maybe<B> {
+  bind<B>(_: Mappable<T, B | Maybe<B>>): Maybe<B> {
     return (this as Nothing<any>) as Nothing<B>; // prefer ugly code over `new Nothing<B>()`
   }
   match<U>(match: MaybePattern<T, U>): Maybe<U> {

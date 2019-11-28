@@ -1,10 +1,12 @@
-import { Dictionary, Mappable, MaybeType, Isomorphism } from "./types";
+import { Dictionary, Isomorphism, Mappable, MaybeType, Predicate } from "./types";
 import { Maybe } from "./Maybe";
 declare type KeyType = string | number;
 declare type PathType = KeyType[] | Maybe<KeyType[]>;
 export declare const get: (path: PathType) => <T>(container: MaybeType<Dictionary>) => Maybe<T>;
 export declare const keys: (obj: MaybeType<Dictionary>) => Maybe<string[]>;
 export declare const mapKeys: (fn: Isomorphism<string>) => (obj: MaybeType<Dictionary>) => Maybe<Dictionary>;
+export declare const pickBy: (predicate: Predicate<string>) => (obj: MaybeType<Dictionary>) => Maybe<Dictionary>;
+export declare const filterKeys: (predicate: Predicate<string>) => (obj: MaybeType<Dictionary>) => Maybe<Dictionary>;
 export declare const mapValues: <A, B>(fn: Mappable<A, B>) => (obj: MaybeType<Dictionary>) => Maybe<Dictionary>;
 export declare const mapFilterValues: <A, B>(fn: Mappable<A, B>) => (obj: MaybeType<Dictionary>) => Maybe<Dictionary>;
 export {};

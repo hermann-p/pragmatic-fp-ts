@@ -6,3 +6,4 @@ export * from "./object";
 export * from "./functools";
 export * from "./predicates";
 export * from "./logic";
+export * from "./types";

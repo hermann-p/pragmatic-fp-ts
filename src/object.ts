@@ -1,8 +1,8 @@
-import { Dictionary, Mappable, MaybeType, Isomorphism } from "./types";
+import { Dictionary, Isomorphism, Mappable, MaybeType, Predicate } from "./types";
 import { Maybe, maybe, nothing } from "./Maybe";
+import { either } from "./Either";
 import { getMonadValue } from "./tools";
 import { isEmpty, isFunction, isNotEmpty } from "./predicates";
-import { either } from "./Either";
 
 type KeyType = string | number;
 type PathType = KeyType[] | Maybe<KeyType[]>;
@@ -41,6 +41,19 @@ export const mapKeys = (fn: Isomorphism<string>) => (
           }, {} as Dictionary);
         })
     : nothing();
+
+export const pickBy = (predicate: Predicate<string>) => (obj: MaybeType<Dictionary>) =>
+  maybe(obj)
+    .bind(keys)
+    .bind((k: string[]) => k.filter(predicate))
+    .filter(isNotEmpty)
+    .bind((_keys: string[]) =>
+      _keys.reduce((accum: Dictionary, key: string) => {
+        accum[key] = getMonadValue(obj)[key];
+        return accum;
+      }, {})
+    );
+export const filterKeys = pickBy;
 
 export const mapValues = <A, B>(fn: Mappable<A, B>) => (
   obj: MaybeType<Dictionary>

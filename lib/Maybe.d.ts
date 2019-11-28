@@ -16,7 +16,7 @@ export declare class Just<T> extends Monad<T> {
     isNothing(): boolean;
     isMonad(): boolean;
     isMaybe(): boolean;
-    bind<B>(fn: Mappable<T, B>): Maybe<B>;
+    bind<B>(fn: Mappable<T, B | Maybe<B>>): Maybe<B>;
     match<U>(match: MaybePattern<T, U>): Maybe<U>;
     filter(pred: Predicate<T>): Maybe<T>;
     effect(fn: Effect<T>): Maybe<T>;
@@ -30,7 +30,7 @@ export declare class Nothing<T> implements Monad<T> {
     isNothing(): boolean;
     isMonad(): boolean;
     isMaybe(): boolean;
-    bind<B>(_: Mappable<T, B>): Maybe<B>;
+    bind<B>(_: Mappable<T, B | Maybe<B>>): Maybe<B>;
     match<U>(match: MaybePattern<T, U>): Maybe<U>;
     filter(_: Predicate<T>): Maybe<T>;
     effect(_: Effect<T>): Maybe<T>;

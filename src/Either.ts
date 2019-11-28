@@ -10,7 +10,7 @@ export type Reason = Error | string;
 
 export type EitherPattern<A, B> = {
   right: (value: A) => B;
-  left: () => B;
+  left: (value: Reason) => B;
 };
 
 export class Right<L, R> implements Monad<R> {
@@ -18,7 +18,7 @@ export class Right<L, R> implements Monad<R> {
   constructor(value: R | Monad<R>) {
     this.value = getMonadValue(value);
   }
-  bind<R2>(fn: Mappable<R, R2>): Either<Reason, R2> {
+  bind<R2>(fn: Mappable<R, R2 | Either<R, R2>>): Either<Reason, R2> {
     try {
       const { value } = this;
       return new Right<Reason, R2>(fn(value));
@@ -88,12 +88,13 @@ export class Left<L, R> implements Monad<R> {
   constructor(reason: L) {
     this.reason = reason;
   }
-  bind<R2>(_: Mappable<R, R2>): Either<Reason, R2> {
+  bind<R2>(_: Mappable<R, R2 | Either<R, R2>>): Either<Reason, R2> {
     return this as any;
   }
   match<R2>(pattern: EitherPattern<R, R2>): Either<L, R2> {
     try {
-      return new Right<L, R2>(pattern.left());
+      const { reason } = this;
+      return new Right<L, R2>(pattern.left((reason as any) as Reason));
     } catch (err) {
       return new Left<L, R2>(err as any);
     }
