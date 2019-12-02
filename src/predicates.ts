@@ -1,6 +1,6 @@
 import { Just, Nothing, Maybe } from "./Maybe";
 import { Left, Right, Either } from "./Either";
-import { Monad } from './Monad';
+import { Monad } from "./Monad";
 import { Predicate } from "./types";
 
 export const isNil: Predicate<unknown> = (value) => value === undefined || value === null;
@@ -43,6 +43,20 @@ export const isLeft: Predicate<unknown> = (value): value is Either<unknown, unkn
   value instanceof Left;
 export const isEither: Predicate<unknown> = (value): value is Either<unknown, unknown> =>
   isLeft(value) || isRight(value);
+
+// export const isRightAsync: Predicate<unknown> = (value): value is EitherAsync<unknown, unknown> =>
+//   value instanceof RightAsync;
+// export const isLeftAsync: Predicate<unknown> = (value): value is EitherAsync<unknown, unknown> =>
+//   value instanceof LeftAsync;
+// export const isEitherAsync: Predicate<unknown> = (value): value is EitherAsync<unknown, unknown> =>
+//   isLeftAsync(value) || isRightAsync(value);
+
+// export const isJustAsync: Predicate<unknown> = (value): value is MaybeAsync<unknown> =>
+//   value instanceof JustAsync;
+// export const isNothingAsync: Predicate<unknown> = (value): value is MaybeAsync<unknown> =>
+//   value instanceof NothingAsync;
+// export const isMaybeAsync: Predicate<unknown> = (value): value is MaybeAsync<unknown> =>
+//   isJustAsync(value) || isNothingAsync(value);
 
 export const isMonad: Predicate<unknown> = (value): value is Monad<unknown> =>
   isMaybe(value) || isEither(value);

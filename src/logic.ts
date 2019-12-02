@@ -47,14 +47,16 @@ export const allPass = <T>(predicates: Predicate<T>[]) => (value: T) => {
  */
 export const every = <T>(pred: Predicate<T>) => (coll: MaybeType<T[]>) =>
   isFunction(pred)
-    ? maybe(coll).bind((c) =>
-        c.reduce(
-          (result, value) =>
-            result &&
-            maybe(value)
-              .bind(pred)
-              .getValueOr(true),
-          true
+    ? maybe(coll)
+        .bind((c) =>
+          c.reduce(
+            (result, value) =>
+              result &&
+              maybe(value)
+                .bind(pred)
+                .getValueOr(true),
+            true
+          )
         )
-      )
+        .getValueOr(false)
     : true;

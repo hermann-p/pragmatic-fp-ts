@@ -1,5 +1,4 @@
-import { Effect } from "./types.d";
-import { Mappable, Predicate } from "./types";
+import { Effect, Mappable, Predicate } from "./types";
 import { Maybe, just, nothing } from "./Maybe";
 import { Monad } from "./Monad";
 import { getMonadValue } from "./tools";
