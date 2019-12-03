@@ -302,3 +302,6 @@ export const reduce = <A, B>(fn: (accum: B, nextValue: A, index: number, fullCol
   initial: B
 ) => (coll: MaybeType<A[]>) =>
   isSome(initial) ? maybe(coll).bind((c) => c.reduce(fn, initial)) : nothing();
+
+export const count = (coll: MaybeType<unknown[] | string>) => maybe(coll).bind((c) => c.length);
+export const size = count;

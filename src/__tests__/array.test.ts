@@ -4,6 +4,7 @@ import {
   butLast,
   conj,
   cons,
+  count,
   contains,
   filter,
   find,
@@ -302,6 +303,17 @@ describe("array functions", () => {
       expect(reduce(sum)(undefined as any)([1, 2, 3])).toBeInstanceOf(Nothing);
       expect(reduce(sum)(0)(null as any)).toBeInstanceOf(Nothing);
       expect(reduce(null as any)(0)([1, 2, 3])).toBeInstanceOf(Nothing);
+    });
+  });
+
+  describe("count", () => {
+    it("counts array sizes", () => {
+      expect(count([1, 2, 3]).getValue()).toBe(3);
+      expect(count([]).getValue()).toBe(0);
+      expect(count("213").getValue()).toBe(3);
+      expect(count(null as any)).toBeInstanceOf(Nothing);
+      expect(count(1 as any)).toBeInstanceOf(Nothing);
+      expect(count({} as any)).toBeInstanceOf(Nothing);
     });
   });
 });
