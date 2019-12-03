@@ -1,8 +1,8 @@
-import { Mappable, MaybeType, Predicate } from './types';
+import { Mappable, MaybeType, Predicate } from "./types";
 import { Maybe, maybe, nothing } from "./Maybe";
 import { getMonadValue } from "./tools";
 import { invert } from "./functools";
-import { isFunction, isNotEmpty, isNumber, isString } from './predicates';
+import { isFunction, isNotEmpty, isNumber, isString, isSome } from "./predicates";
 
 /**
  * returns first element of an array
@@ -297,3 +297,8 @@ export function find<T>(predicate: Predicate<T>) {
     return isFunction(predicate) ? maybe(coll).bind((a) => a.find(predicate) as T) : nothing();
   };
 }
+
+export const reduce = <A, B>(fn: (accum: B, nextValue: A, index: number, fullColl: A[]) => B) => (
+  initial: B
+) => (coll: MaybeType<A[]>) =>
+  isSome(initial) ? maybe(coll).bind((c) => c.reduce(fn, initial)) : nothing();

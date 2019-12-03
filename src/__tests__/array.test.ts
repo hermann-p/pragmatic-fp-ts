@@ -23,6 +23,7 @@ import {
   tail,
   take,
   takeWhile,
+  reduce,
 } from "../array";
 
 describe("array functions", () => {
@@ -291,6 +292,16 @@ describe("array functions", () => {
 
       expect(find(pred)(null as any)).toBeInstanceOf(Nothing);
       expect(find(null as any)([1, 2, 3, 4, 5])).toBeInstanceOf(Nothing);
+    });
+  });
+
+  describe("reduce()", () => {
+    it("safely reduces", () => {
+      const sum = (result: number, nextVal: number) => result + nextVal;
+      expect(reduce(sum)(0)([1, 2, 3]).getValue()).toBe(6);
+      expect(reduce(sum)(undefined as any)([1, 2, 3])).toBeInstanceOf(Nothing);
+      expect(reduce(sum)(0)(null as any)).toBeInstanceOf(Nothing);
+      expect(reduce(null as any)(0)([1, 2, 3])).toBeInstanceOf(Nothing);
     });
   });
 });
