@@ -2,6 +2,7 @@ import { MaybeType, Predicate } from "./types";
 import { getMonadValue } from "./tools";
 import { isFunction } from "./predicates";
 import { maybe } from "./Maybe";
+import * as m from "mori";
 
 /**
  * Does any of the array of predicates pass when applied to the value?
@@ -60,3 +61,19 @@ export const every = <T>(pred: Predicate<T>) => (coll: MaybeType<T[]>) =>
         )
         .getValueOr(false)
     : true;
+
+export const equals = (a: MaybeType<unknown>) => (b: MaybeType<unknown>): boolean => {
+  try {
+    return m.equals(m.toClj(getMonadValue(a)), m.toClj(getMonadValue(b)));
+  } catch {
+    return false;
+  }
+};
+
+export const eqShallow = (a: MaybeType<unknown>) => (b: MaybeType<unknown>): boolean => {
+  try {
+    return getMonadValue(a) === getMonadValue(b);
+  } catch {
+    return a === b;
+  }
+};
