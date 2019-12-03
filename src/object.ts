@@ -3,6 +3,7 @@ import { Maybe, maybe, nothing } from "./Maybe";
 import { either } from "./Either";
 import { getMonadValue } from "./tools";
 import { isEmpty, isFunction, isNotEmpty } from "./predicates";
+import * as m from "mori";
 
 type KeyType = string | number;
 type PathType = KeyType[] | Maybe<KeyType[]>;
@@ -12,7 +13,9 @@ const getRaw = <T>(key: KeyType, path: Array<KeyType>, obj: Maybe<Dictionary>): 
   return isEmpty(path) ? (value as Maybe<T>) : getRaw(path[0], path.slice(1), value);
 };
 
-export const get = (path: PathType) => <T>(container: Dictionary | Maybe<Dictionary>): Maybe<T> => {
+export const getIn = (path: PathType) => <T>(
+  container: Dictionary | Maybe<Dictionary>
+): Maybe<T> => {
   try {
     const pathValue: KeyType[] = getMonadValue<KeyType[]>(path);
     return getRaw(pathValue[0], pathValue.slice(1), maybe(container));
@@ -20,6 +23,9 @@ export const get = (path: PathType) => <T>(container: Dictionary | Maybe<Diction
     return nothing();
   }
 };
+
+export const get = <T>(prop: KeyType) => (obj: MaybeType<Dictionary>) =>
+  maybe(obj).bind<T>((o) => (o as any)[prop]);
 
 export const keys = (obj: MaybeType<Dictionary>): Maybe<string[]> =>
   maybe(obj)
@@ -86,3 +92,31 @@ export const mapFilterValues = <A, B>(fn: Mappable<A, B>) => (
         }, {} as Dictionary);
       })
     : nothing();
+
+export const assoc = <T>(propName: KeyType) => (value: MaybeType<T>) => (
+  target: MaybeType<Dictionary>
+): Maybe<Dictionary> =>
+  maybe(target)
+    .bind((obj) => m.assoc(m.toClj(obj), propName, getMonadValue(value)))
+    .bind(m.toJs);
+
+export const assocIn = <T>(path: KeyType[]) => (value: MaybeType<T>) => (
+  target: MaybeType<Dictionary>
+): Maybe<Dictionary> =>
+  maybe(target)
+    .bind((obj) => m.assoc(obj, path, getMonadValue(value)))
+    .bind(m.toJS);
+
+export const update = <A, B>(propName: KeyType) => (fn: Mappable<A, B>) => (
+  dict: MaybeType<Dictionary>
+): Maybe<Dictionary> =>
+  maybe(dict)
+    .bind((input: unknown) => m.updateIn(m.toClj(input), [propName], fn))
+    .bind(m.toJs);
+
+export const updateIn = <A, B>(path: KeyType[]) => (fn: Mappable<A, B>) => (
+  dict: MaybeType<Dictionary>
+): Maybe<Dictionary> =>
+  maybe(dict)
+    .bind((input: unknown) => m.updateIn(m.toClj(input), path, fn))
+    .bind(m.toJs);

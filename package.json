@@ -1,6 +1,6 @@
 {
   "name": "pragmatic-fp-ts",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Oppinionated functional programming library with easy use in mind",
   "git-repository": "https://github.com/hermann-p/pragmatic-fp-ts",
   "main": "lib/main.js",
@@ -36,5 +36,7 @@
     "ts-node-dev": "^1.0.0-pre.44",
     "typescript": "^3.7.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "mori": "^0.3.2"
+  }
 }

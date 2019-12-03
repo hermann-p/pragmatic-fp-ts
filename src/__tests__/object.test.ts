@@ -1,37 +1,78 @@
 import { Dictionary } from "../types";
 import { Nothing } from "../Maybe";
 import {
+  assoc,
   get,
+  getIn,
   keys,
   mapFilterValues,
   mapKeys,
   mapValues,
-  pickBy
-} from '../object';
+  pickBy,
+  update,
+  updateIn,
+} from "../object";
 
 describe("object", () => {
-  describe("get()()", () => {
+  describe("getIn()()", () => {
     const obj = { foo: 1, bar: { baz: 2, great: [4, 5, 6] } };
 
     it("gets values", () => {
-      expect(get(["foo"])(obj).isJust()).toBe(true);
-      expect(get(["foo"])(obj).getValue()).toBe(1);
-      expect(get(["bar", "baz"])(obj).getValue()).toBe(2);
-      expect(get([1])([7, 8, 9]).getValue()).toBe(8);
-      expect(get(["bar", "great", 2])(obj).getValue()).toBe(6);
+      expect(getIn(["foo"])(obj).isJust()).toBe(true);
+      expect(getIn(["foo"])(obj).getValue()).toBe(1);
+      expect(getIn(["bar", "baz"])(obj).getValue()).toBe(2);
+      expect(getIn([1])([7, 8, 9]).getValue()).toBe(8);
+      expect(getIn(["bar", "great", 2])(obj).getValue()).toBe(6);
     });
 
     it("does not throw on invalid paths", () => {
-      expect(get(["baz"])(obj).isNothing()).toBe(true);
-      expect(get(["some", "invalid", "path"])(obj).isNothing()).toBe(true);
+      expect(getIn(["baz"])(obj).isNothing()).toBe(true);
+      expect(getIn(["some", "invalid", "path"])(obj).isNothing()).toBe(true);
     });
 
     it("is nil safe", () => {
-      expect(get((null as any) as Array<number>)(obj).isNothing()).toBe(true);
-      expect(get(["foo"])((null as any) as Dictionary).isNothing()).toBe(true);
-      expect(get((null as any) as Array<number>)((null as any) as Dictionary).isNothing()).toBe(
+      expect(getIn((null as any) as Array<number>)(obj).isNothing()).toBe(true);
+      expect(getIn(["foo"])((null as any) as Dictionary).isNothing()).toBe(true);
+      expect(getIn((null as any) as Array<number>)((null as any) as Dictionary).isNothing()).toBe(
         true
       );
+    });
+  });
+
+  describe("get()", () => {
+    it("gets values safely", () => {
+      expect(get("foo")({ foo: 1 }).getValue()).toBe(1);
+      expect(get("bar")({ foo: 1 })).toBeInstanceOf(Nothing);
+      expect(get(null as any)({ foo: 1 })).toBeInstanceOf(Nothing);
+      expect(get("foo")(null as any)).toBeInstanceOf(Nothing);
+    });
+  });
+
+  describe("assoc()", () => {
+    it("associates values", () => {
+      expect(assoc("bar")(2)({ foo: 1 }).getValue()).toEqual({ foo: 1, bar: 2 });
+    });
+  });
+
+  describe("update", () => {
+    it("safely updates values", () => {
+      expect(update<number, number>("foo")((x: number) => x + 1)({ foo: 1 }).getValue()).toEqual({
+        foo: 2,
+      });
+    });
+  });
+
+  describe("updateIn", () => {
+    it("safely updates values", () => {
+      expect(
+        updateIn<number, number>(["foo", "bar"])((x: number) => x + 1)({
+          foo: { bar: 1 },
+          baz: 2,
+        }).getValue()
+      ).toEqual({
+        foo: { bar: 2 },
+        baz: 2,
+      });
     });
   });
 

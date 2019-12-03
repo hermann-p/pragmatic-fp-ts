@@ -1,5 +1,4 @@
-import { Effect } from "./types.d";
-import { Mappable, MatchPattern } from "./types";
+import { Mappable, MatchPattern, Effect } from "./types";
 export declare abstract class Monad<T> {
     abstract bind<B>(fn: Mappable<T, B | Monad<B>>): Monad<B>;
     abstract getValue(): T;

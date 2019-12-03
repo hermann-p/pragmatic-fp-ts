@@ -1,5 +1,4 @@
-import { Effect } from "./types.d";
-import { Mappable, Predicate } from "./types";
+import { Effect, Mappable, Predicate } from "./types";
 import { Maybe } from "./Maybe";
 import { Monad } from "./Monad";
 export declare type Either<L, R> = Left<L, R> | Right<L, R>;

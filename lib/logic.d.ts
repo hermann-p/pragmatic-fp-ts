@@ -16,4 +16,4 @@ export declare const allPass: <T>(predicates: Predicate<T>[]) => (value: T) => b
 /**
  * Do all values in the array pass the predicate?
  */
-export declare const every: <T>(pred: Predicate<T>) => (coll: MaybeType<T[]>) => true | import("./Maybe").Just<boolean> | import("./Maybe").Nothing<boolean>;
+export declare const every: <T>(pred: Predicate<T>) => (coll: MaybeType<T[]>) => boolean;
