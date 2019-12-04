@@ -16,7 +16,7 @@ export const isString: Predicate<unknown> = (value): value is string => typeof v
 export const isArray: Predicate<unknown> = (value): value is unknown[] => value instanceof Array;
 
 export const isNumber: Predicate<unknown> = (value): value is number =>
-  typeof value === "number" && !window.isNaN(value);
+  typeof value === "number" && !isNaN(value);
 
 export const isObject: Predicate<unknown> = (value): value is object =>
   typeof value === "object" && !isArray(value);
