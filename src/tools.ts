@@ -1,5 +1,6 @@
-import { isFunction, isNil } from "./predicates";
+import { isFunction, isNil, isNumber } from "./predicates";
 import { Monad } from "./Monad";
+import { maybe } from "./Maybe";
 
 export const getMonadValue = <T>(input: Monad<T> | T, alternate?: T): T => {
   if (isNil(input)) {
@@ -12,3 +13,15 @@ export const getMonadValue = <T>(input: Monad<T> | T, alternate?: T): T => {
     return input as T;
   }
 };
+
+export const toNumber = (value: unknown) =>
+  maybe(value)
+    .bind((v: unknown) => parseFloat(v as string))
+    .filter(isNumber);
+
+export const toInteger = (value: unknown) =>
+  maybe(value)
+    .bind((v: unknown) => parseInt(v as string, 10))
+    .filter(isNumber);
+
+export const toString = (value: unknown) => maybe(value).bind((v: any) => String(v));

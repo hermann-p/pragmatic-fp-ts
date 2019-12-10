@@ -81,7 +81,7 @@ export declare const conj: <A>(elem: MaybeType<A>) => (coll: MaybeType<A[]>) => 
  * Join all array elements by delimiter string
  * join("-")([1,2,3]) === "1-2-3"
  */
-export declare const join: <A>(delimiter?: MaybeType<string>) => (coll: MaybeType<A[]>) => Maybe<string>;
+export declare const join: <A>(delimiter?: string | import("./Maybe").Just<string> | import("./Maybe").Nothing<string>) => (coll: MaybeType<A[]>) => Maybe<string>;
 /**
  * Concatenate two strings or arrays
  * Read as append(this)(to that) -> append([3,4])([1,2]) === [1,2,3,4]
