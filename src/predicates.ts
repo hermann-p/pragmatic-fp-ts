@@ -8,9 +8,6 @@ export const isNil: Predicate<unknown> = (value) => value === undefined || value
 export const isFunction: Predicate<unknown> = (value): value is Function =>
   typeof value === "function";
 
-export const isNaN: Predicate<unknown> = (value) =>
-  typeof value === "number" && window.isNaN(value);
-
 export const isString: Predicate<unknown> = (value): value is string => typeof value === "string";
 
 export const isArray: Predicate<unknown> = (value): value is unknown[] => value instanceof Array;

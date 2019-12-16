@@ -1,4 +1,4 @@
-import { Dictionary, Isomorphism, Mappable, MaybeType, Predicate } from "./types";
+import { Dictionary, Endomorphism, Mappable, MaybeType, Predicate } from "./types";
 import { Maybe, maybe, nothing } from "./Maybe";
 import { either } from "./Either";
 import { getMonadValue } from "./tools";
@@ -33,7 +33,7 @@ export const keys = (obj: MaybeType<Dictionary>): Maybe<string[]> =>
     .bind((o) => Object.keys(o))
     .filter(isNotEmpty);
 
-export const mapKeys = (fn: Isomorphism<string>) => (
+export const mapKeys = (fn: Endomorphism<string>) => (
   obj: MaybeType<Dictionary>
 ): Maybe<Dictionary> =>
   isFunction(fn)

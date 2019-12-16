@@ -1,1 +1,6 @@
-src
+.prettierrc.yamlj
+.projectile
+.eslintrc.yaml
+jest.config.ts
+README.md
+coverage

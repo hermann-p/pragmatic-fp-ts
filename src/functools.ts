@@ -1,4 +1,4 @@
-import { Isomorphism, Mappable, MaybeType, Predicate } from "./types";
+import { Endomorphism, Mappable, MaybeType, Predicate } from "./types";
 import { Maybe, maybe } from "./Maybe";
 
 /**
@@ -51,11 +51,11 @@ export const ifElse = <A, B>(pred: Predicate<A>) => (ifFn: Mappable<A, B>) => (
 /**
  * applies ifFn only when pred is true
  */
-export const when = <T>(pred: Predicate<T>) => (ifFn: Isomorphism<T>) =>
+export const when = <T>(pred: Predicate<T>) => (ifFn: Endomorphism<T>) =>
   ifElse<T, T>(pred)(ifFn)(identity);
 
 /**
  * applies elseFn only when pred is false
  */
-export const unless = <T>(pred: Predicate<T>) => (elseFn: Isomorphism<T>) =>
+export const unless = <T>(pred: Predicate<T>) => (elseFn: Endomorphism<T>) =>
   ifElse<T, T>(pred)(identity)(elseFn);
