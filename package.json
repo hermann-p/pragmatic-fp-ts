@@ -1,9 +1,9 @@
 {
   "name": "pragmatic-fp-ts",
-  "version": "0.1.11",
+  "version": "0.1.13",
   "description": "Opinionated functional programming library with easy use in mind",
   "git-repository": "https://github.com/hermann-p/pragmatic-fp-ts",
-  "main": "lib/main.ts",
+  "main": "lib/main.js",
   "files": [
     "lib"
   ],
@@ -12,7 +12,7 @@
   },
   "scripts": {
     "test": "jest --coverage",
-    "build": "tsc",
+    "build": "tsc && typedoc --out docs --mode modules src --exclude src/__tests__ ",
     "dev": "ts-node-dev --respawn src/main.ts"
   },
   "keywords": [
@@ -34,6 +34,7 @@
     "jest": "^24.9.0",
     "ts-jest": "^24.1.0",
     "ts-node-dev": "^1.0.0-pre.44",
+    "typedoc": "^0.15.5",
     "typescript": "^3.7.2"
   },
   "dependencies": {
