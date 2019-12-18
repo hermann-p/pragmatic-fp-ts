@@ -2,6 +2,7 @@ import { Dictionary } from "../types";
 import { Nothing } from "../Maybe";
 import {
   assoc,
+  assocIn,
   get,
   getIn,
   keys,
@@ -11,6 +12,7 @@ import {
   pickBy,
   update,
   updateIn,
+  dissoc,
 } from "../object";
 
 describe("object", () => {
@@ -51,6 +53,18 @@ describe("object", () => {
   describe("assoc()", () => {
     it("associates values", () => {
       expect(assoc("bar")(2)({ foo: 1 }).getValue()).toEqual({ foo: 1, bar: 2 });
+    });
+  });
+
+  describe("assocIn()", () => {
+    it("associates values", () => {
+      expect(assocIn(["foo", "bar"])(2)({}).getValue()).toEqual({ foo: { bar: 2 } });
+    });
+  });
+
+  describe("dissoc()", () => {
+    it("dissociates values", () => {
+      expect(dissoc("foo")({ foo: 1, bar: 2 }).getValue()).toEqual({ bar: 2 });
     });
   });
 

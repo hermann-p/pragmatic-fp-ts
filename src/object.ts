@@ -104,8 +104,13 @@ export const assocIn = <T>(path: KeyType[]) => (value: MaybeType<T>) => (
   target: MaybeType<Dictionary>
 ): Maybe<Dictionary> =>
   maybe(target)
-    .bind((obj) => m.assoc(obj, path, getMonadValue(value)))
-    .bind(m.toJS);
+    .bind((obj) => m.assocIn(m.toClj(obj), path, getMonadValue(value)))
+    .bind<Dictionary>(m.toJs);
+
+export const dissoc = (key: KeyType) => (value: MaybeType<Dictionary>) =>
+  maybe(m.toClj(value))
+    .bind((o) => m.dissoc(o, key))
+    .bind(m.toJs);
 
 export const update = <A, B>(propName: KeyType) => (fn: Mappable<A, B>) => (
   dict: MaybeType<Dictionary>
