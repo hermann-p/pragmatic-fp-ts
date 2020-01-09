@@ -12,6 +12,7 @@ export declare const mapValues: <A, B>(fn: Mappable<A, B>) => (obj: MaybeType<Di
 export declare const mapFilterValues: <A, B>(fn: Mappable<A, B>) => (obj: MaybeType<Dictionary>) => Maybe<Dictionary>;
 export declare const assoc: <T>(propName: string | number) => (value: MaybeType<T>) => (target: MaybeType<Dictionary>) => Maybe<Dictionary>;
 export declare const assocIn: <T>(path: (string | number)[]) => (value: MaybeType<T>) => (target: MaybeType<Dictionary>) => Maybe<Dictionary>;
+export declare const dissoc: (key: string | number) => (value: MaybeType<Dictionary>) => Maybe<unknown>;
 export declare const update: <A, B>(propName: string | number) => (fn: Mappable<A, B>) => (dict: MaybeType<Dictionary>) => Maybe<Dictionary>;
 export declare const updateIn: <A, B>(path: (string | number)[]) => (fn: Mappable<A, B>) => (dict: MaybeType<Dictionary>) => Maybe<Dictionary>;
 export {};

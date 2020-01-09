@@ -70,10 +70,17 @@
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
+						<section class="tsd-index-section tsd-is-not-exported">
+							<h3>Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter tsd-is-not-exported"><a href="_logic_.html#condtuple" class="tsd-kind-icon">Cond<wbr>Tuple</a></li>
+							</ul>
+						</section>
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_logic_.html#allpass" class="tsd-kind-icon">all<wbr>Pass</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_logic_.html#cond" class="tsd-kind-icon">cond</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_logic_.html#eqshallow" class="tsd-kind-icon">eq<wbr>Shallow</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_logic_.html#equals" class="tsd-kind-icon">equals</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_logic_.html#every" class="tsd-kind-icon">every</a></li>
@@ -82,6 +89,28 @@
 							</ul>
 						</section>
 					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter tsd-is-not-exported">
+					<a name="condtuple" class="tsd-anchor"></a>
+					<h3>Cond<wbr>Tuple</h3>
+					<div class="tsd-signature tsd-kind-icon">Cond<wbr>Tuple&lt;A, B&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">[</span><a href="_types_.html#predicate" class="tsd-signature-type">Predicate</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="_types_.html#mappable" class="tsd-signature-type">Mappable</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">B</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/hermann-p/pragmatic-fp-ts/blob/48d1e8c/src/logic.ts#L85">logic.ts:85</a></li>
+						</ul>
+					</aside>
+					<h4 class="tsd-type-parameters-title">Type parameters</h4>
+					<ul class="tsd-type-parameters">
+						<li>
+							<h4>A</h4>
+						</li>
+						<li>
+							<h4>B</h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -96,7 +125,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/hermann-p/pragmatic-fp-ts/blob/7f477f5/src/logic.ts#L41">logic.ts:41</a></li>
+									<li>Defined in <a href="https://github.com/hermann-p/pragmatic-fp-ts/blob/48d1e8c/src/logic.ts#L42">logic.ts:42</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -120,6 +149,38 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+					<a name="cond" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> cond</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">cond&lt;A, B&gt;<span class="tsd-signature-symbol">(</span>conditions<span class="tsd-signature-symbol">: </span><a href="_logic_.html#condtuple" class="tsd-signature-type">CondTuple</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">B</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/hermann-p/pragmatic-fp-ts/blob/48d1e8c/src/logic.ts#L86">logic.ts:86</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>A</h4>
+								</li>
+								<li>
+									<h4>B</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>conditions: <a href="_logic_.html#condtuple" class="tsd-signature-type">CondTuple</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">B</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">(Anonymous function)</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
 					<a name="eqshallow" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> eq<wbr>Shallow</h3>
@@ -130,7 +191,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/hermann-p/pragmatic-fp-ts/blob/7f477f5/src/logic.ts#L73">logic.ts:73</a></li>
+									<li>Defined in <a href="https://github.com/hermann-p/pragmatic-fp-ts/blob/48d1e8c/src/logic.ts#L74">logic.ts:74</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -153,7 +214,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/hermann-p/pragmatic-fp-ts/blob/7f477f5/src/logic.ts#L65">logic.ts:65</a></li>
+									<li>Defined in <a href="https://github.com/hermann-p/pragmatic-fp-ts/blob/48d1e8c/src/logic.ts#L66">logic.ts:66</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -176,7 +237,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/hermann-p/pragmatic-fp-ts/blob/7f477f5/src/logic.ts#L49">logic.ts:49</a></li>
+									<li>Defined in <a href="https://github.com/hermann-p/pragmatic-fp-ts/blob/48d1e8c/src/logic.ts#L50">logic.ts:50</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -210,7 +271,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/hermann-p/pragmatic-fp-ts/blob/7f477f5/src/logic.ts#L22">logic.ts:22</a></li>
+									<li>Defined in <a href="https://github.com/hermann-p/pragmatic-fp-ts/blob/48d1e8c/src/logic.ts#L23">logic.ts:23</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -245,7 +306,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/hermann-p/pragmatic-fp-ts/blob/7f477f5/src/logic.ts#L11">logic.ts:11</a></li>
+									<li>Defined in <a href="https://github.com/hermann-p/pragmatic-fp-ts/blob/48d1e8c/src/logic.ts#L12">logic.ts:12</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -315,8 +376,14 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter tsd-is-not-exported">
+						<a href="_logic_.html#condtuple" class="tsd-kind-icon">Cond<wbr>Tuple</a>
+					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
 						<a href="_logic_.html#allpass" class="tsd-kind-icon">all<wbr>Pass</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+						<a href="_logic_.html#cond" class="tsd-kind-icon">cond</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
 						<a href="_logic_.html#eqshallow" class="tsd-kind-icon">eq<wbr>Shallow</a>
