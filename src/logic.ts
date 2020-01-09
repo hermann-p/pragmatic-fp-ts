@@ -1,8 +1,9 @@
-import { MaybeType, Predicate } from "./types";
+import { MaybeType, Predicate, Mappable } from "./types";
 import { getMonadValue } from "./tools";
 import { isFunction } from "./predicates";
-import { maybe } from "./Maybe";
+import { maybe, Maybe } from "./Maybe";
 import * as m from "mori";
+import { find } from "./array";
 
 /**
  * Does any of the array of predicates pass when applied to the value?
@@ -77,3 +78,12 @@ export const eqShallow = (a: MaybeType<unknown>) => (b: MaybeType<unknown>): boo
     return a === b;
   }
 };
+
+// Pattern matching -- given a list of [Predicate<A>, Mappable<A,B>]
+// tuples, find the first tuple whose predicate returns true for the
+// value and return its function evaluated with the value
+type CondTuple<A, B> = [Predicate<A>, Mappable<A, B>];
+export const cond = <A, B>(conditions: CondTuple<A, B>[]) => (value: MaybeType<A>): Maybe<B> =>
+  find(([condition]: CondTuple<A, B>) => condition(getMonadValue(value)))(
+    conditions
+  ).bind(([_, fn]: CondTuple<A, B>) => fn(getMonadValue(value)));

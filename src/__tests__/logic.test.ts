@@ -1,5 +1,5 @@
-import { somePass, equals, eqShallow } from "../logic";
-import { maybe } from "../Maybe";
+import { somePass, equals, eqShallow, cond } from "../logic";
+import { maybe, Nothing } from "../Maybe";
 
 describe("logic", () => {
   const gt2 = (x: number) => x > 2;
@@ -54,6 +54,26 @@ describe("logic", () => {
       expect(eqShallow(0)(null)).toBe(false);
       expect(eqShallow(null)(null)).toBe(true);
       expect(eqShallow(maybe(null))(null)).toBe(false);
+    });
+  });
+
+  describe("cond()", () => {
+    it("returns Nothing when nothing matches", () => {
+      expect(cond([])(1)).toBeInstanceOf(Nothing);
+      expect(cond([[(x: number) => x > 1, (x) => x]])(0)).toBeInstanceOf(Nothing);
+    });
+
+    it("evaluates first matching pattern's function", () => {
+      expect(cond([[(x: number) => x > 1, (x) => x]])(2).getValue()).toBe(2);
+      expect(
+        cond([
+          [(_: unknown) => false, (_) => null],
+          [(x: number) => x > 1, (x) => x + 1],
+        ])(2).getValue()
+      ).toBe(3);
+
+      // this should still be nothing because of the implicit maybe
+      expect(cond([[(x: number) => x > 1, (_) => null]])(2)).toBeInstanceOf(Nothing);
     });
   });
 });
