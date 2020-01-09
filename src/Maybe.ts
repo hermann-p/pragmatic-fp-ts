@@ -41,6 +41,7 @@ export class Just<T> extends Monad<T> {
       const result = fn(this.value);
       return maybe(result);
     } catch (err) {
+      console.warn("Caught in Just.bind:", err);
       return nothing<B>();
     }
   }
@@ -48,6 +49,7 @@ export class Just<T> extends Monad<T> {
     try {
       return just(match.just(this.value));
     } catch (err) {
+      console.warn("Caught in Just.match:", err);
       return nothing<U>();
     }
   }
@@ -92,7 +94,8 @@ export class Nothing<T> implements Monad<T> {
   match<U>(match: MaybePattern<T, U>): Maybe<U> {
     try {
       return just(match.nothing());
-    } catch {
+    } catch (err) {
+      console.warn("Caught in Nothing.match:", err);
       return nothing<U>();
     }
   }
