@@ -25,6 +25,7 @@
   ],
   "author": "hermann-p",
   "license": "MIT",
+  "repository": "github:/hermann-p/pragmatic-fp-ts",
   "devDependencies": {
     "@types/jest": "^24.0.22",
     "@types/node": "^12.12.8",
