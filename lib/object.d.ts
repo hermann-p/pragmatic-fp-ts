@@ -15,4 +15,6 @@ export declare const assocIn: <T>(path: (string | number)[]) => (value: MaybeTyp
 export declare const dissoc: (key: string | number) => (value: MaybeType<Dictionary>) => Maybe<unknown>;
 export declare const update: <A, B>(propName: string | number) => (fn: Mappable<A, B>) => (dict: MaybeType<Dictionary>) => Maybe<Dictionary>;
 export declare const updateIn: <A, B>(path: (string | number)[]) => (fn: Mappable<A, B>) => (dict: MaybeType<Dictionary>) => Maybe<Dictionary>;
+export declare const fromPairs: (pairs: MaybeType<unknown[][]>) => Maybe<Dictionary>;
+export declare const toPairs: (dict: Dictionary) => Maybe<any[][]>;
 export {};
