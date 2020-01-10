@@ -17,7 +17,7 @@
 
 ▸ **getMonadValue**<**T**>(`input`: [Monad](../classes/_monad_.monad.md)‹T› | T, `alternate?`: T): *T*
 
-*Defined in [tools.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/351d0ae/src/tools.ts#L5)*
+*Defined in [tools.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/faad691/src/tools.ts#L5)*
 
 **Type parameters:**
 
@@ -38,7 +38,7 @@ ___
 
 ▸ **toInteger**(`value`: unknown): *[Just](../classes/_maybe_.just.md)‹number› | [Nothing](../classes/_maybe_.nothing.md)‹number›*
 
-*Defined in [tools.ts:22](https://github.com/hermann-p/pragmatic-fp-ts/blob/351d0ae/src/tools.ts#L22)*
+*Defined in [tools.ts:22](https://github.com/hermann-p/pragmatic-fp-ts/blob/faad691/src/tools.ts#L22)*
 
 **Parameters:**
 
@@ -54,7 +54,7 @@ ___
 
 ▸ **toNumber**(`value`: unknown): *[Just](../classes/_maybe_.just.md)‹number› | [Nothing](../classes/_maybe_.nothing.md)‹number›*
 
-*Defined in [tools.ts:17](https://github.com/hermann-p/pragmatic-fp-ts/blob/351d0ae/src/tools.ts#L17)*
+*Defined in [tools.ts:17](https://github.com/hermann-p/pragmatic-fp-ts/blob/faad691/src/tools.ts#L17)*
 
 **Parameters:**
 
@@ -70,7 +70,7 @@ ___
 
 ▸ **toString**(`value`: unknown): *[Just](../classes/_maybe_.just.md)‹string› | [Nothing](../classes/_maybe_.nothing.md)‹string›*
 
-*Defined in [tools.ts:27](https://github.com/hermann-p/pragmatic-fp-ts/blob/351d0ae/src/tools.ts#L27)*
+*Defined in [tools.ts:27](https://github.com/hermann-p/pragmatic-fp-ts/blob/faad691/src/tools.ts#L27)*
 
 **Parameters:**
 
