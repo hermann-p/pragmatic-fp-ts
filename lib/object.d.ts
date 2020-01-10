@@ -8,6 +8,8 @@ export declare const keys: (obj: MaybeType<Dictionary>) => Maybe<string[]>;
 export declare const mapKeys: (fn: Endomorphism<string>) => (obj: MaybeType<Dictionary>) => Maybe<Dictionary>;
 export declare const pickBy: (predicate: Predicate<string>) => (obj: MaybeType<Dictionary>) => Maybe<Dictionary>;
 export declare const filterKeys: (predicate: Predicate<string>) => (obj: MaybeType<Dictionary>) => Maybe<Dictionary>;
+export declare const pick: (keysToPick: MaybeType<(string | number)[]>) => (dict: Dictionary) => Maybe<Dictionary>;
+export declare const pickValuesBy: (predicate: Predicate<any>) => (dict: Dictionary) => Maybe<Dictionary>;
 export declare const mapValues: <A, B>(fn: Mappable<A, B>) => (obj: MaybeType<Dictionary>) => Maybe<Dictionary>;
 export declare const mapFilterValues: <A, B>(fn: Mappable<A, B>) => (obj: MaybeType<Dictionary>) => Maybe<Dictionary>;
 export declare const assoc: <T>(propName: string | number) => (value: MaybeType<T>) => (target: MaybeType<Dictionary>) => Maybe<Dictionary>;

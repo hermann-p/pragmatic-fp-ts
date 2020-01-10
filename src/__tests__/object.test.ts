@@ -15,6 +15,8 @@ import {
   dissoc,
   fromPairs,
   toPairs,
+  pick,
+  pickValuesBy,
 } from "../object";
 
 describe("object", () => {
@@ -185,5 +187,13 @@ describe("object", () => {
       ]);
       expect(toPairs({})).toBeInstanceOf(Nothing);
     });
+  });
+
+  describe("pick()", () => {
+    expect(pick(["foo", "bar"])({ foo: 1, bar: 2, baz: 3 }).getValue()).toEqual({ foo: 1, bar: 2 });
+  });
+  describe("pickValuesBy()", () => {
+    const pred = (x: number) => x > 1;
+    expect(pickValuesBy(pred)({ foo: 1, bar: 2 }).getValue()).toEqual({ bar: 2 });
   });
 });

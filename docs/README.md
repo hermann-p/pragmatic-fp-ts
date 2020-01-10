@@ -1,3 +1,7 @@
+[pragmatic-fp-ts](README.md) › [Globals](globals.md)
+
+# pragmatic-fp-ts
+
 # pragmatic-fp-ts
 
 A library for functional programming in TypeScript. Curried, total
