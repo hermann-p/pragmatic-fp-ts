@@ -1,7 +1,3 @@
-[pragmatic-fp-ts](README.md) › [Globals](globals.md)
-
-# pragmatic-fp-ts
-
 # pragmatic-fp-ts
 
 A library for functional programming in TypeScript. Curried, total
@@ -32,8 +28,7 @@ its Left branch as expected.
 # Usability primer
 
 An elaborated readme will follow. Until then, you can see the
-(https://github.com/hermann-p/pragmatic-fp-ts/blob/master/docs/globals.md)[auto
-generated docs on github].
+[auto generated docs on github](https://github.com/hermann-p/pragmatic-fp-ts/blob/master/docs/globals.md).
 
 # Plans for the future
 
