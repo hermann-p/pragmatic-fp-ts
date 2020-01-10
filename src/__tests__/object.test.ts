@@ -13,6 +13,8 @@ import {
   update,
   updateIn,
   dissoc,
+  fromPairs,
+  toPairs,
 } from "../object";
 
 describe("object", () => {
@@ -154,6 +156,34 @@ describe("object", () => {
     it("safely picks object keys", () => {
       const obj = { foo: 1, bar: 2, foobar: 3 };
       expect(pickBy((key) => key.length === 3)(obj).getValue()).toEqual({ foo: 1, bar: 2 });
+    });
+  });
+
+  describe("fromPairs()", () => {
+    it("creates objects from pairs", () => {
+      expect(
+        fromPairs([
+          ["foo", 1],
+          ["bar", 2],
+        ]).getValue()
+      ).toEqual({ foo: 1, bar: 2 });
+
+      expect(fromPairs([])).toBeInstanceOf(Nothing);
+      expect(fromPairs([["foo"], ["bar", 1]]).getValue()).toEqual({ bar: 1 });
+      expect(fromPairs([["foo"], ["bar", 1], ["baz", 2, 3]]).getValue()).toEqual({
+        bar: 1,
+        baz: 2,
+      });
+    });
+  });
+
+  describe("toPairs()", () => {
+    it("creates key-value pairs from objects", () => {
+      expect(toPairs({ foo: 1, bar: 2 }).getValue()).toEqual([
+        ["foo", 1],
+        ["bar", 2],
+      ]);
+      expect(toPairs({})).toBeInstanceOf(Nothing);
     });
   });
 });

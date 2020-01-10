@@ -4,6 +4,7 @@ import { either } from "./Either";
 import { getMonadValue } from "./tools";
 import { isEmpty, isFunction, isNotEmpty } from "./predicates";
 import * as m from "mori";
+import { reduce } from "./array";
 
 type KeyType = string | number;
 type PathType = KeyType[] | Maybe<KeyType[]>;
@@ -125,3 +126,19 @@ export const updateIn = <A, B>(path: KeyType[]) => (fn: Mappable<A, B>) => (
   maybe(dict)
     .bind((input: unknown) => m.updateIn(m.toClj(input), path, fn))
     .bind(m.toJs);
+
+export const fromPairs = (pairs: MaybeType<unknown[][]>) =>
+  (reduce((dict: Dictionary, [key, value]: unknown[]) => {
+    dict[key as string] = value;
+    return dict;
+  })({} as Dictionary)(pairs) as Maybe<Dictionary>).filter(isNotEmpty);
+
+export const toPairs = (dict: Dictionary) =>
+  maybe(dict)
+    .bind((d) => {
+      const ks = Object.keys(d);
+      const vs = Object.values(d);
+
+      return ks.map((key, idx) => [key, vs[idx]]);
+    })
+    .filter(isNotEmpty);
