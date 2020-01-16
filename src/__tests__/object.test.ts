@@ -3,20 +3,22 @@ import { Nothing } from "../Maybe";
 import {
   assoc,
   assocIn,
+  dissoc,
+  fromPairs,
   get,
   getIn,
   keys,
   mapFilterValues,
   mapKeys,
   mapValues,
+  pick,
   pickBy,
+  pickValuesBy,
+  toPairs,
   update,
   updateIn,
-  dissoc,
-  fromPairs,
-  toPairs,
-  pick,
-  pickValuesBy,
+  values,
+  reduceKV,
 } from "../object";
 
 describe("object", () => {
@@ -106,6 +108,18 @@ describe("object", () => {
     });
   });
 
+  describe("values()", () => {
+    it("safely gets object values", () => {
+      expect(values({ foo: 1, bar: 2 }).getValue()).toEqual([1, 2]);
+      expect(values([1, 2, 3]).getValue()).toEqual([1, 2, 3]);
+      expect(values({})).toBeInstanceOf(Nothing);
+
+      expect(values(1 as any)).toBeInstanceOf(Nothing);
+      expect(values(null as any)).toBeInstanceOf(Nothing);
+      expect(values("test" as any)).toBeInstanceOf(Nothing);
+    });
+  });
+
   const toUpper = (input: string) => input.toUpperCase();
   describe("mapKeys()", () => {
     it("safely maps over object keys", () => {
@@ -117,6 +131,20 @@ describe("object", () => {
       expect(mapKeys(toUpper)([1, 2, 3])).toBeInstanceOf(Nothing);
       expect(mapKeys(toUpper)(null as any)).toBeInstanceOf(Nothing);
       expect(mapKeys(null as any)(null as any)).toBeInstanceOf(Nothing);
+    });
+  });
+
+  describe("reduceKV()", () => {
+    it("reduces over keys and values", () => {
+      const reducer = (accum: Dictionary, key: string, value: number) => {
+        accum[key + "Double"] = 2 * value;
+        return accum;
+      };
+
+      expect(reduceKV(reducer)({})({ foo: 1, bar: 3 }).getValue()).toEqual({
+        fooDouble: 2,
+        barDouble: 6,
+      });
     });
   });
 

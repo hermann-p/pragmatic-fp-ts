@@ -2,7 +2,7 @@ import { Dictionary, Endomorphism, Mappable, MaybeType, Predicate } from "./type
 import { Maybe, maybe, nothing } from "./Maybe";
 import { either } from "./Either";
 import { getMonadValue } from "./tools";
-import { isEmpty, isFunction, isNotEmpty } from "./predicates";
+import { isEmpty, isFunction, isNotEmpty, isSome } from "./predicates";
 import * as m from "mori";
 import { reduce } from "./array";
 
@@ -38,6 +38,13 @@ export const keys = (obj: MaybeType<Dictionary>): Maybe<string[]> =>
     .bind((o) => Object.keys(o))
     .filter(isNotEmpty);
 
+// get array of object values
+export const values = (obj: MaybeType<Dictionary>): Maybe<unknown[]> =>
+  maybe(obj)
+    .filter((o) => typeof o !== "string") // because we don't want to allow dirty JS-tricks
+    .bind((o) => Object.values(o))
+    .filter(isNotEmpty);
+
 // Transform field names by fn: mapKeys(toUpperCase)({foo:1,bar:2}) -> {FOO:1,BAR:2}
 export const mapKeys = (fn: Endomorphism<string>) => (
   obj: MaybeType<Dictionary>
@@ -53,6 +60,20 @@ export const mapKeys = (fn: Endomorphism<string>) => (
           }, {} as Dictionary);
         })
     : nothing();
+
+// Reduce over keys and values of an object at the same time.
+//   reduceKV(reducer)(initialValue)(object)
+export const reduceKV = <T>(reducer: (accum: T, key: string, value: any) => T) => (
+  initialValue: T
+) => (dict: MaybeType<Dictionary>) =>
+  maybe(dict)
+    .bind((d) =>
+      Object.keys(d).reduce(
+        (accum: T, key: string) => reducer(accum, key, (dict as any)[key]),
+        initialValue
+      )
+    )
+    .filter(isSome);
 
 // Pick fields from an object if the field name suffices the predicate, synonym to filterKeys
 export const pickBy = (predicate: Predicate<string>) => (obj: MaybeType<Dictionary>) =>
