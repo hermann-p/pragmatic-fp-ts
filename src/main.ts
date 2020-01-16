@@ -8,3 +8,4 @@ export * from "./object";
 export * from "./predicates";
 export * from "./tools";
 export * from "./types";
+export * from "./string";
