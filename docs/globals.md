@@ -15,5 +15,6 @@
 * ["main"](modules/_main_.md)
 * ["object"](modules/_object_.md)
 * ["predicates"](modules/_predicates_.md)
+* ["string"](modules/_string_.md)
 * ["tools"](modules/_tools_.md)
 * ["types"](modules/_types_.md)

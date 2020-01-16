@@ -28,7 +28,7 @@
 
 Ƭ **Maybe**: *[Just](../classes/_maybe_.just.md)‹T› | [Nothing](../classes/_maybe_.nothing.md)‹T›*
 
-*Defined in [Maybe.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/7d47b68/src/Maybe.ts#L8)*
+*Defined in [Maybe.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/be82131/src/Maybe.ts#L8)*
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 Ƭ **MaybePattern**: *object*
 
-*Defined in [Maybe.ts:9](https://github.com/hermann-p/pragmatic-fp-ts/blob/7d47b68/src/Maybe.ts#L9)*
+*Defined in [Maybe.ts:9](https://github.com/hermann-p/pragmatic-fp-ts/blob/be82131/src/Maybe.ts#L9)*
 
 #### Type declaration:
 
@@ -54,7 +54,7 @@ ___
 
 ▸ **just**<**T**>(`value`: T): *[Just](../classes/_maybe_.just.md)‹T›*
 
-*Defined in [Maybe.ts:116](https://github.com/hermann-p/pragmatic-fp-ts/blob/7d47b68/src/Maybe.ts#L116)*
+*Defined in [Maybe.ts:116](https://github.com/hermann-p/pragmatic-fp-ts/blob/be82131/src/Maybe.ts#L116)*
 
 **Type parameters:**
 
@@ -74,7 +74,7 @@ ___
 
 ▸ **maybe**<**T**>(`value`: T | [Monad](../classes/_monad_.monad.md)‹T›): *[Maybe](_maybe_.md#maybe)‹T›*
 
-*Defined in [Maybe.ts:118](https://github.com/hermann-p/pragmatic-fp-ts/blob/7d47b68/src/Maybe.ts#L118)*
+*Defined in [Maybe.ts:118](https://github.com/hermann-p/pragmatic-fp-ts/blob/be82131/src/Maybe.ts#L118)*
 
 **Type parameters:**
 
@@ -94,7 +94,7 @@ ___
 
 ▸ **maybeFalsy**<**T**>(`value`: [MaybeType](_types_.md#maybetype)‹T›): *[Maybe](_maybe_.md#maybe)‹T›*
 
-*Defined in [Maybe.ts:129](https://github.com/hermann-p/pragmatic-fp-ts/blob/7d47b68/src/Maybe.ts#L129)*
+*Defined in [Maybe.ts:129](https://github.com/hermann-p/pragmatic-fp-ts/blob/be82131/src/Maybe.ts#L129)*
 
 **Type parameters:**
 
@@ -114,7 +114,7 @@ ___
 
 ▸ **maybeIf**<**T**>(`predicate`: [MaybeType](_types_.md#maybetype)‹[Predicate](_types_.md#predicate)‹T››): *(Anonymous function)*
 
-*Defined in [Maybe.ts:132](https://github.com/hermann-p/pragmatic-fp-ts/blob/7d47b68/src/Maybe.ts#L132)*
+*Defined in [Maybe.ts:132](https://github.com/hermann-p/pragmatic-fp-ts/blob/be82131/src/Maybe.ts#L132)*
 
 **Type parameters:**
 
@@ -134,7 +134,7 @@ ___
 
 ▸ **nothing**<**T**>(): *[Nothing](../classes/_maybe_.nothing.md)‹T›*
 
-*Defined in [Maybe.ts:117](https://github.com/hermann-p/pragmatic-fp-ts/blob/7d47b68/src/Maybe.ts#L117)*
+*Defined in [Maybe.ts:117](https://github.com/hermann-p/pragmatic-fp-ts/blob/be82131/src/Maybe.ts#L117)*
 
 **Type parameters:**
 
