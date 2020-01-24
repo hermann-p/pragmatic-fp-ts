@@ -1,5 +1,5 @@
 import { Mappable, MaybeType, Predicate } from "./types";
-import { Maybe, maybe, nothing } from "./Maybe";
+import { Maybe, maybe, nothing, just } from "./Maybe";
 import { getMonadValue } from "./tools";
 import { invert } from "./functools";
 import { isFunction, isNotEmpty, isNumber, isString, isSome } from "./predicates";
@@ -302,6 +302,23 @@ export const reduce = <A, B>(fn: (accum: B, nextValue: A, index: number, fullCol
   initial: B
 ) => (coll: MaybeType<A[]>) =>
   isSome(initial) ? maybe(coll).bind((c) => c.reduce(fn, initial)) : nothing();
+
+export const range = (start: MaybeType<number>) => (end: MaybeType<number>) => {
+  try {
+    const _start = getMonadValue(start);
+    const _end = getMonadValue(end);
+    const asc = _end >= _start;
+    const l = asc ? _end - _start : _start - _end;
+    const dir = asc ? 1 : -1;
+    const arr: number[] = Array(l);
+    for (let i = 0; i < l; ++i) {
+      arr[i] = _start + i * dir;
+    }
+    return just(arr);
+  } catch (err) {
+    return nothing();
+  }
+};
 
 export const count = (coll: MaybeType<unknown[] | string>) => maybe(coll).bind((c) => c.length);
 export const size = count;

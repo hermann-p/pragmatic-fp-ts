@@ -1,4 +1,4 @@
-import { Just, Nothing, maybe, nothing } from "../Maybe";
+import { Just, Nothing, maybe, nothing, just } from "../Maybe";
 import {
   append,
   butLast,
@@ -16,6 +16,7 @@ import {
   mapJust,
   mapOr,
   prepend,
+  range,
   reject,
   removeAt,
   rest,
@@ -306,7 +307,7 @@ describe("array functions", () => {
     });
   });
 
-  describe("count", () => {
+  describe("count()", () => {
     it("counts array sizes", () => {
       expect(count([1, 2, 3]).getValue()).toBe(3);
       expect(count([]).getValue()).toBe(0);
@@ -314,6 +315,25 @@ describe("array functions", () => {
       expect(count(null as any)).toBeInstanceOf(Nothing);
       expect(count(1 as any)).toBeInstanceOf(Nothing);
       expect(count({} as any)).toBeInstanceOf(Nothing);
+    });
+  });
+
+  describe("range()", () => {
+    it("delivers ascending arrays", () => {
+      expect(range(0)(5).getValue()).toEqual([0, 1, 2, 3, 4]);
+      expect(range(just(0))(just(5)).getValue()).toEqual([0, 1, 2, 3, 4]);
+      expect(range(0)(0).getValue()).toEqual([]);
+      expect(range(9)(15).getValue()).toEqual([9, 10, 11, 12, 13, 14]);
+    });
+
+    it("delivers descending arrays", () => {
+      expect(range(5)(0).getValue()).toEqual([5, 4, 3, 2, 1]);
+      expect(range(just(5))(just(0)).getValue()).toEqual([5, 4, 3, 2, 1]);
+      expect(range(15)(10).getValue()).toEqual([15, 14, 13, 12, 11]);
+    });
+
+    it("gracefully catches Nothings", () => {
+      expect(range(nothing())(5)).toBeInstanceOf(Nothing);
     });
   });
 });
