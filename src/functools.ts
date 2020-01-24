@@ -59,3 +59,7 @@ export const when = <T>(pred: Predicate<T>) => (ifFn: Endomorphism<T>) =>
  */
 export const unless = <T>(pred: Predicate<T>) => (elseFn: Endomorphism<T>) =>
   ifElse<T, T>(pred)(identity)(elseFn);
+
+// constantly<T> : (value: T) -> fn(_: any) -> T
+// Always return the value, mathematical constant function
+export const constantly = <T>(value: T) => (..._: any[]) => value;

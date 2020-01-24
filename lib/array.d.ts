@@ -108,5 +108,6 @@ export declare function insertAt<A>(index: MaybeType<number>): (elem: MaybeType<
 export declare function removeAt<A>(n: MaybeType<number>): (coll: MaybeType<A[]>) => Maybe<A[]>;
 export declare function find<T>(predicate: Predicate<T>): (coll: T[]) => Maybe<T>;
 export declare const reduce: <A, B>(fn: (accum: B, nextValue: A, index: number, fullColl: A[]) => B) => (initial: B) => (coll: MaybeType<A[]>) => import("./Maybe").Nothing<unknown> | import("./Maybe").Just<B>;
+export declare const range: (start: number | import("./Maybe").Just<number> | import("./Maybe").Nothing<number>) => (end: number | import("./Maybe").Just<number> | import("./Maybe").Nothing<number>) => import("./Maybe").Nothing<unknown> | import("./Maybe").Just<number[]>;
 export declare const count: (coll: MaybeType<string | unknown[]>) => Maybe<number>;
 export declare const size: (coll: MaybeType<string | unknown[]>) => Maybe<number>;

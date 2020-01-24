@@ -43,3 +43,4 @@ export declare const when: <T>(pred: Predicate<T>) => (ifFn: Endomorphism<T>) =>
  * applies elseFn only when pred is false
  */
 export declare const unless: <T>(pred: Predicate<T>) => (elseFn: Endomorphism<T>) => (value: MaybeType<T>) => Maybe<T>;
+export declare const constantly: <T>(value: T) => (..._: any[]) => T;

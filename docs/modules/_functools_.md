@@ -11,6 +11,7 @@
 ### Functions
 
 * [complement](_functools_.md#const-complement)
+* [constantly](_functools_.md#const-constantly)
 * [flip](_functools_.md#const-flip)
 * [identity](_functools_.md#const-identity)
 * [ifElse](_functools_.md#const-ifelse)
@@ -25,7 +26,7 @@
 
 • **invert**: *complement* =  complement
 
-*Defined in [functools.ts:19](https://github.com/hermann-p/pragmatic-fp-ts/blob/bc9a9d0/src/functools.ts#L19)*
+*Defined in [functools.ts:19](https://github.com/hermann-p/pragmatic-fp-ts/blob/bab22d3/src/functools.ts#L19)*
 
 Return the complement of a predicate.
 complement(isEmpty)([]) === true
@@ -36,7 +37,7 @@ complement(isEmpty)([]) === true
 
 ▸ **complement**<**T**>(`pred`: [Predicate](_types_.md#predicate)‹T›): *[Predicate](_types_.md#predicate)‹T›*
 
-*Defined in [functools.ts:14](https://github.com/hermann-p/pragmatic-fp-ts/blob/bc9a9d0/src/functools.ts#L14)*
+*Defined in [functools.ts:14](https://github.com/hermann-p/pragmatic-fp-ts/blob/bab22d3/src/functools.ts#L14)*
 
 Return the complement of a predicate.
 complement(isEmpty)([]) === true
@@ -55,11 +56,31 @@ Name | Type |
 
 ___
 
+### `Const` constantly
+
+▸ **constantly**<**T**>(`value`: T): *(Anonymous function)*
+
+*Defined in [functools.ts:65](https://github.com/hermann-p/pragmatic-fp-ts/blob/bab22d3/src/functools.ts#L65)*
+
+**Type parameters:**
+
+▪ **T**
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`value` | T |
+
+**Returns:** *(Anonymous function)*
+
+___
+
 ### `Const` flip
 
 ▸ **flip**<**A**, **B**, **C**>(`fn`: function): *(Anonymous function)*
 
-*Defined in [functools.ts:37](https://github.com/hermann-p/pragmatic-fp-ts/blob/bc9a9d0/src/functools.ts#L37)*
+*Defined in [functools.ts:37](https://github.com/hermann-p/pragmatic-fp-ts/blob/bab22d3/src/functools.ts#L37)*
 
 Call fn with inverted arguments
 
@@ -99,7 +120,7 @@ ___
 
 ▸ **identity**<**T**>(`a`: T): *T*
 
-*Defined in [functools.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/bc9a9d0/src/functools.ts#L8)*
+*Defined in [functools.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/bab22d3/src/functools.ts#L8)*
 
 mathematical identity.
 const identity = a => a
@@ -122,7 +143,7 @@ ___
 
 ▸ **ifElse**<**A**, **B**>(`pred`: [Predicate](_types_.md#predicate)‹A›): *(Anonymous function)*
 
-*Defined in [functools.ts:46](https://github.com/hermann-p/pragmatic-fp-ts/blob/bc9a9d0/src/functools.ts#L46)*
+*Defined in [functools.ts:46](https://github.com/hermann-p/pragmatic-fp-ts/blob/bab22d3/src/functools.ts#L46)*
 
 composable if-else-switch
 
@@ -150,7 +171,7 @@ ___
 
 ▸ **negate**(`val`: number | [Maybe](_maybe_.md#maybe)‹number›): *[Just](../classes/_maybe_.just.md)‹number› | [Nothing](../classes/_maybe_.nothing.md)‹number›*
 
-*Defined in [functools.ts:32](https://github.com/hermann-p/pragmatic-fp-ts/blob/bc9a9d0/src/functools.ts#L32)*
+*Defined in [functools.ts:32](https://github.com/hermann-p/pragmatic-fp-ts/blob/bab22d3/src/functools.ts#L32)*
 
 Negate a number
 
@@ -168,7 +189,7 @@ ___
 
 ▸ **not**(`val`: any): *boolean*
 
-*Defined in [functools.ts:24](https://github.com/hermann-p/pragmatic-fp-ts/blob/bc9a9d0/src/functools.ts#L24)*
+*Defined in [functools.ts:24](https://github.com/hermann-p/pragmatic-fp-ts/blob/bab22d3/src/functools.ts#L24)*
 
 Invert truthyness
 
@@ -186,7 +207,7 @@ ___
 
 ▸ **unless**<**T**>(`pred`: [Predicate](_types_.md#predicate)‹T›): *(Anonymous function)*
 
-*Defined in [functools.ts:60](https://github.com/hermann-p/pragmatic-fp-ts/blob/bc9a9d0/src/functools.ts#L60)*
+*Defined in [functools.ts:60](https://github.com/hermann-p/pragmatic-fp-ts/blob/bab22d3/src/functools.ts#L60)*
 
 applies elseFn only when pred is false
 
@@ -208,7 +229,7 @@ ___
 
 ▸ **when**<**T**>(`pred`: [Predicate](_types_.md#predicate)‹T›): *(Anonymous function)*
 
-*Defined in [functools.ts:54](https://github.com/hermann-p/pragmatic-fp-ts/blob/bc9a9d0/src/functools.ts#L54)*
+*Defined in [functools.ts:54](https://github.com/hermann-p/pragmatic-fp-ts/blob/bab22d3/src/functools.ts#L54)*
 
 applies ifFn only when pred is true
 

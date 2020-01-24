@@ -298,11 +298,15 @@ export function find<T>(predicate: Predicate<T>) {
   };
 }
 
+// reduce<A,B> : (fn: (accum: B, nextValue: A, index: number, fullColl: A[]) -> B) -> (init: A) -> (coll: A[]) -> B
+// Applies the reducer to all elements in coll with accum always being the result of the previous call
 export const reduce = <A, B>(fn: (accum: B, nextValue: A, index: number, fullColl: A[]) => B) => (
   initial: B
 ) => (coll: MaybeType<A[]>) =>
   isSome(initial) ? maybe(coll).bind((c) => c.reduce(fn, initial)) : nothing();
 
+// range : (start: number) -> (end: number) -> number[]
+// Returns an array of numbers including start and excluding end with step 1 if start < end else step -1
 export const range = (start: MaybeType<number>) => (end: MaybeType<number>) => {
   try {
     const _start = getMonadValue(start);
