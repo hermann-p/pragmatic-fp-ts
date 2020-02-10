@@ -152,8 +152,8 @@ export const mapJust = <A, B>(fn: Mappable<A, B> | Mappable<A, Maybe<B>>) => (
 /**
  * return a new array with all elements from coll for which pred is true
  */
-export function filter<A>(pred: Predicate<A>): (coll: MaybeType<A[]>) => Maybe<A>;
-export function filter<A>(pred: Predicate<Maybe<A>>): (coll: MaybeType<A[]>) => Maybe<A>;
+export function filter<A>(pred: Predicate<A>): (coll: MaybeType<A[]>) => Maybe<A[]>;
+export function filter<A>(pred: Predicate<Maybe<A>>): (coll: MaybeType<A[]>) => Maybe<A[]>;
 export function filter<A>(pred: Predicate<MaybeType<A>>) {
   return (coll: MaybeType<A[]>) =>
     maybe(coll)
@@ -170,8 +170,8 @@ export function filter<A>(pred: Predicate<MaybeType<A>>) {
 /**
  * return a new array with all elements from coll where pred is false
  */
-export function reject<A>(pred: Predicate<A>): (coll: MaybeType<A[]>) => Maybe<A>;
-export function reject<A>(pred: Predicate<Maybe<A>>): (coll: MaybeType<A[]>) => Maybe<A>;
+export function reject<A>(pred: Predicate<A>): (coll: MaybeType<A[]>) => Maybe<A[]>;
+export function reject<A>(pred: Predicate<Maybe<A>>): (coll: MaybeType<A[]>) => Maybe<A[]>;
 export function reject<A>(pred: Predicate<MaybeType<A>>) {
   return filter(invert(pred));
 }

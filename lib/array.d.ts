@@ -49,13 +49,13 @@ export declare const mapJust: <A, B>(fn: Mappable<A, B> | Mappable<A, Maybe<B>>)
 /**
  * return a new array with all elements from coll for which pred is true
  */
-export declare function filter<A>(pred: Predicate<A>): (coll: MaybeType<A[]>) => Maybe<A>;
-export declare function filter<A>(pred: Predicate<Maybe<A>>): (coll: MaybeType<A[]>) => Maybe<A>;
+export declare function filter<A>(pred: Predicate<A>): (coll: MaybeType<A[]>) => Maybe<A[]>;
+export declare function filter<A>(pred: Predicate<Maybe<A>>): (coll: MaybeType<A[]>) => Maybe<A[]>;
 /**
  * return a new array with all elements from coll where pred is false
  */
-export declare function reject<A>(pred: Predicate<A>): (coll: MaybeType<A[]>) => Maybe<A>;
-export declare function reject<A>(pred: Predicate<Maybe<A>>): (coll: MaybeType<A[]>) => Maybe<A>;
+export declare function reject<A>(pred: Predicate<A>): (coll: MaybeType<A[]>) => Maybe<A[]>;
+export declare function reject<A>(pred: Predicate<Maybe<A>>): (coll: MaybeType<A[]>) => Maybe<A[]>;
 /**
  * test if elem is a member of array or string coll
  * isIn("word")("o") === true

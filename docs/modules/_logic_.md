@@ -24,7 +24,7 @@
 
 Ƭ **CondTuple**: *[[Predicate](_types_.md#predicate)‹A›, [Mappable](_types_.md#mappable)‹A, B›]*
 
-*Defined in [logic.ts:85](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/logic.ts#L85)*
+*Defined in [logic.ts:85](https://github.com/hermann-p/pragmatic-fp-ts/blob/923e279/src/logic.ts#L85)*
 
 ## Functions
 
@@ -32,7 +32,7 @@
 
 ▸ **allPass**<**T**>(`predicates`: [Predicate](_types_.md#predicate)‹T›[]): *(Anonymous function)*
 
-*Defined in [logic.ts:42](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/logic.ts#L42)*
+*Defined in [logic.ts:42](https://github.com/hermann-p/pragmatic-fp-ts/blob/923e279/src/logic.ts#L42)*
 
 Does the value pass all predicates in the array?
 
@@ -54,7 +54,7 @@ ___
 
 ▸ **cond**<**A**, **B**>(`conditions`: [CondTuple](_logic_.md#condtuple)‹A, B›[]): *(Anonymous function)*
 
-*Defined in [logic.ts:86](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/logic.ts#L86)*
+*Defined in [logic.ts:86](https://github.com/hermann-p/pragmatic-fp-ts/blob/923e279/src/logic.ts#L86)*
 
 **Type parameters:**
 
@@ -76,7 +76,7 @@ ___
 
 ▸ **eqShallow**(`a`: [MaybeType](_types_.md#maybetype)‹unknown›): *(Anonymous function)*
 
-*Defined in [logic.ts:74](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/logic.ts#L74)*
+*Defined in [logic.ts:74](https://github.com/hermann-p/pragmatic-fp-ts/blob/923e279/src/logic.ts#L74)*
 
 **Parameters:**
 
@@ -92,7 +92,7 @@ ___
 
 ▸ **equals**(`a`: [MaybeType](_types_.md#maybetype)‹unknown›): *(Anonymous function)*
 
-*Defined in [logic.ts:66](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/logic.ts#L66)*
+*Defined in [logic.ts:66](https://github.com/hermann-p/pragmatic-fp-ts/blob/923e279/src/logic.ts#L66)*
 
 **Parameters:**
 
@@ -108,7 +108,7 @@ ___
 
 ▸ **every**<**T**>(`pred`: [Predicate](_types_.md#predicate)‹T›): *(Anonymous function)*
 
-*Defined in [logic.ts:50](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/logic.ts#L50)*
+*Defined in [logic.ts:50](https://github.com/hermann-p/pragmatic-fp-ts/blob/923e279/src/logic.ts#L50)*
 
 Do all values in the array pass the predicate?
 
@@ -130,7 +130,7 @@ ___
 
 ▸ **some**<**T**>(`pred`: [Predicate](_types_.md#predicate)‹T›): *(Anonymous function)*
 
-*Defined in [logic.ts:23](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/logic.ts#L23)*
+*Defined in [logic.ts:23](https://github.com/hermann-p/pragmatic-fp-ts/blob/923e279/src/logic.ts#L23)*
 
 Does any value in the collection pass the predicate?
 ramda calls this `any`, but we want to avoid that word in TypeScript
@@ -153,7 +153,7 @@ ___
 
 ▸ **somePass**<**T**>(`predicates`: [Predicate](_types_.md#predicate)‹T›[]): *(Anonymous function)*
 
-*Defined in [logic.ts:12](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/logic.ts#L12)*
+*Defined in [logic.ts:12](https://github.com/hermann-p/pragmatic-fp-ts/blob/923e279/src/logic.ts#L12)*
 
 Does any of the array of predicates pass when applied to the value?
 ramda calls this `anyPass`, but we want to avoid `any` in TypeScript
