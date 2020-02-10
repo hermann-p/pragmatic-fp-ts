@@ -37,15 +37,15 @@ export declare const sortBy: <A, B>(compare: Mappable<A, B>) => (coll: A[]) => M
  * Map Mappable over a collection. Safe in the collection itself, not
  * its values
  **/
-export declare const map: <A, B>(fn: Mappable<A, B>) => (coll: A[] | import("./Maybe").Just<A[]> | import("./Maybe").Nothing<A[]>) => Maybe<B[]>;
+export declare const map: <A, B>(fn: Mappable<A, B> | Mappable<A, Maybe<B>>) => (coll: A[] | import("./Maybe").Just<A[]> | import("./Maybe").Nothing<A[]>) => Maybe<B[]>;
 /**
  * Map Mappable over a collection. Safe in the collection and its values
  **/
-export declare const mapOr: <A, B>(defaultValue: B) => (fn: Mappable<A, B>) => (coll: A[] | import("./Maybe").Just<A[]> | import("./Maybe").Nothing<A[]>) => Maybe<B[]>;
+export declare const mapOr: <A, B>(defaultValue: B) => (fn: Mappable<A, B> | Mappable<A, Maybe<B>>) => (coll: A[] | import("./Maybe").Just<A[]> | import("./Maybe").Nothing<A[]>) => Maybe<B[]>;
 /**
  * Map Mappable over a collection, filtering out Nothings
  */
-export declare const mapJust: <A, B>(fn: Mappable<A, B>) => (coll: MaybeType<A[]>) => Maybe<B[]>;
+export declare const mapJust: <A, B>(fn: Mappable<A, B> | Mappable<A, Maybe<B>>) => (coll: MaybeType<A[]>) => Maybe<B[]>;
 /**
  * return a new array with all elements from coll for which pred is true
  */

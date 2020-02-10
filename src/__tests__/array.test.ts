@@ -107,6 +107,10 @@ describe("array functions", () => {
       expect(map(null as any)([1, 2, 3])).toBeInstanceOf(Nothing);
       expect(map((x) => x)(null as any)).toBeInstanceOf(Nothing);
     });
+    it("maps maybe mappables", () => {
+      const fn = (n: number) => maybe(n).bind((n) => n + 1);
+      expect(map(fn)([1, 2, 3]).getValue()).toEqual([2, 3, 4]);
+    });
   });
 
   describe("mapOr()()()", () => {

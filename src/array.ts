@@ -94,7 +94,9 @@ export const sortBy = <A, B>(compare: Mappable<A, B>) => (coll: A[]): Maybe<A[]>
  * Map Mappable over a collection. Safe in the collection itself, not
  * its values
  **/
-export const map = <A, B>(fn: Mappable<A, B>) => (coll: A[] | Maybe<A[]>): Maybe<B[]> =>
+export const map = <A, B>(fn: Mappable<A, B> | Mappable<A, Maybe<B>>) => (
+  coll: A[] | Maybe<A[]>
+): Maybe<B[]> =>
   isFunction(fn)
     ? maybe(coll)
         .bind((c: A[]) =>
@@ -107,7 +109,7 @@ export const map = <A, B>(fn: Mappable<A, B>) => (coll: A[] | Maybe<A[]>): Maybe
         .filter(isNotEmpty)
     : nothing();
 
-const __mapOr = <A, B>(def: B, fn: Mappable<A, B>) => (coll: A[]): B[] =>
+const __mapOr = <A, B>(def: B, fn: Mappable<A, B> | Mappable<A, Maybe<B>>) => (coll: A[]): B[] =>
   coll.map((a) =>
     maybe(a)
       .bind(fn)
@@ -117,7 +119,7 @@ const __mapOr = <A, B>(def: B, fn: Mappable<A, B>) => (coll: A[]): B[] =>
 /**
  * Map Mappable over a collection. Safe in the collection and its values
  **/
-export const mapOr = <A, B>(defaultValue: B) => (fn: Mappable<A, B>) => (
+export const mapOr = <A, B>(defaultValue: B) => (fn: Mappable<A, B> | Mappable<A, Maybe<B>>) => (
   coll: A[] | Maybe<A[]>
 ): Maybe<B[]> =>
   isFunction(fn)
@@ -129,7 +131,9 @@ export const mapOr = <A, B>(defaultValue: B) => (fn: Mappable<A, B>) => (
 /**
  * Map Mappable over a collection, filtering out Nothings
  */
-export const mapJust = <A, B>(fn: Mappable<A, B>) => (coll: MaybeType<A[]>): Maybe<B[]> =>
+export const mapJust = <A, B>(fn: Mappable<A, B> | Mappable<A, Maybe<B>>) => (
+  coll: MaybeType<A[]>
+): Maybe<B[]> =>
   isFunction(fn)
     ? maybe(coll)
         .filter(isNotEmpty)

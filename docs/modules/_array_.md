@@ -51,7 +51,7 @@
 
 • **first**: *head* =  head
 
-*Defined in [array.ts:17](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L17)*
+*Defined in [array.ts:17](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L17)*
 
 returns first element of an array
 
@@ -61,7 +61,7 @@ ___
 
 • **includes**: *[contains](_array_.md#contains)* =  contains
 
-*Defined in [array.ts:199](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L199)*
+*Defined in [array.ts:203](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L203)*
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 • **last**: *tail* =  tail
 
-*Defined in [array.ts:27](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L27)*
+*Defined in [array.ts:27](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L27)*
 
 returns last element of an array
 
@@ -79,15 +79,15 @@ ___
 
 • **size**: *count* =  count
 
-*Defined in [array.ts:336](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L336)*
+*Defined in [array.ts:340](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L340)*
 
 ## Functions
 
 ### `Const` __mapOr
 
-▸ **__mapOr**<**A**, **B**>(`def`: B, `fn`: [Mappable](_types_.md#mappable)‹A, B›): *(Anonymous function)*
+▸ **__mapOr**<**A**, **B**>(`def`: B, `fn`: [Mappable](_types_.md#mappable)‹A, B› | [Mappable](_types_.md#mappable)‹A, [Maybe](_maybe_.md#maybe)‹B››): *(Anonymous function)*
 
-*Defined in [array.ts:110](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L110)*
+*Defined in [array.ts:112](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L112)*
 
 **Type parameters:**
 
@@ -100,7 +100,7 @@ ___
 Name | Type |
 ------ | ------ |
 `def` | B |
-`fn` | [Mappable](_types_.md#mappable)‹A, B› |
+`fn` | [Mappable](_types_.md#mappable)‹A, B› &#124; [Mappable](_types_.md#mappable)‹A, [Maybe](_maybe_.md#maybe)‹B›› |
 
 **Returns:** *(Anonymous function)*
 
@@ -110,7 +110,7 @@ ___
 
 ▸ **__reverse**<**T**>(`coll`: Array‹T›): *Array‹T›*
 
-*Defined in [array.ts:29](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L29)*
+*Defined in [array.ts:29](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L29)*
 
 **Type parameters:**
 
@@ -130,7 +130,7 @@ ___
 
 ▸ **__sortBy**<**A**, **B**>(`compare`: [Mappable](_types_.md#mappable)‹A, B›): *(Anonymous function)*
 
-*Defined in [array.ts:76](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L76)*
+*Defined in [array.ts:76](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L76)*
 
 **Type parameters:**
 
@@ -152,7 +152,7 @@ ___
 
 ▸ **__take**<**T**>(`n`: number): *(Anonymous function)*
 
-*Defined in [array.ts:42](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L42)*
+*Defined in [array.ts:42](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L42)*
 
 **Type parameters:**
 
@@ -172,7 +172,7 @@ ___
 
 ▸ **__takeWhile**<**T**>(`pred`: [Predicate](_types_.md#predicate)‹T›): *(Anonymous function)*
 
-*Defined in [array.ts:60](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L60)*
+*Defined in [array.ts:60](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L60)*
 
 **Type parameters:**
 
@@ -192,7 +192,7 @@ ___
 
 ▸ **append**<**A**>(`tailColl`: [MaybeType](_types_.md#maybetype)‹A[]›): *function*
 
-*Defined in [array.ts:225](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L225)*
+*Defined in [array.ts:229](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L229)*
 
 Concatenate two strings or arrays
 Read as append(this)(to that) -> append([3,4])([1,2]) === [1,2,3,4]
@@ -219,7 +219,7 @@ Name | Type |
 
 ▸ **append**(`tail`: [MaybeType](_types_.md#maybetype)‹string›): *function*
 
-*Defined in [array.ts:226](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L226)*
+*Defined in [array.ts:230](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L230)*
 
 **Parameters:**
 
@@ -243,7 +243,7 @@ ___
 
 ▸ **butLast**<**A**>(`coll`: [MaybeType](_types_.md#maybetype)‹A[]›): *[Just](../classes/_maybe_.just.md)‹A[]› | [Nothing](../classes/_maybe_.nothing.md)‹A[]›*
 
-*Defined in [array.ts:256](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L256)*
+*Defined in [array.ts:260](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L260)*
 
 return all but last element of an array
 
@@ -265,7 +265,7 @@ ___
 
 ▸ **conj**<**A**>(`elem`: [MaybeType](_types_.md#maybetype)‹A›): *(Anonymous function)*
 
-*Defined in [array.ts:209](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L209)*
+*Defined in [array.ts:213](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L213)*
 
 Insert a single element after last element of an array
 
@@ -287,7 +287,7 @@ ___
 
 ▸ **cons**<**A**>(`elem`: [MaybeType](_types_.md#maybetype)‹A›): *(Anonymous function)*
 
-*Defined in [array.ts:204](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L204)*
+*Defined in [array.ts:208](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L208)*
 
 Insert a single element before first element of an array
 
@@ -309,7 +309,7 @@ ___
 
 ▸ **contains**<**A**>(`elem`: [MaybeType](_types_.md#maybetype)‹A›): *function*
 
-*Defined in [array.ts:194](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L194)*
+*Defined in [array.ts:198](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L198)*
 
 test if array or string coll has an element elem
 contains("o")("word") === true
@@ -337,7 +337,7 @@ Name | Type |
 
 ▸ **contains**(`elem`: [MaybeType](_types_.md#maybetype)‹string›): *function*
 
-*Defined in [array.ts:195](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L195)*
+*Defined in [array.ts:199](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L199)*
 
 **Parameters:**
 
@@ -361,7 +361,7 @@ ___
 
 ▸ **count**(`coll`: [MaybeType](_types_.md#maybetype)‹unknown[] | string›): *[Just](../classes/_maybe_.just.md)‹number› | [Nothing](../classes/_maybe_.nothing.md)‹number›*
 
-*Defined in [array.ts:335](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L335)*
+*Defined in [array.ts:339](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L339)*
 
 **Parameters:**
 
@@ -377,7 +377,7 @@ ___
 
 ▸ **filter**<**A**>(`pred`: [Predicate](_types_.md#predicate)‹A›): *function*
 
-*Defined in [array.ts:151](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L151)*
+*Defined in [array.ts:155](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L155)*
 
 return a new array with all elements from coll for which pred is true
 
@@ -403,7 +403,7 @@ Name | Type |
 
 ▸ **filter**<**A**>(`pred`: [Predicate](_types_.md#predicate)‹[Maybe](_maybe_.md#maybe)‹A››): *function*
 
-*Defined in [array.ts:152](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L152)*
+*Defined in [array.ts:156](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L156)*
 
 **Type parameters:**
 
@@ -431,7 +431,7 @@ ___
 
 ▸ **find**<**T**>(`predicate`: [Predicate](_types_.md#predicate)‹T›): *(Anonymous function)*
 
-*Defined in [array.ts:303](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L303)*
+*Defined in [array.ts:307](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L307)*
 
 **Type parameters:**
 
@@ -451,7 +451,7 @@ ___
 
 ▸ **head**<**T**>(`coll`: Array‹T› | [Maybe](_maybe_.md#maybe)‹Array‹T››): *[Maybe](_maybe_.md#maybe)‹T›*
 
-*Defined in [array.ts:10](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L10)*
+*Defined in [array.ts:10](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L10)*
 
 returns first element of an array
 
@@ -473,7 +473,7 @@ ___
 
 ▸ **insertAt**<**A**>(`index`: [MaybeType](_types_.md#maybetype)‹number›): *function*
 
-*Defined in [array.ts:267](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L267)*
+*Defined in [array.ts:271](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L271)*
 
 insert element elem at position n in array coll
 
@@ -511,7 +511,7 @@ ___
 
 ▸ **isIn**(`coll`: [MaybeType](_types_.md#maybetype)‹string›): *function*
 
-*Defined in [array.ts:180](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L180)*
+*Defined in [array.ts:184](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L184)*
 
 test if elem is a member of array or string coll
 isIn("word")("o") === true
@@ -535,7 +535,7 @@ Name | Type |
 
 ▸ **isIn**<**A**>(`coll`: [MaybeType](_types_.md#maybetype)‹A[]›): *function*
 
-*Defined in [array.ts:181](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L181)*
+*Defined in [array.ts:185](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L185)*
 
 **Type parameters:**
 
@@ -563,7 +563,7 @@ ___
 
 ▸ **join**<**A**>(`delimiter`: [MaybeType](_types_.md#maybetype)‹string›): *(Anonymous function)*
 
-*Defined in [array.ts:216](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L216)*
+*Defined in [array.ts:220](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L220)*
 
 Join all array elements by delimiter string
 join("-")([1,2,3]) === "1-2-3"
@@ -584,9 +584,9 @@ ___
 
 ### `Const` map
 
-▸ **map**<**A**, **B**>(`fn`: [Mappable](_types_.md#mappable)‹A, B›): *(Anonymous function)*
+▸ **map**<**A**, **B**>(`fn`: [Mappable](_types_.md#mappable)‹A, B› | [Mappable](_types_.md#mappable)‹A, [Maybe](_maybe_.md#maybe)‹B››): *(Anonymous function)*
 
-*Defined in [array.ts:97](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L97)*
+*Defined in [array.ts:97](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L97)*
 
 Map Mappable over a collection. Safe in the collection itself, not
 its values
@@ -601,7 +601,7 @@ its values
 
 Name | Type |
 ------ | ------ |
-`fn` | [Mappable](_types_.md#mappable)‹A, B› |
+`fn` | [Mappable](_types_.md#mappable)‹A, B› &#124; [Mappable](_types_.md#mappable)‹A, [Maybe](_maybe_.md#maybe)‹B›› |
 
 **Returns:** *(Anonymous function)*
 
@@ -609,9 +609,9 @@ ___
 
 ### `Const` mapJust
 
-▸ **mapJust**<**A**, **B**>(`fn`: [Mappable](_types_.md#mappable)‹A, B›): *(Anonymous function)*
+▸ **mapJust**<**A**, **B**>(`fn`: [Mappable](_types_.md#mappable)‹A, B› | [Mappable](_types_.md#mappable)‹A, [Maybe](_maybe_.md#maybe)‹B››): *(Anonymous function)*
 
-*Defined in [array.ts:132](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L132)*
+*Defined in [array.ts:134](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L134)*
 
 Map Mappable over a collection, filtering out Nothings
 
@@ -625,7 +625,7 @@ Map Mappable over a collection, filtering out Nothings
 
 Name | Type |
 ------ | ------ |
-`fn` | [Mappable](_types_.md#mappable)‹A, B› |
+`fn` | [Mappable](_types_.md#mappable)‹A, B› &#124; [Mappable](_types_.md#mappable)‹A, [Maybe](_maybe_.md#maybe)‹B›› |
 
 **Returns:** *(Anonymous function)*
 
@@ -635,7 +635,7 @@ ___
 
 ▸ **mapOr**<**A**, **B**>(`defaultValue`: B): *(Anonymous function)*
 
-*Defined in [array.ts:120](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L120)*
+*Defined in [array.ts:122](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L122)*
 
 Map Mappable over a collection. Safe in the collection and its values
 
@@ -659,7 +659,7 @@ ___
 
 ▸ **prepend**<**A**>(`headColl`: [MaybeType](_types_.md#maybetype)‹A[]›): *(Anonymous function)*
 
-*Defined in [array.ts:242](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L242)*
+*Defined in [array.ts:246](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L246)*
 
 Concatenate two strings or arrays
 Read a prepend(this)(to that) -> prepend( [1,2])([3,4]) === [1,2,3,4]
@@ -682,7 +682,7 @@ ___
 
 ▸ **range**(`start`: [MaybeType](_types_.md#maybetype)‹number›): *(Anonymous function)*
 
-*Defined in [array.ts:318](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L318)*
+*Defined in [array.ts:322](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L322)*
 
 **Parameters:**
 
@@ -698,7 +698,7 @@ ___
 
 ▸ **reduce**<**A**, **B**>(`fn`: function): *(Anonymous function)*
 
-*Defined in [array.ts:311](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L311)*
+*Defined in [array.ts:315](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L315)*
 
 **Type parameters:**
 
@@ -729,7 +729,7 @@ ___
 
 ▸ **reject**<**A**>(`pred`: [Predicate](_types_.md#predicate)‹A›): *function*
 
-*Defined in [array.ts:169](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L169)*
+*Defined in [array.ts:173](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L173)*
 
 return a new array with all elements from coll where pred is false
 
@@ -755,7 +755,7 @@ Name | Type |
 
 ▸ **reject**<**A**>(`pred`: [Predicate](_types_.md#predicate)‹[Maybe](_maybe_.md#maybe)‹A››): *function*
 
-*Defined in [array.ts:170](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L170)*
+*Defined in [array.ts:174](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L174)*
 
 **Type parameters:**
 
@@ -783,7 +783,7 @@ ___
 
 ▸ **removeAt**<**A**>(`n`: [MaybeType](_types_.md#maybetype)‹number›): *(Anonymous function)*
 
-*Defined in [array.ts:288](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L288)*
+*Defined in [array.ts:292](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L292)*
 
 **Type parameters:**
 
@@ -803,7 +803,7 @@ ___
 
 ▸ **rest**<**A**>(`coll`: [MaybeType](_types_.md#maybetype)‹A[]›): *[Just](../classes/_maybe_.just.md)‹A[]› | [Nothing](../classes/_maybe_.nothing.md)‹A[]›*
 
-*Defined in [array.ts:248](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L248)*
+*Defined in [array.ts:252](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L252)*
 
 return all but first element of an array
 
@@ -825,7 +825,7 @@ ___
 
 ▸ **reverse**<**T**>(`coll`: Array‹T› | [Maybe](_maybe_.md#maybe)‹Array‹T››): *[Maybe](_maybe_.md#maybe)‹Array‹T››*
 
-*Defined in [array.ts:39](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L39)*
+*Defined in [array.ts:39](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L39)*
 
 Reverse elements of an array
 reverse([1,2,3])  ->  [3,2,1]
@@ -848,7 +848,7 @@ ___
 
 ▸ **sortBy**<**A**, **B**>(`compare`: [Mappable](_types_.md#mappable)‹A, B›): *(Anonymous function)*
 
-*Defined in [array.ts:86](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L86)*
+*Defined in [array.ts:86](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L86)*
 
 Sort array elements by comparing values generated from elements by compare function
 
@@ -872,7 +872,7 @@ ___
 
 ▸ **tail**<**T**>(`coll`: Array‹T› | [Maybe](_maybe_.md#maybe)‹Array‹T››): *[Maybe](_maybe_.md#maybe)‹T›*
 
-*Defined in [array.ts:22](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L22)*
+*Defined in [array.ts:22](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L22)*
 
 returns last element of an array
 
@@ -894,7 +894,7 @@ ___
 
 ▸ **take**(`n`: number | [Maybe](_maybe_.md#maybe)‹number›): *(Anonymous function)*
 
-*Defined in [array.ts:51](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L51)*
+*Defined in [array.ts:51](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L51)*
 
 get n first elements from an array
 
@@ -912,7 +912,7 @@ ___
 
 ▸ **takeWhile**<**T**>(`pred`: [Predicate](_types_.md#predicate)‹T›): *(Anonymous function)*
 
-*Defined in [array.ts:69](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/array.ts#L69)*
+*Defined in [array.ts:69](https://github.com/hermann-p/pragmatic-fp-ts/blob/75bb725/src/array.ts#L69)*
 
 take elements from array while pred is true
 
