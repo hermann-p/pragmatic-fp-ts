@@ -15,6 +15,7 @@
 ### Functions
 
 * [replace](_string_.md#const-replace)
+* [split](_string_.md#const-split)
 * [test](_string_.md#const-test)
 * [toLower](_string_.md#const-tolower)
 * [toUpper](_string_.md#const-toupper)
@@ -25,7 +26,7 @@
 
 Ƭ **ReplacementFunction**: *function*
 
-*Defined in [string.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/bab22d3/src/string.ts#L4)*
+*Defined in [string.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/string.ts#L4)*
 
 #### Type declaration:
 
@@ -44,7 +45,7 @@ Name | Type |
 
 • **matches**: *test* =  test
 
-*Defined in [string.ts:12](https://github.com/hermann-p/pragmatic-fp-ts/blob/bab22d3/src/string.ts#L12)*
+*Defined in [string.ts:12](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/string.ts#L12)*
 
 ## Functions
 
@@ -52,7 +53,7 @@ Name | Type |
 
 ▸ **replace**(`pattern`: string | RegExp): *(Anonymous function)*
 
-*Defined in [string.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/bab22d3/src/string.ts#L5)*
+*Defined in [string.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/string.ts#L5)*
 
 **Parameters:**
 
@@ -64,11 +65,27 @@ Name | Type |
 
 ___
 
+### `Const` split
+
+▸ **split**(`delimiter`: [MaybeType](_types_.md#maybetype)‹string›): *(Anonymous function)*
+
+*Defined in [string.ts:17](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/string.ts#L17)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`delimiter` | [MaybeType](_types_.md#maybetype)‹string› |
+
+**Returns:** *(Anonymous function)*
+
+___
+
 ### `Const` test
 
 ▸ **test**(`regex`: RegExp): *[Predicate](_types_.md#predicate)‹string›*
 
-*Defined in [string.ts:10](https://github.com/hermann-p/pragmatic-fp-ts/blob/bab22d3/src/string.ts#L10)*
+*Defined in [string.ts:10](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/string.ts#L10)*
 
 **Parameters:**
 
@@ -84,7 +101,7 @@ ___
 
 ▸ **toLower**(`str`: [MaybeType](_types_.md#maybetype)‹string›): *[Just](../classes/_maybe_.just.md)‹string› | [Nothing](../classes/_maybe_.nothing.md)‹string›*
 
-*Defined in [string.ts:15](https://github.com/hermann-p/pragmatic-fp-ts/blob/bab22d3/src/string.ts#L15)*
+*Defined in [string.ts:15](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/string.ts#L15)*
 
 **Parameters:**
 
@@ -100,7 +117,7 @@ ___
 
 ▸ **toUpper**(`str`: [MaybeType](_types_.md#maybetype)‹string›): *[Just](../classes/_maybe_.just.md)‹string› | [Nothing](../classes/_maybe_.nothing.md)‹string›*
 
-*Defined in [string.ts:14](https://github.com/hermann-p/pragmatic-fp-ts/blob/bab22d3/src/string.ts#L14)*
+*Defined in [string.ts:14](https://github.com/hermann-p/pragmatic-fp-ts/blob/9e9f479/src/string.ts#L14)*
 
 **Parameters:**
 

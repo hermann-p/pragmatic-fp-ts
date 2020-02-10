@@ -5,4 +5,5 @@ export declare const test: (regex: RegExp) => Predicate<string>;
 export declare const matches: (regex: RegExp) => Predicate<string>;
 export declare const toUpper: (str: string | import("./Maybe").Just<string> | import("./Maybe").Nothing<string>) => import("./Maybe").Maybe<string>;
 export declare const toLower: (str: string | import("./Maybe").Just<string> | import("./Maybe").Nothing<string>) => import("./Maybe").Maybe<string>;
+export declare const split: (delimiter: string | import("./Maybe").Just<string> | import("./Maybe").Nothing<string>) => (stringToSplit: string | import("./Maybe").Just<string> | import("./Maybe").Nothing<string>) => import("./Maybe").Nothing<unknown> | import("./Maybe").Just<string[]>;
 export {};

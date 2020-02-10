@@ -35,4 +35,24 @@ describe("string", () => {
   it("toLower()", () => {
     expect(s.toLower("FOO").getValue()).toEqual("foo");
   });
+
+  describe("split", () => {
+    it("splits strings correctly", () => {
+      expect(
+        s
+          .split("-")("some-long-string")
+          .getValue()
+      ).toEqual(["some", "long", "string"]);
+      expect(
+        s
+          .split(" ")("some long string")
+          .getValue()
+      ).toEqual(["some", "long", "string"]);
+      expect(
+        s
+          .split("o")("some long string")
+          .getValue()
+      ).toEqual(["s", "me l", "ng string"]);
+    });
+  });
 });

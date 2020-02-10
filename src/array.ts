@@ -1,8 +1,8 @@
-import { Mappable, MaybeType, Predicate } from "./types";
-import { Maybe, maybe, nothing, just } from "./Maybe";
-import { getMonadValue } from "./tools";
 import { invert } from "./functools";
-import { isFunction, isNotEmpty, isNumber, isString, isSome } from "./predicates";
+import { just, Maybe, maybe, nothing } from "./Maybe";
+import { isFunction, isNotEmpty, isNumber, isSome, isString } from "./predicates";
+import { getMonadValue } from "./tools";
+import { Mappable, MaybeType, Predicate } from "./types";
 
 /**
  * returns first element of an array
@@ -148,21 +148,29 @@ export const mapJust = <A, B>(fn: Mappable<A, B>) => (coll: MaybeType<A[]>): May
 /**
  * return a new array with all elements from coll for which pred is true
  */
-export const filter = <A>(pred: Predicate<A>) => (coll: A[] | Maybe<A[]>) =>
-  maybe(coll)
-    .bind((c) =>
-      c.filter((a) =>
-        maybe(a)
-          .bind(pred)
-          .getValueOr(false)
+export function filter<A>(pred: Predicate<A>): (coll: MaybeType<A[]>) => Maybe<A>;
+export function filter<A>(pred: Predicate<Maybe<A>>): (coll: MaybeType<A[]>) => Maybe<A>;
+export function filter<A>(pred: Predicate<MaybeType<A>>) {
+  return (coll: MaybeType<A[]>) =>
+    maybe(coll)
+      .bind((c) =>
+        c.filter((a) =>
+          maybe(a)
+            .bind(pred)
+            .getValueOr(false)
+        )
       )
-    )
-    .filter(isNotEmpty);
+      .filter(isNotEmpty);
+}
 
 /**
  * return a new array with all elements from coll where pred is false
  */
-export const reject = <A>(pred: Predicate<A>) => filter(invert(pred));
+export function reject<A>(pred: Predicate<A>): (coll: MaybeType<A[]>) => Maybe<A>;
+export function reject<A>(pred: Predicate<Maybe<A>>): (coll: MaybeType<A[]>) => Maybe<A>;
+export function reject<A>(pred: Predicate<MaybeType<A>>) {
+  return filter(invert(pred));
+}
 
 /**
  * test if elem is a member of array or string coll
