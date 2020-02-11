@@ -6,6 +6,7 @@ import {
   cons,
   count,
   contains,
+  countBy,
   filter,
   find,
   head,
@@ -352,11 +353,26 @@ describe("array functions", () => {
         lehrer: [lempel],
       });
     });
-
     it("groups arays by key functions", () => {
       expect(
         groupBy((n: number) => (n % 2 === 0 ? "even" : "odd"))([1, 2, 3, 4, 5]).getValue()
       ).toEqual({ even: [2, 4], odd: [1, 3, 5] });
+    });
+  });
+  describe("countBy()", () => {
+    it("counts dicts by keys", () => {
+      const max = { type: "bengel", name: "max" };
+      const moritz = { type: "bengel", name: "moritz" };
+      const lempel = { type: "lehrer", name: "lempel" };
+      expect(countBy("type")([max, moritz, lempel]).getValue()).toEqual({
+        bengel: 2,
+        lehrer: 1,
+      });
+    });
+    it("counts arays by key functions", () => {
+      expect(
+        countBy((n: number) => (n % 2 === 0 ? "even" : "odd"))([1, 2, 3, 4, 5]).getValue()
+      ).toEqual({ even: 2, odd: 3 });
     });
   });
 });

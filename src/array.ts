@@ -3,6 +3,7 @@ import { just, Maybe, maybe, nothing } from "./Maybe";
 import { isFunction, isNotEmpty, isNumber, isSome, isString } from "./predicates";
 import { getMonadValue } from "./tools";
 import { Dictionary, Mappable, MaybeType, Predicate } from "./types";
+import { mapValues } from "./object";
 
 /**
  * returns first element of an array
@@ -363,3 +364,17 @@ export function groupBy<T>(getGroup: unknown) {
 
 export const count = (coll: MaybeType<unknown[] | string>) => maybe(coll).bind((c) => c.length);
 export const size = count;
+
+export function countBy<T extends Dictionary>(
+  key: string
+): (elems: MaybeType<T[]>) => Maybe<{ [key: string]: number }>;
+export function countBy<T>(
+  calcCount: Mappable<T, string>
+): (elems: MaybeType<T[]>) => Maybe<{ [key: string]: number }>;
+export function countBy<T>(
+  calcGroup: Mappable<T, number>
+): (elems: MaybeType<T[]>) => Maybe<{ [key: number]: number }>;
+export function countBy(counter: any) {
+  return (countable: MaybeType<any[]>) =>
+    groupBy(counter)(countable).bind(mapValues((v: unknown[]) => v.length));
+}

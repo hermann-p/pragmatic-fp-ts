@@ -37,7 +37,7 @@
 
 ▸ **bind**<**B**>(`_`: [Mappable](../modules/_types_.md#mappable)‹T, B | [Maybe](../modules/_maybe_.md#maybe)‹B››): *[Maybe](../modules/_maybe_.md#maybe)‹B›*
 
-*Defined in [Maybe.ts:91](https://github.com/hermann-p/pragmatic-fp-ts/blob/8ef41a8/src/Maybe.ts#L91)*
+*Defined in [Maybe.ts:91](https://github.com/hermann-p/pragmatic-fp-ts/blob/f962e01/src/Maybe.ts#L91)*
 
 **Type parameters:**
 
@@ -57,7 +57,7 @@ ___
 
 ▸ **effect**(`_`: [Effect](../modules/_types_.md#effect)‹T›): *[Maybe](../modules/_maybe_.md#maybe)‹T›*
 
-*Defined in [Maybe.ts:105](https://github.com/hermann-p/pragmatic-fp-ts/blob/8ef41a8/src/Maybe.ts#L105)*
+*Defined in [Maybe.ts:105](https://github.com/hermann-p/pragmatic-fp-ts/blob/f962e01/src/Maybe.ts#L105)*
 
 **Parameters:**
 
@@ -73,7 +73,7 @@ ___
 
 ▸ **filter**(`_`: [Predicate](../modules/_types_.md#predicate)‹T›): *[Maybe](../modules/_maybe_.md#maybe)‹T›*
 
-*Defined in [Maybe.ts:102](https://github.com/hermann-p/pragmatic-fp-ts/blob/8ef41a8/src/Maybe.ts#L102)*
+*Defined in [Maybe.ts:102](https://github.com/hermann-p/pragmatic-fp-ts/blob/f962e01/src/Maybe.ts#L102)*
 
 **Parameters:**
 
@@ -89,7 +89,7 @@ ___
 
 ▸ **getValue**(): *T*
 
-*Defined in [Maybe.ts:73](https://github.com/hermann-p/pragmatic-fp-ts/blob/8ef41a8/src/Maybe.ts#L73)*
+*Defined in [Maybe.ts:73](https://github.com/hermann-p/pragmatic-fp-ts/blob/f962e01/src/Maybe.ts#L73)*
 
 **Returns:** *T*
 
@@ -99,7 +99,7 @@ ___
 
 ▸ **getValueOr**(`alternative`: T | [Just](_maybe_.just.md)‹T›): *T*
 
-*Defined in [Maybe.ts:76](https://github.com/hermann-p/pragmatic-fp-ts/blob/8ef41a8/src/Maybe.ts#L76)*
+*Defined in [Maybe.ts:76](https://github.com/hermann-p/pragmatic-fp-ts/blob/f962e01/src/Maybe.ts#L76)*
 
 **Parameters:**
 
@@ -115,7 +115,7 @@ ___
 
 ▸ **isJust**(): *boolean*
 
-*Defined in [Maybe.ts:79](https://github.com/hermann-p/pragmatic-fp-ts/blob/8ef41a8/src/Maybe.ts#L79)*
+*Defined in [Maybe.ts:79](https://github.com/hermann-p/pragmatic-fp-ts/blob/f962e01/src/Maybe.ts#L79)*
 
 **Returns:** *boolean*
 
@@ -125,7 +125,7 @@ ___
 
 ▸ **isMaybe**(): *boolean*
 
-*Defined in [Maybe.ts:88](https://github.com/hermann-p/pragmatic-fp-ts/blob/8ef41a8/src/Maybe.ts#L88)*
+*Defined in [Maybe.ts:88](https://github.com/hermann-p/pragmatic-fp-ts/blob/f962e01/src/Maybe.ts#L88)*
 
 **Returns:** *boolean*
 
@@ -135,7 +135,7 @@ ___
 
 ▸ **isMonad**(): *boolean*
 
-*Defined in [Maybe.ts:85](https://github.com/hermann-p/pragmatic-fp-ts/blob/8ef41a8/src/Maybe.ts#L85)*
+*Defined in [Maybe.ts:85](https://github.com/hermann-p/pragmatic-fp-ts/blob/f962e01/src/Maybe.ts#L85)*
 
 **Returns:** *boolean*
 
@@ -145,7 +145,7 @@ ___
 
 ▸ **isNothing**(): *boolean*
 
-*Defined in [Maybe.ts:82](https://github.com/hermann-p/pragmatic-fp-ts/blob/8ef41a8/src/Maybe.ts#L82)*
+*Defined in [Maybe.ts:82](https://github.com/hermann-p/pragmatic-fp-ts/blob/f962e01/src/Maybe.ts#L82)*
 
 **Returns:** *boolean*
 
@@ -155,7 +155,7 @@ ___
 
 ▸ **match**<**U**>(`match`: [MaybePattern](../modules/_maybe_.md#maybepattern)‹T, U›): *[Maybe](../modules/_maybe_.md#maybe)‹U›*
 
-*Defined in [Maybe.ts:94](https://github.com/hermann-p/pragmatic-fp-ts/blob/8ef41a8/src/Maybe.ts#L94)*
+*Defined in [Maybe.ts:94](https://github.com/hermann-p/pragmatic-fp-ts/blob/f962e01/src/Maybe.ts#L94)*
 
 **Type parameters:**
 
@@ -175,7 +175,7 @@ ___
 
 ▸ **toEither**(): *[Either](../modules/_either_.md#either)‹[Reason](../modules/_either_.md#reason), T›*
 
-*Defined in [Maybe.ts:108](https://github.com/hermann-p/pragmatic-fp-ts/blob/8ef41a8/src/Maybe.ts#L108)*
+*Defined in [Maybe.ts:108](https://github.com/hermann-p/pragmatic-fp-ts/blob/f962e01/src/Maybe.ts#L108)*
 
 **Returns:** *[Either](../modules/_either_.md#either)‹[Reason](../modules/_either_.md#reason), T›*
 
@@ -185,6 +185,6 @@ ___
 
 ▸ **toString**(): *string*
 
-*Defined in [Maybe.ts:111](https://github.com/hermann-p/pragmatic-fp-ts/blob/8ef41a8/src/Maybe.ts#L111)*
+*Defined in [Maybe.ts:111](https://github.com/hermann-p/pragmatic-fp-ts/blob/f962e01/src/Maybe.ts#L111)*
 
 **Returns:** *string*
