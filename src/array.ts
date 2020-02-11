@@ -2,7 +2,7 @@ import { invert } from "./functools";
 import { just, Maybe, maybe, nothing } from "./Maybe";
 import { isFunction, isNotEmpty, isNumber, isSome, isString } from "./predicates";
 import { getMonadValue } from "./tools";
-import { Mappable, MaybeType, Predicate } from "./types";
+import { Dictionary, Mappable, MaybeType, Predicate } from "./types";
 
 /**
  * returns first element of an array
@@ -335,6 +335,31 @@ export const range = (start: MaybeType<number>) => (end: MaybeType<number>) => {
     return nothing();
   }
 };
+
+export function groupBy<T extends Dictionary>(
+  key: string
+): (elems: MaybeType<T[]>) => Maybe<{ [key: string]: T[] }>;
+export function groupBy<T>(
+  calcGroup: Mappable<T, string>
+): (elems: MaybeType<T[]>) => Maybe<{ [key: string]: T[] }>;
+export function groupBy<T>(
+  calcGroup: Mappable<T, number>
+): (elems: MaybeType<T[]>) => Maybe<{ [key: number]: T[] }>;
+export function groupBy<T>(getGroup: unknown) {
+  const groupFn =
+    typeof getGroup === "function"
+      ? (getGroup as Mappable<T, string | number>)
+      : (input: any) => (input && input[getGroup as string]) || null;
+
+  return (elems: MaybeType<T[]>) =>
+    maybe(elems).bind(
+      reduce((coll: Dictionary, nextElement: T) => {
+        const group = groupFn(nextElement);
+        coll[group] ? coll[group].push(nextElement) : (coll[group] = [nextElement]);
+        return coll;
+      })({})
+    );
+}
 
 export const count = (coll: MaybeType<unknown[] | string>) => maybe(coll).bind((c) => c.length);
 export const size = count;

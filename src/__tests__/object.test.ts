@@ -57,8 +57,11 @@ describe("object", () => {
   });
 
   describe("assoc()", () => {
-    it("associates values", () => {
+    it("associates values in dictionaries", () => {
       expect(assoc("bar")(2)({ foo: 1 }).getValue()).toEqual({ foo: 1, bar: 2 });
+    });
+    it("replaces values in arrays", () => {
+      expect(assoc(1)("foo")(["foo", "bar", "baz"]).getValue()).toEqual(["foo", "foo", "baz"]);
     });
   });
 

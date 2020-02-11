@@ -14,7 +14,8 @@ export declare const pick: (keysToPick: MaybeType<(string | number)[]>) => (dict
 export declare const pickValuesBy: (predicate: Predicate<any>) => (dict: Dictionary) => Maybe<Dictionary>;
 export declare const mapValues: <A, B>(fn: Mappable<A, B>) => (obj: MaybeType<Dictionary>) => Maybe<Dictionary>;
 export declare const mapFilterValues: <A, B>(fn: Mappable<A, B>) => (obj: MaybeType<Dictionary>) => Maybe<Dictionary>;
-export declare const assoc: <T>(propName: string | number) => (value: MaybeType<T>) => (target: MaybeType<Dictionary>) => Maybe<Dictionary>;
+export declare function assoc<T, O extends Dictionary>(propName: KeyType): (value: MaybeType<T>) => (dict: MaybeType<O>) => Maybe<O>;
+export declare function assoc<T>(key: number): (value: T) => (arr: MaybeType<T[]>) => Maybe<T[]>;
 export declare const assocIn: <T>(path: (string | number)[]) => (value: MaybeType<T>) => (target: MaybeType<Dictionary>) => Maybe<Dictionary>;
 export declare const dissoc: (key: string | number) => (value: MaybeType<Dictionary>) => Maybe<unknown>;
 export declare const update: <A, B>(propName: string | number) => (fn: Mappable<A, B>) => (dict: MaybeType<Dictionary>) => Maybe<Dictionary>;

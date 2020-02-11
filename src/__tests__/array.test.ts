@@ -26,6 +26,7 @@ import {
   take,
   takeWhile,
   reduce,
+  groupBy,
 } from "../array";
 
 describe("array functions", () => {
@@ -338,6 +339,24 @@ describe("array functions", () => {
 
     it("gracefully catches Nothings", () => {
       expect(range(nothing())(5)).toBeInstanceOf(Nothing);
+    });
+  });
+
+  describe("groupBy()", () => {
+    it("groups dicts by keys", () => {
+      const max = { type: "bengel", name: "max" };
+      const moritz = { type: "bengel", name: "moritz" };
+      const lempel = { type: "lehrer", name: "lempel" };
+      expect(groupBy("type")([max, moritz, lempel]).getValue()).toEqual({
+        bengel: [max, moritz],
+        lehrer: [lempel],
+      });
+    });
+
+    it("groups arays by key functions", () => {
+      expect(
+        groupBy((n: number) => (n % 2 === 0 ? "even" : "odd"))([1, 2, 3, 4, 5]).getValue()
+      ).toEqual({ even: [2, 4], odd: [1, 3, 5] });
     });
   });
 });

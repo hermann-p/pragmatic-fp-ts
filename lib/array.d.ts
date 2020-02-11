@@ -1,5 +1,5 @@
 import { Maybe } from "./Maybe";
-import { Mappable, MaybeType, Predicate } from "./types";
+import { Dictionary, Mappable, MaybeType, Predicate } from "./types";
 /**
  * returns first element of an array
  */
@@ -111,5 +111,14 @@ export declare function removeAt<A>(n: MaybeType<number>): (coll: MaybeType<A[]>
 export declare function find<T>(predicate: Predicate<T>): (coll: T[]) => Maybe<T>;
 export declare const reduce: <A, B>(fn: (accum: B, nextValue: A, index: number, fullColl: A[]) => B) => (initial: B) => (coll: MaybeType<A[]>) => import("./Maybe").Nothing<unknown> | import("./Maybe").Just<B>;
 export declare const range: (start: number | import("./Maybe").Just<number> | import("./Maybe").Nothing<number>) => (end: number | import("./Maybe").Just<number> | import("./Maybe").Nothing<number>) => import("./Maybe").Nothing<unknown> | import("./Maybe").Just<number[]>;
+export declare function groupBy<T extends Dictionary>(key: string): (elems: MaybeType<T[]>) => Maybe<{
+    [key: string]: T[];
+}>;
+export declare function groupBy<T>(calcGroup: Mappable<T, string>): (elems: MaybeType<T[]>) => Maybe<{
+    [key: string]: T[];
+}>;
+export declare function groupBy<T>(calcGroup: Mappable<T, number>): (elems: MaybeType<T[]>) => Maybe<{
+    [key: number]: T[];
+}>;
 export declare const count: (coll: MaybeType<string | unknown[]>) => Maybe<number>;
 export declare const size: (coll: MaybeType<string | unknown[]>) => Maybe<number>;

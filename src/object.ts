@@ -146,12 +146,17 @@ export const mapFilterValues = <A, B>(fn: Mappable<A, B>) => (
     : nothing();
 
 // set field propName to value: assoc("foo")(1)({bar:2}) -> {foo:1, bar:2}
-export const assoc = <T>(propName: KeyType) => (value: MaybeType<T>) => (
-  target: MaybeType<Dictionary>
-): Maybe<Dictionary> =>
-  maybe(target)
-    .bind((obj) => m.assoc(m.toClj(obj), propName, getMonadValue(value)))
-    .bind(m.toJs);
+export function assoc<T, O extends Dictionary>(
+  propName: KeyType
+): (value: MaybeType<T>) => (dict: MaybeType<O>) => Maybe<O>;
+export function assoc<T>(key: number): (value: T) => (arr: MaybeType<T[]>) => Maybe<T[]>;
+
+export function assoc<T>(propName: any) {
+  return (value: MaybeType<T>) => (target: MaybeType<any>) =>
+    maybe(target)
+      .bind((obj) => m.assoc(m.toClj(obj), propName, getMonadValue(value)))
+      .bind(m.toJs);
+}
 
 // set field at path to value: assocIn(["foo","bar"])(1)({}) -> {foo: {bar: 1}}
 export const assocIn = <T>(path: KeyType[]) => (value: MaybeType<T>) => (
