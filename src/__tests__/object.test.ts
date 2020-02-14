@@ -79,7 +79,9 @@ describe("object", () => {
 
   describe("update", () => {
     it("safely updates values", () => {
-      expect(update<number, number>("foo")((x: number) => x + 1)({ foo: 1 }).getValue()).toEqual({
+      expect(
+        update<Dictionary, number, number>("foo")((x: number) => x + 1)({ foo: 1 }).getValue()
+      ).toEqual({
         foo: 2,
       });
     });
@@ -88,7 +90,7 @@ describe("object", () => {
   describe("updateIn", () => {
     it("safely updates values", () => {
       expect(
-        updateIn<number, number>(["foo", "bar"])((x: number) => x + 1)({
+        updateIn<Dictionary, number, number>(["foo", "bar"])((x: number) => x + 1)({
           foo: { bar: 1 },
           baz: 2,
         }).getValue()
