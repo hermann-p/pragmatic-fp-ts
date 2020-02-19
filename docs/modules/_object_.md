@@ -41,7 +41,7 @@
 
 Ƭ **KeyType**: *string | number*
 
-*Defined in [object.ts:9](https://github.com/hermann-p/pragmatic-fp-ts/blob/f524289/src/object.ts#L9)*
+*Defined in [object.ts:9](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/object.ts#L9)*
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 Ƭ **PathType**: *[KeyType](_object_.md#keytype)[] | [Maybe](_maybe_.md#maybe)‹[KeyType](_object_.md#keytype)[]›*
 
-*Defined in [object.ts:10](https://github.com/hermann-p/pragmatic-fp-ts/blob/f524289/src/object.ts#L10)*
+*Defined in [object.ts:10](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/object.ts#L10)*
 
 ## Variables
 
@@ -57,7 +57,7 @@ ___
 
 • **filterKeys**: *pickBy* =  pickBy
 
-*Defined in [object.ts:93](https://github.com/hermann-p/pragmatic-fp-ts/blob/f524289/src/object.ts#L93)*
+*Defined in [object.ts:93](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/object.ts#L93)*
 
 ## Functions
 
@@ -65,7 +65,7 @@ ___
 
 ▸ **assoc**<**O**, **T**>(`propName`: [KeyType](_object_.md#keytype)): *function*
 
-*Defined in [object.ts:160](https://github.com/hermann-p/pragmatic-fp-ts/blob/f524289/src/object.ts#L160)*
+*Defined in [object.ts:160](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/object.ts#L160)*
 
 **Type parameters:**
 
@@ -99,7 +99,7 @@ Name | Type |
 
 ▸ **assoc**<**T**>(`key`: number): *function*
 
-*Defined in [object.ts:163](https://github.com/hermann-p/pragmatic-fp-ts/blob/f524289/src/object.ts#L163)*
+*Defined in [object.ts:163](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/object.ts#L163)*
 
 **Type parameters:**
 
@@ -135,7 +135,7 @@ ___
 
 ▸ **assocIn**<**T**, **U**>(`path`: [KeyType](_object_.md#keytype)[]): *(Anonymous function)*
 
-*Defined in [object.ts:173](https://github.com/hermann-p/pragmatic-fp-ts/blob/f524289/src/object.ts#L173)*
+*Defined in [object.ts:173](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/object.ts#L173)*
 
 **Type parameters:**
 
@@ -157,7 +157,7 @@ ___
 
 ▸ **dissoc**<**T**>(`key`: [KeyType](_object_.md#keytype)): *(Anonymous function)*
 
-*Defined in [object.ts:181](https://github.com/hermann-p/pragmatic-fp-ts/blob/f524289/src/object.ts#L181)*
+*Defined in [object.ts:181](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/object.ts#L181)*
 
 **Type parameters:**
 
@@ -177,7 +177,7 @@ ___
 
 ▸ **fromPairs**<**T**>(`pairs`: [MaybeType](_types_.md#maybetype)‹unknown[][]›): *[Just](../classes/_maybe_.just.md)‹T› | [Nothing](../classes/_maybe_.nothing.md)‹T›*
 
-*Defined in [object.ts:203](https://github.com/hermann-p/pragmatic-fp-ts/blob/f524289/src/object.ts#L203)*
+*Defined in [object.ts:203](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/object.ts#L203)*
 
 **Type parameters:**
 
@@ -197,7 +197,7 @@ ___
 
 ▸ **get**<**T**, **U**>(`prop`: [KeyType](_object_.md#keytype)): *(Anonymous function)*
 
-*Defined in [object.ts:31](https://github.com/hermann-p/pragmatic-fp-ts/blob/f524289/src/object.ts#L31)*
+*Defined in [object.ts:31](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/object.ts#L31)*
 
 **Type parameters:**
 
@@ -219,7 +219,7 @@ ___
 
 ▸ **getIn**(`path`: [PathType](_object_.md#pathtype)): *(Anonymous function)*
 
-*Defined in [object.ts:19](https://github.com/hermann-p/pragmatic-fp-ts/blob/f524289/src/object.ts#L19)*
+*Defined in [object.ts:19](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/object.ts#L19)*
 
 **Parameters:**
 
@@ -235,7 +235,7 @@ ___
 
 ▸ **getRaw**<**T**>(`key`: [KeyType](_object_.md#keytype), `path`: Array‹[KeyType](_object_.md#keytype)›, `obj`: [Maybe](_maybe_.md#maybe)‹[Dictionary](../interfaces/_types_.dictionary.md)›): *[Maybe](_maybe_.md#maybe)‹T›*
 
-*Defined in [object.ts:13](https://github.com/hermann-p/pragmatic-fp-ts/blob/f524289/src/object.ts#L13)*
+*Defined in [object.ts:13](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/object.ts#L13)*
 
 **Type parameters:**
 
@@ -257,7 +257,7 @@ ___
 
 ▸ **keys**<**T**>(`obj`: [MaybeType](_types_.md#maybetype)‹T›): *[Maybe](_maybe_.md#maybe)‹string[]›*
 
-*Defined in [object.ts:35](https://github.com/hermann-p/pragmatic-fp-ts/blob/f524289/src/object.ts#L35)*
+*Defined in [object.ts:35](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/object.ts#L35)*
 
 **Type parameters:**
 
@@ -277,7 +277,7 @@ ___
 
 ▸ **mapFilterValues**<**T**, **U**, **A**, **B**>(`fn`: [Mappable](_types_.md#mappable)‹A, B›): *(Anonymous function)*
 
-*Defined in [object.ts:143](https://github.com/hermann-p/pragmatic-fp-ts/blob/f524289/src/object.ts#L143)*
+*Defined in [object.ts:143](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/object.ts#L143)*
 
 **Type parameters:**
 
@@ -303,7 +303,7 @@ ___
 
 ▸ **mapKeys**<**T**, **U**>(`fn`: [Endomorphism](_types_.md#endomorphism)‹string›): *(Anonymous function)*
 
-*Defined in [object.ts:49](https://github.com/hermann-p/pragmatic-fp-ts/blob/f524289/src/object.ts#L49)*
+*Defined in [object.ts:49](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/object.ts#L49)*
 
 **Type parameters:**
 
@@ -325,7 +325,7 @@ ___
 
 ▸ **mapValues**<**T**, **U**, **A**, **B**>(`fn`: [Mappable](_types_.md#mappable)‹A, B›): *(Anonymous function)*
 
-*Defined in [object.ts:125](https://github.com/hermann-p/pragmatic-fp-ts/blob/f524289/src/object.ts#L125)*
+*Defined in [object.ts:125](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/object.ts#L125)*
 
 **Type parameters:**
 
@@ -351,7 +351,7 @@ ___
 
 ▸ **pick**<**T**, **U**>(`keysToPick`: [MaybeType](_types_.md#maybetype)‹[KeyType](_object_.md#keytype)[]›): *(Anonymous function)*
 
-*Defined in [object.ts:96](https://github.com/hermann-p/pragmatic-fp-ts/blob/f524289/src/object.ts#L96)*
+*Defined in [object.ts:96](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/object.ts#L96)*
 
 **Type parameters:**
 
@@ -373,7 +373,7 @@ ___
 
 ▸ **pickBy**<**T**, **U**>(`predicate`: [Predicate](_types_.md#predicate)‹string›): *(Anonymous function)*
 
-*Defined in [object.ts:79](https://github.com/hermann-p/pragmatic-fp-ts/blob/f524289/src/object.ts#L79)*
+*Defined in [object.ts:79](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/object.ts#L79)*
 
 **Type parameters:**
 
@@ -395,7 +395,7 @@ ___
 
 ▸ **pickValuesBy**<**T**, **U**>(`predicate`: [Predicate](_types_.md#predicate)‹any›): *(Anonymous function)*
 
-*Defined in [object.ts:110](https://github.com/hermann-p/pragmatic-fp-ts/blob/f524289/src/object.ts#L110)*
+*Defined in [object.ts:110](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/object.ts#L110)*
 
 **Type parameters:**
 
@@ -417,7 +417,7 @@ ___
 
 ▸ **reduceKV**<**T**, **U**>(`reducer`: function): *(Anonymous function)*
 
-*Defined in [object.ts:66](https://github.com/hermann-p/pragmatic-fp-ts/blob/f524289/src/object.ts#L66)*
+*Defined in [object.ts:66](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/object.ts#L66)*
 
 **Type parameters:**
 
@@ -447,7 +447,7 @@ ___
 
 ▸ **toPairs**<**T**>(`dict`: T): *[Just](../classes/_maybe_.just.md)‹any[][]› | [Nothing](../classes/_maybe_.nothing.md)‹any[][]›*
 
-*Defined in [object.ts:210](https://github.com/hermann-p/pragmatic-fp-ts/blob/f524289/src/object.ts#L210)*
+*Defined in [object.ts:210](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/object.ts#L210)*
 
 **Type parameters:**
 
@@ -467,7 +467,7 @@ ___
 
 ▸ **update**<**T**, **A**, **B**>(`propName`: [KeyType](_object_.md#keytype)): *(Anonymous function)*
 
-*Defined in [object.ts:187](https://github.com/hermann-p/pragmatic-fp-ts/blob/f524289/src/object.ts#L187)*
+*Defined in [object.ts:187](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/object.ts#L187)*
 
 **Type parameters:**
 
@@ -491,7 +491,7 @@ ___
 
 ▸ **updateIn**<**T**, **A**, **B**>(`path`: [KeyType](_object_.md#keytype)[]): *(Anonymous function)*
 
-*Defined in [object.ts:195](https://github.com/hermann-p/pragmatic-fp-ts/blob/f524289/src/object.ts#L195)*
+*Defined in [object.ts:195](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/object.ts#L195)*
 
 **Type parameters:**
 
@@ -515,7 +515,7 @@ ___
 
 ▸ **values**<**T**>(`obj`: [MaybeType](_types_.md#maybetype)‹T›): *[Maybe](_maybe_.md#maybe)‹unknown[]›*
 
-*Defined in [object.ts:42](https://github.com/hermann-p/pragmatic-fp-ts/blob/f524289/src/object.ts#L42)*
+*Defined in [object.ts:42](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/object.ts#L42)*
 
 **Type parameters:**
 

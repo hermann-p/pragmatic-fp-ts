@@ -25,3 +25,11 @@ export const toInteger = (value: unknown) =>
     .filter(isNumber);
 
 export const toString = (value: unknown) => maybe(value).bind((v: any) => String(v));
+
+export const tap = <T>(effect: (input: T) => unknown) => (value: T) => {
+  effect(value);
+  return value;
+};
+
+export const spy = <T>(message?: string) =>
+  tap<T>((x) => console.log((message || "I spy") + ":", x));
