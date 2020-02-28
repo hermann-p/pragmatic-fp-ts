@@ -29,6 +29,7 @@
 ### Methods
 
 * [bind](_either_.left.md#bind)
+* [bindM](_either_.left.md#bindm)
 * [effect](_either_.left.md#effect)
 * [filter](_either_.left.md#filter)
 * [getReason](_either_.left.md#getreason)
@@ -47,7 +48,7 @@
 
 \+ **new Left**(`reason`: L): *[Left](_either_.left.md)*
 
-*Defined in [Either.ts:86](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/Either.ts#L86)*
+*Defined in [Either.ts:89](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/Either.ts#L89)*
 
 **Parameters:**
 
@@ -63,7 +64,7 @@ Name | Type |
 
 • **reason**: *L*
 
-*Defined in [Either.ts:86](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/Either.ts#L86)*
+*Defined in [Either.ts:89](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/Either.ts#L89)*
 
 ## Methods
 
@@ -71,7 +72,7 @@ Name | Type |
 
 ▸ **bind**<**R2**>(`_`: [Mappable](../modules/_types_.md#mappable)‹R, R2 | [Either](../modules/_either_.md#either)‹R, R2››): *[Either](../modules/_either_.md#either)‹[Reason](../modules/_either_.md#reason), R2›*
 
-*Defined in [Either.ts:90](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/Either.ts#L90)*
+*Defined in [Either.ts:93](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/Either.ts#L93)*
 
 **Type parameters:**
 
@@ -87,11 +88,31 @@ Name | Type |
 
 ___
 
+###  bindM
+
+▸ **bindM**<**R2**>(`_`: [Mappable](../modules/_types_.md#mappable)‹[Monad](_monad_.monad.md)‹R›, R2 | [Either](../modules/_either_.md#either)‹R, R2››): *[Either](../modules/_either_.md#either)‹[Reason](../modules/_either_.md#reason), R2›*
+
+*Defined in [Either.ts:96](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/Either.ts#L96)*
+
+**Type parameters:**
+
+▪ **R2**
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`_` | [Mappable](../modules/_types_.md#mappable)‹[Monad](_monad_.monad.md)‹R›, R2 &#124; [Either](../modules/_either_.md#either)‹R, R2›› |
+
+**Returns:** *[Either](../modules/_either_.md#either)‹[Reason](../modules/_either_.md#reason), R2›*
+
+___
+
 ###  effect
 
 ▸ **effect**(`_`: [Effect](../modules/_types_.md#effect)‹R›): *[Either](../modules/_either_.md#either)‹L, R›*
 
-*Defined in [Either.ts:113](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/Either.ts#L113)*
+*Defined in [Either.ts:119](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/Either.ts#L119)*
 
 **Parameters:**
 
@@ -107,7 +128,7 @@ ___
 
 ▸ **filter**(`_`: [Predicate](../modules/_types_.md#predicate)‹R›): *[Either](../modules/_either_.md#either)‹L, R›*
 
-*Defined in [Either.ts:101](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/Either.ts#L101)*
+*Defined in [Either.ts:107](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/Either.ts#L107)*
 
 **Parameters:**
 
@@ -123,7 +144,7 @@ ___
 
 ▸ **getReason**(): *L*
 
-*Defined in [Either.ts:110](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/Either.ts#L110)*
+*Defined in [Either.ts:116](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/Either.ts#L116)*
 
 **Returns:** *L*
 
@@ -133,7 +154,7 @@ ___
 
 ▸ **getValue**(): *any*
 
-*Defined in [Either.ts:104](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/Either.ts#L104)*
+*Defined in [Either.ts:110](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/Either.ts#L110)*
 
 **Returns:** *any*
 
@@ -143,7 +164,7 @@ ___
 
 ▸ **getValueOr**(`alternative`: R): *R*
 
-*Defined in [Either.ts:107](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/Either.ts#L107)*
+*Defined in [Either.ts:113](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/Either.ts#L113)*
 
 **Parameters:**
 
@@ -159,7 +180,7 @@ ___
 
 ▸ **isLeft**(): *boolean*
 
-*Defined in [Either.ts:119](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/Either.ts#L119)*
+*Defined in [Either.ts:125](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/Either.ts#L125)*
 
 **Returns:** *boolean*
 
@@ -169,7 +190,7 @@ ___
 
 ▸ **isMonad**(): *boolean*
 
-*Defined in [Either.ts:116](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/Either.ts#L116)*
+*Defined in [Either.ts:122](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/Either.ts#L122)*
 
 **Returns:** *boolean*
 
@@ -179,7 +200,7 @@ ___
 
 ▸ **isRight**(): *boolean*
 
-*Defined in [Either.ts:122](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/Either.ts#L122)*
+*Defined in [Either.ts:128](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/Either.ts#L128)*
 
 **Returns:** *boolean*
 
@@ -189,7 +210,7 @@ ___
 
 ▸ **match**<**R2**>(`pattern`: [EitherPattern](../modules/_either_.md#eitherpattern)‹R, R2›): *[Either](../modules/_either_.md#either)‹L, R2›*
 
-*Defined in [Either.ts:93](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/Either.ts#L93)*
+*Defined in [Either.ts:99](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/Either.ts#L99)*
 
 **Type parameters:**
 
@@ -209,7 +230,7 @@ ___
 
 ▸ **toMaybe**(): *[Maybe](../modules/_maybe_.md#maybe)‹R›*
 
-*Defined in [Either.ts:125](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/Either.ts#L125)*
+*Defined in [Either.ts:131](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/Either.ts#L131)*
 
 **Returns:** *[Maybe](../modules/_maybe_.md#maybe)‹R›*
 
@@ -219,6 +240,6 @@ ___
 
 ▸ **toString**(): *string*
 
-*Defined in [Either.ts:128](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/Either.ts#L128)*
+*Defined in [Either.ts:134](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/Either.ts#L134)*
 
 **Returns:** *string*

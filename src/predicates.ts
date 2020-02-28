@@ -1,7 +1,10 @@
-import { Just, Nothing, Maybe } from "./Maybe";
-import { Left, Right, Either } from "./Either";
+import { Either, Left, Right } from "./Either";
+import { equals } from "./logic";
+import { Just, maybe, Maybe, Nothing } from "./Maybe";
 import { Monad } from "./Monad";
-import { Predicate } from "./types";
+import { reduceKV } from "./object";
+import { getMonadValue } from "./tools";
+import { Dictionary, MaybeType, Predicate } from "./types";
 
 export const isNil: Predicate<unknown> = (value) => value === undefined || value === null;
 
@@ -41,22 +44,42 @@ export const isLeft: Predicate<unknown> = (value): value is Either<unknown, unkn
 export const isEither: Predicate<unknown> = (value): value is Either<unknown, unknown> =>
   isLeft(value) || isRight(value);
 
-// export const isRightAsync: Predicate<unknown> = (value): value is EitherAsync<unknown, unknown> =>
-//   value instanceof RightAsync;
-// export const isLeftAsync: Predicate<unknown> = (value): value is EitherAsync<unknown, unknown> =>
-//   value instanceof LeftAsync;
-// export const isEitherAsync: Predicate<unknown> = (value): value is EitherAsync<unknown, unknown> =>
-//   isLeftAsync(value) || isRightAsync(value);
-
-// export const isJustAsync: Predicate<unknown> = (value): value is MaybeAsync<unknown> =>
-//   value instanceof JustAsync;
-// export const isNothingAsync: Predicate<unknown> = (value): value is MaybeAsync<unknown> =>
-//   value instanceof NothingAsync;
-// export const isMaybeAsync: Predicate<unknown> = (value): value is MaybeAsync<unknown> =>
-//   isJustAsync(value) || isNothingAsync(value);
-
 export const isMonad: Predicate<unknown> = (value): value is Monad<unknown> =>
   isMaybe(value) || isEither(value);
 
 export const isSome: Predicate<unknown> = (value) =>
   !isNil(value) && !isNothing(value) && !isLeft(value);
+
+type WhereTemplate<T extends Dictionary> = { [k in keyof T]: Predicate<any> };
+export const where = <T extends Dictionary>(template: MaybeType<WhereTemplate<T>>) => <U extends T>(
+  dict: MaybeType<U>
+): boolean => {
+  try {
+    const _dict = getMonadValue(dict);
+    return maybe(template)
+      .bind(
+        reduceKV((accum: boolean, key: string, predicate) => {
+          return accum && predicate(_dict[key]);
+        })(true)
+      )
+      .getValueOr(false);
+  } catch {
+    return false;
+  }
+};
+
+type WhereEqTemplate<T extends Dictionary> = { [k in keyof T]: unknown };
+export const whereEq = <T extends Dictionary>(template: MaybeType<WhereEqTemplate<T>>) => <
+  U extends Dictionary
+>(
+  dict: MaybeType<U>
+): boolean => {
+  try {
+    const _dict = getMonadValue(dict);
+    return reduceKV((accum: boolean, key: string, value) => accum && equals(_dict[key])(value))(
+      true
+    )(template).getValueOr(false);
+  } catch {
+    return false;
+  }
+};

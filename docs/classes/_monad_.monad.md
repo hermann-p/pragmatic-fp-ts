@@ -23,6 +23,7 @@
 ### Methods
 
 * [bind](_monad_.monad.md#abstract-bind)
+* [bindM](_monad_.monad.md#abstract-bindm)
 * [effect](_monad_.monad.md#abstract-effect)
 * [getValue](_monad_.monad.md#abstract-getvalue)
 * [getValueOr](_monad_.monad.md#abstract-getvalueor)
@@ -35,7 +36,7 @@
 
 ▸ **bind**<**B**>(`fn`: [Mappable](../modules/_types_.md#mappable)‹T, B | [Monad](_monad_.monad.md)‹B››): *[Monad](_monad_.monad.md)‹B›*
 
-*Defined in [Monad.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/Monad.ts#L4)*
+*Defined in [Monad.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/Monad.ts#L4)*
 
 **Type parameters:**
 
@@ -51,11 +52,31 @@ Name | Type |
 
 ___
 
+### `Abstract` bindM
+
+▸ **bindM**<**B**>(`fn`: [Mappable](../modules/_types_.md#mappable)‹[Monad](_monad_.monad.md)‹T›, B | [Monad](_monad_.monad.md)‹B››): *[Monad](_monad_.monad.md)‹B›*
+
+*Defined in [Monad.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/Monad.ts#L5)*
+
+**Type parameters:**
+
+▪ **B**
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`fn` | [Mappable](../modules/_types_.md#mappable)‹[Monad](_monad_.monad.md)‹T›, B &#124; [Monad](_monad_.monad.md)‹B›› |
+
+**Returns:** *[Monad](_monad_.monad.md)‹B›*
+
+___
+
 ### `Abstract` effect
 
 ▸ **effect**(`fn`: [Effect](../modules/_types_.md#effect)‹T›): *[Monad](_monad_.monad.md)‹T›*
 
-*Defined in [Monad.ts:9](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/Monad.ts#L9)*
+*Defined in [Monad.ts:10](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/Monad.ts#L10)*
 
 **Parameters:**
 
@@ -71,7 +92,7 @@ ___
 
 ▸ **getValue**(): *T*
 
-*Defined in [Monad.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/Monad.ts#L5)*
+*Defined in [Monad.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/Monad.ts#L6)*
 
 **Returns:** *T*
 
@@ -81,7 +102,7 @@ ___
 
 ▸ **getValueOr**(`alternate`: T): *T*
 
-*Defined in [Monad.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/Monad.ts#L6)*
+*Defined in [Monad.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/Monad.ts#L7)*
 
 **Parameters:**
 
@@ -97,7 +118,7 @@ ___
 
 ▸ **isMonad**(): *boolean*
 
-*Defined in [Monad.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/Monad.ts#L8)*
+*Defined in [Monad.ts:9](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/Monad.ts#L9)*
 
 **Returns:** *boolean*
 
@@ -107,7 +128,7 @@ ___
 
 ▸ **match**(`matches`: [MatchPattern](../interfaces/_types_.matchpattern.md)‹T›): *[Monad](_monad_.monad.md)‹any›*
 
-*Defined in [Monad.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/Monad.ts#L7)*
+*Defined in [Monad.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/Monad.ts#L8)*
 
 **Parameters:**
 

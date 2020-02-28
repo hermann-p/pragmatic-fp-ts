@@ -45,6 +45,9 @@ export class Just<T> extends Monad<T> {
       return nothing<B>();
     }
   }
+  bindM<B>(fn: Mappable<Monad<T>, B | Monad<B>>): Maybe<B> {
+    return maybe(fn(this));
+  }
   match<U>(match: MaybePattern<T, U>): Maybe<U> {
     try {
       return just(match.just(this.value));
@@ -90,6 +93,9 @@ export class Nothing<T> implements Monad<T> {
   }
   bind<B>(_: Mappable<T, B | Maybe<B>>): Maybe<B> {
     return (this as Nothing<any>) as Nothing<B>; // prefer ugly code over `new Nothing<B>()`
+  }
+  bindM<B>(_: Mappable<Monad<T>, B | Maybe<B>>): Maybe<B> {
+    return (this as unknown) as Nothing<B>;
   }
   match<U>(match: MaybePattern<T, U>): Maybe<U> {
     try {

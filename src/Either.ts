@@ -25,6 +25,9 @@ export class Right<L, R> implements Monad<R> {
       return new Left<Reason, R2>(err);
     }
   }
+  bindM<R2>(fn: Mappable<Monad<R>, R2 | Either<R, R2>>): Either<Reason, R2> {
+    return either(fn(this));
+  }
   match<R2>(pattern: EitherPattern<R, R2>): Either<L, R2> {
     try {
       const { value } = this;
@@ -88,6 +91,9 @@ export class Left<L, R> implements Monad<R> {
     this.reason = reason;
   }
   bind<R2>(_: Mappable<R, R2 | Either<R, R2>>): Either<Reason, R2> {
+    return this as any;
+  }
+  bindM<R2>(_: Mappable<Monad<R>, R2 | Either<R, R2>>): Either<Reason, R2> {
     return this as any;
   }
   match<R2>(pattern: EitherPattern<R, R2>): Either<L, R2> {

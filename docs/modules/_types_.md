@@ -23,7 +23,7 @@
 
 Ƭ **Effect**: *function*
 
-*Defined in [types.ts:18](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/types.ts#L18)*
+*Defined in [types.ts:18](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/types.ts#L18)*
 
 #### Type declaration:
 
@@ -41,7 +41,7 @@ ___
 
 Ƭ **Endomorphism**: *function*
 
-*Defined in [types.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/types.ts#L4)*
+*Defined in [types.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/types.ts#L4)*
 
 #### Type declaration:
 
@@ -59,7 +59,7 @@ ___
 
 Ƭ **Mappable**: *function*
 
-*Defined in [types.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/types.ts#L3)*
+*Defined in [types.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/types.ts#L3)*
 
 #### Type declaration:
 
@@ -77,7 +77,7 @@ ___
 
 Ƭ **MaybeType**: *T | [Maybe](_maybe_.md#maybe)‹T›*
 
-*Defined in [types.ts:16](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/types.ts#L16)*
+*Defined in [types.ts:16](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/types.ts#L16)*
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 Ƭ **Predicate**: *function*
 
-*Defined in [types.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/e1dc667/src/types.ts#L5)*
+*Defined in [types.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/types.ts#L5)*
 
 #### Type declaration:
 

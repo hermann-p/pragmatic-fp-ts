@@ -11,6 +11,7 @@ export declare class Right<L, R> implements Monad<R> {
     private readonly value;
     constructor(value: R | Monad<R>);
     bind<R2>(fn: Mappable<R, R2 | Either<R, R2>>): Either<Reason, R2>;
+    bindM<R2>(fn: Mappable<Monad<R>, R2 | Either<R, R2>>): Either<Reason, R2>;
     match<R2>(pattern: EitherPattern<R, R2>): Either<L, R2>;
     filter(predicate: Predicate<R>): Either<L, R>;
     getValue(): R;
@@ -27,6 +28,7 @@ export declare class Left<L, R> implements Monad<R> {
     private readonly reason;
     constructor(reason: L);
     bind<R2>(_: Mappable<R, R2 | Either<R, R2>>): Either<Reason, R2>;
+    bindM<R2>(_: Mappable<Monad<R>, R2 | Either<R, R2>>): Either<Reason, R2>;
     match<R2>(pattern: EitherPattern<R, R2>): Either<L, R2>;
     filter(_: Predicate<R>): Either<L, R>;
     getValue(): any;
