@@ -131,3 +131,5 @@ export declare function countBy<T>(calcCount: Mappable<T, string>): (elems: Mayb
 export declare function countBy<T>(calcGroup: Mappable<T, number>): (elems: MaybeType<T[]>) => Maybe<{
     [key: number]: number;
 }>;
+export declare const flatten: <T extends any>(coll: MaybeType<unknown[]>) => Maybe<T[]>;
+export declare const flatMap: <A, B>(fn: Mappable<A, B | B[]> | Mappable<A, Maybe<B | B[]>>) => (coll: MaybeType<any[]>) => Maybe<B[]>;

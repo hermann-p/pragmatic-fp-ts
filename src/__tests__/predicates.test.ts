@@ -34,6 +34,10 @@ describe("predicates", () => {
       expect(where(tmpl)({ foo: 1, bar: "foobar" })).toBe(false);
       expect(where(tmpl)({ foo: 1 } as any)).toBe(false);
     });
+
+    it("lets pass anything when empty", () => {
+      expect(where({})({ foo: 1 })).toBe(true);
+    });
   });
 
   describe("whereEq", () => {

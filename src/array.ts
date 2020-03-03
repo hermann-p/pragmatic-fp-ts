@@ -378,3 +378,24 @@ export function countBy(counter: any) {
   return (countable: MaybeType<any[]>) =>
     groupBy(counter)(countable).bind(mapValues((v: unknown[]) => v.length));
 }
+
+export const flatten = <T extends any>(coll: MaybeType<unknown[]>): Maybe<T[]> => {
+  const result: T[] = [];
+  maybe(coll).bind((c) =>
+    c.forEach((value: any) => {
+      if (value instanceof Array) {
+        value.forEach((innerValue) => result.push(innerValue));
+      } else {
+        result.push(value);
+      }
+    })
+  );
+  return just(result);
+};
+
+export const flatMap = <A, B>(fn: Mappable<A, B | B[]> | Mappable<A, Maybe<B | B[]>>) => (
+  coll: MaybeType<any[]>
+): Maybe<B[]> =>
+  maybe(coll)
+    .bind(map(fn))
+    .bind(flatten);

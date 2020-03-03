@@ -28,6 +28,8 @@ import {
   takeWhile,
   reduce,
   groupBy,
+  flatten,
+  flatMap,
 } from "../array";
 
 describe("array functions", () => {
@@ -373,6 +375,22 @@ describe("array functions", () => {
       expect(
         countBy((n: number) => (n % 2 === 0 ? "even" : "odd"))([1, 2, 3, 4, 5]).getValue()
       ).toEqual({ even: 2, odd: 3 });
+    });
+  });
+
+  describe("flatten", () => {
+    it("flattens nested arrays", () => {
+      expect(flatten([1, [2, 3], 4, [5, 6, 7]]).getValue()).toEqual([1, 2, 3, 4, 5, 6, 7]);
+    });
+    it("stops at first nesting level", () => {
+      expect(flatten([1, [2, [3, 4]]]).getValue()).toEqual([1, 2, [3, 4]]);
+    });
+  });
+
+  describe("flatMap", () => {
+    it("maps, then flattens", () => {
+      const inc = (n: number): number | number[] => (n % 2 === 0 ? n : [n, n]);
+      expect(flatMap(inc)([1, 2, 3, 4] as any).getValue()).toEqual([1, 1, 2, 3, 3, 4]);
     });
   });
 });

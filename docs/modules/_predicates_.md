@@ -36,7 +36,7 @@
 
 Ƭ **WhereEqTemplate**: *object*
 
-*Defined in [predicates.ts:71](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/predicates.ts#L71)*
+*Defined in [predicates.ts:71](https://github.com/hermann-p/pragmatic-fp-ts/blob/fe04635/src/predicates.ts#L71)*
 
 #### Type declaration:
 
@@ -46,7 +46,7 @@ ___
 
 Ƭ **WhereTemplate**: *object*
 
-*Defined in [predicates.ts:53](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/predicates.ts#L53)*
+*Defined in [predicates.ts:53](https://github.com/hermann-p/pragmatic-fp-ts/blob/fe04635/src/predicates.ts#L53)*
 
 #### Type declaration:
 
@@ -56,7 +56,7 @@ ___
 
 ▸ **isArray**(`value`: unknown): *value is unknown[]*
 
-*Defined in [predicates.ts:16](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/predicates.ts#L16)*
+*Defined in [predicates.ts:16](https://github.com/hermann-p/pragmatic-fp-ts/blob/fe04635/src/predicates.ts#L16)*
 
 **Parameters:**
 
@@ -72,7 +72,7 @@ ___
 
 ▸ **isEither**(`value`: unknown): *value is Either<unknown, unknown>*
 
-*Defined in [predicates.ts:44](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/predicates.ts#L44)*
+*Defined in [predicates.ts:44](https://github.com/hermann-p/pragmatic-fp-ts/blob/fe04635/src/predicates.ts#L44)*
 
 **Parameters:**
 
@@ -88,7 +88,7 @@ ___
 
 ▸ **isEmpty**(`coll`: string | Object | unknown[]): *boolean*
 
-*Defined in [predicates.ts:24](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/predicates.ts#L24)*
+*Defined in [predicates.ts:24](https://github.com/hermann-p/pragmatic-fp-ts/blob/fe04635/src/predicates.ts#L24)*
 
 **Parameters:**
 
@@ -104,7 +104,7 @@ ___
 
 ▸ **isFunction**(`value`: unknown): *value is Function*
 
-*Defined in [predicates.ts:11](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/predicates.ts#L11)*
+*Defined in [predicates.ts:11](https://github.com/hermann-p/pragmatic-fp-ts/blob/fe04635/src/predicates.ts#L11)*
 
 **Parameters:**
 
@@ -120,7 +120,7 @@ ___
 
 ▸ **isJust**(`value`: unknown): *value is Maybe<unknown>*
 
-*Defined in [predicates.ts:34](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/predicates.ts#L34)*
+*Defined in [predicates.ts:34](https://github.com/hermann-p/pragmatic-fp-ts/blob/fe04635/src/predicates.ts#L34)*
 
 **Parameters:**
 
@@ -136,7 +136,7 @@ ___
 
 ▸ **isLeft**(`value`: unknown): *value is Either<unknown, unknown>*
 
-*Defined in [predicates.ts:42](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/predicates.ts#L42)*
+*Defined in [predicates.ts:42](https://github.com/hermann-p/pragmatic-fp-ts/blob/fe04635/src/predicates.ts#L42)*
 
 **Parameters:**
 
@@ -152,7 +152,7 @@ ___
 
 ▸ **isMaybe**(`value`: unknown): *value is Maybe<unknown>*
 
-*Defined in [predicates.ts:37](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/predicates.ts#L37)*
+*Defined in [predicates.ts:37](https://github.com/hermann-p/pragmatic-fp-ts/blob/fe04635/src/predicates.ts#L37)*
 
 **Parameters:**
 
@@ -168,7 +168,7 @@ ___
 
 ▸ **isMonad**(`value`: unknown): *value is Monad<unknown>*
 
-*Defined in [predicates.ts:47](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/predicates.ts#L47)*
+*Defined in [predicates.ts:47](https://github.com/hermann-p/pragmatic-fp-ts/blob/fe04635/src/predicates.ts#L47)*
 
 **Parameters:**
 
@@ -184,7 +184,7 @@ ___
 
 ▸ **isNil**(`value`: unknown): *boolean*
 
-*Defined in [predicates.ts:9](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/predicates.ts#L9)*
+*Defined in [predicates.ts:9](https://github.com/hermann-p/pragmatic-fp-ts/blob/fe04635/src/predicates.ts#L9)*
 
 **Parameters:**
 
@@ -200,7 +200,7 @@ ___
 
 ▸ **isNotEmpty**(`coll`: string | Object | unknown[]): *boolean*
 
-*Defined in [predicates.ts:31](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/predicates.ts#L31)*
+*Defined in [predicates.ts:31](https://github.com/hermann-p/pragmatic-fp-ts/blob/fe04635/src/predicates.ts#L31)*
 
 **Parameters:**
 
@@ -216,7 +216,7 @@ ___
 
 ▸ **isNothing**(`value`: unknown): *value is Maybe<unknown>*
 
-*Defined in [predicates.ts:35](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/predicates.ts#L35)*
+*Defined in [predicates.ts:35](https://github.com/hermann-p/pragmatic-fp-ts/blob/fe04635/src/predicates.ts#L35)*
 
 **Parameters:**
 
@@ -232,7 +232,7 @@ ___
 
 ▸ **isNumber**(`value`: unknown): *value is number*
 
-*Defined in [predicates.ts:18](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/predicates.ts#L18)*
+*Defined in [predicates.ts:18](https://github.com/hermann-p/pragmatic-fp-ts/blob/fe04635/src/predicates.ts#L18)*
 
 **Parameters:**
 
@@ -248,7 +248,7 @@ ___
 
 ▸ **isObject**(`value`: unknown): *value is object*
 
-*Defined in [predicates.ts:21](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/predicates.ts#L21)*
+*Defined in [predicates.ts:21](https://github.com/hermann-p/pragmatic-fp-ts/blob/fe04635/src/predicates.ts#L21)*
 
 **Parameters:**
 
@@ -264,7 +264,7 @@ ___
 
 ▸ **isRight**(`value`: unknown): *value is Either<unknown, unknown>*
 
-*Defined in [predicates.ts:40](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/predicates.ts#L40)*
+*Defined in [predicates.ts:40](https://github.com/hermann-p/pragmatic-fp-ts/blob/fe04635/src/predicates.ts#L40)*
 
 **Parameters:**
 
@@ -280,7 +280,7 @@ ___
 
 ▸ **isSome**(`value`: unknown): *boolean*
 
-*Defined in [predicates.ts:50](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/predicates.ts#L50)*
+*Defined in [predicates.ts:50](https://github.com/hermann-p/pragmatic-fp-ts/blob/fe04635/src/predicates.ts#L50)*
 
 **Parameters:**
 
@@ -296,7 +296,7 @@ ___
 
 ▸ **isString**(`value`: unknown): *value is string*
 
-*Defined in [predicates.ts:14](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/predicates.ts#L14)*
+*Defined in [predicates.ts:14](https://github.com/hermann-p/pragmatic-fp-ts/blob/fe04635/src/predicates.ts#L14)*
 
 **Parameters:**
 
@@ -312,7 +312,7 @@ ___
 
 ▸ **where**<**T**>(`template`: [MaybeType](_types_.md#maybetype)‹[WhereTemplate](_predicates_.md#wheretemplate)‹T››): *(Anonymous function)*
 
-*Defined in [predicates.ts:54](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/predicates.ts#L54)*
+*Defined in [predicates.ts:54](https://github.com/hermann-p/pragmatic-fp-ts/blob/fe04635/src/predicates.ts#L54)*
 
 **Type parameters:**
 
@@ -332,7 +332,7 @@ ___
 
 ▸ **whereEq**<**T**>(`template`: [MaybeType](_types_.md#maybetype)‹[WhereEqTemplate](_predicates_.md#whereeqtemplate)‹T››): *(Anonymous function)*
 
-*Defined in [predicates.ts:72](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/predicates.ts#L72)*
+*Defined in [predicates.ts:72](https://github.com/hermann-p/pragmatic-fp-ts/blob/fe04635/src/predicates.ts#L72)*
 
 **Type parameters:**
 
