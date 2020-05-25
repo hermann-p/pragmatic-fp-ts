@@ -1,0 +1,29 @@
+[pragmatic-fp-ts](../README.md) › [Globals](../globals.md) › ["always"](_always_.md)
+
+# External module: "always"
+
+## Index
+
+### Functions
+
+* [always](_always_.md#always)
+
+## Functions
+
+###  always
+
+▸ **always**<**A**>(`a`: A): *A*
+
+Defined in always.ts:3
+
+**Type parameters:**
+
+▪ **A**
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`a` | A |
+
+**Returns:** *A*

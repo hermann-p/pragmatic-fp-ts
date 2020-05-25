@@ -1,0 +1,54 @@
+[pragmatic-fp-ts](../README.md) › [Globals](../globals.md) › ["intersection"](_intersection_.md)
+
+# External module: "intersection"
+
+## Index
+
+### Functions
+
+* [intersection](_intersection_.md#intersection)
+
+## Functions
+
+###  intersection
+
+▸ **intersection**<**A**>(`a`: A[], `b`: A[]): *A[]*
+
+Defined in intersection.ts:3
+
+**Type parameters:**
+
+▪ **A**
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`a` | A[] |
+`b` | A[] |
+
+**Returns:** *A[]*
+
+▸ **intersection**<**A**>(`a`: A[]): *function*
+
+Defined in intersection.ts:4
+
+**Type parameters:**
+
+▪ **A**
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`a` | A[] |
+
+**Returns:** *function*
+
+▸ (`b`: A[]): *A[]*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`b` | A[] |

@@ -1,0 +1,58 @@
+[pragmatic-fp-ts](../README.md) › [Globals](../globals.md) › ["flatMap"](_flatmap_.md)
+
+# External module: "flatMap"
+
+## Index
+
+### Functions
+
+* [flatMap](_flatmap_.md#flatmap)
+
+## Functions
+
+###  flatMap
+
+▸ **flatMap**<**A**, **B**>(`mappable`: [Mappable](_types_.md#mappable)‹A, B | B[]›, `coll`: A | A[][]): *B[]*
+
+Defined in flatMap.ts:14
+
+**Type parameters:**
+
+▪ **A**
+
+▪ **B**
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`mappable` | [Mappable](_types_.md#mappable)‹A, B &#124; B[]› |
+`coll` | A &#124; A[][] |
+
+**Returns:** *B[]*
+
+▸ **flatMap**<**A**, **B**>(`mappable`: [Mappable](_types_.md#mappable)‹A, B | B[]›): *function*
+
+Defined in flatMap.ts:18
+
+**Type parameters:**
+
+▪ **A**
+
+▪ **B**
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`mappable` | [Mappable](_types_.md#mappable)‹A, B &#124; B[]› |
+
+**Returns:** *function*
+
+▸ (`coll`: A | A[][]): *B[]*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`coll` | A &#124; A[][] |

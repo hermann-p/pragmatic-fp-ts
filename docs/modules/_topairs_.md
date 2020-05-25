@@ -1,0 +1,29 @@
+[pragmatic-fp-ts](../README.md) › [Globals](../globals.md) › ["toPairs"](_topairs_.md)
+
+# External module: "toPairs"
+
+## Index
+
+### Functions
+
+* [toPairs](_topairs_.md#topairs)
+
+## Functions
+
+###  toPairs
+
+▸ **toPairs**<**A**>(`dict`: [Dictionary](_types_.md#dictionary)‹A›): *[string, A][]*
+
+Defined in toPairs.ts:3
+
+**Type parameters:**
+
+▪ **A**
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`dict` | [Dictionary](_types_.md#dictionary)‹A› |
+
+**Returns:** *[string, A][]*

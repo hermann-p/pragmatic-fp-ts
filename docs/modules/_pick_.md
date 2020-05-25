@@ -1,0 +1,58 @@
+[pragmatic-fp-ts](../README.md) › [Globals](../globals.md) › ["pick"](_pick_.md)
+
+# External module: "pick"
+
+## Index
+
+### Functions
+
+* [pick](_pick_.md#pick)
+
+## Functions
+
+###  pick
+
+▸ **pick**<**V**, **K**>(`props`: K[], `dict`: V): *Pick‹V, K›*
+
+Defined in pick.ts:3
+
+**Type parameters:**
+
+▪ **V**: *__type*
+
+▪ **K**: *keyof V*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`props` | K[] |
+`dict` | V |
+
+**Returns:** *Pick‹V, K›*
+
+▸ **pick**<**V**, **K**>(`props`: K[]): *function*
+
+Defined in pick.ts:7
+
+**Type parameters:**
+
+▪ **V**: *__type*
+
+▪ **K**: *keyof V*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`props` | K[] |
+
+**Returns:** *function*
+
+▸ (`dict`: V): *Pick‹V, K›*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`dict` | V |

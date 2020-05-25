@@ -1,0 +1,54 @@
+[pragmatic-fp-ts](../README.md) › [Globals](../globals.md) › ["some"](_some_.md)
+
+# External module: "some"
+
+## Index
+
+### Functions
+
+* [some](_some_.md#some)
+
+## Functions
+
+###  some
+
+▸ **some**<**A**>(`pred`: [Predicate](_types_.md#predicate)‹A›, `coll`: A[]): *boolean*
+
+Defined in some.ts:3
+
+**Type parameters:**
+
+▪ **A**
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`pred` | [Predicate](_types_.md#predicate)‹A› |
+`coll` | A[] |
+
+**Returns:** *boolean*
+
+▸ **some**<**A**>(`pred`: [Predicate](_types_.md#predicate)‹A›): *function*
+
+Defined in some.ts:4
+
+**Type parameters:**
+
+▪ **A**
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`pred` | [Predicate](_types_.md#predicate)‹A› |
+
+**Returns:** *function*
+
+▸ (`coll`: A[]): *boolean*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`coll` | A[] |

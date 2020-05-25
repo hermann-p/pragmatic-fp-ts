@@ -1,0 +1,100 @@
+[pragmatic-fp-ts](../README.md) › [Globals](../globals.md) › ["zipMap"](_zipmap_.md)
+
+# External module: "zipMap"
+
+## Index
+
+### Functions
+
+* [zipMap](_zipmap_.md#zipmap)
+
+## Functions
+
+###  zipMap
+
+▸ **zipMap**<**A**, **B**, **C**>(`fn`: [Mappable](_types_.md#mappable)‹[A, B], C›, `as`: A[], `bs`: B[]): *C[]*
+
+Defined in zipMap.ts:3
+
+**Type parameters:**
+
+▪ **A**
+
+▪ **B**
+
+▪ **C**
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`fn` | [Mappable](_types_.md#mappable)‹[A, B], C› |
+`as` | A[] |
+`bs` | B[] |
+
+**Returns:** *C[]*
+
+▸ **zipMap**<**A**, **B**, **C**>(`fn`: [Mappable](_types_.md#mappable)‹[A, B], C›, `as`: A[]): *function*
+
+Defined in zipMap.ts:4
+
+**Type parameters:**
+
+▪ **A**
+
+▪ **B**
+
+▪ **C**
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`fn` | [Mappable](_types_.md#mappable)‹[A, B], C› |
+`as` | A[] |
+
+**Returns:** *function*
+
+▸ (`bs`: B[]): *C[]*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`bs` | B[] |
+
+▸ **zipMap**<**A**, **B**, **C**>(`fn`: [Mappable](_types_.md#mappable)‹[A, B], C›): *function*
+
+Defined in zipMap.ts:8
+
+**Type parameters:**
+
+▪ **A**
+
+▪ **B**
+
+▪ **C**
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`fn` | [Mappable](_types_.md#mappable)‹[A, B], C› |
+
+**Returns:** *function*
+
+▸ (`as`: A[]): *function*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`as` | A[] |
+
+▸ (`bs`: B[]): *C[]*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`bs` | B[] |

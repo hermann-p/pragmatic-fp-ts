@@ -1,164 +1,118 @@
-import { Effect, Mappable, Predicate } from "./types";
-import { Maybe, just, nothing } from "./Maybe";
-import { Monad } from "./Monad";
-import { getMonadValue } from "./tools";
-import { isEither, isMonad, isNil, isSome } from "./predicates";
+import { Effect, isNil, getValue, Mappable, Predicate } from "./main";
+import { Monad, MonadType } from "./types";
 
-export type Either<L, R> = Left<L, R> | Right<L, R>;
-export type Reason = Error | string;
+export type Either<R, L = Error> = Left<R, L> | Right<R, L>;
 
-export type EitherPattern<A, B> = {
-  right: (value: A) => B;
-  left: (value: Reason) => B;
+type EitherMatcher<R, L, B> = {
+  left: (err: L) => B;
+  right: (val: R) => B;
 };
+export class Left<R, L = Error> extends Monad<R> {
+  readonly errorValue: L;
 
-export class Right<L, R> implements Monad<R> {
-  private readonly value: R;
-  constructor(value: R | Monad<R>) {
-    this.value = getMonadValue(value);
+  constructor(errVal: L) {
+    super();
+    this.errorValue = errVal;
   }
-  bind<R2>(fn: Mappable<R, R2 | Either<R, R2>>): Either<Reason, R2> {
-    try {
-      const { value } = this;
-      return new Right<Reason, R2>(fn(value));
-    } catch (err) {
-      return new Left<Reason, R2>(err);
-    }
-  }
-  bindM<R2>(fn: Mappable<Monad<R>, R2 | Either<R, R2>>): Either<Reason, R2> {
-    return either(fn(this));
-  }
-  match<R2>(pattern: EitherPattern<R, R2>): Either<L, R2> {
-    try {
-      const { value } = this;
-      return new Right<Reason, R2>(pattern.right(value)) as any;
-    } catch (err) {
-      return new Left<Reason, R2>(err) as any;
-    }
-  }
-  filter(predicate: Predicate<R>): Either<L, R> {
-    const { value } = this;
-    try {
-      return predicate(value)
-        ? this
-        : (left(
-            `<${typeof value}>${JSON.stringify(value, null, 2)} did not match predicate ${
-              predicate.name
-            }`
-          ) as any);
-    } catch (err) {
-      return left(err) as any;
-    }
-  }
-  getValue() {
-    return this.value;
-  }
-  getValueOr() {
-    return this.getValue();
-  }
-  getReason(): L {
-    throw new Error("Can't get reason from Right");
-  }
-  effect(fx: Effect<R>): Either<L, R> {
-    try {
-      const { value } = this;
-      fx(value);
-      return this;
-    } catch (err) {
-      return new Left<Reason, R>(err) as any;
-    }
-  }
-  isMonad() {
-    return true;
-  }
-  isLeft() {
-    return false;
-  }
-  isRight() {
-    return true;
-  }
-  toMaybe(): Maybe<R> {
-    return just(this.value);
-  }
-  toString() {
-    return `Right(${JSON.stringify(this.value)})`;
-  }
-}
 
-export class Left<L, R> implements Monad<R> {
-  private readonly reason: L;
-  constructor(reason: L) {
-    this.reason = reason;
-  }
-  bind<R2>(_: Mappable<R, R2 | Either<R, R2>>): Either<Reason, R2> {
+  bind<B>(_: Mappable<R, B>): Either<B, L> {
     return this as any;
   }
-  bindM<R2>(_: Mappable<Monad<R>, R2 | Either<R, R2>>): Either<Reason, R2> {
+  bindM<B>(_: Mappable<Monad<R>, Monad<B>>): Either<B, L> {
     return this as any;
   }
-  match<R2>(pattern: EitherPattern<R, R2>): Either<L, R2> {
-    try {
-      const { reason } = this;
-      return new Right<L, R2>(pattern.left((reason as any) as Reason));
-    } catch (err) {
-      return new Left<L, R2>(err as any);
-    }
-  }
-  filter(_: Predicate<R>): Either<L, R> {
+  filter(_: any): Either<R, L> {
     return this;
   }
-  getValue(): any {
-    throw new Error("Can't get value of Left");
+  effect(_: any): Either<R, L> {
+    return this;
   }
-  getValueOr(alternative: R): R {
-    return alternative;
+  getValue(): R {
+    throw new Error(`Can not get value of Left(${String(this.errorValue)})`);
   }
-  getReason(): L {
-    return this.reason;
+  getValueOr(alt: R): R {
+    return alt;
   }
-  effect(_: Effect<R>): Either<L, R> {
-    return this as any;
-  }
-  isMonad() {
-    return true;
-  }
-  isLeft() {
-    return true;
-  }
-  isRight() {
-    return false;
-  }
-  toMaybe(): Maybe<R> {
-    return nothing();
-  }
-  toString() {
-    return `Left(${JSON.stringify(this.reason)})`;
+  match<B>(matcher: EitherMatcher<R, L, B>): Either<B, L | Error> {
+    return either<B, L>(matcher.left(this.errorValue));
   }
 }
 
-export const right = <L, R>(value: R | Monad<R>) => new Right<L, R>(getMonadValue(value));
-export const left = <L, R>(reason: L) => new Left<L, R>(reason);
-
-export const either = <L, R>(value: R | Monad<R>): Either<L, R> =>
-  isEither(value)
-    ? (value as Either<L, R>)
-    : isMonad(value)
-    ? isSome(value)
-      ? right((value as Monad<R>).getValue())
-      : left("Converted from Left-like" as any)
-    : right(value as R);
-
-export const eitherIf = <Reason, R>(pred: Predicate<R>) => (value: R | Monad<R>) => {
-  const _value: R = (!isNil(value) ? getMonadValue(value) : value) as R;
-  try {
-    return pred(_value)
-      ? right<Reason, R>(value)
-      : left<Reason, R>(
-          `<${typeof _value}>${_value} did not satisfy predicate ${pred.name}` as any
-        );
-  } catch (err) {
-    return left<Reason, R>(err);
+export class Right<R, L = Error> extends Monad<R> {
+  readonly value: R;
+  constructor(value: R) {
+    super();
+    this.value = value;
   }
-};
+  bind<B>(fn: Mappable<R, B>): Either<B, L | Error> {
+    try {
+      const result = fn(this.value);
+      return either(getValue(result));
+    } catch (err) {
+      return left<B, Error>(err);
+    }
+  }
+  bindM<B>(fn: Mappable<Monad<R>, Monad<B>>): Either<B, L | Error> {
+    try {
+      const result = fn(this);
+      return either(getValue(result));
+    } catch (err) {
+      return left<B, L>(err);
+    }
+  }
+  filter(fn: Predicate<R>): Either<R, L | Error> {
+    try {
+      return fn(this.value) ? this : left<R>(new Error("Did not pass filter"));
+    } catch (err) {
+      return left<R>(new Error(`Exception while filtering: ${err.text}`));
+    }
+  }
 
-export const eitherNullable = <R>(value: R | Monad<R>) => eitherIf(isSome)(value);
+  effect(fn: Effect<R>): Either<R, L> {
+    try {
+      fn(this.value);
+    } catch (err) {}
+    return this;
+  }
+  getValue(): R {
+    return this.value;
+  }
+  getValueOr(_: R): R {
+    return this.value;
+  }
+  match<B>(matcher: EitherMatcher<R, L, B>): Either<B, L> {
+    return either(matcher.right(this.value)) as any;
+  }
+}
+
+export function left<R, L = Error>(errVal: L) {
+  return new Left<R, L>(errVal);
+}
+
+export function right<R, L = Error>(value: R) {
+  return new Right<R, L>(value);
+}
+
+export function either<R, L = Error>(
+  value: MonadType<R>,
+  errVal?: L
+): Either<R, L | Error> {
+  const innerValue = getValue(value);
+  return isNil(innerValue)
+    ? errVal
+      ? new Left<R, L>(errVal)
+      : new Left<R, Error>(new Error("Initially nil"))
+    : new Right<R, L>(innerValue);
+}
+
+export function isLeft<R = any, L = Error>(el: unknown): el is Left<R, L> {
+  return el instanceof Left;
+}
+
+export function isRight<R = any, L = Error>(el: unknown): el is Right<R, L> {
+  return el instanceof Right;
+}
+
+export function isEither<R = any, L = Error>(el: unknown): el is Either<R, L> {
+  return isLeft<R>(el) || isRight<L>(el);
+}

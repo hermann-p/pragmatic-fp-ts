@@ -1,0 +1,46 @@
+[pragmatic-fp-ts](../README.md) › [Globals](../globals.md) › ["and"](_and_.md)
+
+# External module: "and"
+
+## Index
+
+### Functions
+
+* [and](_and_.md#and)
+
+## Functions
+
+###  and
+
+▸ **and**(`a`: boolean, `b`: boolean): *boolean*
+
+Defined in and.ts:5
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`a` | boolean |
+`b` | boolean |
+
+**Returns:** *boolean*
+
+▸ **and**(`a`: boolean): *function*
+
+Defined in and.ts:6
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`a` | boolean |
+
+**Returns:** *function*
+
+▸ (`b`: boolean): *boolean*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`b` | boolean |

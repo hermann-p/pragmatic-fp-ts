@@ -1,0 +1,46 @@
+[pragmatic-fp-ts](../README.md) › [Globals](../globals.md) › ["xor"](_xor_.md)
+
+# External module: "xor"
+
+## Index
+
+### Functions
+
+* [xor](_xor_.md#xor)
+
+## Functions
+
+###  xor
+
+▸ **xor**(`a`: unknown, `b`: unknown): *boolean*
+
+Defined in xor.ts:1
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`a` | unknown |
+`b` | unknown |
+
+**Returns:** *boolean*
+
+▸ **xor**(`a`: unknown): *function*
+
+Defined in xor.ts:2
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`a` | unknown |
+
+**Returns:** *function*
+
+▸ (`b`: unknown): *boolean*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`b` | unknown |

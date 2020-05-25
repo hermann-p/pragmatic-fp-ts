@@ -1,0 +1,29 @@
+[pragmatic-fp-ts](../README.md) › [Globals](../globals.md) › ["reverse"](_reverse_.md)
+
+# External module: "reverse"
+
+## Index
+
+### Functions
+
+* [reverse](_reverse_.md#reverse)
+
+## Functions
+
+###  reverse
+
+▸ **reverse**<**A**>(`coll`: A[]): *A[]*
+
+Defined in reverse.ts:3
+
+**Type parameters:**
+
+▪ **A**
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`coll` | A[] |
+
+**Returns:** *A[]*

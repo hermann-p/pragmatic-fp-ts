@@ -1,0 +1,54 @@
+[pragmatic-fp-ts](../README.md) › [Globals](../globals.md) › ["dropRightWhile"](_droprightwhile_.md)
+
+# External module: "dropRightWhile"
+
+## Index
+
+### Functions
+
+* [dropRightWhile](_droprightwhile_.md#droprightwhile)
+
+## Functions
+
+###  dropRightWhile
+
+▸ **dropRightWhile**<**A**>(`pred`: [Predicate](_types_.md#predicate)‹A›, `coll`: A[]): *A[]*
+
+Defined in dropRightWhile.ts:6
+
+**Type parameters:**
+
+▪ **A**
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`pred` | [Predicate](_types_.md#predicate)‹A› |
+`coll` | A[] |
+
+**Returns:** *A[]*
+
+▸ **dropRightWhile**<**A**>(`pred`: [Predicate](_types_.md#predicate)‹A›): *function*
+
+Defined in dropRightWhile.ts:7
+
+**Type parameters:**
+
+▪ **A**
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`pred` | [Predicate](_types_.md#predicate)‹A› |
+
+**Returns:** *function*
+
+▸ (`coll`: A[]): *A[]*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`coll` | A[] |

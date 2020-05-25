@@ -2,8 +2,4 @@
 
 # External module: "Monad"
 
-## Index
 
-### Classes
-
-* [Monad](../classes/_monad_.monad.md)
