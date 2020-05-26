@@ -14,7 +14,7 @@
 
 ▸ **splitAt**<**A**>(`idx`: number, `coll`: A[]): *[A[], A[]]*
 
-*Defined in [splitAt.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/splitAt.ts#L3)*
+*Defined in [splitAt.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/splitAt.ts#L3)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **splitAt**(`idx`: number): *function*
 
-*Defined in [splitAt.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/splitAt.ts#L4)*
+*Defined in [splitAt.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/splitAt.ts#L4)*
 
 **Parameters:**
 
@@ -55,7 +55,7 @@ Name | Type |
 
 ▸ **splitAt**(`idx`: number, `text`: string): *[string, string]*
 
-*Defined in [splitAt.ts:10](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/splitAt.ts#L10)*
+*Defined in [splitAt.ts:10](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/splitAt.ts#L10)*
 
 **Parameters:**
 
@@ -68,7 +68,7 @@ Name | Type |
 
 ▸ **splitAt**(`idx`: number): *function*
 
-*Defined in [splitAt.ts:11](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/splitAt.ts#L11)*
+*Defined in [splitAt.ts:11](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/splitAt.ts#L11)*
 
 **Parameters:**
 

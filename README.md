@@ -34,19 +34,21 @@ An elaborated readme will follow. Until then, you can see the
 - written in TS from the beginning with emphasis on inferring types
   over just being `any`
 - a very small set of functions is not implemented (at the time of
-  writing, merge, pipe and compose are the most noteworthy)
+  writing, flavours of `merge` and `compose` are the most noteworthy,
+  although a `pipe` function exists)
 - very little function names differ
 - `innerJoin` behaves more like one would expect from an inner
   database join
 - return types look much cleaner and are arguably more readable by
   avoiding constructs like `Curry4<Map<Filter<...` and being more like
   `<A,B>(value: A) => B[]`
+- no support for fantasy-land objects
 
 # Plans for the future
 
 - auto-infer even more types (although it's already quite good)
 - add Futures
-- improve typing once TS implements variadic types
+- improve typing even more once TS implements variadic types
 - implement some more helpful functions found e.g. in lodash or
   Clojure
 

@@ -14,7 +14,7 @@
 
 ▸ **nth**<**A**>(`n`: number, `coll`: A[]): *A*
 
-*Defined in [nth.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/nth.ts#L3)*
+*Defined in [nth.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/nth.ts#L3)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **nth**(`n`: number): *function*
 
-*Defined in [nth.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/nth.ts#L4)*
+*Defined in [nth.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/nth.ts#L4)*
 
 **Parameters:**
 
@@ -55,7 +55,7 @@ Name | Type |
 
 ▸ **nth**(`n`: number, `text`: string): *string*
 
-*Defined in [nth.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/nth.ts#L5)*
+*Defined in [nth.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/nth.ts#L5)*
 
 **Parameters:**
 

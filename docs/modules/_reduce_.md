@@ -14,7 +14,7 @@
 
 ▸ **reduce**<**A**, **B**>(`fold`: [Foldable](_types_.md#foldable)‹A, B›, `startValue`: B, `coll`: A[]): *B*
 
-*Defined in [reduce.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/reduce.ts#L3)*
+*Defined in [reduce.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/reduce.ts#L3)*
 
 **Type parameters:**
 
@@ -34,7 +34,7 @@ Name | Type |
 
 ▸ **reduce**<**A**, **B**>(`fold`: [Foldable](_types_.md#foldable)‹A, B›, `startValue`: B, `dict`: [Dictionary](_types_.md#dictionary)‹A›): *B*
 
-*Defined in [reduce.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/reduce.ts#L4)*
+*Defined in [reduce.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/reduce.ts#L4)*
 
 **Type parameters:**
 
@@ -54,7 +54,7 @@ Name | Type |
 
 ▸ **reduce**<**A**, **B**>(`fold`: [Foldable](_types_.md#foldable)‹A, B›, `StartValue`: B): *function*
 
-*Defined in [reduce.ts:10](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/reduce.ts#L10)*
+*Defined in [reduce.ts:10](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/reduce.ts#L10)*
 
 **Type parameters:**
 
@@ -81,7 +81,7 @@ Name | Type |
 
 ▸ **reduce**<**A**, **B**>(`fold`: [Foldable](_types_.md#foldable)‹A, B›, `StartValue`: B): *function*
 
-*Defined in [reduce.ts:14](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/reduce.ts#L14)*
+*Defined in [reduce.ts:14](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/reduce.ts#L14)*
 
 **Type parameters:**
 
@@ -108,7 +108,7 @@ Name | Type |
 
 ▸ **reduce**<**A**, **B**>(`fold`: [Foldable](_types_.md#foldable)‹A, B›): *function*
 
-*Defined in [reduce.ts:19](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/reduce.ts#L19)*
+*Defined in [reduce.ts:19](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/reduce.ts#L19)*
 
 **Type parameters:**
 
@@ -142,7 +142,7 @@ Name | Type |
 
 ▸ **reduce**<**A**, **B**>(`fold`: [Foldable](_types_.md#foldable)‹A, B›): *function*
 
-*Defined in [reduce.ts:22](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/reduce.ts#L22)*
+*Defined in [reduce.ts:22](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/reduce.ts#L22)*
 
 **Type parameters:**
 

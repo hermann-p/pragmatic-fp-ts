@@ -14,7 +14,7 @@
 
 ▸ **reverse**<**A**>(`coll`: A[]): *A[]*
 
-*Defined in [reverse.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/reverse.ts#L3)*
+*Defined in [reverse.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/reverse.ts#L3)*
 
 **Type parameters:**
 

@@ -18,7 +18,7 @@
 
 Ƭ **Catcher**: *function | function*
 
-*Defined in [tryCatch.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/tryCatch.ts#L3)*
+*Defined in [tryCatch.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/tryCatch.ts#L3)*
 
 ## Functions
 
@@ -26,7 +26,7 @@
 
 ▸ **tryCatch**<**A**, **B**>(`tryer`: [Mappable](_types_.md#mappable)‹A, B›, `catcher`: [Catcher](_trycatch_.md#catcher)‹A, B›, `value`: A): *B*
 
-*Defined in [tryCatch.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/tryCatch.ts#L5)*
+*Defined in [tryCatch.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/tryCatch.ts#L5)*
 
 **Type parameters:**
 
@@ -46,7 +46,7 @@ Name | Type |
 
 ▸ **tryCatch**<**A**, **B**>(`tryer`: [Mappable](_types_.md#mappable)‹A, B›, `catcher`: [Catcher](_trycatch_.md#catcher)‹A, B›): *function*
 
-*Defined in [tryCatch.ts:11](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/tryCatch.ts#L11)*
+*Defined in [tryCatch.ts:11](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/tryCatch.ts#L11)*
 
 **Type parameters:**
 
@@ -73,7 +73,7 @@ Name | Type |
 
 ▸ **tryCatch**<**A**, **B**>(`tryer`: [Mappable](_types_.md#mappable)‹A, B›): *function*
 
-*Defined in [tryCatch.ts:16](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/tryCatch.ts#L16)*
+*Defined in [tryCatch.ts:16](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/tryCatch.ts#L16)*
 
 **Type parameters:**
 

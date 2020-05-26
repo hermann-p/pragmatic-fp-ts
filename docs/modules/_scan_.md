@@ -14,7 +14,7 @@
 
 ▸ **scan**<**A**, **B**>(`fold`: [Foldable](_types_.md#foldable)‹A, B›, `start`: B, `coll`: A[]): *B[]*
 
-*Defined in [scan.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/scan.ts#L3)*
+*Defined in [scan.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/scan.ts#L3)*
 
 **Type parameters:**
 
@@ -34,7 +34,7 @@ Name | Type |
 
 ▸ **scan**<**A**, **B**>(`fold`: [Foldable](_types_.md#foldable)‹A, B›, `start`: B): *function*
 
-*Defined in [scan.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/scan.ts#L4)*
+*Defined in [scan.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/scan.ts#L4)*
 
 **Type parameters:**
 
@@ -61,7 +61,7 @@ Name | Type |
 
 ▸ **scan**<**F**>(`fold`: F): *function*
 
-*Defined in [scan.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/scan.ts#L5)*
+*Defined in [scan.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/scan.ts#L5)*
 
 **Type parameters:**
 

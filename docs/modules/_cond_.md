@@ -18,7 +18,7 @@
 
 Ƭ **Condition**: *[[Predicate](_types_.md#predicate)‹A›, [Mappable](_types_.md#mappable)‹A, B›]*
 
-*Defined in [cond.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/cond.ts#L7)*
+*Defined in [cond.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/cond.ts#L7)*
 
 ## Functions
 
@@ -26,7 +26,7 @@
 
 ▸ **cond**<**A**, **B**>(`conditions`: [Condition](_cond_.md#condition)‹A, B›[]): *[Mappable](_types_.md#mappable)‹A, B›*
 
-*Defined in [cond.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/cond.ts#L8)*
+*Defined in [cond.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/cond.ts#L8)*
 
 **Type parameters:**
 

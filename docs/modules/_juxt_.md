@@ -14,7 +14,7 @@
 
 ▸ **juxt**<**A**, **B**>(`fns`: [Mappable](_types_.md#mappable)‹A[], B›[], `coll`: A[]): *B[]*
 
-*Defined in [juxt.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/juxt.ts#L3)*
+*Defined in [juxt.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/juxt.ts#L3)*
 
 **Type parameters:**
 
@@ -33,7 +33,7 @@ Name | Type |
 
 ▸ **juxt**<**A**, **B**>(`fns`: [Mappable](_types_.md#mappable)‹A[], B›[]): *function*
 
-*Defined in [juxt.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/juxt.ts#L4)*
+*Defined in [juxt.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/juxt.ts#L4)*
 
 **Type parameters:**
 

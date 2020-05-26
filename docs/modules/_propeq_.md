@@ -19,7 +19,7 @@
 
 Ƭ **Input**: *any[] | [Dictionary](_types_.md#dictionary)*
 
-*Defined in [propEq.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/propEq.ts#L4)*
+*Defined in [propEq.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/propEq.ts#L4)*
 
 ___
 
@@ -27,7 +27,7 @@ ___
 
 Ƭ **Path**: *string | number | string | number[]*
 
-*Defined in [propEq.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/propEq.ts#L3)*
+*Defined in [propEq.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/propEq.ts#L3)*
 
 ## Functions
 
@@ -35,7 +35,7 @@ ___
 
 ▸ **propEq**(`path`: [Path](_propeq_.md#path), `value`: any, `input`: [Input](_propeq_.md#input)): *boolean*
 
-*Defined in [propEq.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/propEq.ts#L6)*
+*Defined in [propEq.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/propEq.ts#L6)*
 
 **Parameters:**
 
@@ -49,7 +49,7 @@ Name | Type |
 
 ▸ **propEq**(`path`: [Path](_propeq_.md#path), `value`: any): *function*
 
-*Defined in [propEq.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/propEq.ts#L7)*
+*Defined in [propEq.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/propEq.ts#L7)*
 
 **Parameters:**
 
@@ -70,7 +70,7 @@ Name | Type |
 
 ▸ **propEq**(`path`: [Path](_propeq_.md#path)): *function*
 
-*Defined in [propEq.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/propEq.ts#L8)*
+*Defined in [propEq.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/propEq.ts#L8)*
 
 **Parameters:**
 

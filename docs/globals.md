@@ -131,6 +131,7 @@
 * ["partition"](modules/_partition_.md)
 * ["pick"](modules/_pick_.md)
 * ["pickBy"](modules/_pickby_.md)
+* ["pipe"](modules/_pipe_.md)
 * ["prepend"](modules/_prepend_.md)
 * ["product"](modules/_product_.md)
 * ["project"](modules/_project_.md)

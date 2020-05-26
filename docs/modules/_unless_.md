@@ -14,7 +14,7 @@
 
 ▸ **unless**<**A**>(`condition`: [Predicate](_types_.md#predicate)‹A›, `ifPath`: [Endomorphism](_types_.md#endomorphism)‹A›, `value`: A): *A*
 
-*Defined in [unless.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/unless.ts#L3)*
+*Defined in [unless.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/unless.ts#L3)*
 
 **Type parameters:**
 
@@ -32,7 +32,7 @@ Name | Type |
 
 ▸ **unless**<**A**>(`condition`: [Predicate](_types_.md#predicate)‹A›, `ifPath`: [Endomorphism](_types_.md#endomorphism)‹A›): *function*
 
-*Defined in [unless.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/unless.ts#L8)*
+*Defined in [unless.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/unless.ts#L8)*
 
 **Type parameters:**
 
@@ -57,7 +57,7 @@ Name | Type |
 
 ▸ **unless**<**A**>(`condition`: [Predicate](_types_.md#predicate)‹A›): *function*
 
-*Defined in [unless.ts:12](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/unless.ts#L12)*
+*Defined in [unless.ts:12](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/unless.ts#L12)*
 
 **Type parameters:**
 

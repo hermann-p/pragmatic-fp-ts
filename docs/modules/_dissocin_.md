@@ -18,7 +18,7 @@
 
 Ƭ **Lens**: *string[]*
 
-*Defined in [dissocIn.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/dissocIn.ts#L6)*
+*Defined in [dissocIn.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/dissocIn.ts#L6)*
 
 ## Functions
 
@@ -26,7 +26,7 @@
 
 ▸ **dissocIn**<**A**>(`path`: [Lens](_dissocin_.md#lens), `dict`: A): *A*
 
-*Defined in [dissocIn.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/dissocIn.ts#L7)*
+*Defined in [dissocIn.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/dissocIn.ts#L7)*
 
 **Type parameters:**
 
@@ -43,7 +43,7 @@ Name | Type |
 
 ▸ **dissocIn**(`path`: [Lens](_dissocin_.md#lens)): *function*
 
-*Defined in [dissocIn.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/dissocIn.ts#L8)*
+*Defined in [dissocIn.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/dissocIn.ts#L8)*
 
 **Parameters:**
 

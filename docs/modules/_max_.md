@@ -14,7 +14,7 @@
 
 ▸ **max**(`numbers`: number[]): *number*
 
-*Defined in [max.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/max.ts#L1)*
+*Defined in [max.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/max.ts#L1)*
 
 **Parameters:**
 

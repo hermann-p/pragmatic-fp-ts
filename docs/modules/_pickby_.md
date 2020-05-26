@@ -14,7 +14,7 @@
 
 ▸ **pickBy**<**A**>(`pred`: [Predicate](_types_.md#predicate)‹A›, `dict`: [Dictionary](_types_.md#dictionary)‹A›): *[Dictionary](_types_.md#dictionary)‹A›*
 
-*Defined in [pickBy.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/pickBy.ts#L3)*
+*Defined in [pickBy.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/pickBy.ts#L3)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **pickBy**<**A**>(`pred`: [Predicate](_types_.md#predicate)‹A›): *function*
 
-*Defined in [pickBy.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/pickBy.ts#L7)*
+*Defined in [pickBy.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/pickBy.ts#L7)*
 
 **Type parameters:**
 

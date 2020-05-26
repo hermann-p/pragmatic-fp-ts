@@ -14,7 +14,7 @@
 
 ▸ **insertAll**<**A**>(`position`: number, `values`: A[], `coll`: A[]): *A[]*
 
-*Defined in [insertAll.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/insertAll.ts#L3)*
+*Defined in [insertAll.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/insertAll.ts#L3)*
 
 **Type parameters:**
 
@@ -32,7 +32,7 @@ Name | Type |
 
 ▸ **insertAll**<**A**>(`position`: number, `values`: A[]): *function*
 
-*Defined in [insertAll.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/insertAll.ts#L4)*
+*Defined in [insertAll.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/insertAll.ts#L4)*
 
 **Type parameters:**
 
@@ -57,7 +57,7 @@ Name | Type |
 
 ▸ **insertAll**<**A**>(`position`: number): *function*
 
-*Defined in [insertAll.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/insertAll.ts#L5)*
+*Defined in [insertAll.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/insertAll.ts#L5)*
 
 **Type parameters:**
 

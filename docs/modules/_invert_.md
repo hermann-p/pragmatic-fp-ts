@@ -14,7 +14,7 @@
 
 ▸ **invert**<**A**>(`obj`: A): *object*
 
-*Defined in [invert.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/invert.ts#L5)*
+*Defined in [invert.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/invert.ts#L5)*
 
 **Type parameters:**
 

@@ -14,7 +14,7 @@
 
 ▸ **xor**(`a`: unknown, `b`: unknown): *boolean*
 
-*Defined in [xor.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/xor.ts#L1)*
+*Defined in [xor.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/xor.ts#L1)*
 
 **Parameters:**
 
@@ -27,7 +27,7 @@ Name | Type |
 
 ▸ **xor**(`a`: unknown): *function*
 
-*Defined in [xor.ts:2](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/xor.ts#L2)*
+*Defined in [xor.ts:2](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/xor.ts#L2)*
 
 **Parameters:**
 

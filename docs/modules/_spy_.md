@@ -14,7 +14,7 @@
 
 ▸ **spy**<**A**>(`message`: string, `value`: A): *A*
 
-*Defined in [spy.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/spy.ts#L1)*
+*Defined in [spy.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/spy.ts#L1)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **spy**(`message`: string): *function*
 
-*Defined in [spy.ts:2](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/spy.ts#L2)*
+*Defined in [spy.ts:2](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/spy.ts#L2)*
 
 **Parameters:**
 

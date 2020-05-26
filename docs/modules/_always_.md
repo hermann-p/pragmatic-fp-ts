@@ -14,7 +14,7 @@
 
 ▸ **always**<**A**>(`a`: A): *A*
 
-*Defined in [always.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/always.ts#L3)*
+*Defined in [always.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/always.ts#L3)*
 
 **Type parameters:**
 

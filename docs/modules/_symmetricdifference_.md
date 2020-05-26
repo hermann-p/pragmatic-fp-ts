@@ -14,7 +14,7 @@
 
 ▸ **symmetricDifference**<**A**>(`a`: A[], `b`: A[]): *A[]*
 
-*Defined in [symmetricDifference.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/symmetricDifference.ts#L1)*
+*Defined in [symmetricDifference.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/symmetricDifference.ts#L1)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **symmetricDifference**<**A**>(`a`: A[]): *function*
 
-*Defined in [symmetricDifference.ts:2](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/symmetricDifference.ts#L2)*
+*Defined in [symmetricDifference.ts:2](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/symmetricDifference.ts#L2)*
 
 **Type parameters:**
 
