@@ -1,5 +1,3 @@
-/// <reference path="./@types/mori.d.ts" />
-
 export * from "./Chain";
 export * from "./Either";
 export * from "./Maybe";
@@ -143,10 +141,7 @@ export * from "./splitWhen";
 export * from "./spy";
 export * from "./subtract";
 export * from "./sum";
-export {
-  symmetricDifference,
-  symmetricDifference as symDiff,
-} from "./symmetricDifference";
+export { symmetricDifference, symmetricDifference as symDiff } from "./symmetricDifference";
 export * from "./T";
 export * from "./take";
 export * from "./takeWhile";
