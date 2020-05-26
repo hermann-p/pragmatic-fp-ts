@@ -14,7 +14,7 @@
 
 ▸ **toLower**(`text`: string): *string*
 
-Defined in toLower.ts:1
+*Defined in [toLower.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/toLower.ts#L1)*
 
 **Parameters:**
 

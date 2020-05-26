@@ -38,7 +38,7 @@
 
 ▸ **bind**<**B**>(`fn`: [Mappable](../modules/_types_.md#mappable)‹A, B›): *[MonadType](../modules/_types_.md#monadtype)‹B›*
 
-*Defined in [types.ts:106](https://github.com/hermann-p/pragmatic-fp-ts/blob/63d447f/src/types.ts#L106)*
+*Defined in [types.ts:106](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/types.ts#L106)*
 
 **Type parameters:**
 
@@ -58,7 +58,7 @@ ___
 
 ▸ **bindM**<**B**>(`fn`: [Mappable](../modules/_types_.md#mappable)‹[Monad](_types_.monad.md)‹A›, [MonadType](../modules/_types_.md#monadtype)‹B››): *[Monad](_types_.monad.md)‹B›*
 
-*Defined in [types.ts:107](https://github.com/hermann-p/pragmatic-fp-ts/blob/63d447f/src/types.ts#L107)*
+*Defined in [types.ts:107](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/types.ts#L107)*
 
 **Type parameters:**
 
@@ -78,7 +78,7 @@ ___
 
 ▸ **effect**(`fn`: [Effect](../modules/_types_.md#effect)‹A›): *[Monad](_types_.monad.md)‹A›*
 
-*Defined in [types.ts:109](https://github.com/hermann-p/pragmatic-fp-ts/blob/63d447f/src/types.ts#L109)*
+*Defined in [types.ts:109](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/types.ts#L109)*
 
 **Parameters:**
 
@@ -94,7 +94,7 @@ ___
 
 ▸ **filter**(`fn`: [Predicate](../modules/_types_.md#predicate)‹A›): *[Monad](_types_.monad.md)‹A›*
 
-*Defined in [types.ts:108](https://github.com/hermann-p/pragmatic-fp-ts/blob/63d447f/src/types.ts#L108)*
+*Defined in [types.ts:108](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/types.ts#L108)*
 
 **Parameters:**
 
@@ -110,7 +110,7 @@ ___
 
 ▸ **getValue**(): *A*
 
-*Defined in [types.ts:110](https://github.com/hermann-p/pragmatic-fp-ts/blob/63d447f/src/types.ts#L110)*
+*Defined in [types.ts:110](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/types.ts#L110)*
 
 **Returns:** *A*
 
@@ -120,7 +120,7 @@ ___
 
 ▸ **getValueOr**(`alt`: A): *A*
 
-*Defined in [types.ts:111](https://github.com/hermann-p/pragmatic-fp-ts/blob/63d447f/src/types.ts#L111)*
+*Defined in [types.ts:111](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/types.ts#L111)*
 
 **Parameters:**
 
@@ -136,7 +136,7 @@ ___
 
 ▸ **to**<**B**>(`transform`: [Transform](../modules/_types_.md#transform)‹A, B›): *ReturnType‹function›*
 
-*Defined in [types.ts:112](https://github.com/hermann-p/pragmatic-fp-ts/blob/63d447f/src/types.ts#L112)*
+*Defined in [types.ts:112](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/types.ts#L112)*
 
 **Type parameters:**
 

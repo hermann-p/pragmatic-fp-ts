@@ -14,7 +14,7 @@
 
 ▸ **filterKeys**<**B**, **A**>(`pred`: [Predicate](_types_.md#predicate)‹string›, `dict`: A): *B*
 
-Defined in filterKeys.ts:5
+*Defined in [filterKeys.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/filterKeys.ts#L5)*
 
 **Type parameters:**
 
@@ -33,7 +33,7 @@ Name | Type |
 
 ▸ **filterKeys**(`pred`: [Predicate](_types_.md#predicate)‹string›): *function*
 
-Defined in filterKeys.ts:10
+*Defined in [filterKeys.ts:10](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/filterKeys.ts#L10)*
 
 **Parameters:**
 

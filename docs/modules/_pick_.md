@@ -14,7 +14,7 @@
 
 ▸ **pick**<**V**, **K**>(`props`: K[], `dict`: V): *Pick‹V, K›*
 
-Defined in pick.ts:3
+*Defined in [pick.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/pick.ts#L3)*
 
 **Type parameters:**
 
@@ -33,7 +33,7 @@ Name | Type |
 
 ▸ **pick**<**V**, **K**>(`props`: K[]): *function*
 
-Defined in pick.ts:7
+*Defined in [pick.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/pick.ts#L7)*
 
 **Type parameters:**
 

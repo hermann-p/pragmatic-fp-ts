@@ -14,7 +14,7 @@
 
 ▸ **equals**<**A**>(`a`: A, `b`: A): *boolean*
 
-Defined in equals.ts:4
+*Defined in [equals.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/equals.ts#L4)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **equals**<**A**>(`a`: A): *function*
 
-Defined in equals.ts:5
+*Defined in [equals.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/equals.ts#L5)*
 
 **Type parameters:**
 

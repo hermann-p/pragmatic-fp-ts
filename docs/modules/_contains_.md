@@ -14,7 +14,7 @@
 
 ▸ **contains**<**A**>(`el`: A, `coll`: A[]): *boolean*
 
-Defined in contains.ts:3
+*Defined in [contains.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/contains.ts#L3)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **contains**<**A**>(`el`: A): *function*
 
-Defined in contains.ts:4
+*Defined in [contains.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/contains.ts#L4)*
 
 **Type parameters:**
 
@@ -55,7 +55,7 @@ Name | Type |
 
 ▸ **contains**(`part`: string, `full`: string): *boolean*
 
-Defined in contains.ts:5
+*Defined in [contains.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/contains.ts#L5)*
 
 **Parameters:**
 
@@ -68,7 +68,7 @@ Name | Type |
 
 ▸ **contains**(`part`: string): *function*
 
-Defined in contains.ts:6
+*Defined in [contains.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/contains.ts#L6)*
 
 **Parameters:**
 

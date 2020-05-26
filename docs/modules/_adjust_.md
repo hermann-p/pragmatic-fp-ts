@@ -14,7 +14,7 @@
 
 ▸ **adjust**<**A**>(`idx`: number, `fn`: [Endomorphism](_types_.md#endomorphism)‹A›, `coll`: A[]): *A[]*
 
-Defined in adjust.ts:5
+*Defined in [adjust.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/adjust.ts#L5)*
 
 **Type parameters:**
 
@@ -32,7 +32,7 @@ Name | Type |
 
 ▸ **adjust**<**A**>(`idx`: number, `fn`: [Endomorphism](_types_.md#endomorphism)‹A›): *function*
 
-Defined in adjust.ts:6
+*Defined in [adjust.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/adjust.ts#L6)*
 
 **Type parameters:**
 
@@ -57,7 +57,7 @@ Name | Type |
 
 ▸ **adjust**(`idx`: number): *function*
 
-Defined in adjust.ts:7
+*Defined in [adjust.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/adjust.ts#L7)*
 
 **Parameters:**
 

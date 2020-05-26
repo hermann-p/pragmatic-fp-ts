@@ -18,7 +18,7 @@
 
 Ƭ **ObjKey**: *string | number*
 
-Defined in getIn.ts:4
+*Defined in [getIn.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/getIn.ts#L4)*
 
 ## Functions
 
@@ -26,7 +26,7 @@ Defined in getIn.ts:4
 
 ▸ **getIn**<**A**>(`path`: [ObjKey](_getin_.md#objkey)[], `coll`: [Dictionary](_types_.md#dictionary) | any[]): *A*
 
-Defined in getIn.ts:5
+*Defined in [getIn.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/getIn.ts#L5)*
 
 **Type parameters:**
 
@@ -43,7 +43,7 @@ Name | Type |
 
 ▸ **getIn**<**A**>(`path`: [ObjKey](_getin_.md#objkey)[]): *function*
 
-Defined in getIn.ts:6
+*Defined in [getIn.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/getIn.ts#L6)*
 
 **Type parameters:**
 

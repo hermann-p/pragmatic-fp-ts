@@ -18,7 +18,7 @@
 
 Ƭ **Sortable**: *string | number | Date*
 
-Defined in clamp.ts:5
+*Defined in [clamp.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/clamp.ts#L5)*
 
 ## Functions
 
@@ -26,7 +26,7 @@ Defined in clamp.ts:5
 
 ▸ **clamp**<**A**>(`min`: A, `max`: A, `value`: A): *A*
 
-Defined in clamp.ts:6
+*Defined in [clamp.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/clamp.ts#L6)*
 
 **Type parameters:**
 
@@ -44,7 +44,7 @@ Name | Type |
 
 ▸ **clamp**<**A**>(`min`: A, `max`: A): *function*
 
-Defined in clamp.ts:7
+*Defined in [clamp.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/clamp.ts#L7)*
 
 **Type parameters:**
 
@@ -73,7 +73,7 @@ Name | Type |
 
 ▸ **clamp**<**A**>(`min`: A): *function*
 
-Defined in clamp.ts:13
+*Defined in [clamp.ts:13](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/clamp.ts#L13)*
 
 **Type parameters:**
 

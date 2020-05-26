@@ -14,7 +14,7 @@
 
 ▸ **take**<**A**>(`n`: number, `coll`: A[]): *A[]*
 
-Defined in take.ts:1
+*Defined in [take.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/take.ts#L1)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **take**(`n`: number): *function*
 
-Defined in take.ts:2
+*Defined in [take.ts:2](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/take.ts#L2)*
 
 **Parameters:**
 

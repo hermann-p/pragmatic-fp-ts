@@ -18,7 +18,7 @@
 
 Ƭ **ObjKey**: *string | number*
 
-Defined in updateIn.ts:4
+*Defined in [updateIn.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/updateIn.ts#L4)*
 
 ## Functions
 
@@ -26,7 +26,7 @@ Defined in updateIn.ts:4
 
 ▸ **updateIn**<**TInput**, **A**, **B**>(`path`: [ObjKey](_updatein_.md#objkey)[], `fn`: [Endomorphism](_types_.md#endomorphism)‹A›, `dict`: TInput): *TInput*
 
-Defined in updateIn.ts:5
+*Defined in [updateIn.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/updateIn.ts#L5)*
 
 **Type parameters:**
 
@@ -48,7 +48,7 @@ Name | Type |
 
 ▸ **updateIn**<**A**>(`path`: [ObjKey](_updatein_.md#objkey)[], `fn`: [Endomorphism](_types_.md#endomorphism)‹A›): *function*
 
-Defined in updateIn.ts:11
+*Defined in [updateIn.ts:11](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/updateIn.ts#L11)*
 
 **Type parameters:**
 
@@ -77,7 +77,7 @@ Name | Type |
 
 ▸ **updateIn**(`path`: [ObjKey](_updatein_.md#objkey)[]): *function*
 
-Defined in updateIn.ts:16
+*Defined in [updateIn.ts:16](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/updateIn.ts#L16)*
 
 **Parameters:**
 

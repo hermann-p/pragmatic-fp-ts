@@ -14,7 +14,7 @@
 
 ▸ **nonePass**<**A**>(`preds`: [Predicate](_types_.md#predicate)‹A›[], `value`: A): *boolean*
 
-Defined in nonePass.ts:5
+*Defined in [nonePass.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/nonePass.ts#L5)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **nonePass**<**A**>(`preds`: [Predicate](_types_.md#predicate)‹A›[]): *function*
 
-Defined in nonePass.ts:6
+*Defined in [nonePass.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/nonePass.ts#L6)*
 
 **Type parameters:**
 

@@ -14,7 +14,7 @@
 
 ▸ **dropRightWhile**<**A**>(`pred`: [Predicate](_types_.md#predicate)‹A›, `coll`: A[]): *A[]*
 
-Defined in dropRightWhile.ts:6
+*Defined in [dropRightWhile.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/dropRightWhile.ts#L6)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **dropRightWhile**<**A**>(`pred`: [Predicate](_types_.md#predicate)‹A›): *function*
 
-Defined in dropRightWhile.ts:7
+*Defined in [dropRightWhile.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/dropRightWhile.ts#L7)*
 
 **Type parameters:**
 

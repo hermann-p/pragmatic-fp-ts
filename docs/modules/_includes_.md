@@ -14,7 +14,7 @@
 
 ▸ **includes**(`what`: string, `coll`: string): *boolean*
 
-Defined in includes.ts:3
+*Defined in [includes.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/includes.ts#L3)*
 
 **Parameters:**
 
@@ -27,7 +27,7 @@ Name | Type |
 
 ▸ **includes**<**A**>(`what`: A, `coll`: A[]): *boolean*
 
-Defined in includes.ts:4
+*Defined in [includes.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/includes.ts#L4)*
 
 **Type parameters:**
 
@@ -44,7 +44,7 @@ Name | Type |
 
 ▸ **includes**(`what`: string): *function*
 
-Defined in includes.ts:5
+*Defined in [includes.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/includes.ts#L5)*
 
 **Parameters:**
 
@@ -64,7 +64,7 @@ Name | Type |
 
 ▸ **includes**<**A**>(`what`: A): *function*
 
-Defined in includes.ts:6
+*Defined in [includes.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/includes.ts#L6)*
 
 **Type parameters:**
 

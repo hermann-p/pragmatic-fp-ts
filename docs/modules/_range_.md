@@ -19,7 +19,7 @@
 
 Ƭ **MNum**: *number*
 
-Defined in range.ts:3
+*Defined in [range.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/range.ts#L3)*
 
 ## Functions
 
@@ -27,7 +27,7 @@ Defined in range.ts:3
 
 ▸ **getValueOr**(`alt`: number, `v`: [MNum](_range_.md#mnum)): *number*
 
-Defined in range.ts:5
+*Defined in [range.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/range.ts#L5)*
 
 **Parameters:**
 
@@ -44,7 +44,7 @@ ___
 
 ▸ **range**(`start`: [MNum](_range_.md#mnum), `end`: [MNum](_range_.md#mnum)): *number[]*
 
-Defined in range.ts:10
+*Defined in [range.ts:10](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/range.ts#L10)*
 
 **Parameters:**
 
@@ -57,7 +57,7 @@ Name | Type |
 
 ▸ **range**(`start`: [MNum](_range_.md#mnum)): *function*
 
-Defined in range.ts:11
+*Defined in [range.ts:11](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/range.ts#L11)*
 
 **Parameters:**
 

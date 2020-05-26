@@ -18,7 +18,7 @@
 
 Ƭ **Path**: *string | number[]*
 
-Defined in assocIn.ts:4
+*Defined in [assocIn.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/assocIn.ts#L4)*
 
 ## Functions
 
@@ -26,7 +26,7 @@ Defined in assocIn.ts:4
 
 ▸ **assocIn**<**A**>(`path`: [Path](_associn_.md#path), `value`: any, `coll`: any[]): *A[]*
 
-Defined in assocIn.ts:5
+*Defined in [assocIn.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/assocIn.ts#L5)*
 
 **Type parameters:**
 
@@ -44,7 +44,7 @@ Name | Type |
 
 ▸ **assocIn**<**A**>(`path`: [Path](_associn_.md#path), `value`: any): *function*
 
-Defined in assocIn.ts:6
+*Defined in [assocIn.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/assocIn.ts#L6)*
 
 **Type parameters:**
 
@@ -69,7 +69,7 @@ Name | Type |
 
 ▸ **assocIn**<**A**>(`path`: [Path](_associn_.md#path)): *function*
 
-Defined in assocIn.ts:7
+*Defined in [assocIn.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/assocIn.ts#L7)*
 
 **Type parameters:**
 
@@ -101,7 +101,7 @@ Name | Type |
 
 ▸ **assocIn**<**A**>(`path`: [Path](_associn_.md#path), `value`: any, `dict`: A): *A*
 
-Defined in assocIn.ts:11
+*Defined in [assocIn.ts:11](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/assocIn.ts#L11)*
 
 **Type parameters:**
 
@@ -119,7 +119,7 @@ Name | Type |
 
 ▸ **assocIn**<**A**>(`path`: [Path](_associn_.md#path), `value`: any): *function*
 
-Defined in assocIn.ts:16
+*Defined in [assocIn.ts:16](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/assocIn.ts#L16)*
 
 **Type parameters:**
 

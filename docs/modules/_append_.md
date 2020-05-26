@@ -14,7 +14,7 @@
 
 ▸ **append**<**A**>(`el`: A, `coll`: A[]): *A[]*
 
-Defined in append.ts:6
+*Defined in [append.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/append.ts#L6)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **append**(`tail`: string, `head`: string): *string*
 
-Defined in append.ts:7
+*Defined in [append.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/append.ts#L7)*
 
 **Parameters:**
 
@@ -44,7 +44,7 @@ Name | Type |
 
 ▸ **append**<**A**>(`tail`: A): *function*
 
-Defined in append.ts:8
+*Defined in [append.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/append.ts#L8)*
 
 **Type parameters:**
 

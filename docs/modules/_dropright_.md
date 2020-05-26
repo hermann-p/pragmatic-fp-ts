@@ -14,7 +14,7 @@
 
 ▸ **dropRight**<**A**>(`n`: number, `coll`: A[]): *A[]*
 
-Defined in dropRight.ts:5
+*Defined in [dropRight.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/dropRight.ts#L5)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **dropRight**<**A**>(`n`: number): *function*
 
-Defined in dropRight.ts:6
+*Defined in [dropRight.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/dropRight.ts#L6)*
 
 **Type parameters:**
 

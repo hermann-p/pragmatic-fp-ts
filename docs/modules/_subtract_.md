@@ -15,7 +15,7 @@
 
 ▸ **dec**(`n`: number): *number*
 
-Defined in subtract.ts:14
+*Defined in [subtract.ts:14](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/subtract.ts#L14)*
 
 **Parameters:**
 
@@ -31,7 +31,7 @@ ___
 
 ▸ **subtract**(`a`: number, `b`: number): *number*
 
-Defined in subtract.ts:3
+*Defined in [subtract.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/subtract.ts#L3)*
 
 **Parameters:**
 
@@ -44,7 +44,7 @@ Name | Type |
 
 ▸ **subtract**(`a`: number): *function*
 
-Defined in subtract.ts:4
+*Defined in [subtract.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/subtract.ts#L4)*
 
 **Parameters:**
 

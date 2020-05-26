@@ -18,7 +18,7 @@
 
 Ƭ **MixedCmp**: *function*
 
-Defined in innerJoin.ts:3
+*Defined in [innerJoin.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/innerJoin.ts#L3)*
 
 #### Type declaration:
 
@@ -37,7 +37,7 @@ Name | Type |
 
 ▸ **innerJoin**<**A**, **B**>(`match`: [MixedCmp](_innerjoin_.md#mixedcmp)‹A, B›, `as`: A[], `bs`: B[]): *A & B[]*
 
-Defined in innerJoin.ts:4
+*Defined in [innerJoin.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/innerJoin.ts#L4)*
 
 **Type parameters:**
 
@@ -57,7 +57,7 @@ Name | Type |
 
 ▸ **innerJoin**<**A**, **B**>(`match`: [MixedCmp](_innerjoin_.md#mixedcmp)‹A, B›, `as`: A[]): *function*
 
-Defined in innerJoin.ts:9
+*Defined in [innerJoin.ts:9](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/innerJoin.ts#L9)*
 
 **Type parameters:**
 
@@ -84,7 +84,7 @@ Name | Type |
 
 ▸ **innerJoin**<**A**, **B**>(`match`: [MixedCmp](_innerjoin_.md#mixedcmp)‹A, B›): *function*
 
-Defined in innerJoin.ts:14
+*Defined in [innerJoin.ts:14](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/innerJoin.ts#L14)*
 
 **Type parameters:**
 

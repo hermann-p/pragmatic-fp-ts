@@ -14,7 +14,7 @@
 
 ▸ **takeRight**<**A**>(`n`: number, `coll`: A[]): *A[]*
 
-Defined in takeRight.ts:1
+*Defined in [takeRight.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/takeRight.ts#L1)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **takeRight**(`n`: number): *function*
 
-Defined in takeRight.ts:2
+*Defined in [takeRight.ts:2](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/takeRight.ts#L2)*
 
 **Parameters:**
 

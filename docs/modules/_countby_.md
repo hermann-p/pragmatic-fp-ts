@@ -14,7 +14,7 @@
 
 ▸ **countBy**<**A**>(`toKey`: [Mappable](_types_.md#mappable)‹A, any›, `dict`: A[]): *[Dictionary](_types_.md#dictionary)‹number›*
 
-Defined in countBy.ts:7
+*Defined in [countBy.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/countBy.ts#L7)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **countBy**<**A**>(`toKey`: [Mappable](_types_.md#mappable)‹A, any›): *function*
 
-Defined in countBy.ts:12
+*Defined in [countBy.ts:12](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/countBy.ts#L12)*
 
 **Type parameters:**
 

@@ -14,7 +14,7 @@
 
 ▸ **unionBy**<**A**, **B**>(`cmp`: [Mappable](_types_.md#mappable)‹A, B›, `a`: A[], `b`: A[]): *A[]*
 
-Defined in unionBy.ts:3
+*Defined in [unionBy.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/unionBy.ts#L3)*
 
 **Type parameters:**
 
@@ -34,7 +34,7 @@ Name | Type |
 
 ▸ **unionBy**<**A**, **B**>(`cmp`: [Mappable](_types_.md#mappable)‹A, B›, `a`: A[]): *function*
 
-Defined in unionBy.ts:4
+*Defined in [unionBy.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/unionBy.ts#L4)*
 
 **Type parameters:**
 
@@ -61,7 +61,7 @@ Name | Type |
 
 ▸ **unionBy**<**A**, **B**>(`cmp`: [Mappable](_types_.md#mappable)‹A, B›): *function*
 
-Defined in unionBy.ts:5
+*Defined in [unionBy.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/unionBy.ts#L5)*
 
 **Type parameters:**
 

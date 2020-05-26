@@ -14,7 +14,7 @@
 
 ▸ **where**<**A**>(`pattern`: [Dictionary](_types_.md#dictionary)‹[Predicate](_types_.md#predicate)‹A››, `dict`: [Dictionary](_types_.md#dictionary)‹A›): *boolean*
 
-Defined in where.ts:3
+*Defined in [where.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/where.ts#L3)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **where**<**A**>(`pattern`: [Dictionary](_types_.md#dictionary)‹[Predicate](_types_.md#predicate)‹A››): *function*
 
-Defined in where.ts:7
+*Defined in [where.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/where.ts#L7)*
 
 **Type parameters:**
 

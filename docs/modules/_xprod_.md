@@ -14,7 +14,7 @@
 
 ▸ **xprod**<**A**, **B**>(`a`: A[], `b`: B[]): *[A, B][]*
 
-Defined in xprod.ts:1
+*Defined in [xprod.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/xprod.ts#L1)*
 
 **Type parameters:**
 
@@ -33,7 +33,7 @@ Name | Type |
 
 ▸ **xprod**<**A**>(`a`: A[]): *function*
 
-Defined in xprod.ts:2
+*Defined in [xprod.ts:2](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/xprod.ts#L2)*
 
 **Type parameters:**
 

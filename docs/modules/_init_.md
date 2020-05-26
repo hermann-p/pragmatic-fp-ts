@@ -14,7 +14,7 @@
 
 ▸ **init**<**A**>(`coll`: A[]): *A[]*
 
-Defined in init.ts:3
+*Defined in [init.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/init.ts#L3)*
 
 **Type parameters:**
 

@@ -15,7 +15,7 @@
 
 ▸ **add**(`a`: number, `b`: number): *number*
 
-Defined in add.ts:3
+*Defined in [add.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/add.ts#L3)*
 
 **Parameters:**
 
@@ -28,7 +28,7 @@ Name | Type |
 
 ▸ **add**(`a`: number): *function*
 
-Defined in add.ts:4
+*Defined in [add.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/add.ts#L4)*
 
 **Parameters:**
 
@@ -52,7 +52,7 @@ ___
 
 ▸ **inc**(`n`: number): *number*
 
-Defined in add.ts:14
+*Defined in [add.ts:14](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/add.ts#L14)*
 
 **Parameters:**
 

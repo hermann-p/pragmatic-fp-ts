@@ -14,7 +14,7 @@
 
 ▸ **differenceWith**<**A**, **B**>(`toKey`: [Mappable](_types_.md#mappable)‹A, B›, `setA`: A[], `setB`: A[]): *A[]*
 
-Defined in differenceWith.ts:3
+*Defined in [differenceWith.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/differenceWith.ts#L3)*
 
 **Type parameters:**
 
@@ -34,7 +34,7 @@ Name | Type |
 
 ▸ **differenceWith**<**A**, **B**>(`toKey`: [Mappable](_types_.md#mappable)‹A, B›, `setA`: A[]): *function*
 
-Defined in differenceWith.ts:8
+*Defined in [differenceWith.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/differenceWith.ts#L8)*
 
 **Type parameters:**
 
@@ -61,7 +61,7 @@ Name | Type |
 
 ▸ **differenceWith**<**A**, **B**>(`toKey`: [Mappable](_types_.md#mappable)‹A, B›): *function*
 
-Defined in differenceWith.ts:12
+*Defined in [differenceWith.ts:12](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/differenceWith.ts#L12)*
 
 **Type parameters:**
 

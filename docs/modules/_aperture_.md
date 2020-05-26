@@ -14,7 +14,7 @@
 
 ▸ **aperture**<**A**>(`step`: number, `coll`: A[]): *A[][]*
 
-Defined in aperture.ts:3
+*Defined in [aperture.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/aperture.ts#L3)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **aperture**<**A**>(`step`: number): *function*
 
-Defined in aperture.ts:5
+*Defined in [aperture.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/aperture.ts#L5)*
 
 **Type parameters:**
 
