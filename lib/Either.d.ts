@@ -1,48 +1,36 @@
-import { Effect, Mappable, Predicate } from "./types";
-import { Maybe } from "./Maybe";
-import { Monad } from "./Monad";
-export declare type Either<L, R> = Left<L, R> | Right<L, R>;
-export declare type Reason = Error | string;
-export declare type EitherPattern<A, B> = {
-    right: (value: A) => B;
-    left: (value: Reason) => B;
+import { Effect, Mappable, Predicate } from "./main";
+import { Monad, MonadType } from "./types";
+export declare type Either<R, L = Error> = Left<R, L> | Right<R, L>;
+declare type EitherMatcher<R, L, B> = {
+    left: (err: L) => B;
+    right: (val: R) => B;
 };
-export declare class Right<L, R> implements Monad<R> {
-    private readonly value;
-    constructor(value: R | Monad<R>);
-    bind<R2>(fn: Mappable<R, R2 | Either<R, R2>>): Either<Reason, R2>;
-    bindM<R2>(fn: Mappable<Monad<R>, R2 | Either<R, R2>>): Either<Reason, R2>;
-    match<R2>(pattern: EitherPattern<R, R2>): Either<L, R2>;
-    filter(predicate: Predicate<R>): Either<L, R>;
+export declare class Left<R, L = Error> extends Monad<R> {
+    readonly errorValue: L;
+    constructor(errVal: L);
+    bind<B>(_: Mappable<R, B>): Either<B, L>;
+    bindM<B>(_: Mappable<Monad<R>, Monad<B>>): Either<B, L>;
+    filter(_: any): Either<R, L>;
+    effect(_: any): Either<R, L>;
     getValue(): R;
-    getValueOr(): R;
-    getReason(): L;
-    effect(fx: Effect<R>): Either<L, R>;
-    isMonad(): boolean;
-    isLeft(): boolean;
-    isRight(): boolean;
-    toMaybe(): Maybe<R>;
-    toString(): string;
+    getValueOr(alt: R): R;
+    match<B>(matcher: EitherMatcher<R, L, B>): Either<B, L | Error>;
 }
-export declare class Left<L, R> implements Monad<R> {
-    private readonly reason;
-    constructor(reason: L);
-    bind<R2>(_: Mappable<R, R2 | Either<R, R2>>): Either<Reason, R2>;
-    bindM<R2>(_: Mappable<Monad<R>, R2 | Either<R, R2>>): Either<Reason, R2>;
-    match<R2>(pattern: EitherPattern<R, R2>): Either<L, R2>;
-    filter(_: Predicate<R>): Either<L, R>;
-    getValue(): any;
-    getValueOr(alternative: R): R;
-    getReason(): L;
-    effect(_: Effect<R>): Either<L, R>;
-    isMonad(): boolean;
-    isLeft(): boolean;
-    isRight(): boolean;
-    toMaybe(): Maybe<R>;
-    toString(): string;
+export declare class Right<R, L = Error> extends Monad<R> {
+    readonly value: R;
+    constructor(value: R);
+    bind<B>(fn: Mappable<R, B>): Either<B, L | Error>;
+    bindM<B>(fn: Mappable<Monad<R>, Monad<B>>): Either<B, L | Error>;
+    filter(fn: Predicate<R>): Either<R, L | Error>;
+    effect(fn: Effect<R>): Either<R, L>;
+    getValue(): R;
+    getValueOr(_: R): R;
+    match<B>(matcher: EitherMatcher<R, L, B>): Either<B, L>;
 }
-export declare const right: <L, R>(value: R | Monad<R>) => Right<L, R>;
-export declare const left: <L, R>(reason: L) => Left<L, R>;
-export declare const either: <L, R>(value: R | Monad<R>) => Either<L, R>;
-export declare const eitherIf: <Reason_1, R>(pred: Predicate<R>) => (value: R | Monad<R>) => Right<Reason_1, R> | Left<Reason_1, R>;
-export declare const eitherNullable: <R>(value: R | Monad<R>) => Right<unknown, unknown> | Left<unknown, unknown>;
+export declare function left<R, L = Error>(errVal: L): Left<R, L>;
+export declare function right<R, L = Error>(value: R): Right<R, L>;
+export declare function either<R, L = Error>(value: MonadType<R>, errVal?: L): Either<R, L | Error>;
+export declare function isLeft<R = any, L = Error>(el: unknown): el is Left<R, L>;
+export declare function isRight<R = any, L = Error>(el: unknown): el is Right<R, L>;
+export declare function isEither<R = any, L = Error>(el: unknown): el is Either<R, L>;
+export {};

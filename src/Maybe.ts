@@ -1,143 +1,96 @@
-import { Effect, MaybeType, Predicate } from "./types";
-import { Either, Reason, left, right } from "./Either";
-import { Mappable } from "./types";
-import { Monad } from "./Monad";
-import { getMonadValue } from "./tools";
-import { isMaybe, isMonad, isNil, isSome } from "./predicates";
+import { Effect, getValue, Mappable, Predicate } from "./main";
+import { Monad } from "./types";
 
-export type Maybe<T> = Just<T> | Nothing<T>;
-export type MaybePattern<A, B> = {
-  just: (value: A) => B;
-  nothing: () => B;
-};
+export type Maybe<A> = Just<A> | Nothing<A>;
 
-export class Just<T> extends Monad<T> {
-  private value: T;
-  constructor(value: T | Just<T>) {
-    super();
-    this.value = getMonadValue<T>(value) as T;
+type MaybeMatcher<A, B> = { just: Mappable<A, B>; nothing: () => B };
+export class Nothing<A> extends Monad<A> {
+  bind<B>(_: Mappable<A, B>): Maybe<B> {
+    return this as any;
   }
-
-  getValue(): T {
-    return this.value;
+  bindM<B>(_: Mappable<Monad<A>, Monad<B>>): Maybe<B> {
+    return this as any;
   }
-  getValueOr(_: T): T {
-    return this.getValue();
-  }
-  isJust() {
-    return true;
-  }
-  isNothing() {
-    return false;
-  }
-  isMonad() {
-    return true;
-  }
-  isMaybe() {
-    return true;
-  }
-  bind<B>(fn: Mappable<T, B | Maybe<B>>): Maybe<B> {
-    try {
-      const result = fn(this.value);
-      return maybe(result);
-    } catch (err) {
-      console.warn("Caught in Just.bind:", err);
-      return nothing<B>();
-    }
-  }
-  bindM<B>(fn: Mappable<Monad<T>, B | Monad<B>>): Maybe<B> {
-    return maybe(fn(this));
-  }
-  match<U>(match: MaybePattern<T, U>): Maybe<U> {
-    try {
-      return just(match.just(this.value));
-    } catch (err) {
-      console.warn("Caught in Just.match:", err);
-      return nothing<U>();
-    }
-  }
-  filter(pred: Predicate<T>): Maybe<T> {
-    return pred(this.value) ? this : nothing();
-  }
-  effect(fn: Effect<T>): Maybe<T> {
-    const { value } = this;
-    fn(value);
+  filter(_: any): Maybe<A> {
     return this;
   }
-  toEither(): Either<Reason, T> {
-    return right<Reason, T>(this.value);
+  effect(_: any): Maybe<A> {
+    return this;
   }
-  toString(): string {
-    return `Just(${JSON.stringify(this.value)})`;
-  }
-}
-
-export class Nothing<T> implements Monad<T> {
-  getValue(): T {
+  getValue(): A {
     throw new Error("Can not get value of Nothing");
   }
-  getValueOr(alternative: T | Just<T>): T {
-    return alternative instanceof Just ? alternative.getValue() : alternative;
+  getValueOr(alt: A) {
+    return alt;
   }
-  isJust() {
-    return false;
-  }
-  isNothing() {
-    return true;
-  }
-  isMonad() {
-    return true;
-  }
-  isMaybe() {
-    return true;
-  }
-  bind<B>(_: Mappable<T, B | Maybe<B>>): Maybe<B> {
-    return (this as Nothing<any>) as Nothing<B>; // prefer ugly code over `new Nothing<B>()`
-  }
-  bindM<B>(_: Mappable<Monad<T>, B | Maybe<B>>): Maybe<B> {
-    return (this as unknown) as Nothing<B>;
-  }
-  match<U>(match: MaybePattern<T, U>): Maybe<U> {
-    try {
-      return just(match.nothing());
-    } catch (err) {
-      console.warn("Caught in Nothing.match:", err);
-      return nothing<U>();
-    }
-  }
-  filter(_: Predicate<T>): Maybe<T> {
-    return this;
-  }
-  effect(_: Effect<T>): Maybe<T> {
-    return this;
-  }
-  toEither(): Either<Reason, T> {
-    return left("Cast from nothing");
-  }
-  toString() {
-    return "Nothing";
+  match<B>(matcher: MaybeMatcher<A, B>): Maybe<B> {
+    return maybe(matcher.nothing());
   }
 }
 
-export const just = <T>(value: T) => new Just(value);
-export const nothing = <T>() => new Nothing<T>();
-export const maybe = <T>(value: T | Monad<T>): Maybe<T> =>
-  isMaybe(value)
-    ? (value as Maybe<T>) // avoid re-casting monads
-    : isMonad(value)
-    ? isSome(value)
-      ? maybe(getMonadValue(value) as T)
-      : nothing()
-    : isNil(value)
-    ? nothing()
-    : just(value as T);
+export class Just<A> extends Monad<A> {
+  readonly value: A;
+  constructor(value: A) {
+    super();
+    this.value = value;
+  }
+  bind<B>(fn: Mappable<A, B>): Maybe<B> {
+    try {
+      const result = fn(this.value);
+      return maybe(getValue(result));
+    } catch (err) {
+      return nothing();
+    }
+  }
+  bindM<B>(fn: Mappable<Monad<A>, Monad<B>>): Maybe<B> {
+    try {
+      const result = fn(this);
+      return maybe(getValue(result));
+    } catch (err) {
+      return nothing();
+    }
+  }
+  filter(fn: Predicate<A>): Maybe<A> {
+    try {
+      return fn(this.value) ? this : nothing();
+    } catch {
+      return nothing();
+    }
+  }
 
-export const maybeFalsy = <T>(value: MaybeType<T>): Maybe<T> =>
-  maybe(value).filter((v: any) => !!v);
+  effect(fn: Effect<A>): Maybe<A> {
+    try {
+      fn(this.value);
+    } catch (err) {}
+    return this;
+  }
+  getValue(): A {
+    return this.value;
+  }
+  getValueOr(_: A): A {
+    return this.value;
+  }
+  match<B>(matcher: MaybeMatcher<A, B>): Maybe<B> {
+    return maybe(matcher.just(this.value));
+  }
+}
 
-export const maybeIf = <T>(predicate: MaybeType<Predicate<T>>) => (value: MaybeType<T>) => {
-  const pred = maybe(predicate)
-    .filter((fn) => typeof fn === "function")
-    .getValueOr((_: any) => false);
-  return maybe(value).filter(pred);
+export const just = <T>(value: T) => {
+  return new Just<T>(value);
 };
+export const nothing = <T>() => {
+  return new Nothing<T>();
+};
+
+export const maybe = <T>(value: T | Monad<T>): Maybe<T> => {
+  const extractedValue = getValue<T>(value);
+  return extractedValue === null || extractedValue === undefined
+    ? (nothing() as Nothing<T>)
+    : just<T>(extractedValue);
+};
+
+export const isJust = (x: unknown) => x instanceof Just;
+
+export const isNothing = (x: unknown) => x instanceof Nothing;
+
+export const isMaybe = (x: unknown) => isJust(x) || isNothing(x);

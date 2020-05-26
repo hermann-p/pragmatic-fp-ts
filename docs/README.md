@@ -4,8 +4,9 @@
 
 # pragmatic-fp-ts
 
-A library for functional programming in TypeScript. Curried, total
-functions, Maybe/Either monads.
+A library for functional programming in TypeScript. Curried,
+argument-last, pure, total functions that never mutate any data,
+Maybe/Either/Chain monads.
 
 > There's not enough JavaScript libraries to choose from.
 > -- <cite>no one, never</cite>
@@ -15,35 +16,43 @@ daily work. Typings are kept as as simple as possible, although this
 may include some dirty castings under the hood. Still, it is quite
 shiny when seen from the outside.
 
-All functions are curried, there is no optional currying. This is
-mainly because I develop this lib in my spare time but need it
-available at work. As multi-arg functions are meant to be used in
-chaining, this should not be too much of a burden (although I agree that using things like `ifElse` in the wild is kind of ugly). I plan on
-implementing `ramda`-like flexible currying in the future, but it is
-not a top priority and will not break the existing API.
+# Breaking changes
 
-All functions are total and will always return Maybe/Either
-types. Exceptions are caught automatically and converted to
-Nothing/Left, except when it could be very confusing for a function to
-return. Maybe will warn you in the console when it transformed to
-Nothing due to an exception, and Either will store any exception in
-its Left branch as expected.
+## 1.0
+
+- functions no longer return Maybe monads as default
+- some function names changed
+- `Maybe.match` and `Either.match` no longer automatically catch
+  errors, so they can be used as to throw when absolutely needed
+  without leaving the monads' flow.
+- monads support transforming themselves when given a monad
+  constructor
 
 # Usability primer
 
 An elaborated readme will follow. Until then, you can see the
 [auto generated docs on github](https://github.com/hermann-p/pragmatic-fp-ts/blob/master/docs/globals.md).
 
+## Differences to ramda
+
+- written in TS from the beginning with emphasis on inferring types
+  over just being `any`
+- a very small set of functions is not implemented (at the time of
+  writing, merge, pipe and compose are the most noteworthy)
+- very little function names differ
+- `innerJoin` behaves more like one would expect from an inner
+  database join
+- return types look much cleaner and are arguably more readable by
+  avoiding constructs like `Curry4<Map<Filter<...` and being more like
+  `<A,B>(value: A) => B[]`
+
 # Plans for the future
 
-- add more functionality to get on par with ramda (most of the
-  functions I use do already exist)
-- clean up typing
-- add type overloads
-- implement currying
-- some sort of weak monad transformers
-- rely more heavily on `mori` internally, to get more speed out of its
-  optimised immutable data structures
+- auto-infer even more types (although it's already quite good)
+- add Futures
+- improve typing once TS implements variadic types
+- implement some more helpful functions found e.g. in lodash or
+  Clojure
 
 # FAQ
 
@@ -63,7 +72,7 @@ const fnWithMaybe = () => Promise.resolve(Maybe("value"))
 
 // or outside async fn
 fnWithMaybe()
-  .then(optional => 
+  .then(optional =>
     optional
       .bind(...)
       .filter(...)
@@ -81,22 +90,15 @@ maybe(await fn())
 
 // outside async fn
 fn()
-  .then(value => 
+  .then(value =>
     maybe(value)
       .bind(...)
   ) // etc
 ```
 
-## The docs do not show how many arguments I need to feed to curried functions!
-
-I know. They are simply auto-generated using `typedoc` and
-`typedoc-plugin-markdown` so I can host them on github in a readable format. As said before, I just don't have the time to write a full-on documentation as I got work to do.
-
-The docs do, however, provide you with links to the respective lines in the source files, so you can just click them and see the signatures yourself. If you have any FP background, nothing should surprise you.
-
 # Collaboration
 
-- If you miss any FP construct, feel free to let me know.  
+- If you miss any FP construct, feel free to open an issue or PR.
   It's probably missing because I forgot to implement it/didn't need
   it yet. If it makes sense to me to have it here, I'll implement it.
 - Comments/PRs are very welcome, especially if you want to improve the docs.

@@ -1,20 +1,18 @@
 [pragmatic-fp-ts](../README.md) › [Globals](../globals.md) › ["Either"](../modules/_either_.md) › [Right](_either_.right.md)
 
-# Class: Right <**L, R**>
+# Class: Right <**R, L**>
 
 ## Type parameters
 
-▪ **L**
-
 ▪ **R**
+
+▪ **L**
 
 ## Hierarchy
 
-* **Right**
+* [Monad](_types_.monad.md)‹R›
 
-## Implements
-
-* [Monad](_monad_.monad.md)‹R›
+  ↳ **Right**
 
 ## Index
 
@@ -24,7 +22,7 @@
 
 ### Properties
 
-* [value](_either_.right.md#private-value)
+* [value](_either_.right.md#value)
 
 ### Methods
 
@@ -32,121 +30,114 @@
 * [bindM](_either_.right.md#bindm)
 * [effect](_either_.right.md#effect)
 * [filter](_either_.right.md#filter)
-* [getReason](_either_.right.md#getreason)
 * [getValue](_either_.right.md#getvalue)
 * [getValueOr](_either_.right.md#getvalueor)
-* [isLeft](_either_.right.md#isleft)
-* [isMonad](_either_.right.md#ismonad)
-* [isRight](_either_.right.md#isright)
 * [match](_either_.right.md#match)
-* [toMaybe](_either_.right.md#tomaybe)
-* [toString](_either_.right.md#tostring)
+* [to](_either_.right.md#to)
 
 ## Constructors
 
 ###  constructor
 
-\+ **new Right**(`value`: R | [Monad](_monad_.monad.md)‹R›): *[Right](_either_.right.md)*
+\+ **new Right**(`value`: R): *[Right](_either_.right.md)*
 
-*Defined in [Either.ts:16](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/Either.ts#L16)*
+*Defined in [Either.ts:42](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/Either.ts#L42)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`value` | R &#124; [Monad](_monad_.monad.md)‹R› |
+`value` | R |
 
 **Returns:** *[Right](_either_.right.md)*
 
 ## Properties
 
-### `Private` value
+###  value
 
 • **value**: *R*
 
-*Defined in [Either.ts:16](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/Either.ts#L16)*
+*Defined in [Either.ts:42](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/Either.ts#L42)*
 
 ## Methods
 
 ###  bind
 
-▸ **bind**<**R2**>(`fn`: [Mappable](../modules/_types_.md#mappable)‹R, R2 | [Either](../modules/_either_.md#either)‹R, R2››): *[Either](../modules/_either_.md#either)‹[Reason](../modules/_either_.md#reason), R2›*
+▸ **bind**<**B**>(`fn`: [Mappable](../modules/_types_.md#mappable)‹R, B›): *[Either](../modules/_either_.md#either)‹B, L | Error›*
 
-*Defined in [Either.ts:20](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/Either.ts#L20)*
+*Overrides [Monad](_types_.monad.md).[bind](_types_.monad.md#abstract-bind)*
+
+*Defined in [Either.ts:47](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/Either.ts#L47)*
 
 **Type parameters:**
 
-▪ **R2**
+▪ **B**
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`fn` | [Mappable](../modules/_types_.md#mappable)‹R, R2 &#124; [Either](../modules/_either_.md#either)‹R, R2›› |
+`fn` | [Mappable](../modules/_types_.md#mappable)‹R, B› |
 
-**Returns:** *[Either](../modules/_either_.md#either)‹[Reason](../modules/_either_.md#reason), R2›*
+**Returns:** *[Either](../modules/_either_.md#either)‹B, L | Error›*
 
 ___
 
 ###  bindM
 
-▸ **bindM**<**R2**>(`fn`: [Mappable](../modules/_types_.md#mappable)‹[Monad](_monad_.monad.md)‹R›, R2 | [Either](../modules/_either_.md#either)‹R, R2››): *[Either](../modules/_either_.md#either)‹[Reason](../modules/_either_.md#reason), R2›*
+▸ **bindM**<**B**>(`fn`: [Mappable](../modules/_types_.md#mappable)‹[Monad](_types_.monad.md)‹R›, [Monad](_types_.monad.md)‹B››): *[Either](../modules/_either_.md#either)‹B, L | Error›*
 
-*Defined in [Either.ts:28](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/Either.ts#L28)*
+*Overrides [Monad](_types_.monad.md).[bindM](_types_.monad.md#abstract-bindm)*
+
+*Defined in [Either.ts:55](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/Either.ts#L55)*
 
 **Type parameters:**
 
-▪ **R2**
+▪ **B**
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`fn` | [Mappable](../modules/_types_.md#mappable)‹[Monad](_monad_.monad.md)‹R›, R2 &#124; [Either](../modules/_either_.md#either)‹R, R2›› |
+`fn` | [Mappable](../modules/_types_.md#mappable)‹[Monad](_types_.monad.md)‹R›, [Monad](_types_.monad.md)‹B›› |
 
-**Returns:** *[Either](../modules/_either_.md#either)‹[Reason](../modules/_either_.md#reason), R2›*
+**Returns:** *[Either](../modules/_either_.md#either)‹B, L | Error›*
 
 ___
 
 ###  effect
 
-▸ **effect**(`fx`: [Effect](../modules/_types_.md#effect)‹R›): *[Either](../modules/_either_.md#either)‹L, R›*
+▸ **effect**(`fn`: [Effect](../modules/_types_.md#effect)‹R›): *[Either](../modules/_either_.md#either)‹R, L›*
 
-*Defined in [Either.ts:62](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/Either.ts#L62)*
+*Overrides [Monad](_types_.monad.md).[effect](_types_.monad.md#abstract-effect)*
+
+*Defined in [Either.ts:71](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/Either.ts#L71)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`fx` | [Effect](../modules/_types_.md#effect)‹R› |
+`fn` | [Effect](../modules/_types_.md#effect)‹R› |
 
-**Returns:** *[Either](../modules/_either_.md#either)‹L, R›*
+**Returns:** *[Either](../modules/_either_.md#either)‹R, L›*
 
 ___
 
 ###  filter
 
-▸ **filter**(`predicate`: [Predicate](../modules/_types_.md#predicate)‹R›): *[Either](../modules/_either_.md#either)‹L, R›*
+▸ **filter**(`fn`: [Predicate](../modules/_types_.md#predicate)‹R›): *[Either](../modules/_either_.md#either)‹R, L | Error›*
 
-*Defined in [Either.ts:39](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/Either.ts#L39)*
+*Overrides [Monad](_types_.monad.md).[filter](_types_.monad.md#abstract-filter)*
+
+*Defined in [Either.ts:63](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/Either.ts#L63)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`predicate` | [Predicate](../modules/_types_.md#predicate)‹R› |
+`fn` | [Predicate](../modules/_types_.md#predicate)‹R› |
 
-**Returns:** *[Either](../modules/_either_.md#either)‹L, R›*
-
-___
-
-###  getReason
-
-▸ **getReason**(): *L*
-
-*Defined in [Either.ts:59](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/Either.ts#L59)*
-
-**Returns:** *L*
+**Returns:** *[Either](../modules/_either_.md#either)‹R, L | Error›*
 
 ___
 
@@ -154,7 +145,9 @@ ___
 
 ▸ **getValue**(): *R*
 
-*Defined in [Either.ts:53](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/Either.ts#L53)*
+*Overrides [Monad](_types_.monad.md).[getValue](_types_.monad.md#abstract-getvalue)*
+
+*Defined in [Either.ts:77](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/Either.ts#L77)*
 
 **Returns:** *R*
 
@@ -162,78 +155,58 @@ ___
 
 ###  getValueOr
 
-▸ **getValueOr**(): *R*
+▸ **getValueOr**(`_`: R): *R*
 
-*Defined in [Either.ts:56](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/Either.ts#L56)*
+*Overrides [Monad](_types_.monad.md).[getValueOr](_types_.monad.md#abstract-getvalueor)*
 
-**Returns:** *R*
-
-___
-
-###  isLeft
-
-▸ **isLeft**(): *boolean*
-
-*Defined in [Either.ts:74](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/Either.ts#L74)*
-
-**Returns:** *boolean*
-
-___
-
-###  isMonad
-
-▸ **isMonad**(): *boolean*
-
-*Defined in [Either.ts:71](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/Either.ts#L71)*
-
-**Returns:** *boolean*
-
-___
-
-###  isRight
-
-▸ **isRight**(): *boolean*
-
-*Defined in [Either.ts:77](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/Either.ts#L77)*
-
-**Returns:** *boolean*
-
-___
-
-###  match
-
-▸ **match**<**R2**>(`pattern`: [EitherPattern](../modules/_either_.md#eitherpattern)‹R, R2›): *[Either](../modules/_either_.md#either)‹L, R2›*
-
-*Defined in [Either.ts:31](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/Either.ts#L31)*
-
-**Type parameters:**
-
-▪ **R2**
+*Defined in [Either.ts:80](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/Either.ts#L80)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`pattern` | [EitherPattern](../modules/_either_.md#eitherpattern)‹R, R2› |
+`_` | R |
 
-**Returns:** *[Either](../modules/_either_.md#either)‹L, R2›*
-
-___
-
-###  toMaybe
-
-▸ **toMaybe**(): *[Maybe](../modules/_maybe_.md#maybe)‹R›*
-
-*Defined in [Either.ts:80](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/Either.ts#L80)*
-
-**Returns:** *[Maybe](../modules/_maybe_.md#maybe)‹R›*
+**Returns:** *R*
 
 ___
 
-###  toString
+###  match
 
-▸ **toString**(): *string*
+▸ **match**<**B**>(`matcher`: [EitherMatcher](../modules/_either_.md#eithermatcher)‹R, L, B›): *[Either](../modules/_either_.md#either)‹B, L›*
 
-*Defined in [Either.ts:83](https://github.com/hermann-p/pragmatic-fp-ts/blob/2f49fce/src/Either.ts#L83)*
+*Defined in [Either.ts:83](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/Either.ts#L83)*
 
-**Returns:** *string*
+**Type parameters:**
+
+▪ **B**
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`matcher` | [EitherMatcher](../modules/_either_.md#eithermatcher)‹R, L, B› |
+
+**Returns:** *[Either](../modules/_either_.md#either)‹B, L›*
+
+___
+
+###  to
+
+▸ **to**<**B**>(`transform`: [Transform](../modules/_types_.md#transform)‹R, B›): *ReturnType‹function›*
+
+*Inherited from [Monad](_types_.monad.md).[to](_types_.monad.md#to)*
+
+*Defined in [types.ts:112](https://github.com/hermann-p/pragmatic-fp-ts/blob/16cc592/src/types.ts#L112)*
+
+**Type parameters:**
+
+▪ **B**: *[Monad](_types_.monad.md)‹R›*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`transform` | [Transform](../modules/_types_.md#transform)‹R, B› |
+
+**Returns:** *ReturnType‹function›*
