@@ -15,9 +15,10 @@ export class Left<R, L = Error> extends Monad<R> {
     this.errorValue = errVal;
   }
 
-  bind<B>(_: Mappable<R, B>): Either<B, L> {
+  _<B>(_: Mappable<R, B>): Either<B, L> {
     return this as any;
   }
+  bind = this._;
   bindM<B>(_: Mappable<Monad<R>, Monad<B>>): Either<B, L> {
     return this as any;
   }
@@ -44,7 +45,7 @@ export class Right<R, L = Error> extends Monad<R> {
     super();
     this.value = value;
   }
-  bind<B>(fn: Mappable<R, B>): Either<B, L | Error> {
+  _<B>(fn: Mappable<R, B>): Either<B, L | Error> {
     try {
       const result = fn(this.value);
       return either(getValue(result));
@@ -52,6 +53,7 @@ export class Right<R, L = Error> extends Monad<R> {
       return left<B, Error>(err);
     }
   }
+  bind = this._;
   bindM<B>(fn: Mappable<Monad<R>, Monad<B>>): Either<B, L | Error> {
     try {
       const result = fn(this);
@@ -93,10 +95,7 @@ export function right<R, L = Error>(value: R) {
   return new Right<R, L>(value);
 }
 
-export function either<R, L = Error>(
-  value: MonadType<R>,
-  errVal?: L
-): Either<R, L | Error> {
+export function either<R, L = Error>(value: MonadType<R>, errVal?: L): Either<R, L | Error> {
   const innerValue = getValue(value);
   return isNil(innerValue)
     ? errVal

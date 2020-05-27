@@ -18,7 +18,7 @@
 
 Ƭ **ObjKey**: *string | number*
 
-*Defined in [into.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/into.ts#L3)*
+*Defined in [src/into.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/into.ts#L3)*
 
 ## Functions
 
@@ -26,7 +26,7 @@
 
 ▸ **into**<**T**>(`target`: [Dictionary](_types_.md#dictionary)‹T›, `coll`: [[ObjKey](_into_.md#objkey), T][]): *[Dictionary](_types_.md#dictionary)‹T›*
 
-*Defined in [into.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/into.ts#L4)*
+*Defined in [src/into.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/into.ts#L4)*
 
 **Type parameters:**
 
@@ -43,7 +43,7 @@ Name | Type |
 
 ▸ **into**<**T**>(`target`: [Dictionary](_types_.md#dictionary)‹T›): *function*
 
-*Defined in [into.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/into.ts#L8)*
+*Defined in [src/into.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/into.ts#L8)*
 
 **Type parameters:**
 
@@ -67,7 +67,7 @@ Name | Type |
 
 ▸ **into**<**T**>(`target`: T[], `coll`: T[]): *T[]*
 
-*Defined in [into.ts:12](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/into.ts#L12)*
+*Defined in [src/into.ts:12](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/into.ts#L12)*
 
 **Type parameters:**
 
@@ -84,7 +84,7 @@ Name | Type |
 
 ▸ **into**<**T**>(`target`: T[]): *function*
 
-*Defined in [into.ts:13](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/into.ts#L13)*
+*Defined in [src/into.ts:13](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/into.ts#L13)*
 
 **Type parameters:**
 

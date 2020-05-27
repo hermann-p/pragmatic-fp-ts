@@ -14,7 +14,7 @@
 
 ▸ **flatMap**<**A**, **B**>(`mappable`: [Mappable](_types_.md#mappable)‹A, B | B[]›, `coll`: A | A[][]): *B[]*
 
-*Defined in [flatMap.ts:14](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/flatMap.ts#L14)*
+*Defined in [src/flatMap.ts:14](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/flatMap.ts#L14)*
 
 **Type parameters:**
 
@@ -33,7 +33,7 @@ Name | Type |
 
 ▸ **flatMap**<**A**, **B**>(`mappable`: [Mappable](_types_.md#mappable)‹A, B | B[]›): *function*
 
-*Defined in [flatMap.ts:18](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/flatMap.ts#L18)*
+*Defined in [src/flatMap.ts:18](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/flatMap.ts#L18)*
 
 **Type parameters:**
 

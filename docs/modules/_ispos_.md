@@ -14,7 +14,7 @@
 
 ▸ **isPos**(`n`: number): *boolean*
 
-*Defined in [isPos.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/isPos.ts#L1)*
+*Defined in [src/isPos.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/isPos.ts#L1)*
 
 **Parameters:**
 

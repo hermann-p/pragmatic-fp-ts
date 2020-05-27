@@ -19,7 +19,7 @@
 
 ▸ **chain**<**A**>(`value`: [MonadType](_types_.md#monadtype)‹A›): *[Chain](../classes/_chain_.chain.md)‹A›*
 
-*Defined in [Chain.ts:32](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/Chain.ts#L32)*
+*Defined in [src/Chain.ts:33](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/Chain.ts#L33)*
 
 **Type parameters:**
 
@@ -39,7 +39,7 @@ ___
 
 ▸ **isChain**(`candidate`: unknown): *boolean*
 
-*Defined in [Chain.ts:36](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/Chain.ts#L36)*
+*Defined in [src/Chain.ts:37](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/Chain.ts#L37)*
 
 **Parameters:**
 

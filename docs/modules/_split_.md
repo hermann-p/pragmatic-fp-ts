@@ -14,7 +14,7 @@
 
 ▸ **split**(`splitMark`: string, `input`: string): *string[]*
 
-*Defined in [split.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/split.ts#L1)*
+*Defined in [src/split.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/split.ts#L1)*
 
 **Parameters:**
 
@@ -27,7 +27,7 @@ Name | Type |
 
 ▸ **split**(`splitMark`: string): *function*
 
-*Defined in [split.ts:2](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/split.ts#L2)*
+*Defined in [src/split.ts:2](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/split.ts#L2)*
 
 **Parameters:**
 

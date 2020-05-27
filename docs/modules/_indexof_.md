@@ -14,7 +14,7 @@
 
 ▸ **indexOf**<**A**>(`value`: A, `coll`: A[]): *number*
 
-*Defined in [indexOf.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/indexOf.ts#L3)*
+*Defined in [src/indexOf.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/indexOf.ts#L3)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **indexOf**<**A**>(`value`: A): *function*
 
-*Defined in [indexOf.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/indexOf.ts#L4)*
+*Defined in [src/indexOf.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/indexOf.ts#L4)*
 
 **Type parameters:**
 

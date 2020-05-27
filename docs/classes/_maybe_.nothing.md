@@ -14,9 +14,13 @@
 
 ## Index
 
-### Methods
+### Properties
 
 * [bind](_maybe_.nothing.md#bind)
+
+### Methods
+
+* [_](_maybe_.nothing.md#_)
 * [bindM](_maybe_.nothing.md#bindm)
 * [effect](_maybe_.nothing.md#effect)
 * [filter](_maybe_.nothing.md#filter)
@@ -25,15 +29,25 @@
 * [match](_maybe_.nothing.md#match)
 * [to](_maybe_.nothing.md#to)
 
-## Methods
+## Properties
 
 ###  bind
 
-▸ **bind**<**B**>(`_`: [Mappable](../modules/_types_.md#mappable)‹A, B›): *[Maybe](../modules/_maybe_.md#maybe)‹B›*
+• **bind**: *[_](_maybe_.nothing.md#_)* =  this._
 
 *Overrides [Monad](_types_.monad.md).[bind](_types_.monad.md#abstract-bind)*
 
-*Defined in [Maybe.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/Maybe.ts#L8)*
+*Defined in [src/Maybe.ts:11](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/Maybe.ts#L11)*
+
+## Methods
+
+###  _
+
+▸ **_**<**B**>(`_`: [Mappable](../modules/_types_.md#mappable)‹A, B›): *[Maybe](../modules/_maybe_.md#maybe)‹B›*
+
+*Overrides [Monad](_types_.monad.md).[_](_types_.monad.md#abstract-_)*
+
+*Defined in [src/Maybe.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/Maybe.ts#L8)*
 
 **Type parameters:**
 
@@ -55,7 +69,7 @@ ___
 
 *Overrides [Monad](_types_.monad.md).[bindM](_types_.monad.md#abstract-bindm)*
 
-*Defined in [Maybe.ts:11](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/Maybe.ts#L11)*
+*Defined in [src/Maybe.ts:12](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/Maybe.ts#L12)*
 
 **Type parameters:**
 
@@ -77,7 +91,7 @@ ___
 
 *Overrides [Monad](_types_.monad.md).[effect](_types_.monad.md#abstract-effect)*
 
-*Defined in [Maybe.ts:17](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/Maybe.ts#L17)*
+*Defined in [src/Maybe.ts:18](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/Maybe.ts#L18)*
 
 **Parameters:**
 
@@ -95,7 +109,7 @@ ___
 
 *Overrides [Monad](_types_.monad.md).[filter](_types_.monad.md#abstract-filter)*
 
-*Defined in [Maybe.ts:14](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/Maybe.ts#L14)*
+*Defined in [src/Maybe.ts:15](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/Maybe.ts#L15)*
 
 **Parameters:**
 
@@ -113,7 +127,7 @@ ___
 
 *Overrides [Monad](_types_.monad.md).[getValue](_types_.monad.md#abstract-getvalue)*
 
-*Defined in [Maybe.ts:20](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/Maybe.ts#L20)*
+*Defined in [src/Maybe.ts:21](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/Maybe.ts#L21)*
 
 **Returns:** *A*
 
@@ -125,7 +139,7 @@ ___
 
 *Overrides [Monad](_types_.monad.md).[getValueOr](_types_.monad.md#abstract-getvalueor)*
 
-*Defined in [Maybe.ts:23](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/Maybe.ts#L23)*
+*Defined in [src/Maybe.ts:24](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/Maybe.ts#L24)*
 
 **Parameters:**
 
@@ -141,7 +155,7 @@ ___
 
 ▸ **match**<**B**>(`matcher`: [MaybeMatcher](../modules/_maybe_.md#maybematcher)‹A, B›): *[Maybe](../modules/_maybe_.md#maybe)‹B›*
 
-*Defined in [Maybe.ts:26](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/Maybe.ts#L26)*
+*Defined in [src/Maybe.ts:27](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/Maybe.ts#L27)*
 
 **Type parameters:**
 
@@ -163,7 +177,7 @@ ___
 
 *Inherited from [Monad](_types_.monad.md).[to](_types_.monad.md#to)*
 
-*Defined in [types.ts:112](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/types.ts#L112)*
+*Defined in [src/types.ts:106](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/types.ts#L106)*
 
 **Type parameters:**
 

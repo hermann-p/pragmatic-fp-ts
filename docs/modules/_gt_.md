@@ -14,7 +14,7 @@
 
 ▸ **gt**(`a`: [BasicComparable](_types_.md#basiccomparable), `b`: [BasicComparable](_types_.md#basiccomparable)): *boolean*
 
-*Defined in [gt.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/gt.ts#L3)*
+*Defined in [src/gt.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/gt.ts#L3)*
 
 **Parameters:**
 
@@ -27,7 +27,7 @@ Name | Type |
 
 ▸ **gt**(`a`: [BasicComparable](_types_.md#basiccomparable)): *function*
 
-*Defined in [gt.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/gt.ts#L4)*
+*Defined in [src/gt.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/gt.ts#L4)*
 
 **Parameters:**
 

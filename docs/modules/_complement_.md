@@ -14,7 +14,7 @@
 
 ▸ **complement**<**A**>(`pred`: [Predicate](_types_.md#predicate)‹A›, `value`: A): *boolean*
 
-*Defined in [complement.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/complement.ts#L6)*
+*Defined in [src/complement.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/complement.ts#L6)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **complement**<**A**>(`pred`: [Predicate](_types_.md#predicate)‹A›): *[Predicate](_types_.md#predicate)‹A›*
 
-*Defined in [complement.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/complement.ts#L7)*
+*Defined in [src/complement.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/complement.ts#L7)*
 
 **Type parameters:**
 

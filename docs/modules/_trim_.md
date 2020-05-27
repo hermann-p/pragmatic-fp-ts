@@ -14,7 +14,7 @@
 
 ▸ **trim**(`text`: string): *string*
 
-*Defined in [trim.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/trim.ts#L1)*
+*Defined in [src/trim.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/trim.ts#L1)*
 
 **Parameters:**
 

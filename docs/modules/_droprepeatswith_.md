@@ -14,7 +14,7 @@
 
 ▸ **dropRepeatsWith**<**A**>(`isEqual`: [Equality](_types_.md#equality)‹A›, `coll`: A[]): *A[]*
 
-*Defined in [dropRepeatsWith.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/dropRepeatsWith.ts#L5)*
+*Defined in [src/dropRepeatsWith.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/dropRepeatsWith.ts#L5)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **dropRepeatsWith**<**A**>(`isEqual`: [Equality](_types_.md#equality)‹A›): *function*
 
-*Defined in [dropRepeatsWith.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/dropRepeatsWith.ts#L6)*
+*Defined in [src/dropRepeatsWith.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/dropRepeatsWith.ts#L6)*
 
 **Type parameters:**
 

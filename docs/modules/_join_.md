@@ -14,7 +14,7 @@
 
 ▸ **join**(`separator`: string, `coll`: any[]): *string*
 
-*Defined in [join.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/join.ts#L3)*
+*Defined in [src/join.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/join.ts#L3)*
 
 **Parameters:**
 
@@ -27,7 +27,7 @@ Name | Type |
 
 ▸ **join**(`separator`: string): *function*
 
-*Defined in [join.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/join.ts#L4)*
+*Defined in [src/join.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/join.ts#L4)*
 
 **Parameters:**
 

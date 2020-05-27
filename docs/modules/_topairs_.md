@@ -14,7 +14,7 @@
 
 ▸ **toPairs**<**A**>(`dict`: [Dictionary](_types_.md#dictionary)‹A›): *[string, A][]*
 
-*Defined in [toPairs.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/toPairs.ts#L3)*
+*Defined in [src/toPairs.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/toPairs.ts#L3)*
 
 **Type parameters:**
 

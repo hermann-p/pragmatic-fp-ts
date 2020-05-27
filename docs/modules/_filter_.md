@@ -16,7 +16,7 @@
 
 ▸ **filter**<**A**>(`pred`: [Predicate](_types_.md#predicate)‹A›, `coll`: A[]): *A[]*
 
-*Defined in [filter.ts:13](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/filter.ts#L13)*
+*Defined in [src/filter.ts:13](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/filter.ts#L13)*
 
 **Type parameters:**
 
@@ -33,7 +33,7 @@ Name | Type |
 
 ▸ **filter**<**A**>(`pred`: [Predicate](_types_.md#predicate)‹A›, `coll`: [Dictionary](_types_.md#dictionary)‹A›): *[Dictionary](_types_.md#dictionary)‹A›*
 
-*Defined in [filter.ts:14](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/filter.ts#L14)*
+*Defined in [src/filter.ts:14](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/filter.ts#L14)*
 
 **Type parameters:**
 
@@ -50,7 +50,7 @@ Name | Type |
 
 ▸ **filter**<**A**>(`pred`: [Predicate](_types_.md#predicate)‹A›): *function*
 
-*Defined in [filter.ts:18](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/filter.ts#L18)*
+*Defined in [src/filter.ts:18](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/filter.ts#L18)*
 
 **Type parameters:**
 
@@ -82,7 +82,7 @@ ___
 
 ▸ **filterArray**(`pred`: [Predicate](_types_.md#predicate)‹any›, `arr`: any[]): *any[]*
 
-*Defined in [filter.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/filter.ts#L5)*
+*Defined in [src/filter.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/filter.ts#L5)*
 
 **Parameters:**
 
@@ -99,7 +99,7 @@ ___
 
 ▸ **filterDict**(`pred`: [Predicate](_types_.md#predicate)‹any›, `dict`: [Dictionary](_types_.md#dictionary)): *object*
 
-*Defined in [filter.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/filter.ts#L6)*
+*Defined in [src/filter.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/filter.ts#L6)*
 
 **Parameters:**
 

@@ -14,7 +14,7 @@
 
 ▸ **indexBy**<**A**>(`mkIndex`: [Mappable](_types_.md#mappable)‹A, string›, `coll`: A[]): *[Dictionary](_types_.md#dictionary)‹A›*
 
-*Defined in [indexBy.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/indexBy.ts#L3)*
+*Defined in [src/indexBy.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/indexBy.ts#L3)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **indexBy**<**A**>(`mkIndex`: [Mappable](_types_.md#mappable)‹A, string›): *function*
 
-*Defined in [indexBy.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/indexBy.ts#L8)*
+*Defined in [src/indexBy.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/indexBy.ts#L8)*
 
 **Type parameters:**
 

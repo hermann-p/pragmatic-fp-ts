@@ -16,6 +16,18 @@ daily work. Typings are kept as as simple as possible, although this
 may include some dirty castings under the hood. Still, it is quite
 shiny when seen from the outside.
 
+# How to get
+
+It's on npmjs.com, so you should know the drill.
+
+- npm: `npm install --save pragmatic-fp-ts`
+- yarn: `yarn add pragmatic-fp-ts`
+- Currently no single .min.js for easy import via browser tags
+  exists. This is because webpack and I dislike each other. I tried
+  using the parcel bundler, but the resulting bundle file size
+  exploded while at the same time the .d.ts files disappeared. Anyone
+  bothers to help?
+
 # Breaking changes
 
 ## 1.0
@@ -38,19 +50,25 @@ An elaborated readme will follow. Until then, you can see the
 - written in TS from the beginning with emphasis on inferring types
   over just being `any`
 - a very small set of functions is not implemented (at the time of
-  writing, merge, pipe and compose are the most noteworthy)
+  writing, flavours of `merge` are the most noteworthy, although a
+  `pipe` function exists)
 - very little function names differ
 - `innerJoin` behaves more like one would expect from an inner
   database join
+- `compose` and `pipe` use monadic-style infix composition instead of
+  just accepting arguments. This allows for type-checked composition
+  of an arbitrary number of functions in contrast to ramda's "list
+  overloads" approach
 - return types look much cleaner and are arguably more readable by
   avoiding constructs like `Curry4<Map<Filter<...` and being more like
   `<A,B>(value: A) => B[]`
+- no support for fantasy-land objects
 
 # Plans for the future
 
 - auto-infer even more types (although it's already quite good)
 - add Futures
-- improve typing once TS implements variadic types
+- improve typing even more once TS implements variadic types
 - implement some more helpful functions found e.g. in lodash or
   Clojure
 
@@ -95,6 +113,29 @@ fn()
       .bind(...)
   ) // etc
 ```
+
+# History
+
+## 1.1
+
+- Deprecated the function name `bind` of monads, calling it `_`
+  instead. Although functional programmers should not have run into
+  any problems with it, the name `bind` might confuse people coming
+  from object oriented JavaScript programming, expecting
+  function-this-argument-binding instead of monadic binding. The old
+  name is still kept to keep older code from breaking too
+  much. Composition is arguably easier to read this way.
+- Introduced `flow`, `pipe`, and `compose`, so now we should now be
+  able to do anything with this lib we can do with ramda.
+- Still missing `mergeXXX`, as I still need to find performant ways to
+  do so. I have a history with lodash's `merge` crippling one of my
+  web apps' performance, and don't want anyone to run into similar
+  issues, especially myself :D
+
+## 1.0
+
+- ~100 new functions
+- some concept changes, see breaking changes
 
 # Collaboration
 

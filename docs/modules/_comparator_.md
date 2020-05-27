@@ -14,7 +14,7 @@
 
 ▸ **comparator**<**A**>(`isInOrder`: function): *[Comparator](_types_.md#comparator)‹A›*
 
-*Defined in [comparator.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/comparator.ts#L5)*
+*Defined in [src/comparator.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/comparator.ts#L5)*
 
 **Type parameters:**
 

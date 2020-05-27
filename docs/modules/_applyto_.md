@@ -14,7 +14,7 @@
 
 ▸ **applyTo**<**A**, **B**>(`value`: A, `fn`: [Mappable](_types_.md#mappable)‹A, B›): *B*
 
-*Defined in [applyTo.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/applyTo.ts#L5)*
+*Defined in [src/applyTo.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/applyTo.ts#L5)*
 
 **Type parameters:**
 
@@ -33,7 +33,7 @@ Name | Type |
 
 ▸ **applyTo**<**A**, **B**>(`value`: A): *function*
 
-*Defined in [applyTo.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/applyTo.ts#L6)*
+*Defined in [src/applyTo.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/applyTo.ts#L6)*
 
 **Type parameters:**
 

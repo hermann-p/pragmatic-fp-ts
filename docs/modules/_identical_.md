@@ -14,7 +14,7 @@
 
 ▸ **identical**<**T**>(`a`: T, `B`: T): *boolean*
 
-*Defined in [identical.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/identical.ts#L1)*
+*Defined in [src/identical.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/identical.ts#L1)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **identical**<**T**>(`a`: T): *function*
 
-*Defined in [identical.ts:2](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/identical.ts#L2)*
+*Defined in [src/identical.ts:2](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/identical.ts#L2)*
 
 **Type parameters:**
 

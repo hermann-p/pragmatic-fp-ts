@@ -14,7 +14,7 @@
 
 ▸ **get**<**A**>(`idx`: number, `coll`: A[]): *A*
 
-*Defined in [get.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/get.ts#L3)*
+*Defined in [src/get.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/get.ts#L3)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **get**<**A**>(`propName`: string, `dict`: [Dictionary](_types_.md#dictionary)): *A*
 
-*Defined in [get.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/get.ts#L4)*
+*Defined in [src/get.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/get.ts#L4)*
 
 **Type parameters:**
 

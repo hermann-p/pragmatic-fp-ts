@@ -14,7 +14,7 @@
 
 ▸ **when**<**A**>(`condition`: [Predicate](_types_.md#predicate)‹A›, `ifPath`: [Endomorphism](_types_.md#endomorphism)‹A›, `value`: A): *A*
 
-*Defined in [when.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/when.ts#L3)*
+*Defined in [src/when.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/when.ts#L3)*
 
 **Type parameters:**
 
@@ -32,7 +32,7 @@ Name | Type |
 
 ▸ **when**<**A**>(`condition`: [Predicate](_types_.md#predicate)‹A›, `ifPath`: [Endomorphism](_types_.md#endomorphism)‹A›): *function*
 
-*Defined in [when.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/when.ts#L8)*
+*Defined in [src/when.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/when.ts#L8)*
 
 **Type parameters:**
 
@@ -57,7 +57,7 @@ Name | Type |
 
 ▸ **when**<**A**>(`condition`: [Predicate](_types_.md#predicate)‹A›): *function*
 
-*Defined in [when.ts:12](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/when.ts#L12)*
+*Defined in [src/when.ts:12](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/when.ts#L12)*
 
 **Type parameters:**
 

@@ -5,9 +5,10 @@ export type Maybe<A> = Just<A> | Nothing<A>;
 
 type MaybeMatcher<A, B> = { just: Mappable<A, B>; nothing: () => B };
 export class Nothing<A> extends Monad<A> {
-  bind<B>(_: Mappable<A, B>): Maybe<B> {
+  _<B>(_: Mappable<A, B>): Maybe<B> {
     return this as any;
   }
+  bind = this._;
   bindM<B>(_: Mappable<Monad<A>, Monad<B>>): Maybe<B> {
     return this as any;
   }
@@ -34,7 +35,7 @@ export class Just<A> extends Monad<A> {
     super();
     this.value = value;
   }
-  bind<B>(fn: Mappable<A, B>): Maybe<B> {
+  _<B>(fn: Mappable<A, B>): Maybe<B> {
     try {
       const result = fn(this.value);
       return maybe(getValue(result));
@@ -42,6 +43,7 @@ export class Just<A> extends Monad<A> {
       return nothing();
     }
   }
+  bind = this._;
   bindM<B>(fn: Mappable<Monad<A>, Monad<B>>): Maybe<B> {
     try {
       const result = fn(this);

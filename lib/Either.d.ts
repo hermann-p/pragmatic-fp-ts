@@ -8,7 +8,8 @@ declare type EitherMatcher<R, L, B> = {
 export declare class Left<R, L = Error> extends Monad<R> {
     readonly errorValue: L;
     constructor(errVal: L);
-    bind<B>(_: Mappable<R, B>): Either<B, L>;
+    _<B>(_: Mappable<R, B>): Either<B, L>;
+    bind: <B>(_: Mappable<R, B>) => Either<B, L>;
     bindM<B>(_: Mappable<Monad<R>, Monad<B>>): Either<B, L>;
     filter(_: any): Either<R, L>;
     effect(_: any): Either<R, L>;
@@ -19,7 +20,8 @@ export declare class Left<R, L = Error> extends Monad<R> {
 export declare class Right<R, L = Error> extends Monad<R> {
     readonly value: R;
     constructor(value: R);
-    bind<B>(fn: Mappable<R, B>): Either<B, L | Error>;
+    _<B>(fn: Mappable<R, B>): Either<B, L | Error>;
+    bind: <B>(fn: Mappable<R, B>) => Either<B, Error | L>;
     bindM<B>(fn: Mappable<Monad<R>, Monad<B>>): Either<B, L | Error>;
     filter(fn: Predicate<R>): Either<R, L | Error>;
     effect(fn: Effect<R>): Either<R, L>;

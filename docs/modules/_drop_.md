@@ -14,7 +14,7 @@
 
 ▸ **drop**<**A**>(`n`: number, `coll`: A[]): *A[]*
 
-*Defined in [drop.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/drop.ts#L5)*
+*Defined in [src/drop.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/drop.ts#L5)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **drop**<**A**>(`n`: number): *function*
 
-*Defined in [drop.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/drop.ts#L6)*
+*Defined in [src/drop.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/drop.ts#L6)*
 
 **Type parameters:**
 

@@ -18,7 +18,7 @@
 
 Ƭ **Input**: *[Dictionary](_types_.md#dictionary) | any[]*
 
-*Defined in [prop.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/prop.ts#L3)*
+*Defined in [src/prop.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/prop.ts#L3)*
 
 ## Functions
 
@@ -26,7 +26,7 @@
 
 ▸ **prop**<**A**>(`lens`: [LensPath](_types_.md#lenspath), `input`: [Input](_prop_.md#input)): *A*
 
-*Defined in [prop.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/prop.ts#L4)*
+*Defined in [src/prop.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/prop.ts#L4)*
 
 **Type parameters:**
 
@@ -43,7 +43,7 @@ Name | Type |
 
 ▸ **prop**<**A**>(`lens`: [LensPath](_types_.md#lenspath)): *function*
 
-*Defined in [prop.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/prop.ts#L5)*
+*Defined in [src/prop.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/prop.ts#L5)*
 
 **Type parameters:**
 

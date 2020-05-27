@@ -14,7 +14,7 @@
 
 ▸ **project**<**V**, **K**>(`keys`: K[], `coll`: V[]): *Pick‹V, K›[]*
 
-*Defined in [project.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/project.ts#L3)*
+*Defined in [src/project.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/project.ts#L3)*
 
 **Type parameters:**
 
@@ -33,7 +33,7 @@ Name | Type |
 
 ▸ **project**<**V**, **K**>(`keys`: K[]): *function*
 
-*Defined in [project.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/project.ts#L8)*
+*Defined in [src/project.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/project.ts#L8)*
 
 **Type parameters:**
 

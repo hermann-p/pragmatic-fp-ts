@@ -8,9 +8,10 @@ export class Chain<A> extends Monad<A> {
     super();
     this.__value = value;
   }
-  bind<B>(fn: Mappable<A, MonadType<B>>): Chain<B> {
+  _<B>(fn: Mappable<A, MonadType<B>>): Chain<B> {
     return chain(fn(this.__value));
   }
+  bind = this._;
   bindM<B>(fn: Mappable<Monad<A>, Monad<B>>): Chain<B> {
     return chain(fn(this));
   }

@@ -6,7 +6,8 @@ declare type MaybeMatcher<A, B> = {
     nothing: () => B;
 };
 export declare class Nothing<A> extends Monad<A> {
-    bind<B>(_: Mappable<A, B>): Maybe<B>;
+    _<B>(_: Mappable<A, B>): Maybe<B>;
+    bind: <B>(_: Mappable<A, B>) => Maybe<B>;
     bindM<B>(_: Mappable<Monad<A>, Monad<B>>): Maybe<B>;
     filter(_: any): Maybe<A>;
     effect(_: any): Maybe<A>;
@@ -17,7 +18,8 @@ export declare class Nothing<A> extends Monad<A> {
 export declare class Just<A> extends Monad<A> {
     readonly value: A;
     constructor(value: A);
-    bind<B>(fn: Mappable<A, B>): Maybe<B>;
+    _<B>(fn: Mappable<A, B>): Maybe<B>;
+    bind: <B>(fn: Mappable<A, B>) => Maybe<B>;
     bindM<B>(fn: Mappable<Monad<A>, Monad<B>>): Maybe<B>;
     filter(fn: Predicate<A>): Maybe<A>;
     effect(fn: Effect<A>): Maybe<A>;

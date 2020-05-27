@@ -1,30 +1,21 @@
-type Lookup<T, K extends keyof any, Else = never> = K extends keyof T ? T[K] : Else;
-type Tail<T extends any[]> = ((...t: T) => void) extends (x: any, ...u: infer U) => void
-  ? U
-  : never;
-type Func1 = (arg: any) => any;
-type ArgType<F, Else = never> = F extends (arg: infer A) => any ? A : Else;
-type AsChain<F extends [Func1, ...Func1[]], G extends Func1[] = Tail<F>> = {
-  [K in keyof F]: (arg: ArgType<F[K]>) => ArgType<Lookup<G, K, any>, any>;
-};
-type LastIndexOf<T extends any[]> = ((...x: T) => void) extends (y: any, ...z: infer U) => void
-  ? U["length"]
-  : never;
-export function pipe<F extends [(arg: any) => any, ...Array<(arg: any) => any>]>(
-  ...f: F & AsChain<F>
-): (arg: ArgType<F[0]>) => ReturnType<F[LastIndexOf<F>]>;
+import { Mappable } from "./types";
 
-/**
- * Composes an arbitrary number of functions unary into a n-ary
- * function, type-checking the chain.
- *
- * Note: Generic function types cannot be inferred, resulting in a
- * TypeScript error. Successive (any) -> any functions might break type
- * inference.
- *
- * ((A1 -> A2) -> (A2 -> A3) ... -> (An-1 -> An)) -> A1 -> An
- */
+class Pipe<A, B> extends Function {
+  readonly fn: Mappable<A, B>;
 
-export function pipe(...fns: any) {
-  return (startValue: any) => fns.reduce((val: any, fn: any) => fn(val), startValue);
+  constructor(fn: Mappable<A, B>) {
+    super();
+    this.fn = fn;
+    const pipe = function (x: A) {
+      return fn(x);
+    };
+    (pipe as any)._ = <C>(nextFn: Mappable<B, C>) => new Pipe((x: A) => nextFn(fn(x)));
+    return pipe as any;
+  }
+
+  _<C>(nextFn: Mappable<B, C>) {
+    return new Pipe((x: A) => nextFn(this.fn(x)));
+  }
 }
+
+export const pipe = <A, B>(fn: Mappable<A, B>) => new Pipe(fn);

@@ -15,7 +15,7 @@
 
 ▸ **divide**(`dividend`: number, `divisor`: number): *number*
 
-*Defined in [divide.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/divide.ts#L3)*
+*Defined in [src/divide.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/divide.ts#L3)*
 
 **Parameters:**
 
@@ -28,7 +28,7 @@ Name | Type |
 
 ▸ **divide**(`dividend`: number): *function*
 
-*Defined in [divide.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/divide.ts#L4)*
+*Defined in [src/divide.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/divide.ts#L4)*
 
 **Parameters:**
 
@@ -52,7 +52,7 @@ ___
 
 ▸ **divideBy**(`divisor`: number, `dividend`: number): *number*
 
-*Defined in [divide.ts:13](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/divide.ts#L13)*
+*Defined in [src/divide.ts:13](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/divide.ts#L13)*
 
 **Parameters:**
 
@@ -65,7 +65,7 @@ Name | Type |
 
 ▸ **divideBy**(`divisor`: number): *function*
 
-*Defined in [divide.ts:14](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/divide.ts#L14)*
+*Defined in [src/divide.ts:14](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/divide.ts#L14)*
 
 **Parameters:**
 

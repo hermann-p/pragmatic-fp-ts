@@ -3,7 +3,8 @@ import { Monad } from "./types";
 export declare class Chain<A> extends Monad<A> {
     readonly __value: A;
     constructor(value: A);
-    bind<B>(fn: Mappable<A, MonadType<B>>): Chain<B>;
+    _<B>(fn: Mappable<A, MonadType<B>>): Chain<B>;
+    bind: <B>(fn: Mappable<A, MonadType<B>>) => Chain<B>;
     bindM<B>(fn: Mappable<Monad<A>, Monad<B>>): Chain<B>;
     filter(pred: Predicate<A>): Chain<A>;
     getValue(): A;

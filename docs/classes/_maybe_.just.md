@@ -20,11 +20,12 @@
 
 ### Properties
 
+* [bind](_maybe_.just.md#bind)
 * [value](_maybe_.just.md#value)
 
 ### Methods
 
-* [bind](_maybe_.just.md#bind)
+* [_](_maybe_.just.md#_)
 * [bindM](_maybe_.just.md#bindm)
 * [effect](_maybe_.just.md#effect)
 * [filter](_maybe_.just.md#filter)
@@ -39,7 +40,7 @@
 
 \+ **new Just**(`value`: A): *[Just](_maybe_.just.md)*
 
-*Defined in [Maybe.ts:32](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/Maybe.ts#L32)*
+*Defined in [src/Maybe.ts:33](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/Maybe.ts#L33)*
 
 **Parameters:**
 
@@ -51,21 +52,31 @@ Name | Type |
 
 ## Properties
 
+###  bind
+
+• **bind**: *[_](_maybe_.just.md#_)* =  this._
+
+*Overrides [Monad](_types_.monad.md).[bind](_types_.monad.md#abstract-bind)*
+
+*Defined in [src/Maybe.ts:46](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/Maybe.ts#L46)*
+
+___
+
 ###  value
 
 • **value**: *A*
 
-*Defined in [Maybe.ts:32](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/Maybe.ts#L32)*
+*Defined in [src/Maybe.ts:33](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/Maybe.ts#L33)*
 
 ## Methods
 
-###  bind
+###  _
 
-▸ **bind**<**B**>(`fn`: [Mappable](../modules/_types_.md#mappable)‹A, B›): *[Maybe](../modules/_maybe_.md#maybe)‹B›*
+▸ **_**<**B**>(`fn`: [Mappable](../modules/_types_.md#mappable)‹A, B›): *[Maybe](../modules/_maybe_.md#maybe)‹B›*
 
-*Overrides [Monad](_types_.monad.md).[bind](_types_.monad.md#abstract-bind)*
+*Overrides [Monad](_types_.monad.md).[_](_types_.monad.md#abstract-_)*
 
-*Defined in [Maybe.ts:37](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/Maybe.ts#L37)*
+*Defined in [src/Maybe.ts:38](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/Maybe.ts#L38)*
 
 **Type parameters:**
 
@@ -87,7 +98,7 @@ ___
 
 *Overrides [Monad](_types_.monad.md).[bindM](_types_.monad.md#abstract-bindm)*
 
-*Defined in [Maybe.ts:45](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/Maybe.ts#L45)*
+*Defined in [src/Maybe.ts:47](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/Maybe.ts#L47)*
 
 **Type parameters:**
 
@@ -109,7 +120,7 @@ ___
 
 *Overrides [Monad](_types_.monad.md).[effect](_types_.monad.md#abstract-effect)*
 
-*Defined in [Maybe.ts:61](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/Maybe.ts#L61)*
+*Defined in [src/Maybe.ts:63](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/Maybe.ts#L63)*
 
 **Parameters:**
 
@@ -127,7 +138,7 @@ ___
 
 *Overrides [Monad](_types_.monad.md).[filter](_types_.monad.md#abstract-filter)*
 
-*Defined in [Maybe.ts:53](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/Maybe.ts#L53)*
+*Defined in [src/Maybe.ts:55](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/Maybe.ts#L55)*
 
 **Parameters:**
 
@@ -145,7 +156,7 @@ ___
 
 *Overrides [Monad](_types_.monad.md).[getValue](_types_.monad.md#abstract-getvalue)*
 
-*Defined in [Maybe.ts:67](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/Maybe.ts#L67)*
+*Defined in [src/Maybe.ts:69](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/Maybe.ts#L69)*
 
 **Returns:** *A*
 
@@ -157,7 +168,7 @@ ___
 
 *Overrides [Monad](_types_.monad.md).[getValueOr](_types_.monad.md#abstract-getvalueor)*
 
-*Defined in [Maybe.ts:70](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/Maybe.ts#L70)*
+*Defined in [src/Maybe.ts:72](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/Maybe.ts#L72)*
 
 **Parameters:**
 
@@ -173,7 +184,7 @@ ___
 
 ▸ **match**<**B**>(`matcher`: [MaybeMatcher](../modules/_maybe_.md#maybematcher)‹A, B›): *[Maybe](../modules/_maybe_.md#maybe)‹B›*
 
-*Defined in [Maybe.ts:73](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/Maybe.ts#L73)*
+*Defined in [src/Maybe.ts:75](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/Maybe.ts#L75)*
 
 **Type parameters:**
 
@@ -195,7 +206,7 @@ ___
 
 *Inherited from [Monad](_types_.monad.md).[to](_types_.monad.md#to)*
 
-*Defined in [types.ts:112](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/types.ts#L112)*
+*Defined in [src/types.ts:106](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/types.ts#L106)*
 
 **Type parameters:**
 

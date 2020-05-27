@@ -20,6 +20,7 @@ export declare type GetLast<original extends any[]> = original[Prev<GetLength<or
 declare type Transform<A, B extends Monad<A>> = (monad: Monad<A>) => B;
 export declare abstract class Monad<A> {
     abstract bind<B>(fn: Mappable<A, B>): MonadType<B>;
+    abstract _<B>(fn: Mappable<A, B>): MonadType<B>;
     abstract bindM<B>(fn: Mappable<Monad<A>, MonadType<B>>): Monad<B>;
     abstract filter(fn: Predicate<A>): Monad<A>;
     abstract effect(fn: Effect<A>): Monad<A>;

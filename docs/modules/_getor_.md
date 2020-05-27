@@ -19,7 +19,7 @@
 
 Ƭ **Input**: *any[] | [Dictionary](_types_.md#dictionary)*
 
-*Defined in [getOr.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/getOr.ts#L4)*
+*Defined in [src/getOr.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/getOr.ts#L4)*
 
 ___
 
@@ -27,7 +27,7 @@ ___
 
 Ƭ **Lens**: *number | string | string | number[]*
 
-*Defined in [getOr.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/getOr.ts#L3)*
+*Defined in [src/getOr.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/getOr.ts#L3)*
 
 ## Functions
 
@@ -35,7 +35,7 @@ ___
 
 ▸ **getOr**<**A**>(`alt`: A, `lens`: [Lens](_getor_.md#lens), `input`: [Input](_getor_.md#input)): *A*
 
-*Defined in [getOr.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/getOr.ts#L6)*
+*Defined in [src/getOr.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/getOr.ts#L6)*
 
 **Type parameters:**
 
@@ -53,7 +53,7 @@ Name | Type |
 
 ▸ **getOr**<**A**>(`alt`: A, `lens`: [Lens](_getor_.md#lens)): *function*
 
-*Defined in [getOr.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/getOr.ts#L7)*
+*Defined in [src/getOr.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/getOr.ts#L7)*
 
 **Type parameters:**
 
@@ -78,7 +78,7 @@ Name | Type |
 
 ▸ **getOr**<**A**>(`alt`: A): *function*
 
-*Defined in [getOr.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/65c599f/src/getOr.ts#L8)*
+*Defined in [src/getOr.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/getOr.ts#L8)*
 
 **Type parameters:**
 
