@@ -132,6 +132,7 @@ export * from "./reduce";
 export * from "./reduceKV";
 export * from "./reject";
 export * from "./repeat";
+export * from "./replace";
 export * from "./reverse";
 export * from "./scan";
 export * from "./sequentialize";

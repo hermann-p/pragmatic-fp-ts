@@ -147,6 +147,7 @@
 * ["reduceKV"](modules/_reducekv_.md)
 * ["reject"](modules/_reject_.md)
 * ["repeat"](modules/_repeat_.md)
+* ["replace"](modules/_replace_.md)
 * ["reverse"](modules/_reverse_.md)
 * ["scan"](modules/_scan_.md)
 * ["sequentialize"](modules/_sequentialize_.md)

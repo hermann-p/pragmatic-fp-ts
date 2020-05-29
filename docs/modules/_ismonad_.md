@@ -14,7 +14,7 @@
 
 ▸ **isMonad**<**A**>(`candidate`: unknown): *candidate is Monad<A>*
 
-*Defined in [src/isMonad.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/isMonad.ts#L3)*
+*Defined in [src/isMonad.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/isMonad.ts#L3)*
 
 **Type parameters:**
 

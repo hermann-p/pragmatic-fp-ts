@@ -14,7 +14,7 @@
 
 ▸ **isZero**(`n`: number): *boolean*
 
-*Defined in [src/isZero.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/isZero.ts#L1)*
+*Defined in [src/isZero.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/isZero.ts#L1)*
 
 **Parameters:**
 

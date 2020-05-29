@@ -14,7 +14,7 @@
 
 ▸ **mapP**<**A**, **B**>(`fn`: function, `coll`: A[]): *Promise‹B[]›*
 
-*Defined in [src/mapP.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/mapP.ts#L3)*
+*Defined in [src/mapP.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/mapP.ts#L3)*
 
 **Type parameters:**
 
@@ -40,7 +40,7 @@ Name | Type |
 
 ▸ **mapP**<**A**, **B**>(`fn`: function): *function*
 
-*Defined in [src/mapP.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/mapP.ts#L8)*
+*Defined in [src/mapP.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/mapP.ts#L8)*
 
 **Type parameters:**
 

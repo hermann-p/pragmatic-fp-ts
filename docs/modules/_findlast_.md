@@ -14,7 +14,7 @@
 
 ▸ **findLast**<**A**>(`condition`: [Predicate](_types_.md#predicate)‹A›, `coll`: A[]): *A | null*
 
-*Defined in [src/findLast.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/findLast.ts#L3)*
+*Defined in [src/findLast.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/findLast.ts#L3)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **findLast**<**A**>(`condition`: [Predicate](_types_.md#predicate)‹A›, `dict`: [Dictionary](_types_.md#dictionary)‹A›): *A | null*
 
-*Defined in [src/findLast.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/findLast.ts#L4)*
+*Defined in [src/findLast.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/findLast.ts#L4)*
 
 **Type parameters:**
 
@@ -48,7 +48,7 @@ Name | Type |
 
 ▸ **findLast**<**A**>(`condition`: [Predicate](_types_.md#predicate)‹A›): *function*
 
-*Defined in [src/findLast.ts:9](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/findLast.ts#L9)*
+*Defined in [src/findLast.ts:9](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/findLast.ts#L9)*
 
 **Type parameters:**
 
@@ -72,7 +72,7 @@ Name | Type |
 
 ▸ **findLast**<**A**>(`condition`: [Predicate](_types_.md#predicate)‹A›): *function*
 
-*Defined in [src/findLast.ts:10](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/findLast.ts#L10)*
+*Defined in [src/findLast.ts:10](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/findLast.ts#L10)*
 
 **Type parameters:**
 

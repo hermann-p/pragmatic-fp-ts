@@ -19,7 +19,7 @@
 
 Ƭ **ObjKey**: *string | number*
 
-*Defined in [src/hasIn.ts:10](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/hasIn.ts#L10)*
+*Defined in [src/hasIn.ts:10](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/hasIn.ts#L10)*
 
 ## Functions
 
@@ -27,7 +27,7 @@
 
 ▸ **checkIfPathExists**(`path`: [ObjKey](_hasin_.md#objkey)[], `obj`: any): *boolean*
 
-*Defined in [src/hasIn.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/hasIn.ts#L3)*
+*Defined in [src/hasIn.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/hasIn.ts#L3)*
 
 **Parameters:**
 
@@ -44,7 +44,7 @@ ___
 
 ▸ **hasIn**(`path`: [ObjKey](_hasin_.md#objkey)[], `dict`: [Dictionary](_types_.md#dictionary)): *boolean*
 
-*Defined in [src/hasIn.ts:11](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/hasIn.ts#L11)*
+*Defined in [src/hasIn.ts:11](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/hasIn.ts#L11)*
 
 **Parameters:**
 
@@ -57,7 +57,7 @@ Name | Type |
 
 ▸ **hasIn**(`path`: [ObjKey](_hasin_.md#objkey)[]): *function*
 
-*Defined in [src/hasIn.ts:12](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/hasIn.ts#L12)*
+*Defined in [src/hasIn.ts:12](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/hasIn.ts#L12)*
 
 **Parameters:**
 

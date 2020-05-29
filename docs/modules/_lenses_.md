@@ -27,7 +27,7 @@
 
 Ƭ **Lens**: *object*
 
-*Defined in [src/lenses.ts:14](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/lenses.ts#L14)*
+*Defined in [src/lenses.ts:14](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/lenses.ts#L14)*
 
 #### Type declaration:
 
@@ -41,7 +41,7 @@ ___
 
 Ƭ **LensGetter**: *function*
 
-*Defined in [src/lenses.ts:11](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/lenses.ts#L11)*
+*Defined in [src/lenses.ts:11](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/lenses.ts#L11)*
 
 #### Type declaration:
 
@@ -59,7 +59,7 @@ ___
 
 Ƭ **LensPath**: *string | number[]*
 
-*Defined in [src/lenses.ts:117](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/lenses.ts#L117)*
+*Defined in [src/lenses.ts:117](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/lenses.ts#L117)*
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 Ƭ **LensSetter**: *function*
 
-*Defined in [src/lenses.ts:12](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/lenses.ts#L12)*
+*Defined in [src/lenses.ts:12](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/lenses.ts#L12)*
 
 #### Type declaration:
 
@@ -86,7 +86,7 @@ Name | Type |
 
 ▸ **lens**<**TData**, **TValue**>(`getter`: [LensGetter](_lenses_.md#lensgetter)‹TData, TValue›, `setter`: [LensSetter](_lenses_.md#lenssetter)‹TData, TValue›): *[Lens](_lenses_.md#lens)‹TData, TValue›*
 
-*Defined in [src/lenses.ts:19](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/lenses.ts#L19)*
+*Defined in [src/lenses.ts:19](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/lenses.ts#L19)*
 
 **Type parameters:**
 
@@ -109,7 +109,7 @@ ___
 
 ▸ **lensIndex**<**T**>(`idx`: number): *object*
 
-*Defined in [src/lenses.ts:111](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/lenses.ts#L111)*
+*Defined in [src/lenses.ts:111](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/lenses.ts#L111)*
 
 **Type parameters:**
 
@@ -133,7 +133,7 @@ ___
 
 ▸ **lensPath**<**TValue**, **TData**>(`path`: [LensPath](_lenses_.md#lenspath)): *object*
 
-*Defined in [src/lenses.ts:118](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/lenses.ts#L118)*
+*Defined in [src/lenses.ts:118](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/lenses.ts#L118)*
 
 **Type parameters:**
 
@@ -159,7 +159,7 @@ ___
 
 ▸ **lensProp**<**TValue**, **TData**>(`propName`: string): *object*
 
-*Defined in [src/lenses.ts:103](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/lenses.ts#L103)*
+*Defined in [src/lenses.ts:103](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/lenses.ts#L103)*
 
 **Type parameters:**
 
@@ -185,7 +185,7 @@ ___
 
 ▸ **over**<**TData**, **TValue**>(`lens`: [Lens](_lenses_.md#lens)‹TData, TValue›, `fn`: [Endomorphism](_types_.md#endomorphism)‹TValue›, `data`: TData): *TData*
 
-*Defined in [src/lenses.ts:75](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/lenses.ts#L75)*
+*Defined in [src/lenses.ts:75](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/lenses.ts#L75)*
 
 **Type parameters:**
 
@@ -205,7 +205,7 @@ Name | Type |
 
 ▸ **over**<**TData**, **TValue**>(`lens`: [Lens](_lenses_.md#lens)‹TData, TValue›, `fn`: [Endomorphism](_types_.md#endomorphism)‹TValue›): *function*
 
-*Defined in [src/lenses.ts:80](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/lenses.ts#L80)*
+*Defined in [src/lenses.ts:80](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/lenses.ts#L80)*
 
 **Type parameters:**
 
@@ -232,7 +232,7 @@ Name | Type |
 
 ▸ **over**<**TData**, **TValue**>(`lens`: [Lens](_lenses_.md#lens)‹TData, TValue›): *function*
 
-*Defined in [src/lenses.ts:84](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/lenses.ts#L84)*
+*Defined in [src/lenses.ts:84](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/lenses.ts#L84)*
 
 **Type parameters:**
 
@@ -270,7 +270,7 @@ ___
 
 ▸ **set**<**TData**, **TValue**>(`lens`: [Lens](_lenses_.md#lens)‹TData, TValue›, `value`: TValue, `data`: TData): *TData*
 
-*Defined in [src/lenses.ts:45](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/lenses.ts#L45)*
+*Defined in [src/lenses.ts:45](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/lenses.ts#L45)*
 
 **Type parameters:**
 
@@ -290,7 +290,7 @@ Name | Type |
 
 ▸ **set**<**TData**, **TValue**>(`lens`: [Lens](_lenses_.md#lens)‹TData, TValue›, `value`: TValue): *function*
 
-*Defined in [src/lenses.ts:50](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/lenses.ts#L50)*
+*Defined in [src/lenses.ts:50](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/lenses.ts#L50)*
 
 **Type parameters:**
 
@@ -317,7 +317,7 @@ Name | Type |
 
 ▸ **set**<**TData**, **TValue**>(`lens`: [Lens](_lenses_.md#lens)‹TData, TValue›): *function*
 
-*Defined in [src/lenses.ts:54](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/lenses.ts#L54)*
+*Defined in [src/lenses.ts:54](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/lenses.ts#L54)*
 
 **Type parameters:**
 
@@ -355,7 +355,7 @@ ___
 
 ▸ **view**<**TData**, **TValue**>(`lens`: [Lens](_lenses_.md#lens)‹TData, TValue›, `data`: TData): *TValue*
 
-*Defined in [src/lenses.ts:29](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/lenses.ts#L29)*
+*Defined in [src/lenses.ts:29](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/lenses.ts#L29)*
 
 **Type parameters:**
 
@@ -374,7 +374,7 @@ Name | Type |
 
 ▸ **view**<**TData**, **TValue**>(`lens`: [Lens](_lenses_.md#lens)‹TData, TValue›): *function*
 
-*Defined in [src/lenses.ts:33](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/lenses.ts#L33)*
+*Defined in [src/lenses.ts:33](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/lenses.ts#L33)*
 
 **Type parameters:**
 
