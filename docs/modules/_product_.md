@@ -14,7 +14,7 @@
 
 ▸ **product**(`xs`: number[]): *number*
 
-*Defined in [src/product.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/product.ts#L1)*
+*Defined in [src/product.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/product.ts#L1)*
 
 **Parameters:**
 

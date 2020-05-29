@@ -14,7 +14,7 @@
 
 ▸ **partition**<**A**>(`by`: [Predicate](_types_.md#predicate)‹A›, `coll`: A[]): *object*
 
-*Defined in [src/partition.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/partition.ts#L3)*
+*Defined in [src/partition.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/partition.ts#L3)*
 
 **Type parameters:**
 
@@ -35,7 +35,7 @@ Name | Type |
 
 ▸ **partition**<**A**>(`by`: [Predicate](_types_.md#predicate)‹A›): *function*
 
-*Defined in [src/partition.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/partition.ts#L4)*
+*Defined in [src/partition.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/partition.ts#L4)*
 
 **Type parameters:**
 

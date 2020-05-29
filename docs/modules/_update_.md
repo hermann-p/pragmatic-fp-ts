@@ -15,7 +15,7 @@
 
 ▸ **update**<**TInput**, **A**, **B**>(`propName`: string, `fn`: [Endomorphism](_types_.md#endomorphism)‹A›, `dict`: TInput): *TInput*
 
-*Defined in [src/update.ts:9](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/update.ts#L9)*
+*Defined in [src/update.ts:9](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/update.ts#L9)*
 
 **Type parameters:**
 
@@ -37,7 +37,7 @@ Name | Type |
 
 ▸ **update**<**A**>(`propName`: string, `fn`: [Endomorphism](_types_.md#endomorphism)‹A›): *function*
 
-*Defined in [src/update.ts:15](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/update.ts#L15)*
+*Defined in [src/update.ts:15](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/update.ts#L15)*
 
 **Type parameters:**
 
@@ -66,7 +66,7 @@ Name | Type |
 
 ▸ **update**(`propName`: string): *function*
 
-*Defined in [src/update.ts:20](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/update.ts#L20)*
+*Defined in [src/update.ts:20](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/update.ts#L20)*
 
 **Parameters:**
 
@@ -102,7 +102,7 @@ Name | Type |
 
 ▸ **update**<**A**>(`index`: number, `fn`: [Endomorphism](_types_.md#endomorphism)‹A›, `coll`: A[]): *A[]*
 
-*Defined in [src/update.ts:26](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/update.ts#L26)*
+*Defined in [src/update.ts:26](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/update.ts#L26)*
 
 **Type parameters:**
 
@@ -120,7 +120,7 @@ Name | Type |
 
 ▸ **update**<**A**>(`index`: number, `fn`: [Endomorphism](_types_.md#endomorphism)‹A›): *function*
 
-*Defined in [src/update.ts:28](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/update.ts#L28)*
+*Defined in [src/update.ts:28](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/update.ts#L28)*
 
 **Type parameters:**
 
@@ -145,7 +145,7 @@ Name | Type |
 
 ▸ **update**(`propName`: number): *function*
 
-*Defined in [src/update.ts:33](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/update.ts#L33)*
+*Defined in [src/update.ts:33](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/update.ts#L33)*
 
 **Parameters:**
 
@@ -181,7 +181,7 @@ ___
 
 ▸ **updateArray**<**A**>(`idx`: number, `fn`: [Endomorphism](_types_.md#endomorphism)‹A›, `arr`: A[]): *A[]*
 
-*Defined in [src/update.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/update.ts#L3)*
+*Defined in [src/update.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/update.ts#L3)*
 
 **Type parameters:**
 

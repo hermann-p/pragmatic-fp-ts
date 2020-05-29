@@ -119,13 +119,9 @@ describe("fns", () => {
 
   describe("converge()", () => {
     it("transforms stuff", () => {
-      expect(l.converge(l.join(""))([l.toUpper, l.toLower])("foo")).toEqual(
-        "FOOfoo"
-      );
+      expect(l.converge(l.join(""))([l.toUpper, l.toLower])("foo")).toEqual("FOOfoo");
 
-      expect(l.converge(l.sum)([l.max, l.min, l.mean])([1, 2, 3, 4, 5])).toBe(
-        9
-      );
+      expect(l.converge(l.sum)([l.max, l.min, l.mean])([1, 2, 3, 4, 5])).toBe(9);
     });
   });
 
@@ -258,9 +254,7 @@ describe("fns", () => {
       expect(l.findIndex(l.eq(4))([1, 2, 3])).toEqual(-1);
     });
     it("finds elements within an object", () => {
-      expect(l.findIndex(l.eq(2))({ foo: 1, bar: 2, yordle: 3 })).toEqual(
-        "bar"
-      );
+      expect(l.findIndex(l.eq(2))({ foo: 1, bar: 2, yordle: 3 })).toEqual("bar");
     });
   });
 
@@ -277,9 +271,7 @@ describe("fns", () => {
       expect(l.findLastIndex(l.eq(4))([1, 2, 3, 2, 1])).toEqual(-1);
     });
     it("finds elements within an object", () => {
-      expect(l.findLastIndex(l.eq(2))({ foo: 1, bar: 2, yordle: 2 })).toEqual(
-        "yordle"
-      );
+      expect(l.findLastIndex(l.eq(2))({ foo: 1, bar: 2, yordle: 2 })).toEqual("yordle");
     });
   });
 

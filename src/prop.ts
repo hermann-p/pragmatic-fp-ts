@@ -1,15 +1,15 @@
-import { get, getIn, Dictionary, LensPath } from "./main";
+import { get, getIn, Dictionary, SelectorPath } from "./main";
 
 type Input = Dictionary | any[];
-export function prop<A>(lens: LensPath, input: Input): A;
-export function prop<A>(lens: LensPath): (input: Input) => A;
+export function prop<A>(path: SelectorPath, input: Input): A;
+export function prop<A>(path: SelectorPath): (input: Input) => A;
 
-export function prop<A>(lens: LensPath, input?: Input) {
+export function prop<A>(path: SelectorPath, input?: Input) {
   if (arguments.length === 1) {
-    return (i: Input) => prop(lens, i);
+    return (i: Input) => prop(path, i);
   }
 
-  return lens instanceof Array
-    ? getIn<A>(lens, input!)
-    : get<A>(lens as string, input!);
+  const i = input || {};
+
+  return path instanceof Array ? getIn<A>(path, i) : get<A>(path as any, i as any);
 }

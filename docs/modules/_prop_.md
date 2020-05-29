@@ -18,15 +18,15 @@
 
 Ƭ **Input**: *[Dictionary](_types_.md#dictionary) | any[]*
 
-*Defined in [src/prop.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/prop.ts#L3)*
+*Defined in [src/prop.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/prop.ts#L3)*
 
 ## Functions
 
 ###  prop
 
-▸ **prop**<**A**>(`lens`: [LensPath](_types_.md#lenspath), `input`: [Input](_prop_.md#input)): *A*
+▸ **prop**<**A**>(`path`: [SelectorPath](_types_.md#selectorpath), `input`: [Input](_prop_.md#input)): *A*
 
-*Defined in [src/prop.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/prop.ts#L4)*
+*Defined in [src/prop.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/prop.ts#L4)*
 
 **Type parameters:**
 
@@ -36,14 +36,14 @@
 
 Name | Type |
 ------ | ------ |
-`lens` | [LensPath](_types_.md#lenspath) |
+`path` | [SelectorPath](_types_.md#selectorpath) |
 `input` | [Input](_prop_.md#input) |
 
 **Returns:** *A*
 
-▸ **prop**<**A**>(`lens`: [LensPath](_types_.md#lenspath)): *function*
+▸ **prop**<**A**>(`path`: [SelectorPath](_types_.md#selectorpath)): *function*
 
-*Defined in [src/prop.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/prop.ts#L5)*
+*Defined in [src/prop.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/prop.ts#L5)*
 
 **Type parameters:**
 
@@ -53,7 +53,7 @@ Name | Type |
 
 Name | Type |
 ------ | ------ |
-`lens` | [LensPath](_types_.md#lenspath) |
+`path` | [SelectorPath](_types_.md#selectorpath) |
 
 **Returns:** *function*
 

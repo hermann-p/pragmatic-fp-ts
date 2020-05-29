@@ -14,7 +14,7 @@
 
 ▸ **get**<**A**>(`idx`: number, `coll`: A[]): *A*
 
-*Defined in [src/get.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/get.ts#L3)*
+*Defined in [src/get.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/get.ts#L3)*
 
 **Type parameters:**
 
@@ -29,9 +29,9 @@ Name | Type |
 
 **Returns:** *A*
 
-▸ **get**<**A**>(`propName`: string, `dict`: [Dictionary](_types_.md#dictionary)): *A*
+▸ **get**<**A**>(`idx`: number): *function*
 
-*Defined in [src/get.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/get.ts#L4)*
+*Defined in [src/get.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/get.ts#L4)*
 
 **Type parameters:**
 
@@ -41,7 +41,63 @@ Name | Type |
 
 Name | Type |
 ------ | ------ |
-`propName` | string |
-`dict` | [Dictionary](_types_.md#dictionary) |
+`idx` | number |
 
-**Returns:** *A*
+**Returns:** *function*
+
+▸ (`coll`: A[]): *A*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`coll` | A[] |
+
+▸ **get**<**V**, **K**>(`propName`: K, `dict`: V): *V[K]*
+
+*Defined in [src/get.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/get.ts#L5)*
+
+**Type parameters:**
+
+▪ **V**: *__type*
+
+▪ **K**: *keyof V*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`propName` | K |
+`dict` | V |
+
+**Returns:** *V[K]*
+
+▸ **get**<**K**>(`propName`: K): *function*
+
+*Defined in [src/get.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/get.ts#L6)*
+
+**Type parameters:**
+
+▪ **K**: *string*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`propName` | K |
+
+**Returns:** *function*
+
+▸ <**A**, **V**>(`dict`: V): *V[K]*
+
+**Type parameters:**
+
+▪ **A**: *any*
+
+▪ **V**: *Record‹K, A›*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`dict` | V |

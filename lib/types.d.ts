@@ -10,7 +10,7 @@ export declare type Comparator<A> = (a: A, b: A) => number;
 export declare type Equality<A> = (a: A, b: A) => boolean;
 export declare type BasicComparable = number | string | Date;
 export declare type Foldable<TValues, TResult> = (accum: TResult, value: TValues) => TResult;
-export declare type LensPath = number | string | (number | string)[];
+export declare type SelectorPath = number | string | (number | string)[];
 export declare type ArgTypes<F extends Function> = F extends (...args: infer A) => any ? A : never;
 export declare type GetLength<original extends any[]> = original extends {
     length: infer L;

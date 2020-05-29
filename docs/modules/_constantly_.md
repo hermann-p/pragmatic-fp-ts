@@ -14,7 +14,7 @@
 
 ▸ **constantly**<**T**>(`value`: T): *(Anonymous function)*
 
-*Defined in [src/constantly.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/constantly.ts#L3)*
+*Defined in [src/constantly.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/constantly.ts#L3)*
 
 **Type parameters:**
 

@@ -1,23 +1,22 @@
-import { get, getIn, Dictionary } from "./main";
+import { get, getIn, Dictionary, SelectorPath } from "./main";
 
-type Lens = number | string | (number | string)[];
 type Input = any[] | Dictionary;
 
-export function getOr<A = any>(alt: A, lens: Lens, input: Input): A;
-export function getOr<A = any>(alt: A, lens: Lens): (input: Input) => A;
-export function getOr<A = any>(alt: A): (lens: Lens) => (input: Input) => A;
+export function getOr<A = any>(alt: A, path: SelectorPath, input: Input): A;
+export function getOr<A = any>(alt: A, path: SelectorPath): (input: Input) => A;
+export function getOr<A = any>(alt: A): (path: SelectorPath) => (input: Input) => A;
 
-export function getOr<A = any>(alt: A, lens?: Lens, input?: Input) {
+export function getOr<A = any>(alt: A, path?: SelectorPath, input?: Input) {
   if (arguments.length === 1) {
-    return function (l: Lens, i?: Input) {
+    return function (l: SelectorPath, i?: Input) {
       return arguments.length === 1 ? getOr(alt, l) : getOr(alt, l, i!);
     };
   } else if (arguments.length === 2) {
-    return (i: Input) => getOr(alt, lens!, i);
+    return (i: Input) => getOr(alt, path!, i);
   }
 
-  const value =
-    lens instanceof Array ? getIn(lens!, input!) : get(lens! as string, input!);
+  const i = input || {};
+  const value = path instanceof Array ? getIn(path || [], i) : get((path || "") as any, i);
 
   return value || alt;
 }

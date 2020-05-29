@@ -15,7 +15,7 @@ export type BasicComparable = number | string | Date;
 
 export type Foldable<TValues, TResult> = (accum: TResult, value: TValues) => TResult;
 
-export type LensPath = number | string | (number | string)[];
+export type SelectorPath = number | string | (number | string)[];
 
 export type ArgTypes<F extends Function> = F extends (...args: infer A) => any ? A : never;
 

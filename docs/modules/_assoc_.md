@@ -14,7 +14,7 @@
 
 ▸ **assoc**<**A**>(`idx`: number, `value`: A, `coll`: A[]): *A[]*
 
-*Defined in [src/assoc.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/assoc.ts#L3)*
+*Defined in [src/assoc.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/assoc.ts#L3)*
 
 **Type parameters:**
 
@@ -32,7 +32,7 @@ Name | Type |
 
 ▸ **assoc**<**A**>(`idx`: number, `value`: A): *function*
 
-*Defined in [src/assoc.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/assoc.ts#L4)*
+*Defined in [src/assoc.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/assoc.ts#L4)*
 
 **Type parameters:**
 
@@ -57,7 +57,7 @@ Name | Type |
 
 ▸ **assoc**(`idx`: number): *function*
 
-*Defined in [src/assoc.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/assoc.ts#L5)*
+*Defined in [src/assoc.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/assoc.ts#L5)*
 
 **Parameters:**
 
@@ -89,7 +89,7 @@ Name | Type |
 
 ▸ **assoc**<**T**, **K**, **V**>(`propName`: K, `value`: V, `dict`: T): *T & Record‹K, V›*
 
-*Defined in [src/assoc.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/assoc.ts#L7)*
+*Defined in [src/assoc.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/assoc.ts#L7)*
 
 **Type parameters:**
 
@@ -111,7 +111,7 @@ Name | Type |
 
 ▸ **assoc**<**K**, **V**>(`propName`: K, `value`: V): *function*
 
-*Defined in [src/assoc.ts:12](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/assoc.ts#L12)*
+*Defined in [src/assoc.ts:12](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/assoc.ts#L12)*
 
 **Type parameters:**
 
@@ -142,7 +142,7 @@ Name | Type |
 
 ▸ **assoc**<**K**>(`propName`: K): *function*
 
-*Defined in [src/assoc.ts:16](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/assoc.ts#L16)*
+*Defined in [src/assoc.ts:16](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/assoc.ts#L16)*
 
 **Type parameters:**
 

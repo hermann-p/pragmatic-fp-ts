@@ -15,7 +15,7 @@
 
 ▸ **isNil**(`value`: unknown): *value is null*
 
-*Defined in [src/isNil.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/isNil.ts#L1)*
+*Defined in [src/isNil.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/isNil.ts#L1)*
 
 **Parameters:**
 
@@ -31,7 +31,7 @@ ___
 
 ▸ **isNotNil**<**T**>(`value?`: T): *value is NonNullable<T>*
 
-*Defined in [src/isNil.ts:9](https://github.com/hermann-p/pragmatic-fp-ts/blob/c9716de/src/isNil.ts#L9)*
+*Defined in [src/isNil.ts:9](https://github.com/hermann-p/pragmatic-fp-ts/blob/0abe0d4/src/isNil.ts#L9)*
 
 **Type parameters:**
 
