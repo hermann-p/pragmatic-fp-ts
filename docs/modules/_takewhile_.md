@@ -14,7 +14,7 @@
 
 ▸ **takeWhile**<**A**>(`pred`: [Predicate](_types_.md#predicate)‹A›, `coll`: A[]): *A[]*
 
-*Defined in [src/takeWhile.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/takeWhile.ts#L3)*
+*Defined in [src/takeWhile.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/takeWhile.ts#L3)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **takeWhile**<**A**>(`pred`: [Predicate](_types_.md#predicate)‹A›): *function*
 
-*Defined in [src/takeWhile.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/takeWhile.ts#L4)*
+*Defined in [src/takeWhile.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/takeWhile.ts#L4)*
 
 **Type parameters:**
 

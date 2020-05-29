@@ -1,11 +1,11 @@
 import { Effect, Mappable, Predicate } from "./main";
 import { Monad, MonadType } from "./types";
-export declare type Either<R, L = Error> = Left<R, L> | Right<R, L>;
-declare type EitherMatcher<R, L, B> = {
+export declare type Either<R extends NonNullable<any>, L = Error> = Left<R, L> | Right<R, L>;
+declare type EitherMatcher<R extends NonNullable<any>, L, B> = {
     left: (err: L) => B;
     right: (val: R) => B;
 };
-export declare class Left<R, L = Error> extends Monad<R> {
+export declare class Left<R extends NonNullable<any>, L = Error> extends Monad<R> {
     readonly errorValue: L;
     constructor(errVal: L);
     _<B>(_: Mappable<R, B>): Either<B, L>;
@@ -17,7 +17,7 @@ export declare class Left<R, L = Error> extends Monad<R> {
     getValueOr(alt: R): R;
     match<B>(matcher: EitherMatcher<R, L, B>): Either<B, L | Error>;
 }
-export declare class Right<R, L = Error> extends Monad<R> {
+export declare class Right<R extends NonNullable<any>, L = Error> extends Monad<R> {
     readonly value: R;
     constructor(value: R);
     _<B>(fn: Mappable<R, B>): Either<B, L | Error>;

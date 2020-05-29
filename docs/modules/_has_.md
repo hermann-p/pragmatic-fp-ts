@@ -14,7 +14,7 @@
 
 ▸ **has**(`propName`: string, `dict`: [Dictionary](_types_.md#dictionary)): *boolean*
 
-*Defined in [src/has.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/has.ts#L5)*
+*Defined in [src/has.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/has.ts#L5)*
 
 **Parameters:**
 
@@ -27,7 +27,7 @@ Name | Type |
 
 ▸ **has**(`propName`: string): *function*
 
-*Defined in [src/has.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/has.ts#L6)*
+*Defined in [src/has.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/has.ts#L6)*
 
 **Parameters:**
 

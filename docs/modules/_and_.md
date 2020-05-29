@@ -14,7 +14,7 @@
 
 ▸ **and**(`a`: boolean, `b`: boolean): *boolean*
 
-*Defined in [src/and.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/and.ts#L5)*
+*Defined in [src/and.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/and.ts#L5)*
 
 **Parameters:**
 
@@ -27,7 +27,7 @@ Name | Type |
 
 ▸ **and**(`a`: boolean): *function*
 
-*Defined in [src/and.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/and.ts#L6)*
+*Defined in [src/and.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/and.ts#L6)*
 
 **Parameters:**
 

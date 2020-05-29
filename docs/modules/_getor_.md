@@ -18,7 +18,7 @@
 
 Ƭ **Input**: *any[] | [Dictionary](_types_.md#dictionary)*
 
-*Defined in [src/getOr.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/getOr.ts#L3)*
+*Defined in [src/getOr.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/getOr.ts#L3)*
 
 ## Functions
 
@@ -26,7 +26,7 @@
 
 ▸ **getOr**<**A**>(`alt`: A, `path`: [SelectorPath](_types_.md#selectorpath), `input`: [Input](_getor_.md#input)): *A*
 
-*Defined in [src/getOr.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/getOr.ts#L5)*
+*Defined in [src/getOr.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/getOr.ts#L5)*
 
 **Type parameters:**
 
@@ -44,7 +44,7 @@ Name | Type |
 
 ▸ **getOr**<**A**>(`alt`: A, `path`: [SelectorPath](_types_.md#selectorpath)): *function*
 
-*Defined in [src/getOr.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/getOr.ts#L6)*
+*Defined in [src/getOr.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/getOr.ts#L6)*
 
 **Type parameters:**
 
@@ -69,7 +69,7 @@ Name | Type |
 
 ▸ **getOr**<**A**>(`alt`: A): *function*
 
-*Defined in [src/getOr.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/getOr.ts#L7)*
+*Defined in [src/getOr.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/getOr.ts#L7)*
 
 **Type parameters:**
 

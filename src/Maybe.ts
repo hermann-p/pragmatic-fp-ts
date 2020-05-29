@@ -1,10 +1,10 @@
 import { Effect, getValue, Mappable, Predicate } from "./main";
 import { Monad } from "./types";
 
-export type Maybe<A> = Just<A> | Nothing<A>;
+export type Maybe<A extends NonNullable<any>> = Just<A> | Nothing<A>;
 
-type MaybeMatcher<A, B> = { just: Mappable<A, B>; nothing: () => B };
-export class Nothing<A> extends Monad<A> {
+type MaybeMatcher<A extends NonNullable<any>, B> = { just: Mappable<A, B>; nothing: () => B };
+export class Nothing<A extends NonNullable<any>> extends Monad<A> {
   _<B>(_: Mappable<A, B>): Maybe<B> {
     return this as any;
   }
@@ -29,7 +29,7 @@ export class Nothing<A> extends Monad<A> {
   }
 }
 
-export class Just<A> extends Monad<A> {
+export class Just<A extends NonNullable<any>> extends Monad<A> {
   readonly value: A;
   constructor(value: A) {
     super();

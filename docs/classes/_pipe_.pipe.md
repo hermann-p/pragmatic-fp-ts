@@ -45,7 +45,7 @@
 
 \+ **new Pipe**(`fn`: [Mappable](../modules/_types_.md#mappable)‹A, B›): *[Pipe](_pipe_.pipe.md)*
 
-*Defined in [src/pipe.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/pipe.ts#L4)*
+*Defined in [src/pipe.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/pipe.ts#L4)*
 
 **Parameters:**
 
@@ -81,7 +81,7 @@ ___
 
 • **fn**: *[Mappable](../modules/_types_.md#mappable)‹A, B›*
 
-*Defined in [src/pipe.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/pipe.ts#L4)*
+*Defined in [src/pipe.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/pipe.ts#L4)*
 
 ___
 
@@ -153,7 +153,7 @@ ___
 
 ▸ **_**<**C**>(`nextFn`: [Mappable](../modules/_types_.md#mappable)‹B, C›): *[Pipe](_pipe_.pipe.md)‹A, C›*
 
-*Defined in [src/pipe.ts:16](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/pipe.ts#L16)*
+*Defined in [src/pipe.ts:16](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/pipe.ts#L16)*
 
 **Type parameters:**
 

@@ -1,13 +1,13 @@
 import { Effect, isNil, getValue, Mappable, Predicate } from "./main";
 import { Monad, MonadType } from "./types";
 
-export type Either<R, L = Error> = Left<R, L> | Right<R, L>;
+export type Either<R extends NonNullable<any>, L = Error> = Left<R, L> | Right<R, L>;
 
-type EitherMatcher<R, L, B> = {
+type EitherMatcher<R extends NonNullable<any>, L, B> = {
   left: (err: L) => B;
   right: (val: R) => B;
 };
-export class Left<R, L = Error> extends Monad<R> {
+export class Left<R extends NonNullable<any>, L = Error> extends Monad<R> {
   readonly errorValue: L;
 
   constructor(errVal: L) {
@@ -39,7 +39,7 @@ export class Left<R, L = Error> extends Monad<R> {
   }
 }
 
-export class Right<R, L = Error> extends Monad<R> {
+export class Right<R extends NonNullable<any>, L = Error> extends Monad<R> {
   readonly value: R;
   constructor(value: R) {
     super();

@@ -18,7 +18,7 @@
 
 Ƭ **FoldKV**: *function*
 
-*Defined in [src/reduceKV.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/reduceKV.ts#L3)*
+*Defined in [src/reduceKV.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/reduceKV.ts#L3)*
 
 #### Type declaration:
 
@@ -38,7 +38,7 @@ Name | Type |
 
 ▸ **reduceKV**<**A**, **B**>(`fold`: [FoldKV](_reducekv_.md#foldkv)‹A, B›, `start`: B, `dict`: [Dictionary](_types_.md#dictionary)‹A›): *B*
 
-*Defined in [src/reduceKV.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/reduceKV.ts#L4)*
+*Defined in [src/reduceKV.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/reduceKV.ts#L4)*
 
 **Type parameters:**
 
@@ -58,7 +58,7 @@ Name | Type |
 
 ▸ **reduceKV**<**A**, **B**>(`fold`: [FoldKV](_reducekv_.md#foldkv)‹A, B›, `start`: B): *function*
 
-*Defined in [src/reduceKV.ts:9](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/reduceKV.ts#L9)*
+*Defined in [src/reduceKV.ts:9](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/reduceKV.ts#L9)*
 
 **Type parameters:**
 
@@ -85,7 +85,7 @@ Name | Type |
 
 ▸ **reduceKV**<**A**, **B**>(`fold`: [FoldKV](_reducekv_.md#foldkv)‹A, B›): *function*
 
-*Defined in [src/reduceKV.ts:13](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/reduceKV.ts#L13)*
+*Defined in [src/reduceKV.ts:13](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/reduceKV.ts#L13)*
 
 **Type parameters:**
 

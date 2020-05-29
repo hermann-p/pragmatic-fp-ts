@@ -4,7 +4,7 @@
 
 ## Type parameters
 
-▪ **R**
+▪ **R**: *NonNullable‹any›*
 
 ▪ **L**
 
@@ -42,7 +42,7 @@
 
 \+ **new Right**(`value`: R): *[Right](_either_.right.md)*
 
-*Defined in [src/Either.ts:43](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/Either.ts#L43)*
+*Defined in [src/Either.ts:43](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/Either.ts#L43)*
 
 **Parameters:**
 
@@ -60,7 +60,7 @@ Name | Type |
 
 *Overrides [Monad](_types_.monad.md).[bind](_types_.monad.md#abstract-bind)*
 
-*Defined in [src/Either.ts:56](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/Either.ts#L56)*
+*Defined in [src/Either.ts:56](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/Either.ts#L56)*
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 • **value**: *R*
 
-*Defined in [src/Either.ts:43](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/Either.ts#L43)*
+*Defined in [src/Either.ts:43](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/Either.ts#L43)*
 
 ## Methods
 
@@ -78,7 +78,7 @@ ___
 
 *Overrides [Monad](_types_.monad.md).[_](_types_.monad.md#abstract-_)*
 
-*Defined in [src/Either.ts:48](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/Either.ts#L48)*
+*Defined in [src/Either.ts:48](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/Either.ts#L48)*
 
 **Type parameters:**
 
@@ -100,7 +100,7 @@ ___
 
 *Overrides [Monad](_types_.monad.md).[bindM](_types_.monad.md#abstract-bindm)*
 
-*Defined in [src/Either.ts:57](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/Either.ts#L57)*
+*Defined in [src/Either.ts:57](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/Either.ts#L57)*
 
 **Type parameters:**
 
@@ -122,7 +122,7 @@ ___
 
 *Overrides [Monad](_types_.monad.md).[effect](_types_.monad.md#abstract-effect)*
 
-*Defined in [src/Either.ts:73](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/Either.ts#L73)*
+*Defined in [src/Either.ts:73](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/Either.ts#L73)*
 
 **Parameters:**
 
@@ -140,7 +140,7 @@ ___
 
 *Overrides [Monad](_types_.monad.md).[filter](_types_.monad.md#abstract-filter)*
 
-*Defined in [src/Either.ts:65](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/Either.ts#L65)*
+*Defined in [src/Either.ts:65](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/Either.ts#L65)*
 
 **Parameters:**
 
@@ -158,7 +158,7 @@ ___
 
 *Overrides [Monad](_types_.monad.md).[getValue](_types_.monad.md#abstract-getvalue)*
 
-*Defined in [src/Either.ts:79](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/Either.ts#L79)*
+*Defined in [src/Either.ts:79](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/Either.ts#L79)*
 
 **Returns:** *R*
 
@@ -170,7 +170,7 @@ ___
 
 *Overrides [Monad](_types_.monad.md).[getValueOr](_types_.monad.md#abstract-getvalueor)*
 
-*Defined in [src/Either.ts:82](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/Either.ts#L82)*
+*Defined in [src/Either.ts:82](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/Either.ts#L82)*
 
 **Parameters:**
 
@@ -186,7 +186,7 @@ ___
 
 ▸ **match**<**B**>(`matcher`: [EitherMatcher](../modules/_either_.md#eithermatcher)‹R, L, B›): *[Either](../modules/_either_.md#either)‹B, L›*
 
-*Defined in [src/Either.ts:85](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/Either.ts#L85)*
+*Defined in [src/Either.ts:85](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/Either.ts#L85)*
 
 **Type parameters:**
 
@@ -208,7 +208,7 @@ ___
 
 *Inherited from [Monad](_types_.monad.md).[to](_types_.monad.md#to)*
 
-*Defined in [src/types.ts:106](https://github.com/hermann-p/pragmatic-fp-ts/blob/d50fca4/src/types.ts#L106)*
+*Defined in [src/types.ts:106](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/types.ts#L106)*
 
 **Type parameters:**
 
