@@ -14,7 +14,7 @@
 
 ▸ **toUpper**(`text`: string): *string*
 
-*Defined in [src/toUpper.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/toUpper.ts#L1)*
+*Defined in [src/toUpper.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/toUpper.ts#L1)*
 
 **Parameters:**
 

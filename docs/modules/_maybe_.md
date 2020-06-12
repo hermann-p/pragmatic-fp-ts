@@ -29,7 +29,7 @@
 
 Ƭ **Maybe**: *[Just](../classes/_maybe_.just.md)‹A› | [Nothing](../classes/_maybe_.nothing.md)‹A›*
 
-*Defined in [src/Maybe.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/Maybe.ts#L4)*
+*Defined in [src/Maybe.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/Maybe.ts#L4)*
 
 ___
 
@@ -37,11 +37,11 @@ ___
 
 Ƭ **MaybeMatcher**: *object*
 
-*Defined in [src/Maybe.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/Maybe.ts#L6)*
+*Defined in [src/Maybe.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/Maybe.ts#L6)*
 
 #### Type declaration:
 
-* **just**: *[Mappable](_types_.md#mappable)‹A, B›*
+* **just**: *[Mappable](_types_.md#mappable)‹NonNullable‹A›, B›*
 
 * **nothing**(): *function*
 
@@ -53,7 +53,7 @@ ___
 
 ▸ **isJust**(`x`: unknown): *boolean*
 
-*Defined in [src/Maybe.ts:94](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/Maybe.ts#L94)*
+*Defined in [src/Maybe.ts:94](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/Maybe.ts#L94)*
 
 **Parameters:**
 
@@ -69,7 +69,7 @@ ___
 
 ▸ **isMaybe**(`x`: unknown): *boolean*
 
-*Defined in [src/Maybe.ts:98](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/Maybe.ts#L98)*
+*Defined in [src/Maybe.ts:98](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/Maybe.ts#L98)*
 
 **Parameters:**
 
@@ -85,7 +85,7 @@ ___
 
 ▸ **isNothing**(`x`: unknown): *boolean*
 
-*Defined in [src/Maybe.ts:96](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/Maybe.ts#L96)*
+*Defined in [src/Maybe.ts:96](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/Maybe.ts#L96)*
 
 **Parameters:**
 
@@ -101,7 +101,7 @@ ___
 
 ▸ **just**<**T**>(`value`: T): *[Just](../classes/_maybe_.just.md)‹T›*
 
-*Defined in [src/Maybe.ts:80](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/Maybe.ts#L80)*
+*Defined in [src/Maybe.ts:80](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/Maybe.ts#L80)*
 
 **Type parameters:**
 
@@ -119,11 +119,13 @@ ___
 
 ### `Const` maybe
 
-▸ **maybe**<**T**>(`value`: T | [Monad](../classes/_types_.monad.md)‹T›): *[Maybe](_maybe_.md#maybe)‹T›*
+▸ **maybe**<**U**, **T**>(`value`: U | [Monad](../classes/_types_.monad.md)‹U›): *[Maybe](_maybe_.md#maybe)‹T›*
 
-*Defined in [src/Maybe.ts:87](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/Maybe.ts#L87)*
+*Defined in [src/Maybe.ts:87](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/Maybe.ts#L87)*
 
 **Type parameters:**
+
+▪ **U**
 
 ▪ **T**
 
@@ -131,7 +133,7 @@ ___
 
 Name | Type |
 ------ | ------ |
-`value` | T &#124; [Monad](../classes/_types_.monad.md)‹T› |
+`value` | U &#124; [Monad](../classes/_types_.monad.md)‹U› |
 
 **Returns:** *[Maybe](_maybe_.md#maybe)‹T›*
 
@@ -141,7 +143,7 @@ ___
 
 ▸ **nothing**<**T**>(): *[Nothing](../classes/_maybe_.nothing.md)‹T›*
 
-*Defined in [src/Maybe.ts:83](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/Maybe.ts#L83)*
+*Defined in [src/Maybe.ts:83](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/Maybe.ts#L83)*
 
 **Type parameters:**
 

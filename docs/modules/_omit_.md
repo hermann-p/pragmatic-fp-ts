@@ -14,7 +14,7 @@
 
 ▸ **omit**<**V**, **K**>(`props`: K[], `dict`: V): *Omit‹V, K›*
 
-*Defined in [src/omit.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/omit.ts#L1)*
+*Defined in [src/omit.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/omit.ts#L1)*
 
 **Type parameters:**
 
@@ -33,7 +33,7 @@ Name | Type |
 
 ▸ **omit**<**V**, **K**>(`props`: K[]): *function*
 
-*Defined in [src/omit.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/omit.ts#L6)*
+*Defined in [src/omit.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/omit.ts#L6)*
 
 **Type parameters:**
 

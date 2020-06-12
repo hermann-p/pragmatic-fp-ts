@@ -14,7 +14,7 @@
 
 ▸ **differenceWith**<**A**>(`setA`: A[], `setB`: A[]): *A[]*
 
-*Defined in [src/difference.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/difference.ts#L3)*
+*Defined in [src/difference.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/difference.ts#L3)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **differenceWith**<**A**>(`setA`: A[]): *function*
 
-*Defined in [src/difference.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/difference.ts#L4)*
+*Defined in [src/difference.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/difference.ts#L4)*
 
 **Type parameters:**
 

@@ -33,7 +33,7 @@
 
 Ƭ **ArgTypes**: *ArgTypes<F>*
 
-*Defined in [src/types.ts:20](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/types.ts#L20)*
+*Defined in [src/types.ts:20](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/types.ts#L20)*
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 Ƭ **BasicComparable**: *number | string | Date*
 
-*Defined in [src/types.ts:14](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/types.ts#L14)*
+*Defined in [src/types.ts:14](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/types.ts#L14)*
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 Ƭ **Comparator**: *function*
 
-*Defined in [src/types.ts:11](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/types.ts#L11)*
+*Defined in [src/types.ts:11](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/types.ts#L11)*
 
 #### Type declaration:
 
@@ -68,7 +68,7 @@ ___
 
 Ƭ **Dictionary**: *object*
 
-*Defined in [src/types.ts:9](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/types.ts#L9)*
+*Defined in [src/types.ts:9](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/types.ts#L9)*
 
 #### Type declaration:
 
@@ -80,7 +80,7 @@ ___
 
 Ƭ **Effect**: *function*
 
-*Defined in [src/types.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/types.ts#L5)*
+*Defined in [src/types.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/types.ts#L5)*
 
 #### Type declaration:
 
@@ -98,7 +98,7 @@ ___
 
 Ƭ **Endomorphism**: *[Mappable](_types_.md#mappable)‹A, A›*
 
-*Defined in [src/types.ts:2](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/types.ts#L2)*
+*Defined in [src/types.ts:2](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/types.ts#L2)*
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 Ƭ **Equality**: *function*
 
-*Defined in [src/types.ts:13](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/types.ts#L13)*
+*Defined in [src/types.ts:13](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/types.ts#L13)*
 
 #### Type declaration:
 
@@ -125,7 +125,7 @@ ___
 
 Ƭ **Foldable**: *function*
 
-*Defined in [src/types.ts:16](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/types.ts#L16)*
+*Defined in [src/types.ts:16](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/types.ts#L16)*
 
 #### Type declaration:
 
@@ -144,7 +144,7 @@ ___
 
 Ƭ **GetLast**: *original[[-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, ... 24 more ..., 62][GetLength<...>]]*
 
-*Defined in [src/types.ts:95](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/types.ts#L95)*
+*Defined in [src/types.ts:95](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/types.ts#L95)*
 
 ___
 
@@ -152,7 +152,7 @@ ___
 
 Ƭ **GetLength**: *GetLength<original>*
 
-*Defined in [src/types.ts:22](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/types.ts#L22)*
+*Defined in [src/types.ts:22](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/types.ts#L22)*
 
 ___
 
@@ -160,7 +160,7 @@ ___
 
 Ƭ **Mappable**: *function*
 
-*Defined in [src/types.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/types.ts#L1)*
+*Defined in [src/types.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/types.ts#L1)*
 
 #### Type declaration:
 
@@ -178,7 +178,7 @@ ___
 
 Ƭ **MonadType**: *A | [Monad](../classes/_types_.monad.md)‹A›*
 
-*Defined in [src/types.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/types.ts#L7)*
+*Defined in [src/types.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/types.ts#L7)*
 
 ___
 
@@ -186,7 +186,7 @@ ___
 
 Ƭ **Predicate**: *function*
 
-*Defined in [src/types.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/types.ts#L3)*
+*Defined in [src/types.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/types.ts#L3)*
 
 #### Type declaration:
 
@@ -204,7 +204,7 @@ ___
 
 Ƭ **Prev**: *[-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, ... 20 more ..., 62][T]*
 
-*Defined in [src/types.ts:28](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/types.ts#L28)*
+*Defined in [src/types.ts:28](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/types.ts#L28)*
 
 ___
 
@@ -212,7 +212,7 @@ ___
 
 Ƭ **SelectorPath**: *number | string | string | number[]*
 
-*Defined in [src/types.ts:18](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/types.ts#L18)*
+*Defined in [src/types.ts:18](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/types.ts#L18)*
 
 ___
 
@@ -220,7 +220,7 @@ ___
 
 Ƭ **Transform**: *function*
 
-*Defined in [src/types.ts:97](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/types.ts#L97)*
+*Defined in [src/types.ts:97](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/types.ts#L97)*
 
 #### Type declaration:
 

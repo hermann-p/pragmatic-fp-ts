@@ -14,7 +14,7 @@
 
 ▸ **match**(`re`: RegExp | string, `text`: string): *string[]*
 
-*Defined in [src/match.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/match.ts#L1)*
+*Defined in [src/match.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/match.ts#L1)*
 
 **Parameters:**
 
@@ -27,7 +27,7 @@ Name | Type |
 
 ▸ **match**(`re`: RegExp | string): *function*
 
-*Defined in [src/match.ts:2](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/match.ts#L2)*
+*Defined in [src/match.ts:2](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/match.ts#L2)*
 
 **Parameters:**
 

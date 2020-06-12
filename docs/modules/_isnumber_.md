@@ -14,7 +14,7 @@
 
 ▸ **isNumber**(`n`: unknown): *n is number*
 
-*Defined in [src/isNumber.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/isNumber.ts#L1)*
+*Defined in [src/isNumber.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/isNumber.ts#L1)*
 
 **Parameters:**
 

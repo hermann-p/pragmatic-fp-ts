@@ -13,6 +13,7 @@ import {
   right,
   left,
 } from "../main";
+import * as l from "../main";
 
 describe("monads", () => {
   describe("Maybe", () => {
@@ -39,6 +40,11 @@ describe("monads", () => {
     expect(just(1).filter(() => false)).toBeInstanceOf(Nothing);
 
     expect(nothing().filter(() => true)).toBeInstanceOf(Nothing);
+
+    const x = maybe([1, 2, 3])
+      ._(l.find(l.eq(4)))
+      ._(l.add(3));
+    expect(x).toBeInstanceOf(Nothing);
   });
 
   describe("Either", () => {

@@ -14,7 +14,7 @@
 
 ▸ **count**(`coll`: any[] | [Dictionary](_types_.md#dictionary) | string): *number*
 
-*Defined in [src/count.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/893c172/src/count.ts#L3)*
+*Defined in [src/count.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/count.ts#L3)*
 
 **Parameters:**
 

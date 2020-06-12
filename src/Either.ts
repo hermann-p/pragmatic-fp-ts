@@ -1,13 +1,13 @@
 import { Effect, isNil, getValue, Mappable, Predicate } from "./main";
 import { Monad, MonadType } from "./types";
 
-export type Either<R extends NonNullable<any>, L = Error> = Left<R, L> | Right<R, L>;
+export type Either<R, L = Error> = Left<R, L> | Right<R, L>;
 
-type EitherMatcher<R extends NonNullable<any>, L, B> = {
+type EitherMatcher<R, L, B> = {
   left: (err: L) => B;
   right: (val: R) => B;
 };
-export class Left<R extends NonNullable<any>, L = Error> extends Monad<R> {
+export class Left<R, L = Error> extends Monad<R> {
   readonly errorValue: L;
 
   constructor(errVal: L) {
@@ -15,26 +15,26 @@ export class Left<R extends NonNullable<any>, L = Error> extends Monad<R> {
     this.errorValue = errVal;
   }
 
-  _<B>(_: Mappable<R, B>): Either<B, L> {
+  _<B>(_: Mappable<R, B>): Either<NonNullable<B>, L> {
     return this as any;
   }
   bind = this._;
-  bindM<B>(_: Mappable<Monad<R>, Monad<B>>): Either<B, L> {
+  bindM<B>(_: Mappable<Monad<R>, Monad<B>>): Either<NonNullable<B>, L> {
     return this as any;
   }
-  filter(_: any): Either<R, L> {
-    return this;
+  filter(_: any): Either<NonNullable<R>, L> {
+    return this as any;
   }
-  effect(_: any): Either<R, L> {
-    return this;
+  effect(_: any): Either<NonNullable<R>, L> {
+    return this as any;
   }
-  getValue(): R {
+  getValue(): NonNullable<R> {
     throw new Error(`Can not get value of Left(${String(this.errorValue)})`);
   }
   getValueOr(alt: R): R {
     return alt;
   }
-  match<B>(matcher: EitherMatcher<R, L, B>): Either<B, L | Error> {
+  match<B>(matcher: EitherMatcher<R, L, B>): Either<NonNullable<B>, L | Error> {
     return either<B, L>(matcher.left(this.errorValue));
   }
 }
@@ -45,44 +45,46 @@ export class Right<R extends NonNullable<any>, L = Error> extends Monad<R> {
     super();
     this.value = value;
   }
-  _<B>(fn: Mappable<R, B>): Either<B, L | Error> {
+  _<B>(fn: Mappable<R, B>): Either<NonNullable<B>, L | Error> {
     try {
       const result = fn(this.value);
       return either(getValue(result));
     } catch (err) {
-      return left<B, Error>(err);
+      return left<NonNullable<B>, Error>(err);
     }
   }
   bind = this._;
-  bindM<B>(fn: Mappable<Monad<R>, Monad<B>>): Either<B, L | Error> {
+  bindM<B>(fn: Mappable<Monad<R>, Monad<B>>): Either<NonNullable<B>, L | Error> {
     try {
       const result = fn(this);
       return either(getValue(result));
     } catch (err) {
-      return left<B, L>(err);
+      return left<NonNullable<B>, L>(err);
     }
   }
-  filter(fn: Predicate<R>): Either<R, L | Error> {
+  filter(fn: Predicate<R>): Either<NonNullable<R>, L | Error> {
     try {
-      return fn(this.value) ? this : left<R>(new Error("Did not pass filter"));
+      return fn(this.value)
+        ? (this as any)
+        : left<NonNullable<R>>(new Error("Did not pass filter"));
     } catch (err) {
-      return left<R>(new Error(`Exception while filtering: ${err.text}`));
+      return left<NonNullable<R>>(new Error(`Exception while filtering: ${err.text}`));
     }
   }
 
-  effect(fn: Effect<R>): Either<R, L> {
+  effect(fn: Effect<R>): Either<NonNullable<R>, L> {
     try {
       fn(this.value);
     } catch (err) {}
-    return this;
+    return this as any;
   }
-  getValue(): R {
-    return this.value;
+  getValue(): NonNullable<R> {
+    return this.value as NonNullable<R>;
   }
   getValueOr(_: R): R {
     return this.value;
   }
-  match<B>(matcher: EitherMatcher<R, L, B>): Either<B, L> {
+  match<B>(matcher: EitherMatcher<R, L, B>): Either<NonNullable<B>, L> {
     return either(matcher.right(this.value)) as any;
   }
 }
@@ -95,13 +97,16 @@ export function right<R, L = Error>(value: R) {
   return new Right<R, L>(value);
 }
 
-export function either<R, L = Error>(value: MonadType<R>, errVal?: L): Either<R, L | Error> {
+export function either<R, L = Error>(
+  value: MonadType<R>,
+  errVal?: L
+): Either<NonNullable<R>, L | Error> {
   const innerValue = getValue(value);
   return isNil(innerValue)
     ? errVal
-      ? new Left<R, L>(errVal)
-      : new Left<R, Error>(new Error("Initially nil"))
-    : new Right<R, L>(innerValue);
+      ? new Left<NonNullable<R>, L>(errVal)
+      : new Left<NonNullable<R>, Error>(new Error("Initially nil"))
+    : new Right<NonNullable<R>, L>(innerValue as any);
 }
 
 export function isLeft<R = any, L = Error>(el: unknown): el is Left<R, L> {
