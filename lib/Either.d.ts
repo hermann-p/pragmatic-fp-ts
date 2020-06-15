@@ -16,6 +16,8 @@ export declare class Left<R, L = Error> extends Monad<R> {
     getValue(): NonNullable<R>;
     getValueOr(alt: R): R;
     match<B>(matcher: EitherMatcher<R, L, B>): Either<NonNullable<B>, L | Error>;
+    isLeft(): boolean;
+    isRight(): boolean;
 }
 export declare class Right<R extends NonNullable<any>, L = Error> extends Monad<R> {
     readonly value: R;
@@ -28,6 +30,8 @@ export declare class Right<R extends NonNullable<any>, L = Error> extends Monad<
     getValue(): NonNullable<R>;
     getValueOr(_: R): R;
     match<B>(matcher: EitherMatcher<R, L, B>): Either<NonNullable<B>, L>;
+    isLeft(): boolean;
+    isRight(): boolean;
 }
 export declare function left<R, L = Error>(errVal: L): Left<R, L>;
 export declare function right<R, L = Error>(value: R): Right<R, L>;

@@ -1,19 +1,13 @@
-import { equals, Dictionary } from "./main";
+import { equals } from "./main";
 
-export function whereEq<A = any>(
-  pattern: Dictionary<A>,
-  dict: Dictionary<A>
-): boolean;
-export function whereEq<A = any>(
-  pattern: Dictionary<A>
-): (dict: Dictionary<A>) => boolean;
+export function whereEq<A extends {}>(pattern: { [K in keyof A]?: A[K] }, dict: A): boolean;
+export function whereEq<A extends {}>(pattern: A): (dict: A) => boolean;
 
-export function whereEq<A = any>(pattern: Dictionary<A>, dict?: Dictionary<A>) {
-  if (arguments.length === 1)
-    return (_dict: Dictionary<A>) => whereEq(pattern, _dict);
+export function whereEq<A extends {}>(pattern: A, dict?: A) {
+  if (arguments.length === 1) return (_dict: A) => whereEq(pattern, _dict);
 
   return Object.keys(pattern!).reduce(
-    (success, key) => success && equals(pattern[key], dict![key]),
+    (success, key) => success && equals((pattern as any)[key], (dict! as any)[key]),
     true
   );
 }

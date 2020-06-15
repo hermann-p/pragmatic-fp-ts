@@ -37,6 +37,12 @@ export class Left<R, L = Error> extends Monad<R> {
   match<B>(matcher: EitherMatcher<R, L, B>): Either<NonNullable<B>, L | Error> {
     return either<B, L>(matcher.left(this.errorValue));
   }
+  isLeft() {
+    return true;
+  }
+  isRight() {
+    return false;
+  }
 }
 
 export class Right<R extends NonNullable<any>, L = Error> extends Monad<R> {
@@ -86,6 +92,12 @@ export class Right<R extends NonNullable<any>, L = Error> extends Monad<R> {
   }
   match<B>(matcher: EitherMatcher<R, L, B>): Either<NonNullable<B>, L> {
     return either(matcher.right(this.value)) as any;
+  }
+  isLeft() {
+    return false;
+  }
+  isRight() {
+    return true;
   }
 }
 

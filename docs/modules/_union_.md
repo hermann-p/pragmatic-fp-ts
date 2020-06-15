@@ -14,7 +14,7 @@
 
 ▸ **union**<**A**>(`a`: A[], `b`: A[]): *A[]*
 
-*Defined in [src/union.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/union.ts#L1)*
+*Defined in [src/union.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/472cce0/src/union.ts#L1)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **union**<**A**>(`a`: A[]): *function*
 
-*Defined in [src/union.ts:2](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/union.ts#L2)*
+*Defined in [src/union.ts:2](https://github.com/hermann-p/pragmatic-fp-ts/blob/472cce0/src/union.ts#L2)*
 
 **Type parameters:**
 

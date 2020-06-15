@@ -14,7 +14,7 @@
 
 ▸ **includes**(`what`: string, `coll`: string): *boolean*
 
-*Defined in [src/includes.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/includes.ts#L3)*
+*Defined in [src/includes.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/472cce0/src/includes.ts#L3)*
 
 **Parameters:**
 
@@ -27,7 +27,7 @@ Name | Type |
 
 ▸ **includes**<**A**>(`what`: A, `coll`: A[]): *boolean*
 
-*Defined in [src/includes.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/includes.ts#L4)*
+*Defined in [src/includes.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/472cce0/src/includes.ts#L4)*
 
 **Type parameters:**
 
@@ -42,33 +42,15 @@ Name | Type |
 
 **Returns:** *boolean*
 
-▸ **includes**(`what`: string): *function*
+▸ **includes**<**A**, **B**>(`what`: A): *function*
 
-*Defined in [src/includes.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/includes.ts#L5)*
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`what` | string |
-
-**Returns:** *function*
-
-▸ (`coll`: string): *boolean*
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`coll` | string |
-
-▸ **includes**<**A**>(`what`: A): *function*
-
-*Defined in [src/includes.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/includes.ts#L6)*
+*Defined in [src/includes.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/472cce0/src/includes.ts#L5)*
 
 **Type parameters:**
 
 ▪ **A**
+
+▪ **B**
 
 **Parameters:**
 
@@ -78,10 +60,10 @@ Name | Type |
 
 **Returns:** *function*
 
-▸ (`coll`: A[]): *boolean*
+▸ (`coll`: B): *boolean*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`coll` | A[] |
+`coll` | B |

@@ -14,6 +14,8 @@ export declare class Nothing<A> extends Monad<A> {
     getValue(): A;
     getValueOr(alt: A): A;
     match<B>(matcher: MaybeMatcher<A, B>): Maybe<NonNullable<B>>;
+    isNothing(): boolean;
+    isJust(): boolean;
 }
 export declare class Just<A> extends Monad<A> {
     readonly value: A;
@@ -26,6 +28,8 @@ export declare class Just<A> extends Monad<A> {
     getValue(): NonNullable<A>;
     getValueOr(_: A): A;
     match<B>(matcher: MaybeMatcher<A, B>): Maybe<NonNullable<B>>;
+    isNothing(): boolean;
+    isJust(): boolean;
 }
 export declare const just: <T>(value: T) => Just<T>;
 export declare const nothing: <T>() => Nothing<T>;

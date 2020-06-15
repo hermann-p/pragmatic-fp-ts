@@ -12,43 +12,43 @@
 
 ###  where
 
-▸ **where**<**A**>(`pattern`: [Dictionary](_types_.md#dictionary)‹[Predicate](_types_.md#predicate)‹A››, `dict`: [Dictionary](_types_.md#dictionary)‹A›): *boolean*
+▸ **where**<**A**>(`pattern`: object, `dict`: A): *boolean*
 
-*Defined in [src/where.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/where.ts#L3)*
+*Defined in [src/where.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/472cce0/src/where.ts#L3)*
 
 **Type parameters:**
 
-▪ **A**
+▪ **A**: *__type*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`pattern` | [Dictionary](_types_.md#dictionary)‹[Predicate](_types_.md#predicate)‹A›› |
-`dict` | [Dictionary](_types_.md#dictionary)‹A› |
+`pattern` | object |
+`dict` | A |
 
 **Returns:** *boolean*
 
-▸ **where**<**A**>(`pattern`: [Dictionary](_types_.md#dictionary)‹[Predicate](_types_.md#predicate)‹A››): *function*
+▸ **where**<**P**>(`pattern`: P): *function*
 
-*Defined in [src/where.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/where.ts#L7)*
+*Defined in [src/where.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/472cce0/src/where.ts#L8)*
 
 **Type parameters:**
 
-▪ **A**
+▪ **P**: *[Dictionary](_types_.md#dictionary)‹[Predicate](_types_.md#predicate)‹any››*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`pattern` | [Dictionary](_types_.md#dictionary)‹[Predicate](_types_.md#predicate)‹A›› |
+`pattern` | P |
 
 **Returns:** *function*
 
-▸ (`dict`: [Dictionary](_types_.md#dictionary)‹A›): *boolean*
+▸ (`dict`: object): *boolean*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`dict` | [Dictionary](_types_.md#dictionary)‹A› |
+`dict` | object |

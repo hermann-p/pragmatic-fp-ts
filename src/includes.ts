@@ -2,8 +2,9 @@ import { getValue, isNil } from "./main";
 
 export function includes(what: string, coll: string): boolean;
 export function includes<A>(what: A, coll: A[]): boolean;
-export function includes(what: string): (coll: string) => boolean;
-export function includes<A>(what: A): (coll: A[]) => boolean;
+export function includes<A, B = A extends string ? string | string[] : A[]>(
+  what: A
+): (coll: B) => boolean;
 
 export function includes<A>(what: A | string, coll?: A[] | string) {
   if (arguments.length === 1) return (theColl: any) => includes(what, theColl);

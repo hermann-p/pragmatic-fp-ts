@@ -14,7 +14,7 @@
 
 ▸ **isSome**<**A**>(`x?`: A): *x is NonNullable<Exclude<A, "" | __type | []>>*
 
-*Defined in [src/isSome.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/isSome.ts#L3)*
+*Defined in [src/isSome.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/472cce0/src/isSome.ts#L3)*
 
 **Type parameters:**
 

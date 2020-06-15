@@ -14,7 +14,7 @@
 
 ▸ **min**(`numbers`: number[]): *number*
 
-*Defined in [src/min.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/6562256/src/min.ts#L1)*
+*Defined in [src/min.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/472cce0/src/min.ts#L1)*
 
 **Parameters:**
 

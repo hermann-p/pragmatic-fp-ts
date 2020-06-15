@@ -27,6 +27,12 @@ export class Nothing<A> extends Monad<A> {
   match<B>(matcher: MaybeMatcher<A, B>): Maybe<NonNullable<B>> {
     return maybe(matcher.nothing());
   }
+  isNothing() {
+    return true;
+  }
+  isJust() {
+    return false;
+  }
 }
 
 export class Just<A> extends Monad<A> {
@@ -74,6 +80,12 @@ export class Just<A> extends Monad<A> {
   }
   match<B>(matcher: MaybeMatcher<A, B>): Maybe<NonNullable<B>> {
     return maybe(matcher.just(this.value as NonNullable<A>));
+  }
+  isNothing() {
+    return false;
+  }
+  isJust() {
+    return true;
   }
 }
 

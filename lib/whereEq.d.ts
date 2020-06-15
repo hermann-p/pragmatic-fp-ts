@@ -1,3 +1,4 @@
-import { Dictionary } from "./main";
-export declare function whereEq<A = any>(pattern: Dictionary<A>, dict: Dictionary<A>): boolean;
-export declare function whereEq<A = any>(pattern: Dictionary<A>): (dict: Dictionary<A>) => boolean;
+export declare function whereEq<A extends {}>(pattern: {
+    [K in keyof A]?: A[K];
+}, dict: A): boolean;
+export declare function whereEq<A extends {}>(pattern: A): (dict: A) => boolean;
