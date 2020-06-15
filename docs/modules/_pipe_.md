@@ -18,7 +18,7 @@
 
 ▸ **pipe**<**A**, **B**>(`fn`: [Mappable](_types_.md#mappable)‹A, B›): *[Pipe](../classes/_pipe_.pipe.md)‹A, B›*
 
-*Defined in [src/pipe.ts:21](https://github.com/hermann-p/pragmatic-fp-ts/blob/472cce0/src/pipe.ts#L21)*
+*Defined in [src/pipe.ts:21](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/pipe.ts#L21)*
 
 **Type parameters:**
 

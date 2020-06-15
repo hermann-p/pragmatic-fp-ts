@@ -16,7 +16,7 @@
 
 ▸ **arrayToIndexed**<**A**>(`arr`: A[]): *[number, A][]*
 
-*Defined in [src/findLastIndex.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/472cce0/src/findLastIndex.ts#L6)*
+*Defined in [src/findLastIndex.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/findLastIndex.ts#L6)*
 
 **Type parameters:**
 
@@ -36,7 +36,7 @@ ___
 
 ▸ **dictToIndexed**<**A**>(`dict`: [Dictionary](_types_.md#dictionary)‹A›): *[string, A][]*
 
-*Defined in [src/findLastIndex.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/472cce0/src/findLastIndex.ts#L8)*
+*Defined in [src/findLastIndex.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/findLastIndex.ts#L8)*
 
 **Type parameters:**
 
@@ -56,7 +56,7 @@ ___
 
 ▸ **findLastIndex**<**A**>(`condition`: [Predicate](_types_.md#predicate)‹A›, `coll`: A[]): *number*
 
-*Defined in [src/findLastIndex.ts:13](https://github.com/hermann-p/pragmatic-fp-ts/blob/472cce0/src/findLastIndex.ts#L13)*
+*Defined in [src/findLastIndex.ts:13](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/findLastIndex.ts#L13)*
 
 **Type parameters:**
 
@@ -73,7 +73,7 @@ Name | Type |
 
 ▸ **findLastIndex**<**A**>(`condition`: [Predicate](_types_.md#predicate)‹A›, `coll`: [Dictionary](_types_.md#dictionary)‹A›): *string*
 
-*Defined in [src/findLastIndex.ts:14](https://github.com/hermann-p/pragmatic-fp-ts/blob/472cce0/src/findLastIndex.ts#L14)*
+*Defined in [src/findLastIndex.ts:14](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/findLastIndex.ts#L14)*
 
 **Type parameters:**
 
@@ -90,7 +90,7 @@ Name | Type |
 
 ▸ **findLastIndex**<**A**>(`condition`: [Predicate](_types_.md#predicate)‹A›): *function*
 
-*Defined in [src/findLastIndex.ts:15](https://github.com/hermann-p/pragmatic-fp-ts/blob/472cce0/src/findLastIndex.ts#L15)*
+*Defined in [src/findLastIndex.ts:15](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/findLastIndex.ts#L15)*
 
 **Type parameters:**
 

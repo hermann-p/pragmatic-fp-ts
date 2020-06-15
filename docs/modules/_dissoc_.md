@@ -14,7 +14,7 @@
 
 ▸ **dissoc**<**A**, **K**>(`propName`: K, `dict`: A): *Omit‹A, K›*
 
-*Defined in [src/dissoc.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/472cce0/src/dissoc.ts#L6)*
+*Defined in [src/dissoc.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/dissoc.ts#L6)*
 
 **Type parameters:**
 
@@ -33,7 +33,7 @@ Name | Type |
 
 ▸ **dissoc**<**K**>(`propName`: K): *function*
 
-*Defined in [src/dissoc.ts:10](https://github.com/hermann-p/pragmatic-fp-ts/blob/472cce0/src/dissoc.ts#L10)*
+*Defined in [src/dissoc.ts:10](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/dissoc.ts#L10)*
 
 **Type parameters:**
 

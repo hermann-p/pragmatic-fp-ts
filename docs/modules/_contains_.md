@@ -14,7 +14,7 @@
 
 ▸ **contains**<**A**>(`el`: A, `coll`: A[]): *boolean*
 
-*Defined in [src/contains.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/472cce0/src/contains.ts#L3)*
+*Defined in [src/contains.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/contains.ts#L3)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **contains**<**A**>(`el`: A): *function*
 
-*Defined in [src/contains.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/472cce0/src/contains.ts#L4)*
+*Defined in [src/contains.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/contains.ts#L4)*
 
 **Type parameters:**
 
@@ -55,7 +55,7 @@ Name | Type |
 
 ▸ **contains**(`part`: string, `full`: string): *boolean*
 
-*Defined in [src/contains.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/472cce0/src/contains.ts#L5)*
+*Defined in [src/contains.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/contains.ts#L5)*
 
 **Parameters:**
 
@@ -68,7 +68,7 @@ Name | Type |
 
 ▸ **contains**(`part`: string): *function*
 
-*Defined in [src/contains.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/472cce0/src/contains.ts#L6)*
+*Defined in [src/contains.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/contains.ts#L6)*
 
 **Parameters:**
 

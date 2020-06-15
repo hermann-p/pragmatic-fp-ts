@@ -14,7 +14,7 @@
 
 ▸ **intersperse**<**A**>(`elem`: A, `coll`: A[]): *A[]*
 
-*Defined in [src/intersperse.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/472cce0/src/intersperse.ts#L3)*
+*Defined in [src/intersperse.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/intersperse.ts#L3)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **intersperse**<**A**>(`elem`: A): *function*
 
-*Defined in [src/intersperse.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/472cce0/src/intersperse.ts#L4)*
+*Defined in [src/intersperse.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/intersperse.ts#L4)*
 
 **Type parameters:**
 

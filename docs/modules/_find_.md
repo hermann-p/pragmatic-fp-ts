@@ -14,7 +14,7 @@
 
 ▸ **find**<**A**>(`condition`: [Predicate](_types_.md#predicate)‹A›, `coll`: A[]): *A | null*
 
-*Defined in [src/find.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/472cce0/src/find.ts#L3)*
+*Defined in [src/find.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/find.ts#L3)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **find**<**A**>(`condition`: [Predicate](_types_.md#predicate)‹A›, `dict`: [Dictionary](_types_.md#dictionary)‹A›): *A | null*
 
-*Defined in [src/find.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/472cce0/src/find.ts#L4)*
+*Defined in [src/find.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/find.ts#L4)*
 
 **Type parameters:**
 
@@ -48,7 +48,7 @@ Name | Type |
 
 ▸ **find**<**A**>(`condition`: [Predicate](_types_.md#predicate)‹A›): *function*
 
-*Defined in [src/find.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/472cce0/src/find.ts#L6)*
+*Defined in [src/find.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/find.ts#L6)*
 
 **Type parameters:**
 

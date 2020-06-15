@@ -14,7 +14,7 @@
 
 ▸ **both**<**A**>(`p1`: [Predicate](_types_.md#predicate)‹A›, `p2`: [Predicate](_types_.md#predicate)‹A›, `value`: A): *boolean*
 
-*Defined in [src/both.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/472cce0/src/both.ts#L5)*
+*Defined in [src/both.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/both.ts#L5)*
 
 **Type parameters:**
 
@@ -32,7 +32,7 @@ Name | Type |
 
 ▸ **both**<**A**>(`p1`: [Predicate](_types_.md#predicate)‹A›, `p2`: [Predicate](_types_.md#predicate)‹A›): *function*
 
-*Defined in [src/both.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/472cce0/src/both.ts#L6)*
+*Defined in [src/both.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/both.ts#L6)*
 
 **Type parameters:**
 
@@ -57,7 +57,7 @@ Name | Type |
 
 ▸ **both**<**A**>(`p1`: [Predicate](_types_.md#predicate)‹A›): *function*
 
-*Defined in [src/both.ts:10](https://github.com/hermann-p/pragmatic-fp-ts/blob/472cce0/src/both.ts#L10)*
+*Defined in [src/both.ts:10](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/both.ts#L10)*
 
 **Type parameters:**
 

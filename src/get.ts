@@ -8,6 +8,8 @@ export function get<K extends string>(
 ): <A extends any, V extends Record<K, A>>(dict: V) => V[K];
 
 export function get(p: string | number, coll?: any) {
+  if (arguments.length === 1) return (coll_: any) => get(p, coll_);
+
   const defVal = typeof p === "string" ? {} : [];
   return getValueOr(defVal, coll)[p];
 }

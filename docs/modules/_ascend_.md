@@ -14,7 +14,7 @@
 
 ▸ **ascend**<**A**>(`toComparable`: [Mappable](_types_.md#mappable)‹A, string | number›): *[Comparator](_types_.md#comparator)‹A›*
 
-*Defined in [src/ascend.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/472cce0/src/ascend.ts#L3)*
+*Defined in [src/ascend.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/ascend.ts#L3)*
 
 **Type parameters:**
 

@@ -52,7 +52,7 @@ fn(-5) //: 6
 
 \+ **new Compose**(`fn`: [Mappable](../modules/_types_.md#mappable)‹A, B›): *[Compose](_compose_.compose.md)*
 
-*Defined in [src/compose.ts:13](https://github.com/hermann-p/pragmatic-fp-ts/blob/472cce0/src/compose.ts#L13)*
+*Defined in [src/compose.ts:13](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/compose.ts#L13)*
 
 **Parameters:**
 
@@ -88,7 +88,7 @@ ___
 
 • **fn**: *[Mappable](../modules/_types_.md#mappable)‹A, B›*
 
-*Defined in [src/compose.ts:13](https://github.com/hermann-p/pragmatic-fp-ts/blob/472cce0/src/compose.ts#L13)*
+*Defined in [src/compose.ts:13](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/compose.ts#L13)*
 
 ___
 
@@ -160,7 +160,7 @@ ___
 
 ▸ **_**<**C**>(`prevFn`: [Mappable](../modules/_types_.md#mappable)‹C, A›): *[Compose](_compose_.compose.md)‹C, B›*
 
-*Defined in [src/compose.ts:24](https://github.com/hermann-p/pragmatic-fp-ts/blob/472cce0/src/compose.ts#L24)*
+*Defined in [src/compose.ts:24](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/compose.ts#L24)*
 
 **Type parameters:**
 
