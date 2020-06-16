@@ -14,7 +14,7 @@
 
 ▸ **uniq**<**A**>(`coll`: A[]): *A[]*
 
-*Defined in [src/uniq.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/uniq.ts#L1)*
+*Defined in [src/uniq.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/d13f3c1/src/uniq.ts#L1)*
 
 **Type parameters:**
 

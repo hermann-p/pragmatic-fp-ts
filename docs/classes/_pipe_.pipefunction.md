@@ -1,8 +1,12 @@
-[pragmatic-fp-ts](../README.md) › [Globals](../globals.md) › ["pipe"](../modules/_pipe_.md) › [Pipe](_pipe_.pipe.md)
+[pragmatic-fp-ts](../README.md) › [Globals](../globals.md) › ["pipe"](../modules/_pipe_.md) › [PipeFunction](_pipe_.pipefunction.md)
 
-# Class: Pipe <**A, B**>
+# Class: PipeFunction <**A, B, A, B**>
 
 ## Type parameters
+
+▪ **A**
+
+▪ **B**
 
 ▪ **A**
 
@@ -12,40 +16,54 @@
 
 * Function
 
-  ↳ **Pipe**
+  ↳ **PipeFunction**
+
+## Callable
+
+▸ (`input`: A): *B*
+
+*Defined in [src/pipe.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/d13f3c1/src/pipe.ts#L3)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`input` | A |
+
+**Returns:** *B*
 
 ## Index
 
 ### Constructors
 
-* [constructor](_pipe_.pipe.md#constructor)
+* [constructor](_pipe_.pipefunction.md#constructor)
 
 ### Properties
 
-* [arguments](_pipe_.pipe.md#arguments)
-* [caller](_pipe_.pipe.md#caller)
-* [fn](_pipe_.pipe.md#fn)
-* [length](_pipe_.pipe.md#length)
-* [name](_pipe_.pipe.md#name)
-* [prototype](_pipe_.pipe.md#prototype)
-* [Function](_pipe_.pipe.md#static-function)
+* [arguments](_pipe_.pipefunction.md#arguments)
+* [caller](_pipe_.pipefunction.md#caller)
+* [fn](_pipe_.pipefunction.md#fn)
+* [length](_pipe_.pipefunction.md#length)
+* [name](_pipe_.pipefunction.md#name)
+* [prototype](_pipe_.pipefunction.md#prototype)
+* [Function](_pipe_.pipefunction.md#static-function)
 
 ### Methods
 
-* [[Symbol.hasInstance]](_pipe_.pipe.md#[symbol.hasinstance])
-* [_](_pipe_.pipe.md#_)
-* [apply](_pipe_.pipe.md#apply)
-* [bind](_pipe_.pipe.md#bind)
-* [call](_pipe_.pipe.md#call)
-* [toString](_pipe_.pipe.md#tostring)
+* [[Symbol.hasInstance]](_pipe_.pipefunction.md#[symbol.hasinstance])
+* [_](_pipe_.pipefunction.md#_)
+* [apply](_pipe_.pipefunction.md#apply)
+* [bind](_pipe_.pipefunction.md#bind)
+* [call](_pipe_.pipefunction.md#call)
+* [toString](_pipe_.pipefunction.md#tostring)
 
 ## Constructors
 
 ###  constructor
 
-\+ **new Pipe**(`fn`: [Mappable](../modules/_types_.md#mappable)‹A, B›): *[Pipe](_pipe_.pipe.md)*
+\+ **new PipeFunction**(`fn`: [Mappable](../modules/_types_.md#mappable)‹A, B›): *[PipeFunction](_pipe_.pipefunction.md)*
 
-*Defined in [src/pipe.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/pipe.ts#L4)*
+*Defined in [src/pipe.ts:9](https://github.com/hermann-p/pragmatic-fp-ts/blob/d13f3c1/src/pipe.ts#L9)*
 
 **Parameters:**
 
@@ -53,7 +71,7 @@ Name | Type |
 ------ | ------ |
 `fn` | [Mappable](../modules/_types_.md#mappable)‹A, B› |
 
-**Returns:** *[Pipe](_pipe_.pipe.md)*
+**Returns:** *[PipeFunction](_pipe_.pipefunction.md)*
 
 ## Properties
 
@@ -81,7 +99,7 @@ ___
 
 • **fn**: *[Mappable](../modules/_types_.md#mappable)‹A, B›*
 
-*Defined in [src/pipe.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/pipe.ts#L4)*
+*Defined in [src/pipe.ts:9](https://github.com/hermann-p/pragmatic-fp-ts/blob/d13f3c1/src/pipe.ts#L9)*
 
 ___
 
@@ -151,9 +169,9 @@ ___
 
 ###  _
 
-▸ **_**<**C**>(`nextFn`: [Mappable](../modules/_types_.md#mappable)‹B, C›): *[Pipe](_pipe_.pipe.md)‹A, C›*
+▸ **_**<**C**>(`nextFn`: [Mappable](../modules/_types_.md#mappable)‹B, C›): *[PipeFunction](_pipe_.pipefunction.md)‹A, C›*
 
-*Defined in [src/pipe.ts:16](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/pipe.ts#L16)*
+*Defined in [src/pipe.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/d13f3c1/src/pipe.ts#L5)*
 
 **Type parameters:**
 
@@ -165,7 +183,7 @@ Name | Type |
 ------ | ------ |
 `nextFn` | [Mappable](../modules/_types_.md#mappable)‹B, C› |
 
-**Returns:** *[Pipe](_pipe_.pipe.md)‹A, C›*
+**Returns:** *[PipeFunction](_pipe_.pipefunction.md)‹A, C›*
 
 ___
 

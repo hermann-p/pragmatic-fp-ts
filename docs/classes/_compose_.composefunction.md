@@ -1,6 +1,6 @@
-[pragmatic-fp-ts](../README.md) › [Globals](../globals.md) › ["compose"](../modules/_compose_.md) › [Compose](_compose_.compose.md)
+[pragmatic-fp-ts](../README.md) › [Globals](../globals.md) › ["compose"](../modules/_compose_.md) › [ComposeFunction](_compose_.composefunction.md)
 
-# Class: Compose <**A, B**>
+# Class: ComposeFunction <**A, B, A, B**>
 
 Composes unary functions from right to left, using infix/monadic binding style
 
@@ -15,44 +15,69 @@ fn(-5) //: 6
 
 ▪ **B**
 
+▪ **A**
+
+▪ **B**
+
 ## Hierarchy
 
 * Function
 
-  ↳ **Compose**
+  ↳ **ComposeFunction**
+
+## Callable
+
+▸ (`input`: A): *B*
+
+*Defined in [src/compose.ts:12](https://github.com/hermann-p/pragmatic-fp-ts/blob/d13f3c1/src/compose.ts#L12)*
+
+Composes unary functions from right to left, using infix/monadic binding style
+
+```
+const fn = compose(inc)._(Math.abs)
+fn(-5) //: 6
+```
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`input` | A |
+
+**Returns:** *B*
 
 ## Index
 
 ### Constructors
 
-* [constructor](_compose_.compose.md#constructor)
+* [constructor](_compose_.composefunction.md#constructor)
 
 ### Properties
 
-* [arguments](_compose_.compose.md#arguments)
-* [caller](_compose_.compose.md#caller)
-* [fn](_compose_.compose.md#fn)
-* [length](_compose_.compose.md#length)
-* [name](_compose_.compose.md#name)
-* [prototype](_compose_.compose.md#prototype)
-* [Function](_compose_.compose.md#static-function)
+* [arguments](_compose_.composefunction.md#arguments)
+* [caller](_compose_.composefunction.md#caller)
+* [fn](_compose_.composefunction.md#fn)
+* [length](_compose_.composefunction.md#length)
+* [name](_compose_.composefunction.md#name)
+* [prototype](_compose_.composefunction.md#prototype)
+* [Function](_compose_.composefunction.md#static-function)
 
 ### Methods
 
-* [[Symbol.hasInstance]](_compose_.compose.md#[symbol.hasinstance])
-* [_](_compose_.compose.md#_)
-* [apply](_compose_.compose.md#apply)
-* [bind](_compose_.compose.md#bind)
-* [call](_compose_.compose.md#call)
-* [toString](_compose_.compose.md#tostring)
+* [[Symbol.hasInstance]](_compose_.composefunction.md#[symbol.hasinstance])
+* [_](_compose_.composefunction.md#_)
+* [apply](_compose_.composefunction.md#apply)
+* [bind](_compose_.composefunction.md#bind)
+* [call](_compose_.composefunction.md#call)
+* [toString](_compose_.composefunction.md#tostring)
 
 ## Constructors
 
 ###  constructor
 
-\+ **new Compose**(`fn`: [Mappable](../modules/_types_.md#mappable)‹A, B›): *[Compose](_compose_.compose.md)*
+\+ **new ComposeFunction**(`fn`: [Mappable](../modules/_types_.md#mappable)‹A, B›): *[ComposeFunction](_compose_.composefunction.md)*
 
-*Defined in [src/compose.ts:13](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/compose.ts#L13)*
+*Defined in [src/compose.ts:18](https://github.com/hermann-p/pragmatic-fp-ts/blob/d13f3c1/src/compose.ts#L18)*
 
 **Parameters:**
 
@@ -60,7 +85,7 @@ Name | Type |
 ------ | ------ |
 `fn` | [Mappable](../modules/_types_.md#mappable)‹A, B› |
 
-**Returns:** *[Compose](_compose_.compose.md)*
+**Returns:** *[ComposeFunction](_compose_.composefunction.md)*
 
 ## Properties
 
@@ -88,7 +113,7 @@ ___
 
 • **fn**: *[Mappable](../modules/_types_.md#mappable)‹A, B›*
 
-*Defined in [src/compose.ts:13](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/compose.ts#L13)*
+*Defined in [src/compose.ts:18](https://github.com/hermann-p/pragmatic-fp-ts/blob/d13f3c1/src/compose.ts#L18)*
 
 ___
 
@@ -158,9 +183,9 @@ ___
 
 ###  _
 
-▸ **_**<**C**>(`prevFn`: [Mappable](../modules/_types_.md#mappable)‹C, A›): *[Compose](_compose_.compose.md)‹C, B›*
+▸ **_**<**C**>(`after`: [Mappable](../modules/_types_.md#mappable)‹C, A›): *[ComposeFunction](_compose_.composefunction.md)‹C, B›*
 
-*Defined in [src/compose.ts:24](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/compose.ts#L24)*
+*Defined in [src/compose.ts:14](https://github.com/hermann-p/pragmatic-fp-ts/blob/d13f3c1/src/compose.ts#L14)*
 
 **Type parameters:**
 
@@ -170,9 +195,9 @@ ___
 
 Name | Type |
 ------ | ------ |
-`prevFn` | [Mappable](../modules/_types_.md#mappable)‹C, A› |
+`after` | [Mappable](../modules/_types_.md#mappable)‹C, A› |
 
-**Returns:** *[Compose](_compose_.compose.md)‹C, B›*
+**Returns:** *[ComposeFunction](_compose_.composefunction.md)‹C, B›*
 
 ___
 

@@ -9,7 +9,12 @@ import { Mappable } from "./types";
  * ```
  */
 
-class Compose<A, B> extends Function {
+interface ComposeFunction<A, B> {
+  (input: A): B;
+  _<C>(after: Mappable<C, A>): ComposeFunction<C, B>;
+}
+
+class ComposeFunction<A, B> extends Function {
   readonly fn: Mappable<A, B>;
   constructor(fn: Mappable<A, B>) {
     super();
@@ -17,13 +22,9 @@ class Compose<A, B> extends Function {
     const comp = function (x: A) {
       return fn(x);
     };
-    (comp as any)._ = <C>(prevFn: Mappable<C, A>) => new Compose((x: C) => fn(prevFn(x)));
+    (comp as any)._ = <C>(prevFn: Mappable<C, A>) => new ComposeFunction((x: C) => fn(prevFn(x)));
     return comp as any;
-  }
-
-  _<C>(prevFn: Mappable<C, A>) {
-    return new Compose((x: C) => this.fn(prevFn(x)));
   }
 }
 
-export const compose = <A, B>(fn: Mappable<A, B>) => new Compose(fn);
+export const compose = <A, B>(fn: Mappable<A, B>) => new ComposeFunction(fn);

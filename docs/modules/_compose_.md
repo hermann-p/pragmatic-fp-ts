@@ -6,7 +6,7 @@
 
 ### Classes
 
-* [Compose](../classes/_compose_.compose.md)
+* [ComposeFunction](../classes/_compose_.composefunction.md)
 
 ### Functions
 
@@ -16,9 +16,9 @@
 
 ### `Const` compose
 
-▸ **compose**<**A**, **B**>(`fn`: [Mappable](_types_.md#mappable)‹A, B›): *[Compose](../classes/_compose_.compose.md)‹A, B›*
+▸ **compose**<**A**, **B**>(`fn`: [Mappable](_types_.md#mappable)‹A, B›): *[ComposeFunction](../classes/_compose_.composefunction.md)‹A, B›*
 
-*Defined in [src/compose.ts:29](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/compose.ts#L29)*
+*Defined in [src/compose.ts:30](https://github.com/hermann-p/pragmatic-fp-ts/blob/d13f3c1/src/compose.ts#L30)*
 
 **Type parameters:**
 
@@ -32,4 +32,4 @@ Name | Type |
 ------ | ------ |
 `fn` | [Mappable](_types_.md#mappable)‹A, B› |
 
-**Returns:** *[Compose](../classes/_compose_.compose.md)‹A, B›*
+**Returns:** *[ComposeFunction](../classes/_compose_.composefunction.md)‹A, B›*

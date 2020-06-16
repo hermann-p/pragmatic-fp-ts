@@ -19,7 +19,7 @@
 
 Ƭ **Replace**: *string | RegExp*
 
-*Defined in [src/replace.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/replace.ts#L3)*
+*Defined in [src/replace.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/d13f3c1/src/replace.ts#L3)*
 
 ___
 
@@ -27,7 +27,7 @@ ___
 
 Ƭ **Replacer**: *string | [Endomorphism](_types_.md#endomorphism)‹string›*
 
-*Defined in [src/replace.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/replace.ts#L4)*
+*Defined in [src/replace.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/d13f3c1/src/replace.ts#L4)*
 
 ## Functions
 
@@ -35,7 +35,7 @@ ___
 
 ▸ **replace**(`what`: [Replace](_replace_.md#replace), `by`: [Replacer](_replace_.md#replacer), `where`: string): *string*
 
-*Defined in [src/replace.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/replace.ts#L6)*
+*Defined in [src/replace.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/d13f3c1/src/replace.ts#L6)*
 
 **Parameters:**
 
@@ -49,7 +49,7 @@ Name | Type |
 
 ▸ **replace**(`what`: [Replace](_replace_.md#replace), `by`: [Replacer](_replace_.md#replacer)): *function*
 
-*Defined in [src/replace.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/replace.ts#L7)*
+*Defined in [src/replace.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/d13f3c1/src/replace.ts#L7)*
 
 **Parameters:**
 
@@ -70,7 +70,7 @@ Name | Type |
 
 ▸ **replace**(`what`: [Replace](_replace_.md#replace)): *function*
 
-*Defined in [src/replace.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/replace.ts#L8)*
+*Defined in [src/replace.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/d13f3c1/src/replace.ts#L8)*
 
 **Parameters:**
 

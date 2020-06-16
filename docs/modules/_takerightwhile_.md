@@ -14,7 +14,7 @@
 
 ▸ **takeRightWhile**<**A**>(`pred`: [Predicate](_types_.md#predicate)‹A›, `coll`: A[]): *A[]*
 
-*Defined in [src/takeRightWhile.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/takeRightWhile.ts#L3)*
+*Defined in [src/takeRightWhile.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/d13f3c1/src/takeRightWhile.ts#L3)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **takeRightWhile**<**A**>(`pred`: [Predicate](_types_.md#predicate)‹A›): *function*
 
-*Defined in [src/takeRightWhile.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/takeRightWhile.ts#L4)*
+*Defined in [src/takeRightWhile.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/d13f3c1/src/takeRightWhile.ts#L4)*
 
 **Type parameters:**
 

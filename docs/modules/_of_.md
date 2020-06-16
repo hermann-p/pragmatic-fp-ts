@@ -14,7 +14,7 @@
 
 ▸ **of**<**A**>(`elem`: A): *A[]*
 
-*Defined in [src/of.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/a1a02fb/src/of.ts#L1)*
+*Defined in [src/of.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/d13f3c1/src/of.ts#L1)*
 
 **Type parameters:**
 

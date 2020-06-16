@@ -7,10 +7,13 @@ import { Mappable } from "./types";
  * fn(-5) //: 6
  * ```
  */
-declare class Compose<A, B> extends Function {
+interface ComposeFunction<A, B> {
+    (input: A): B;
+    _<C>(after: Mappable<C, A>): ComposeFunction<C, B>;
+}
+declare class ComposeFunction<A, B> extends Function {
     readonly fn: Mappable<A, B>;
     constructor(fn: Mappable<A, B>);
-    _<C>(prevFn: Mappable<C, A>): Compose<C, B>;
 }
-export declare const compose: <A, B>(fn: Mappable<A, B>) => Compose<A, B>;
+export declare const compose: <A, B>(fn: Mappable<A, B>) => ComposeFunction<A, B>;
 export {};

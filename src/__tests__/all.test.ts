@@ -711,8 +711,8 @@ describe("fns", () => {
       { foo: -1, id: 1 },
     ];
     const noFoo = l.whereEq({ foo: -1 });
-    expect(l.find(noFoo, arr)?.id).toBe(1);
-    expect(l.find(noFoo, [])?.id).toBe(undefined);
+    expect(l.find<typeof arr[0]>(noFoo)(arr)?.id).toBe(1);
+    expect(l.find<typeof arr[0]>(noFoo)([])?.id).toBe(undefined);
   });
 
   describe("zip()", () => {
