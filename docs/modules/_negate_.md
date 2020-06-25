@@ -14,7 +14,7 @@
 
 ▸ **negate**(`x`: number): *number*
 
-*Defined in [src/negate.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/d13f3c1/src/negate.ts#L3)*
+*Defined in [src/negate.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/negate.ts#L3)*
 
 **Parameters:**
 

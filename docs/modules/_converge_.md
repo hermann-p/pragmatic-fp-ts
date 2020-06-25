@@ -14,7 +14,7 @@
 
 ▸ **converge**<**A**, **B**, **C**>(`join`: function, `fns`: [Mappable](_types_.md#mappable)‹A, B›[], `value`: A): *C*
 
-*Defined in [src/converge.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/d13f3c1/src/converge.ts#L7)*
+*Defined in [src/converge.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/converge.ts#L7)*
 
 **Type parameters:**
 
@@ -44,7 +44,7 @@ Name | Type |
 
 ▸ **converge**<**A**, **B**, **C**>(`join`: function, `fns`: [Mappable](_types_.md#mappable)‹A, B›[]): *function*
 
-*Defined in [src/converge.ts:12](https://github.com/hermann-p/pragmatic-fp-ts/blob/d13f3c1/src/converge.ts#L12)*
+*Defined in [src/converge.ts:12](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/converge.ts#L12)*
 
 **Type parameters:**
 
@@ -80,7 +80,7 @@ Name | Type |
 
 ▸ **converge**<**B**, **C**>(`join`: function): *function*
 
-*Defined in [src/converge.ts:16](https://github.com/hermann-p/pragmatic-fp-ts/blob/d13f3c1/src/converge.ts#L16)*
+*Defined in [src/converge.ts:16](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/converge.ts#L16)*
 
 **Type parameters:**
 

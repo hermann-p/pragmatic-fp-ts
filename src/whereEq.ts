@@ -1,7 +1,7 @@
 import { equals } from "./main";
 
 export function whereEq<A extends {}>(pattern: { [K in keyof A]?: A[K] }, dict: A): boolean;
-export function whereEq<A extends {}>(pattern: A): (dict: A) => boolean;
+export function whereEq<A extends {}>(pattern: A): <B extends A>(dict: B) => boolean;
 
 export function whereEq<A extends {}>(pattern: A, dict?: A) {
   if (arguments.length === 1) return (_dict: A) => whereEq(pattern, _dict);

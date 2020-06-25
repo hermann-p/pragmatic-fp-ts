@@ -14,7 +14,7 @@
 
 ▸ **whereEq**<**A**>(`pattern`: object, `dict`: A): *boolean*
 
-*Defined in [src/whereEq.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/d13f3c1/src/whereEq.ts#L3)*
+*Defined in [src/whereEq.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/whereEq.ts#L3)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **whereEq**<**A**>(`pattern`: A): *function*
 
-*Defined in [src/whereEq.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/d13f3c1/src/whereEq.ts#L4)*
+*Defined in [src/whereEq.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/whereEq.ts#L4)*
 
 **Type parameters:**
 
@@ -45,10 +45,14 @@ Name | Type |
 
 **Returns:** *function*
 
-▸ (`dict`: A): *boolean*
+▸ <**B**>(`dict`: B): *boolean*
+
+**Type parameters:**
+
+▪ **B**: *A*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`dict` | A |
+`dict` | B |

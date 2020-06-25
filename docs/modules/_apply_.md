@@ -14,7 +14,7 @@
 
 ▸ **apply**<**F**>(`fn`: F, `args`: Parameters‹F›): *ReturnType‹F›*
 
-*Defined in [src/apply.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/d13f3c1/src/apply.ts#L3)*
+*Defined in [src/apply.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/apply.ts#L3)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **apply**<**F**>(`fn`: F): *function*
 
-*Defined in [src/apply.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/d13f3c1/src/apply.ts#L8)*
+*Defined in [src/apply.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/apply.ts#L8)*
 
 **Type parameters:**
 

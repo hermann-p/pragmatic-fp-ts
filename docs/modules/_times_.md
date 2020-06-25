@@ -14,7 +14,7 @@
 
 ▸ **times**<**A**>(`repeats`: number, `fn`: [Mappable](_types_.md#mappable)‹number, A›): *A[]*
 
-*Defined in [src/times.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/d13f3c1/src/times.ts#L3)*
+*Defined in [src/times.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/times.ts#L3)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **times**(`repeats`: number): *function*
 
-*Defined in [src/times.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/d13f3c1/src/times.ts#L4)*
+*Defined in [src/times.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/times.ts#L4)*
 
 **Parameters:**
 

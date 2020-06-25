@@ -14,7 +14,7 @@
 
 ▸ **memoizeWith**<**A**, **B**, **C**>(`toKey`: [Mappable](_types_.md#mappable)‹A, C›, `fn`: [Mappable](_types_.md#mappable)‹A, B›): *[Mappable](_types_.md#mappable)‹A, B›*
 
-*Defined in [src/memoizeWith.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/d13f3c1/src/memoizeWith.ts#L3)*
+*Defined in [src/memoizeWith.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/memoizeWith.ts#L3)*
 
 **Type parameters:**
 
@@ -35,7 +35,7 @@ Name | Type |
 
 ▸ **memoizeWith**<**A**, **C**>(`toKey`: [Mappable](_types_.md#mappable)‹A, C›): *function*
 
-*Defined in [src/memoizeWith.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/d13f3c1/src/memoizeWith.ts#L7)*
+*Defined in [src/memoizeWith.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/memoizeWith.ts#L7)*
 
 **Type parameters:**
 
