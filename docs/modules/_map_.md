@@ -15,7 +15,7 @@
 
 ▸ **map**<**A**, **B**>(`fn`: [Mappable](_types_.md#mappable)‹A, B›, `coll`: A[]): *B[]*
 
-*Defined in [src/map.ts:9](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/map.ts#L9)*
+*Defined in [src/map.ts:9](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/map.ts#L9)*
 
 **Type parameters:**
 
@@ -34,7 +34,7 @@ Name | Type |
 
 ▸ **map**<**A**, **B**>(`fn`: [Mappable](_types_.md#mappable)‹A, B›, `coll`: [Dictionary](_types_.md#dictionary)‹A›): *[Dictionary](_types_.md#dictionary)‹B›*
 
-*Defined in [src/map.ts:10](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/map.ts#L10)*
+*Defined in [src/map.ts:10](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/map.ts#L10)*
 
 **Type parameters:**
 
@@ -53,7 +53,7 @@ Name | Type |
 
 ▸ **map**<**A**, **B**>(`fn`: [Mappable](_types_.md#mappable)‹A, B›): *function*
 
-*Defined in [src/map.ts:14](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/map.ts#L14)*
+*Defined in [src/map.ts:14](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/map.ts#L14)*
 
 **Type parameters:**
 
@@ -87,7 +87,7 @@ ___
 
 ▸ **mapObj**<**A**, **B**>(`fn`: [Mappable](_types_.md#mappable)‹A, B›, `dict`: [Dictionary](_types_.md#dictionary)‹A›): *[Dictionary](_types_.md#dictionary)‹B›*
 
-*Defined in [src/map.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/map.ts#L3)*
+*Defined in [src/map.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/map.ts#L3)*
 
 **Type parameters:**
 

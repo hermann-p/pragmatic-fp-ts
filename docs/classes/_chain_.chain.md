@@ -39,7 +39,7 @@
 
 \+ **new Chain**(`value`: A): *[Chain](_chain_.chain.md)*
 
-*Defined in [src/Chain.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/Chain.ts#L6)*
+*Defined in [src/Chain.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/Chain.ts#L6)*
 
 **Parameters:**
 
@@ -55,7 +55,7 @@ Name | Type |
 
 • **__value**: *A*
 
-*Defined in [src/Chain.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/Chain.ts#L6)*
+*Defined in [src/Chain.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/Chain.ts#L6)*
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 *Overrides [Monad](_types_.monad.md).[bind](_types_.monad.md#abstract-bind)*
 
-*Defined in [src/Chain.ts:14](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/Chain.ts#L14)*
+*Defined in [src/Chain.ts:14](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/Chain.ts#L14)*
 
 ## Methods
 
@@ -75,7 +75,7 @@ ___
 
 *Overrides [Monad](_types_.monad.md).[_](_types_.monad.md#abstract-_)*
 
-*Defined in [src/Chain.ts:11](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/Chain.ts#L11)*
+*Defined in [src/Chain.ts:11](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/Chain.ts#L11)*
 
 **Type parameters:**
 
@@ -97,7 +97,7 @@ ___
 
 *Overrides [Monad](_types_.monad.md).[bindM](_types_.monad.md#abstract-bindm)*
 
-*Defined in [src/Chain.ts:15](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/Chain.ts#L15)*
+*Defined in [src/Chain.ts:15](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/Chain.ts#L15)*
 
 **Type parameters:**
 
@@ -119,7 +119,7 @@ ___
 
 *Overrides [Monad](_types_.monad.md).[effect](_types_.monad.md#abstract-effect)*
 
-*Defined in [src/Chain.ts:27](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/Chain.ts#L27)*
+*Defined in [src/Chain.ts:27](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/Chain.ts#L27)*
 
 **Parameters:**
 
@@ -137,7 +137,7 @@ ___
 
 *Overrides [Monad](_types_.monad.md).[filter](_types_.monad.md#abstract-filter)*
 
-*Defined in [src/Chain.ts:18](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/Chain.ts#L18)*
+*Defined in [src/Chain.ts:18](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/Chain.ts#L18)*
 
 **Parameters:**
 
@@ -155,7 +155,7 @@ ___
 
 *Overrides [Monad](_types_.monad.md).[getValue](_types_.monad.md#abstract-getvalue)*
 
-*Defined in [src/Chain.ts:21](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/Chain.ts#L21)*
+*Defined in [src/Chain.ts:21](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/Chain.ts#L21)*
 
 **Returns:** *A*
 
@@ -167,7 +167,7 @@ ___
 
 *Overrides [Monad](_types_.monad.md).[getValueOr](_types_.monad.md#abstract-getvalueor)*
 
-*Defined in [src/Chain.ts:24](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/Chain.ts#L24)*
+*Defined in [src/Chain.ts:24](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/Chain.ts#L24)*
 
 **Parameters:**
 
@@ -185,7 +185,7 @@ ___
 
 *Inherited from [Monad](_types_.monad.md).[to](_types_.monad.md#to)*
 
-*Defined in [src/types.ts:106](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/types.ts#L106)*
+*Defined in [src/types.ts:127](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/types.ts#L127)*
 
 **Type parameters:**
 

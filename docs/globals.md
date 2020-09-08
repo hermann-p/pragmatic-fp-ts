@@ -7,6 +7,7 @@
 ### External modules
 
 * ["Chain"](modules/_chain_.md)
+* ["CustomError"](modules/_customerror_.md)
 * ["Either"](modules/_either_.md)
 * ["F"](modules/_f_.md)
 * ["Maybe"](modules/_maybe_.md)

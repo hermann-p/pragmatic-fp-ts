@@ -18,7 +18,7 @@
 
 ▸ **compose**<**A**, **B**>(`fn`: [Mappable](_types_.md#mappable)‹A, B›): *[ComposeFunction](../classes/_compose_.composefunction.md)‹A, B›*
 
-*Defined in [src/compose.ts:30](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/compose.ts#L30)*
+*Defined in [src/compose.ts:30](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/compose.ts#L30)*
 
 **Type parameters:**
 

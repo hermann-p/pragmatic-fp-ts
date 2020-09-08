@@ -14,7 +14,7 @@
 
 ▸ **intersection**<**A**>(`a`: A[], `b`: A[]): *A[]*
 
-*Defined in [src/intersection.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/intersection.ts#L3)*
+*Defined in [src/intersection.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/intersection.ts#L3)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **intersection**<**A**>(`a`: A[]): *function*
 
-*Defined in [src/intersection.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/intersection.ts#L4)*
+*Defined in [src/intersection.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/intersection.ts#L4)*
 
 **Type parameters:**
 

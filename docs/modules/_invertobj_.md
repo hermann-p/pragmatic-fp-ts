@@ -14,7 +14,7 @@
 
 ▸ **invertObj**(`obj`: [Dictionary](_types_.md#dictionary)): *[Dictionary](_types_.md#dictionary)‹string›*
 
-*Defined in [src/invertObj.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/invertObj.ts#L5)*
+*Defined in [src/invertObj.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/invertObj.ts#L5)*
 
 **Parameters:**
 

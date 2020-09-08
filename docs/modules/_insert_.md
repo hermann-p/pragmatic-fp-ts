@@ -14,7 +14,7 @@
 
 ▸ **insert**<**A**>(`position`: number, `value`: A, `coll`: A[]): *A[]*
 
-*Defined in [src/insert.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/insert.ts#L3)*
+*Defined in [src/insert.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/insert.ts#L3)*
 
 **Type parameters:**
 
@@ -32,7 +32,7 @@ Name | Type |
 
 ▸ **insert**<**A**>(`position`: number, `value`: A): *function*
 
-*Defined in [src/insert.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/insert.ts#L4)*
+*Defined in [src/insert.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/insert.ts#L4)*
 
 **Type parameters:**
 
@@ -57,7 +57,7 @@ Name | Type |
 
 ▸ **insert**<**A**>(`position`: number): *function*
 
-*Defined in [src/insert.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/insert.ts#L5)*
+*Defined in [src/insert.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/insert.ts#L5)*
 
 **Type parameters:**
 

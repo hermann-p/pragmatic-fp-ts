@@ -1,5 +1,5 @@
 import { Effect, isNil, getValue, Mappable, Predicate } from "./main";
-import { Monad, MonadType } from "./types";
+import { Monad, MonadType, NilError, InvalidValueError } from "./types";
 
 export type Either<R, L = Error> = Left<R, L> | Right<R, L>;
 
@@ -70,9 +70,7 @@ export class Right<R extends NonNullable<any>, L = Error> extends Monad<R> {
   }
   filter(fn: Predicate<R>): Either<NonNullable<R>, L | Error> {
     try {
-      return fn(this.value)
-        ? (this as any)
-        : left<NonNullable<R>>(new Error("Did not pass filter"));
+      return fn(this.value) ? (this as any) : left<NonNullable<R>>(new InvalidValueError());
     } catch (err) {
       return left<NonNullable<R>>(new Error(`Exception while filtering: ${err.text}`));
     }
@@ -117,7 +115,7 @@ export function either<R, L = Error>(
   return isNil(innerValue)
     ? errVal
       ? new Left<NonNullable<R>, L>(errVal)
-      : new Left<NonNullable<R>, Error>(new Error("Initially nil"))
+      : new Left<NonNullable<R>, Error>(new NilError())
     : new Right<NonNullable<R>, L>(innerValue as any);
 }
 

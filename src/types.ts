@@ -25,6 +25,27 @@ export type GetLength<original extends any[]> = original extends {
   ? L
   : never;
 
+export class NilError extends Error {
+  constructor(message = "Encountered NIL") {
+    super(message);
+    this.name = this.constructor.name;
+    if (typeof Error.captureStackTrace === "function") {
+      Error.captureStackTrace(this, this.constructor);
+    }
+  }
+}
+
+export class InvalidValueError extends Error {
+  constructor(moreDetails = "") {
+    const baseMsg = "Value was invalid";
+    super(moreDetails ? `${baseMsg}: ${moreDetails}` : baseMsg);
+    this.name = this.constructor.name;
+    if (typeof Error.captureStackTrace === "function") {
+      Error.captureStackTrace(this, this.constructor);
+    }
+  }
+}
+
 type Prev<T extends number> = [
   -1,
   0,

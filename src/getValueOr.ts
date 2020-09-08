@@ -9,7 +9,7 @@ export function getValueOr<T>(alt: T, candidate?: MonadType<T>): T {
   }
   if (isFunction((candidate as any)?.getValue)) {
     try {
-      return (candidate as Monad<T>).getValueOr(alt);
+      return getValueOr(alt, (candidate as Monad<T>).getValueOr(alt));
     } catch {
       return alt;
     }

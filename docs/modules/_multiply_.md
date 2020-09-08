@@ -14,7 +14,7 @@
 
 ▸ **multiply**(`a`: number, `b`: number): *number*
 
-*Defined in [src/multiply.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/multiply.ts#L3)*
+*Defined in [src/multiply.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/multiply.ts#L3)*
 
 **Parameters:**
 
@@ -27,7 +27,7 @@ Name | Type |
 
 ▸ **multiply**(`a`: number): *function*
 
-*Defined in [src/multiply.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/multiply.ts#L4)*
+*Defined in [src/multiply.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/multiply.ts#L4)*
 
 **Parameters:**
 

@@ -29,7 +29,7 @@
 
 Ƭ **Either**: *[Left](../classes/_either_.left.md)‹R, L› | [Right](../classes/_either_.right.md)‹R, L›*
 
-*Defined in [src/Either.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/Either.ts#L4)*
+*Defined in [src/Either.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/Either.ts#L4)*
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 Ƭ **EitherMatcher**: *object*
 
-*Defined in [src/Either.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/Either.ts#L6)*
+*Defined in [src/Either.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/Either.ts#L6)*
 
 #### Type declaration:
 
@@ -55,7 +55,7 @@ ___
 
 ▸ **either**<**R**, **L**>(`value`: [MonadType](_types_.md#monadtype)‹R›, `errVal?`: L): *[Either](_either_.md#either)‹NonNullable‹R›, L | Error›*
 
-*Defined in [src/Either.ts:112](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/Either.ts#L112)*
+*Defined in [src/Either.ts:110](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/Either.ts#L110)*
 
 **Type parameters:**
 
@@ -78,7 +78,7 @@ ___
 
 ▸ **isEither**<**R**, **L**>(`el`: unknown): *el is Either<R, L>*
 
-*Defined in [src/Either.ts:132](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/Either.ts#L132)*
+*Defined in [src/Either.ts:130](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/Either.ts#L130)*
 
 **Type parameters:**
 
@@ -100,7 +100,7 @@ ___
 
 ▸ **isLeft**<**R**, **L**>(`el`: unknown): *el is Left<R, L>*
 
-*Defined in [src/Either.ts:124](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/Either.ts#L124)*
+*Defined in [src/Either.ts:122](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/Either.ts#L122)*
 
 **Type parameters:**
 
@@ -122,7 +122,7 @@ ___
 
 ▸ **isRight**<**R**, **L**>(`el`: unknown): *el is Right<R, L>*
 
-*Defined in [src/Either.ts:128](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/Either.ts#L128)*
+*Defined in [src/Either.ts:126](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/Either.ts#L126)*
 
 **Type parameters:**
 
@@ -144,7 +144,7 @@ ___
 
 ▸ **left**<**R**, **L**>(`errVal`: L): *[Left](../classes/_either_.left.md)‹R, L›*
 
-*Defined in [src/Either.ts:104](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/Either.ts#L104)*
+*Defined in [src/Either.ts:102](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/Either.ts#L102)*
 
 **Type parameters:**
 
@@ -166,7 +166,7 @@ ___
 
 ▸ **right**<**R**, **L**>(`value`: R): *[Right](../classes/_either_.right.md)‹R, L›*
 
-*Defined in [src/Either.ts:108](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/Either.ts#L108)*
+*Defined in [src/Either.ts:106](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/Either.ts#L106)*
 
 **Type parameters:**
 

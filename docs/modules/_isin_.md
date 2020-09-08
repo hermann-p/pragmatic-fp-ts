@@ -14,7 +14,7 @@
 
 ▸ **isIn**(`coll`: string, `what`: string): *boolean*
 
-*Defined in [src/isIn.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/isIn.ts#L3)*
+*Defined in [src/isIn.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/isIn.ts#L3)*
 
 **Parameters:**
 
@@ -27,7 +27,7 @@ Name | Type |
 
 ▸ **isIn**<**A**>(`coll`: A[], `what`: A): *boolean*
 
-*Defined in [src/isIn.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/isIn.ts#L4)*
+*Defined in [src/isIn.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/isIn.ts#L4)*
 
 **Type parameters:**
 
@@ -44,7 +44,7 @@ Name | Type |
 
 ▸ **isIn**(`coll`: string): *function*
 
-*Defined in [src/isIn.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/isIn.ts#L5)*
+*Defined in [src/isIn.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/isIn.ts#L5)*
 
 **Parameters:**
 
@@ -64,7 +64,7 @@ Name | Type |
 
 ▸ **isIn**<**A**>(`coll`: A[]): *function*
 
-*Defined in [src/isIn.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/79e5127/src/isIn.ts#L6)*
+*Defined in [src/isIn.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/isIn.ts#L6)*
 
 **Type parameters:**
 
