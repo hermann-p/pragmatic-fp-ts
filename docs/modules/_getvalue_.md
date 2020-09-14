@@ -14,7 +14,7 @@
 
 ▸ **getValue**<**T**>(`candidate`: [MonadType](_types_.md#monadtype)‹T› | undefined): *T*
 
-*Defined in [src/getValue.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/getValue.ts#L3)*
+*Defined in [src/getValue.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/getValue.ts#L3)*
 
 **Type parameters:**
 

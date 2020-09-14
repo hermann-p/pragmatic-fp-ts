@@ -14,7 +14,7 @@
 
 ▸ **isNeg**(`n`: number): *boolean*
 
-*Defined in [src/isNeg.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/isNeg.ts#L1)*
+*Defined in [src/isNeg.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/isNeg.ts#L1)*
 
 **Parameters:**
 

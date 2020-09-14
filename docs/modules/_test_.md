@@ -14,7 +14,7 @@
 
 ▸ **test**(`re`: RegExp, `text`: string): *boolean*
 
-*Defined in [src/test.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/test.ts#L1)*
+*Defined in [src/test.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/test.ts#L1)*
 
 **Parameters:**
 
@@ -27,7 +27,7 @@ Name | Type |
 
 ▸ **test**(`re`: RegExp): *function*
 
-*Defined in [src/test.ts:2](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/test.ts#L2)*
+*Defined in [src/test.ts:2](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/test.ts#L2)*
 
 **Parameters:**
 

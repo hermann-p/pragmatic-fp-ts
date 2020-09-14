@@ -14,7 +14,7 @@
 
 ▸ **endsWith**(`tail`: string, `seq`: string): *boolean*
 
-*Defined in [src/endsWith.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/endsWith.ts#L3)*
+*Defined in [src/endsWith.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/endsWith.ts#L3)*
 
 **Parameters:**
 
@@ -27,7 +27,7 @@ Name | Type |
 
 ▸ **endsWith**<**A**>(`tail`: A | A[], `seq`: A[]): *boolean*
 
-*Defined in [src/endsWith.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/endsWith.ts#L4)*
+*Defined in [src/endsWith.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/endsWith.ts#L4)*
 
 **Type parameters:**
 
@@ -44,7 +44,7 @@ Name | Type |
 
 ▸ **endsWith**(`tail`: string): *function*
 
-*Defined in [src/endsWith.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/endsWith.ts#L5)*
+*Defined in [src/endsWith.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/endsWith.ts#L5)*
 
 **Parameters:**
 
@@ -64,7 +64,7 @@ Name | Type |
 
 ▸ **endsWith**<**A**>(`tail`: A | A[]): *function*
 
-*Defined in [src/endsWith.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/endsWith.ts#L6)*
+*Defined in [src/endsWith.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/endsWith.ts#L6)*
 
 **Type parameters:**
 

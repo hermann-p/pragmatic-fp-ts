@@ -14,7 +14,7 @@
 
 ▸ **none**<**A**>(`pred`: [Predicate](_types_.md#predicate)‹A›, `coll`: A[]): *boolean*
 
-*Defined in [src/none.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/none.ts#L5)*
+*Defined in [src/none.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/none.ts#L5)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **none**<**A**>(`pred`: [Predicate](_types_.md#predicate)‹A›): *function*
 
-*Defined in [src/none.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/none.ts#L6)*
+*Defined in [src/none.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/none.ts#L6)*
 
 **Type parameters:**
 

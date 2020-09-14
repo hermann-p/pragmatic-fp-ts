@@ -74,7 +74,7 @@ describe("Future", () => {
       expect(value).toBe(2);
     });
 
-    it("should catch errors", async () => {
+    it.only("should catch errors", async () => {
       const num = l.futureEither(1);
       const boom1 = () => Promise.reject("boom") as any;
       const boom2 = () => {
@@ -85,6 +85,10 @@ describe("Future", () => {
       expect(await num.filter(boom1).getMonad()).toBeInstanceOf(l.Left);
       expect(await num._(boom2).getMonad()).toBeInstanceOf(l.Left);
       expect(await num.filter(boom2).getMonad()).toBeInstanceOf(l.Left);
+
+      const error1 = await num._(boom1, "bad stuff!").getMonad();
+
+      expect(error1.getReason()).toEqual("bad stuff!");
     });
   });
 
@@ -161,7 +165,7 @@ describe("Future", () => {
       expect(value).toBe(2);
     });
 
-    it("should catch errors", async () => {
+    it.only("should catch errors", async () => {
       const num = l.futureMaybe(1);
       const boom1 = () => Promise.reject("boom") as any;
       const boom2 = () => {

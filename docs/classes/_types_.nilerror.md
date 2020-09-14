@@ -27,7 +27,7 @@
 
 \+ **new NilError**(`message`: string): *[NilError](_types_.nilerror.md)*
 
-*Defined in [src/types.ts:30](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/types.ts#L30)*
+*Defined in [src/types.ts:30](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/types.ts#L30)*
 
 **Parameters:**
 

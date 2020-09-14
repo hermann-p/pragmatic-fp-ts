@@ -14,7 +14,7 @@
 
 ▸ **ifElse**<**A**, **B**>(`condition`: [Predicate](_types_.md#predicate)‹A›, `ifPath`: [Mappable](_types_.md#mappable)‹A, B›, `elsePath`: [Mappable](_types_.md#mappable)‹A, B›, `value`: A): *B*
 
-*Defined in [src/ifElse.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/ifElse.ts#L3)*
+*Defined in [src/ifElse.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/ifElse.ts#L3)*
 
 **Type parameters:**
 
@@ -35,7 +35,7 @@ Name | Type |
 
 ▸ **ifElse**<**A**, **B**>(`condition`: [Predicate](_types_.md#predicate)‹A›, `ifPath`: [Mappable](_types_.md#mappable)‹A, B›, `elsePath`: [Mappable](_types_.md#mappable)‹A, B›): *function*
 
-*Defined in [src/ifElse.ts:10](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/ifElse.ts#L10)*
+*Defined in [src/ifElse.ts:10](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/ifElse.ts#L10)*
 
 **Type parameters:**
 
@@ -63,7 +63,7 @@ Name | Type |
 
 ▸ **ifElse**<**A**, **B**>(`condition`: [Predicate](_types_.md#predicate)‹A›, `ifPath`: [Mappable](_types_.md#mappable)‹A, B›): *function*
 
-*Defined in [src/ifElse.ts:16](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/ifElse.ts#L16)*
+*Defined in [src/ifElse.ts:16](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/ifElse.ts#L16)*
 
 **Type parameters:**
 
@@ -98,7 +98,7 @@ Name | Type |
 
 ▸ **ifElse**<**A**, **B**>(`condition`: [Predicate](_types_.md#predicate)‹A›): *function*
 
-*Defined in [src/ifElse.ts:21](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/ifElse.ts#L21)*
+*Defined in [src/ifElse.ts:21](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/ifElse.ts#L21)*
 
 **Type parameters:**
 

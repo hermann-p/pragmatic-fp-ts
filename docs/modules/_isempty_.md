@@ -15,7 +15,7 @@
 
 ▸ **isEmpty**(`coll`: [MonadType](_types_.md#monadtype)‹any[] | [Dictionary](_types_.md#dictionary) | string›): *boolean*
 
-*Defined in [src/isEmpty.ts:10](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/isEmpty.ts#L10)*
+*Defined in [src/isEmpty.ts:10](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/isEmpty.ts#L10)*
 
 **Parameters:**
 
@@ -31,7 +31,7 @@ ___
 
 ▸ **isNotEmpty**(`coll`: [MonadType](_types_.md#monadtype)‹any[] | [Dictionary](_types_.md#dictionary) | string›): *boolean*
 
-*Defined in [src/isEmpty.ts:22](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/isEmpty.ts#L22)*
+*Defined in [src/isEmpty.ts:22](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/isEmpty.ts#L22)*
 
 **Parameters:**
 

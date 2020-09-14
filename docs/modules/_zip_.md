@@ -14,7 +14,7 @@
 
 ▸ **zip**<**A**, **B**>(`as`: A[], `bs`: B[]): *[A, B][]*
 
-*Defined in [src/zip.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/zip.ts#L1)*
+*Defined in [src/zip.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/zip.ts#L1)*
 
 **Type parameters:**
 
@@ -33,7 +33,7 @@ Name | Type |
 
 ▸ **zip**<**A**, **B**>(`as`: A[]): *function*
 
-*Defined in [src/zip.ts:2](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/zip.ts#L2)*
+*Defined in [src/zip.ts:2](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/zip.ts#L2)*
 
 **Type parameters:**
 

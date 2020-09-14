@@ -15,14 +15,14 @@ export class Left<R, L = Error> extends Monad<R> {
     this.errorValue = errVal;
   }
 
-  _<B>(_: Mappable<R, B>): Either<NonNullable<B>, L> {
+  _<B>(_: Mappable<R, B>, _hint?: L): Either<NonNullable<B>, L> {
     return this as any;
   }
   bind = this._;
   bindM<B>(_: Mappable<Monad<R>, Monad<B>>): Either<NonNullable<B>, L> {
     return this as any;
   }
-  filter(_: any): Either<NonNullable<R>, L> {
+  filter(_: any, _hint?: L): Either<NonNullable<R>, L> {
     return this as any;
   }
   effect(_: any): Either<NonNullable<R>, L> {
@@ -43,6 +43,9 @@ export class Left<R, L = Error> extends Monad<R> {
   isRight() {
     return false;
   }
+  getReason() {
+    return this.errorValue;
+  }
 }
 
 export class Right<R extends NonNullable<any>, L = Error> extends Monad<R> {
@@ -51,10 +54,11 @@ export class Right<R extends NonNullable<any>, L = Error> extends Monad<R> {
     super();
     this.value = value;
   }
-  _<B>(fn: Mappable<R, B>): Either<NonNullable<B>, L | Error> {
+  _<B>(fn: Mappable<R, B>, hint?: L): Either<NonNullable<B>, L | Error> {
     try {
       const result = fn(this.value);
-      return either(getValue(result));
+      const bound = either(getValue(result));
+      return bound.isLeft() && hint ? left(hint) : bound;
     } catch (err) {
       return left<NonNullable<B>, Error>(err);
     }
@@ -68,9 +72,11 @@ export class Right<R extends NonNullable<any>, L = Error> extends Monad<R> {
       return left<NonNullable<B>, L>(err);
     }
   }
-  filter(fn: Predicate<R>): Either<NonNullable<R>, L | Error> {
+  filter(fn: Predicate<R>, hint?: L): Either<NonNullable<R>, L | Error> {
     try {
-      return fn(this.value) ? (this as any) : left<NonNullable<R>>(new InvalidValueError());
+      return fn(this.value)
+        ? (this as any)
+        : left<NonNullable<R>>(hint instanceof Error ? hint : new InvalidValueError(hint as any));
     } catch (err) {
       return left<NonNullable<R>>(new Error(`Exception while filtering: ${err.text}`));
     }
@@ -96,6 +102,9 @@ export class Right<R extends NonNullable<any>, L = Error> extends Monad<R> {
   }
   isRight() {
     return true;
+  }
+  getReason() {
+    throw new Error("Can not get error reason for Right");
   }
 }
 

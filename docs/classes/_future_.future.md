@@ -40,7 +40,7 @@
 
 \+ **new Future**(`bindDefault`: [Mappable](../modules/_types_.md#mappable)‹any, M›, `bindError`: [Mappable](../modules/_types_.md#mappable)‹any, M›, `value`: M | Promise‹M›): *[Future](_future_.future.md)*
 
-*Defined in [src/Future.ts:18](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/Future.ts#L18)*
+*Defined in [src/Future.ts:18](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/Future.ts#L18)*
 
 **Parameters:**
 
@@ -58,7 +58,7 @@ Name | Type |
 
 • **bindDefault**: *[Mappable](../modules/_types_.md#mappable)‹any, M›*
 
-*Defined in [src/Future.ts:17](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/Future.ts#L17)*
+*Defined in [src/Future.ts:17](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/Future.ts#L17)*
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 • **bindError**: *[Mappable](../modules/_types_.md#mappable)‹any, M›*
 
-*Defined in [src/Future.ts:18](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/Future.ts#L18)*
+*Defined in [src/Future.ts:18](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/Future.ts#L18)*
 
 ___
 
@@ -74,27 +74,30 @@ ___
 
 • **value**: *Promise‹M›*
 
-*Defined in [src/Future.ts:16](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/Future.ts#L16)*
+*Defined in [src/Future.ts:16](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/Future.ts#L16)*
 
 ## Methods
 
 ###  _
 
-▸ **_**<**U**>(`f`: [Mappable](../modules/_types_.md#mappable)‹T, U | Promise‹U››): *[Future](_future_.future.md)‹NonNullable‹[UnboxPromise](../modules/_types_.md#unboxpromise)‹U››, [Monad](_types_.monad.md)‹NonNullable‹[UnboxPromise](../modules/_types_.md#unboxpromise)‹U››››*
+▸ **_**<**U**, **TO**>(`f`: [Mappable](../modules/_types_.md#mappable)‹T, U | Promise‹U››, `errorHint?`: string | Error): *[Future](_future_.future.md)‹TO, M extends Either<T, Error> ? Either<TO, Error> : Maybe<TO>›*
 
-*Defined in [src/Future.ts:26](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/Future.ts#L26)*
+*Defined in [src/Future.ts:26](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/Future.ts#L26)*
 
 **Type parameters:**
 
 ▪ **U**
+
+▪ **TO**
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `f` | [Mappable](../modules/_types_.md#mappable)‹T, U &#124; Promise‹U›› |
+`errorHint?` | string &#124; Error |
 
-**Returns:** *[Future](_future_.future.md)‹NonNullable‹[UnboxPromise](../modules/_types_.md#unboxpromise)‹U››, [Monad](_types_.monad.md)‹NonNullable‹[UnboxPromise](../modules/_types_.md#unboxpromise)‹U››››*
+**Returns:** *[Future](_future_.future.md)‹TO, M extends Either<T, Error> ? Either<TO, Error> : Maybe<TO>›*
 
 ___
 
@@ -102,7 +105,7 @@ ___
 
 ▸ **effect**(`f`: [Effect](../modules/_types_.md#effect)‹T›): *[Future](_future_.future.md)‹T, M›*
 
-*Defined in [src/Future.ts:62](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/Future.ts#L62)*
+*Defined in [src/Future.ts:64](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/Future.ts#L64)*
 
 **Parameters:**
 
@@ -118,7 +121,7 @@ ___
 
 ▸ **effectAsync**(`f`: [Effect](../modules/_types_.md#effect)‹T›): *[Future](_future_.future.md)‹T, M›*
 
-*Defined in [src/Future.ts:70](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/Future.ts#L70)*
+*Defined in [src/Future.ts:72](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/Future.ts#L72)*
 
 **Parameters:**
 
@@ -132,15 +135,16 @@ ___
 
 ###  filter
 
-▸ **filter**(`pred`: [Mappable](../modules/_types_.md#mappable)‹T, boolean | Promise‹Boolean››): *[Future](_future_.future.md)‹T, M›*
+▸ **filter**(`pred`: [Mappable](../modules/_types_.md#mappable)‹T, boolean | Promise‹Boolean››, `errorHint?`: string | Error): *[Future](_future_.future.md)‹T, M›*
 
-*Defined in [src/Future.ts:49](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/Future.ts#L49)*
+*Defined in [src/Future.ts:51](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/Future.ts#L51)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
 `pred` | [Mappable](../modules/_types_.md#mappable)‹T, boolean &#124; Promise‹Boolean›› |
+`errorHint?` | string &#124; Error |
 
 **Returns:** *[Future](_future_.future.md)‹T, M›*
 
@@ -150,7 +154,7 @@ ___
 
 ▸ **getMonad**(): *Promise‹M›*
 
-*Defined in [src/Future.ts:83](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/Future.ts#L83)*
+*Defined in [src/Future.ts:85](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/Future.ts#L85)*
 
 **Returns:** *Promise‹M›*
 
@@ -160,7 +164,7 @@ ___
 
 ▸ **getValue**(): *Promise‹T›*
 
-*Defined in [src/Future.ts:79](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/Future.ts#L79)*
+*Defined in [src/Future.ts:81](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/Future.ts#L81)*
 
 **Returns:** *Promise‹T›*
 
@@ -170,7 +174,7 @@ ___
 
 ▸ **getValueOr**(`alt`: T): *Promise‹T›*
 
-*Defined in [src/Future.ts:75](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/Future.ts#L75)*
+*Defined in [src/Future.ts:77](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/Future.ts#L77)*
 
 **Parameters:**
 

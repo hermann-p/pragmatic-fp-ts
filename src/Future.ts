@@ -5,10 +5,10 @@ import {
   getValueOr,
   isLeft,
   isNothing,
+  left,
   maybe,
   Maybe,
   nothing,
-  left,
 } from "./main";
 import { Effect, Mappable, Monad, UnboxPromise } from "./types";
 
@@ -23,37 +23,39 @@ export class Future<T, M extends Monad<T>> {
     this.value = value instanceof Promise ? value : Promise.resolve(value);
   }
 
-  _<U>(
-    f: Mappable<T, U | Promise<U>>
-  ): Future<NonNullable<UnboxPromise<U>>, Monad<NonNullable<UnboxPromise<U>>>> {
+  _<U, TO = NonNullable<UnboxPromise<U>>>(
+    f: Mappable<T, U | Promise<U>>,
+    errorHint?: string | Error
+  ): Future<TO, M extends Either<T> ? Either<TO> : Maybe<TO>> {
+    const toError = errorHint ? () => this.bindError(errorHint as any) : this.bindError;
     const applyBinding: Mappable<M, Promise<Monad<NonNullable<U>>>> = async (m: M) => {
       if (isNothing(m) || isLeft(m)) {
-        console.log("exiting with", m);
         return Promise.resolve(m as any);
       } // short circuit Left, Nothing,...
       try {
         const v = m.getValue();
         const applied = f(v);
-        return applied instanceof Promise
-          ? await applied.catch(this.bindError)
-          : Promise.resolve(applied);
+        return (((applied instanceof Promise
+          ? applied.catch(this.bindError)
+          : Promise.resolve(applied)) as unknown) as Promise<Monad<NonNullable<U>>>).then((bound) =>
+          (m.bind as any)(() => bound, errorHint)
+        );
       } catch (err) {
-        console.log("catching error of", err.name, err);
-        return this.bindError(err) as any;
+        return this.bindError(toError) as any;
       }
     };
     const rm = this.value.then(applyBinding);
     return new Future(this.bindDefault as any, this.bindError as any, rm as any);
   }
 
-  filter(pred: Mappable<T, boolean | Promise<Boolean>>): Future<T, M> {
+  filter(pred: Mappable<T, boolean | Promise<Boolean>>, errorHint?: string | Error): Future<T, M> {
     return new Future(
       this.bindDefault,
       this.bindError,
       this.value
         .then(async (m) => {
           const filterResult = await (m.bind(pred) as any).getValue();
-          return m.filter(() => filterResult);
+          return (m.filter as any)(() => filterResult, errorHint);
         })
         .catch(this.bindError)
     ) as any;
@@ -80,12 +82,15 @@ export class Future<T, M extends Monad<T>> {
     return this.value.then(getValue);
   }
 
-  getMonad() {
+  getMonad(): Promise<M> {
     return this.value;
   }
 }
 
-export const futureEither = <T>(value: T) =>
+type FutureEither<T> = Future<T, Either<T, Error>>;
+export const futureEither = <T>(value: T): FutureEither<T> =>
   new Future<T, Either<T, Error>>(either, left, either(value));
 
-export const futureMaybe = <T>(value: T) => new Future<T, Maybe<T>>(maybe, nothing, maybe(value));
+type FutureMaybe<T> = Future<T, Maybe<T>>;
+export const futureMaybe = <T>(value: T): FutureMaybe<T> =>
+  new Future<T, Maybe<T>>(maybe, nothing, maybe(value));

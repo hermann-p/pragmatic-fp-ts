@@ -14,7 +14,7 @@
 
 ▸ **not**(`el`: any): *boolean*
 
-*Defined in [src/not.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/not.ts#L3)*
+*Defined in [src/not.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/not.ts#L3)*
 
 **Parameters:**
 
