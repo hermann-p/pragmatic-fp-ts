@@ -21,7 +21,7 @@
 
 Ƭ **ArrayMappable**: *function*
 
-*Defined in [src/mapIndexed.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/mapIndexed.ts#L3)*
+*Defined in [src/mapIndexed.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/mapIndexed.ts#L3)*
 
 #### Type declaration:
 
@@ -40,7 +40,7 @@ ___
 
 Ƭ **DictMappable**: *function*
 
-*Defined in [src/mapIndexed.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/mapIndexed.ts#L4)*
+*Defined in [src/mapIndexed.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/mapIndexed.ts#L4)*
 
 #### Type declaration:
 
@@ -59,7 +59,7 @@ Name | Type |
 
 ▸ **mapArrayIndexed**<**A**, **B**>(`fn`: [ArrayMappable](_mapindexed_.md#arraymappable)‹A, B›, `coll`: A[]): *B[]*
 
-*Defined in [src/mapIndexed.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/mapIndexed.ts#L6)*
+*Defined in [src/mapIndexed.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/mapIndexed.ts#L6)*
 
 **Type parameters:**
 
@@ -82,7 +82,7 @@ ___
 
 ▸ **mapIndexed**<**A**, **B**>(`fn`: [ArrayMappable](_mapindexed_.md#arraymappable)‹A, B›, `coll`: A[]): *B[]*
 
-*Defined in [src/mapIndexed.ts:24](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/mapIndexed.ts#L24)*
+*Defined in [src/mapIndexed.ts:24](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/mapIndexed.ts#L24)*
 
 **Type parameters:**
 
@@ -101,7 +101,7 @@ Name | Type |
 
 ▸ **mapIndexed**<**A**, **B**>(`fn`: [ArrayMappable](_mapindexed_.md#arraymappable)‹A, B›): *function*
 
-*Defined in [src/mapIndexed.ts:25](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/mapIndexed.ts#L25)*
+*Defined in [src/mapIndexed.ts:25](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/mapIndexed.ts#L25)*
 
 **Type parameters:**
 
@@ -127,7 +127,7 @@ Name | Type |
 
 ▸ **mapIndexed**<**A**, **B**>(`fn`: [DictMappable](_mapindexed_.md#dictmappable)‹A, B›, `coll`: [Dictionary](_types_.md#dictionary)‹A›): *[Dictionary](_types_.md#dictionary)‹B›*
 
-*Defined in [src/mapIndexed.ts:27](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/mapIndexed.ts#L27)*
+*Defined in [src/mapIndexed.ts:27](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/mapIndexed.ts#L27)*
 
 **Type parameters:**
 
@@ -146,7 +146,7 @@ Name | Type |
 
 ▸ **mapIndexed**<**A**, **B**>(`fn`: [DictMappable](_mapindexed_.md#dictmappable)‹A, B›): *function*
 
-*Defined in [src/mapIndexed.ts:31](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/mapIndexed.ts#L31)*
+*Defined in [src/mapIndexed.ts:31](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/mapIndexed.ts#L31)*
 
 **Type parameters:**
 
@@ -176,7 +176,7 @@ ___
 
 ▸ **mapObjIndexed**<**A**, **B**>(`fn`: [DictMappable](_mapindexed_.md#dictmappable)‹A, B›, `dict`: [Dictionary](_types_.md#dictionary)‹A›): *[Dictionary](_types_.md#dictionary)‹B›*
 
-*Defined in [src/mapIndexed.ts:9](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/mapIndexed.ts#L9)*
+*Defined in [src/mapIndexed.ts:9](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/mapIndexed.ts#L9)*
 
 **Type parameters:**
 

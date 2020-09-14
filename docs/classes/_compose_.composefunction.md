@@ -29,7 +29,7 @@ fn(-5) //: 6
 
 ▸ (`input`: A): *B*
 
-*Defined in [src/compose.ts:12](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/compose.ts#L12)*
+*Defined in [src/compose.ts:12](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/compose.ts#L12)*
 
 Composes unary functions from right to left, using infix/monadic binding style
 
@@ -77,7 +77,7 @@ Name | Type |
 
 \+ **new ComposeFunction**(`fn`: [Mappable](../modules/_types_.md#mappable)‹A, B›): *[ComposeFunction](_compose_.composefunction.md)*
 
-*Defined in [src/compose.ts:18](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/compose.ts#L18)*
+*Defined in [src/compose.ts:18](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/compose.ts#L18)*
 
 **Parameters:**
 
@@ -113,7 +113,7 @@ ___
 
 • **fn**: *[Mappable](../modules/_types_.md#mappable)‹A, B›*
 
-*Defined in [src/compose.ts:18](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/compose.ts#L18)*
+*Defined in [src/compose.ts:18](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/compose.ts#L18)*
 
 ___
 
@@ -185,7 +185,7 @@ ___
 
 ▸ **_**<**C**>(`after`: [Mappable](../modules/_types_.md#mappable)‹C, A›): *[ComposeFunction](_compose_.composefunction.md)‹C, B›*
 
-*Defined in [src/compose.ts:14](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/compose.ts#L14)*
+*Defined in [src/compose.ts:14](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/compose.ts#L14)*
 
 **Type parameters:**
 

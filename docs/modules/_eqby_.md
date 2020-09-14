@@ -14,7 +14,7 @@
 
 ▸ **eqBy**<**A**, **B**>(`toComparable`: [Mappable](_types_.md#mappable)‹A, B›, `a`: A, `b`: A): *boolean*
 
-*Defined in [src/eqBy.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/eqBy.ts#L3)*
+*Defined in [src/eqBy.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/eqBy.ts#L3)*
 
 **Type parameters:**
 
@@ -34,7 +34,7 @@ Name | Type |
 
 ▸ **eqBy**<**A**, **B**>(`toComparable`: [Mappable](_types_.md#mappable)‹A, B›, `a`: A): *function*
 
-*Defined in [src/eqBy.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/eqBy.ts#L4)*
+*Defined in [src/eqBy.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/eqBy.ts#L4)*
 
 **Type parameters:**
 
@@ -61,7 +61,7 @@ Name | Type |
 
 ▸ **eqBy**<**A**, **B**>(`toComparable`: [Mappable](_types_.md#mappable)‹A, B›): *function*
 
-*Defined in [src/eqBy.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/eqBy.ts#L8)*
+*Defined in [src/eqBy.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/eqBy.ts#L8)*
 
 **Type parameters:**
 
@@ -88,7 +88,7 @@ Name | Type |
 
 ▸ **eqBy**<**A**, **B**>(`toComparable`: [Mappable](_types_.md#mappable)‹A, B›): *function*
 
-*Defined in [src/eqBy.ts:11](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/eqBy.ts#L11)*
+*Defined in [src/eqBy.ts:11](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/eqBy.ts#L11)*
 
 **Type parameters:**
 

@@ -14,7 +14,7 @@
 
 ▸ **somePass**<**A**>(`preds`: [Predicate](_types_.md#predicate)‹A›[], `value`: A): *boolean*
 
-*Defined in [src/somePass.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/somePass.ts#L3)*
+*Defined in [src/somePass.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/somePass.ts#L3)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **somePass**<**A**>(`preds`: [Predicate](_types_.md#predicate)‹A›[]): *function*
 
-*Defined in [src/somePass.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/somePass.ts#L4)*
+*Defined in [src/somePass.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/somePass.ts#L4)*
 
 **Type parameters:**
 

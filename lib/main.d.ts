@@ -1,5 +1,6 @@
 export * from "./Chain";
 export * from "./Either";
+export * from "./Future";
 export * from "./Maybe";
 export * from "./add";
 export * from "./adjust";

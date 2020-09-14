@@ -14,7 +14,7 @@
 
 ▸ **mapKeys**<**A**, **B**>(`fn`: [Mappable](_types_.md#mappable)‹string, string›, `dict`: A): *B*
 
-*Defined in [src/mapKeys.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/mapKeys.ts#L3)*
+*Defined in [src/mapKeys.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/mapKeys.ts#L3)*
 
 **Type parameters:**
 
@@ -33,7 +33,7 @@ Name | Type |
 
 ▸ **mapKeys**<**A**, **B**>(`fn`: [Mappable](_types_.md#mappable)‹string, string›): *function*
 
-*Defined in [src/mapKeys.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/mapKeys.ts#L8)*
+*Defined in [src/mapKeys.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/mapKeys.ts#L8)*
 
 **Type parameters:**
 

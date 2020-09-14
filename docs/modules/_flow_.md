@@ -23,7 +23,7 @@
 
 Ƭ **ArgType**: *ArgType<F, Else>*
 
-*Defined in [src/flow.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/flow.ts#L6)*
+*Defined in [src/flow.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/flow.ts#L6)*
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 Ƭ **AsChain**: *object*
 
-*Defined in [src/flow.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/flow.ts#L7)*
+*Defined in [src/flow.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/flow.ts#L7)*
 
 #### Type declaration:
 
@@ -41,7 +41,7 @@ ___
 
 Ƭ **Func1**: *function*
 
-*Defined in [src/flow.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/flow.ts#L5)*
+*Defined in [src/flow.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/flow.ts#L5)*
 
 #### Type declaration:
 
@@ -59,7 +59,7 @@ ___
 
 Ƭ **LastIndexOf**: *LastIndexOf<T>*
 
-*Defined in [src/flow.ts:10](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/flow.ts#L10)*
+*Defined in [src/flow.ts:10](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/flow.ts#L10)*
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 Ƭ **Lookup**: *Lookup<T, K, Else>*
 
-*Defined in [src/flow.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/flow.ts#L1)*
+*Defined in [src/flow.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/flow.ts#L1)*
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 Ƭ **Tail**: *Tail<T>*
 
-*Defined in [src/flow.ts:2](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/flow.ts#L2)*
+*Defined in [src/flow.ts:2](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/flow.ts#L2)*
 
 ## Functions
 
@@ -83,7 +83,7 @@ ___
 
 ▸ **flow**<**F**>(...`f`: F & [AsChain](_flow_.md#aschain)‹F›): *function*
 
-*Defined in [src/flow.ts:13](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/flow.ts#L13)*
+*Defined in [src/flow.ts:13](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/flow.ts#L13)*
 
 Composes an arbitrary number of functions into a new function, the
 result being a function piping their results as argument into the

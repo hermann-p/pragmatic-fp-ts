@@ -10,6 +10,7 @@
 * ["CustomError"](modules/_customerror_.md)
 * ["Either"](modules/_either_.md)
 * ["F"](modules/_f_.md)
+* ["Future"](modules/_future_.md)
 * ["Maybe"](modules/_maybe_.md)
 * ["Monad"](modules/_monad_.md)
 * ["T"](modules/_t_.md)

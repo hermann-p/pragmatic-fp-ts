@@ -18,7 +18,7 @@
 
 Ƭ **Input**: *[Dictionary](_types_.md#dictionary) | any[]*
 
-*Defined in [src/prop.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/prop.ts#L3)*
+*Defined in [src/prop.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/prop.ts#L3)*
 
 ## Functions
 
@@ -26,7 +26,7 @@
 
 ▸ **prop**<**A**>(`path`: [SelectorPath](_types_.md#selectorpath), `input`: [Input](_prop_.md#input)): *A*
 
-*Defined in [src/prop.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/prop.ts#L4)*
+*Defined in [src/prop.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/prop.ts#L4)*
 
 **Type parameters:**
 
@@ -43,7 +43,7 @@ Name | Type |
 
 ▸ **prop**<**A**>(`path`: [SelectorPath](_types_.md#selectorpath)): *function*
 
-*Defined in [src/prop.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/prop.ts#L5)*
+*Defined in [src/prop.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/prop.ts#L5)*
 
 **Type parameters:**
 

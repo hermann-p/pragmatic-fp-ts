@@ -14,7 +14,7 @@
 
 ▸ **concat**<**A**>(`head`: A[], `tail`: A[]): *A[]*
 
-*Defined in [src/concat.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/concat.ts#L3)*
+*Defined in [src/concat.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/concat.ts#L3)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **concat**<**A**>(`head`: A[]): *function*
 
-*Defined in [src/concat.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/concat.ts#L4)*
+*Defined in [src/concat.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/concat.ts#L4)*
 
 **Type parameters:**
 
@@ -55,7 +55,7 @@ Name | Type |
 
 ▸ **concat**(`tail`: string, `head`: string): *string*
 
-*Defined in [src/concat.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/concat.ts#L5)*
+*Defined in [src/concat.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/concat.ts#L5)*
 
 **Parameters:**
 
@@ -68,7 +68,7 @@ Name | Type |
 
 ▸ **concat**(`tail`: string): *function*
 
-*Defined in [src/concat.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/concat.ts#L6)*
+*Defined in [src/concat.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/concat.ts#L6)*
 
 **Parameters:**
 

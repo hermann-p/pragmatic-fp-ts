@@ -14,7 +14,7 @@
 
 ▸ **xprod**<**A**, **B**>(`a`: A[], `b`: B[]): *[A, B][]*
 
-*Defined in [src/xprod.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/xprod.ts#L1)*
+*Defined in [src/xprod.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/xprod.ts#L1)*
 
 **Type parameters:**
 
@@ -33,7 +33,7 @@ Name | Type |
 
 ▸ **xprod**<**A**>(`a`: A[]): *function*
 
-*Defined in [src/xprod.ts:2](https://github.com/hermann-p/pragmatic-fp-ts/blob/ce213e6/src/xprod.ts#L2)*
+*Defined in [src/xprod.ts:2](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/xprod.ts#L2)*
 
 **Type parameters:**
 
