@@ -16,7 +16,7 @@
 
 ▸ **dec**(`n`: number): *number*
 
-*Defined in [src/subtract.ts:14](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/subtract.ts#L14)*
+*Defined in [src/subtract.ts:14](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/subtract.ts#L14)*
 
 **Parameters:**
 
@@ -32,7 +32,7 @@ ___
 
 ▸ **subtract**(`subtrahend`: number, `minuend`: number): *number*
 
-*Defined in [src/subtract.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/subtract.ts#L3)*
+*Defined in [src/subtract.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/subtract.ts#L3)*
 
 **Parameters:**
 
@@ -45,7 +45,7 @@ Name | Type |
 
 ▸ **subtract**(`subtrahend`: number): *function*
 
-*Defined in [src/subtract.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/subtract.ts#L4)*
+*Defined in [src/subtract.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/subtract.ts#L4)*
 
 **Parameters:**
 
@@ -69,7 +69,7 @@ ___
 
 ▸ **subtractFrom**(`minuend`: number, `subtrahend?`: undefined | number): *number*
 
-*Defined in [src/subtract.ts:18](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/subtract.ts#L18)*
+*Defined in [src/subtract.ts:18](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/subtract.ts#L18)*
 
 **Parameters:**
 
@@ -82,7 +82,7 @@ Name | Type |
 
 ▸ **subtractFrom**(`minuend`: number): *function*
 
-*Defined in [src/subtract.ts:19](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/subtract.ts#L19)*
+*Defined in [src/subtract.ts:19](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/subtract.ts#L19)*
 
 **Parameters:**
 

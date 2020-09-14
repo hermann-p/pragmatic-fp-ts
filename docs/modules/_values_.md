@@ -14,7 +14,7 @@
 
 ▸ **values**<**T**>(`dict`: [Dictionary](_types_.md#dictionary)‹T›): *T[]*
 
-*Defined in [src/values.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/values.ts#L3)*
+*Defined in [src/values.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/values.ts#L3)*
 
 **Type parameters:**
 

@@ -14,7 +14,7 @@
 
 ▸ **last**(`str`: string): *string*
 
-*Defined in [src/last.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/last.ts#L3)*
+*Defined in [src/last.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/last.ts#L3)*
 
 **Parameters:**
 
@@ -26,7 +26,7 @@ Name | Type |
 
 ▸ **last**<**A**>(`coll`: A[]): *A*
 
-*Defined in [src/last.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/last.ts#L4)*
+*Defined in [src/last.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/last.ts#L4)*
 
 **Type parameters:**
 

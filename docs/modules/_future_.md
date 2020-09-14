@@ -19,7 +19,7 @@
 
 ▸ **futureEither**<**T**>(`value`: T): *[Future](../classes/_future_.future.md)‹T, [Left](../classes/_either_.left.md)‹T, Error› | [Right](../classes/_either_.right.md)‹T, Error››*
 
-Defined in src/Future.ts:86
+*Defined in [src/Future.ts:88](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/Future.ts#L88)*
 
 **Type parameters:**
 
@@ -39,7 +39,7 @@ ___
 
 ▸ **futureMaybe**<**T**>(`value`: T): *[Future](../classes/_future_.future.md)‹T, [Just](../classes/_maybe_.just.md)‹T› | [Nothing](../classes/_maybe_.nothing.md)‹T››*
 
-Defined in src/Future.ts:89
+*Defined in [src/Future.ts:91](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/Future.ts#L91)*
 
 **Type parameters:**
 

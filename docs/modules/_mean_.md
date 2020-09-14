@@ -14,7 +14,7 @@
 
 ▸ **mean**(`ns`: number[]): *number*
 
-*Defined in [src/mean.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/mean.ts#L3)*
+*Defined in [src/mean.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/mean.ts#L3)*
 
 **Parameters:**
 

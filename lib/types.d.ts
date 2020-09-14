@@ -7,6 +7,7 @@ export declare type Dictionary<T extends any = any> = {
     [key: string]: T;
 };
 export declare type Comparator<A> = (a: A, b: A) => number;
+export declare type UnboxPromise<T> = T extends Promise<infer U> ? U : T;
 export declare type Equality<A> = (a: A, b: A) => boolean;
 export declare type BasicComparable = number | string | Date;
 export declare type Foldable<TValues, TResult> = (accum: TResult, value: TValues) => TResult;

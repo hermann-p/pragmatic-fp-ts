@@ -14,7 +14,7 @@
 
 ▸ **zipMap**<**A**, **B**, **C**>(`fn`: [Mappable](_types_.md#mappable)‹[A, B], C›, `as`: A[], `bs`: B[]): *C[]*
 
-*Defined in [src/zipMap.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/zipMap.ts#L3)*
+*Defined in [src/zipMap.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/zipMap.ts#L3)*
 
 **Type parameters:**
 
@@ -36,7 +36,7 @@ Name | Type |
 
 ▸ **zipMap**<**A**, **B**, **C**>(`fn`: [Mappable](_types_.md#mappable)‹[A, B], C›, `as`: A[]): *function*
 
-*Defined in [src/zipMap.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/zipMap.ts#L4)*
+*Defined in [src/zipMap.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/zipMap.ts#L4)*
 
 **Type parameters:**
 
@@ -65,7 +65,7 @@ Name | Type |
 
 ▸ **zipMap**<**A**, **B**, **C**>(`fn`: [Mappable](_types_.md#mappable)‹[A, B], C›): *function*
 
-*Defined in [src/zipMap.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/zipMap.ts#L8)*
+*Defined in [src/zipMap.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/zipMap.ts#L8)*
 
 **Type parameters:**
 

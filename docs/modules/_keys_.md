@@ -14,7 +14,7 @@
 
 ▸ **keys**(`dict`: [Dictionary](_types_.md#dictionary)): *string[]*
 
-*Defined in [src/keys.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/keys.ts#L3)*
+*Defined in [src/keys.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/keys.ts#L3)*
 
 **Parameters:**
 

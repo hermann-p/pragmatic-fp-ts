@@ -14,7 +14,7 @@
 
 ▸ **props**<**A**>(`propNames`: string[], `dict`: [Dictionary](_types_.md#dictionary)‹A›): *A*
 
-*Defined in [src/props.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/props.ts#L3)*
+*Defined in [src/props.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/props.ts#L3)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **props**(`propNames`: string[]): *function*
 
-*Defined in [src/props.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/props.ts#L4)*
+*Defined in [src/props.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/props.ts#L4)*
 
 **Parameters:**
 

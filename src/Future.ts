@@ -10,7 +10,7 @@ import {
   nothing,
   left,
 } from "./main";
-import { Effect, Mappable, Monad } from "./types";
+import { Effect, Mappable, Monad, UnboxPromise } from "./types";
 
 export class Future<T, M extends Monad<T>> {
   readonly value: Promise<M>;
@@ -23,7 +23,9 @@ export class Future<T, M extends Monad<T>> {
     this.value = value instanceof Promise ? value : Promise.resolve(value);
   }
 
-  _<U>(f: Mappable<T, U | Promise<U>>): Future<NonNullable<U>, Monad<NonNullable<U>>> {
+  _<U>(
+    f: Mappable<T, U | Promise<U>>
+  ): Future<NonNullable<UnboxPromise<U>>, Monad<NonNullable<UnboxPromise<U>>>> {
     const applyBinding: Mappable<M, Promise<Monad<NonNullable<U>>>> = async (m: M) => {
       if (isNothing(m) || isLeft(m)) {
         console.log("exiting with", m);
@@ -41,7 +43,7 @@ export class Future<T, M extends Monad<T>> {
       }
     };
     const rm = this.value.then(applyBinding);
-    return new Future(this.bindDefault as any, this.bindError as any, rm);
+    return new Future(this.bindDefault as any, this.bindError as any, rm as any);
   }
 
   filter(pred: Mappable<T, boolean | Promise<Boolean>>): Future<T, M> {

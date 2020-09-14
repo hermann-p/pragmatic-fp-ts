@@ -40,7 +40,7 @@
 
 \+ **new Future**(`bindDefault`: [Mappable](../modules/_types_.md#mappable)‹any, M›, `bindError`: [Mappable](../modules/_types_.md#mappable)‹any, M›, `value`: M | Promise‹M›): *[Future](_future_.future.md)*
 
-Defined in src/Future.ts:18
+*Defined in [src/Future.ts:18](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/Future.ts#L18)*
 
 **Parameters:**
 
@@ -58,7 +58,7 @@ Name | Type |
 
 • **bindDefault**: *[Mappable](../modules/_types_.md#mappable)‹any, M›*
 
-Defined in src/Future.ts:17
+*Defined in [src/Future.ts:17](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/Future.ts#L17)*
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 • **bindError**: *[Mappable](../modules/_types_.md#mappable)‹any, M›*
 
-Defined in src/Future.ts:18
+*Defined in [src/Future.ts:18](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/Future.ts#L18)*
 
 ___
 
@@ -74,15 +74,15 @@ ___
 
 • **value**: *Promise‹M›*
 
-Defined in src/Future.ts:16
+*Defined in [src/Future.ts:16](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/Future.ts#L16)*
 
 ## Methods
 
 ###  _
 
-▸ **_**<**U**>(`f`: [Mappable](../modules/_types_.md#mappable)‹T, U | Promise‹U››): *[Future](_future_.future.md)‹NonNullable‹U›, [Monad](_types_.monad.md)‹NonNullable‹U›››*
+▸ **_**<**U**>(`f`: [Mappable](../modules/_types_.md#mappable)‹T, U | Promise‹U››): *[Future](_future_.future.md)‹NonNullable‹[UnboxPromise](../modules/_types_.md#unboxpromise)‹U››, [Monad](_types_.monad.md)‹NonNullable‹[UnboxPromise](../modules/_types_.md#unboxpromise)‹U››››*
 
-Defined in src/Future.ts:26
+*Defined in [src/Future.ts:26](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/Future.ts#L26)*
 
 **Type parameters:**
 
@@ -94,7 +94,7 @@ Name | Type |
 ------ | ------ |
 `f` | [Mappable](../modules/_types_.md#mappable)‹T, U &#124; Promise‹U›› |
 
-**Returns:** *[Future](_future_.future.md)‹NonNullable‹U›, [Monad](_types_.monad.md)‹NonNullable‹U›››*
+**Returns:** *[Future](_future_.future.md)‹NonNullable‹[UnboxPromise](../modules/_types_.md#unboxpromise)‹U››, [Monad](_types_.monad.md)‹NonNullable‹[UnboxPromise](../modules/_types_.md#unboxpromise)‹U››››*
 
 ___
 
@@ -102,7 +102,7 @@ ___
 
 ▸ **effect**(`f`: [Effect](../modules/_types_.md#effect)‹T›): *[Future](_future_.future.md)‹T, M›*
 
-Defined in src/Future.ts:60
+*Defined in [src/Future.ts:62](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/Future.ts#L62)*
 
 **Parameters:**
 
@@ -118,7 +118,7 @@ ___
 
 ▸ **effectAsync**(`f`: [Effect](../modules/_types_.md#effect)‹T›): *[Future](_future_.future.md)‹T, M›*
 
-Defined in src/Future.ts:68
+*Defined in [src/Future.ts:70](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/Future.ts#L70)*
 
 **Parameters:**
 
@@ -134,7 +134,7 @@ ___
 
 ▸ **filter**(`pred`: [Mappable](../modules/_types_.md#mappable)‹T, boolean | Promise‹Boolean››): *[Future](_future_.future.md)‹T, M›*
 
-Defined in src/Future.ts:47
+*Defined in [src/Future.ts:49](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/Future.ts#L49)*
 
 **Parameters:**
 
@@ -150,7 +150,7 @@ ___
 
 ▸ **getMonad**(): *Promise‹M›*
 
-Defined in src/Future.ts:81
+*Defined in [src/Future.ts:83](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/Future.ts#L83)*
 
 **Returns:** *Promise‹M›*
 
@@ -160,7 +160,7 @@ ___
 
 ▸ **getValue**(): *Promise‹T›*
 
-Defined in src/Future.ts:77
+*Defined in [src/Future.ts:79](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/Future.ts#L79)*
 
 **Returns:** *Promise‹T›*
 
@@ -170,7 +170,7 @@ ___
 
 ▸ **getValueOr**(`alt`: T): *Promise‹T›*
 
-Defined in src/Future.ts:73
+*Defined in [src/Future.ts:75](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/Future.ts#L75)*
 
 **Parameters:**
 

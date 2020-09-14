@@ -10,6 +10,8 @@ export type Dictionary<T extends any = any> = { [key: string]: T };
 
 export type Comparator<A> = (a: A, b: A) => number;
 
+export type UnboxPromise<T> = T extends Promise<infer U> ? U : T;
+
 export type Equality<A> = (a: A, b: A) => boolean;
 export type BasicComparable = number | string | Date;
 

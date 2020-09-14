@@ -14,7 +14,7 @@
 
 ▸ **eq**<**A**>(`a`: A, `b`: A): *boolean*
 
-*Defined in [src/eq.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/eq.ts#L3)*
+*Defined in [src/eq.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/eq.ts#L3)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **eq**<**A**>(`a`: A): *function*
 
-*Defined in [src/eq.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/eq.ts#L4)*
+*Defined in [src/eq.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/eq.ts#L4)*
 
 **Type parameters:**
 

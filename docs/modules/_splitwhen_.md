@@ -14,7 +14,7 @@
 
 ▸ **splitWhen**<**A**>(`when`: [Predicate](_types_.md#predicate)‹A›, `coll`: A[]): *[A[], A[]]*
 
-*Defined in [src/splitWhen.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/splitWhen.ts#L3)*
+*Defined in [src/splitWhen.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/splitWhen.ts#L3)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **splitWhen**<**A**>(`when`: [Predicate](_types_.md#predicate)‹A›): *function*
 
-*Defined in [src/splitWhen.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/splitWhen.ts#L4)*
+*Defined in [src/splitWhen.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/splitWhen.ts#L4)*
 
 **Type parameters:**
 

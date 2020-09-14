@@ -1,11 +1,11 @@
 import { Either, Maybe } from "./main";
-import { Effect, Mappable, Monad } from "./types";
+import { Effect, Mappable, Monad, UnboxPromise } from "./types";
 export declare class Future<T, M extends Monad<T>> {
     readonly value: Promise<M>;
     readonly bindDefault: Mappable<any, M>;
     readonly bindError: Mappable<any, M>;
     constructor(bindDefault: Mappable<any, M>, bindError: Mappable<any, M>, value: M | Promise<M>);
-    _<U>(f: Mappable<T, U | Promise<U>>): Future<NonNullable<U>, Monad<NonNullable<U>>>;
+    _<U>(f: Mappable<T, U | Promise<U>>): Future<NonNullable<UnboxPromise<U>>, Monad<NonNullable<UnboxPromise<U>>>>;
     filter(pred: Mappable<T, boolean | Promise<Boolean>>): Future<T, M>;
     effect(f: Effect<T>): Future<T, M>;
     effectAsync(f: Effect<T>): Future<T, M>;

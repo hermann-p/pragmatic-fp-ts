@@ -14,7 +14,7 @@
 
 ▸ **groupBy**<**A**>(`mkGroup`: [Mappable](_types_.md#mappable)‹A, string›, `coll`: A[]): *[Dictionary](_types_.md#dictionary)‹A[]›*
 
-*Defined in [src/groupBy.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/groupBy.ts#L3)*
+*Defined in [src/groupBy.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/groupBy.ts#L3)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **groupBy**<**A**>(`mkGroup`: [Mappable](_types_.md#mappable)‹A, string›): *function*
 
-*Defined in [src/groupBy.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/4c86847/src/groupBy.ts#L7)*
+*Defined in [src/groupBy.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/d79a7fd/src/groupBy.ts#L7)*
 
 **Type parameters:**
 
