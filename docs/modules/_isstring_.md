@@ -14,7 +14,7 @@
 
 ▸ **isString**(`s`: unknown): *s is string*
 
-*Defined in [src/isString.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/isString.ts#L1)*
+*Defined in [src/isString.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/isString.ts#L1)*
 
 **Parameters:**
 

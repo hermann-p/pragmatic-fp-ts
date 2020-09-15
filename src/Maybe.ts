@@ -1,9 +1,9 @@
-import { Effect, getValue, Mappable, Predicate } from "./main";
+import { Effect, getValue, identity, Mappable, Predicate } from "./main";
 import { Monad } from "./types";
 
 export type Maybe<A> = Just<A> | Nothing<A>;
 
-type MaybeMatcher<A, B> = { just: Mappable<NonNullable<A>, B>; nothing: () => B };
+export type MaybeMatcher<A, B> = { just?: Mappable<NonNullable<A>, B>; nothing?: () => B };
 export class Nothing<A> extends Monad<A> {
   _<B>(_: Mappable<A, B>): Maybe<NonNullable<B>> {
     return this as any;
@@ -25,7 +25,7 @@ export class Nothing<A> extends Monad<A> {
     return alt;
   }
   match<B>(matcher: MaybeMatcher<A, B>): Maybe<NonNullable<B>> {
-    return maybe(matcher.nothing());
+    return matcher.nothing ? maybe(matcher.nothing()) : (this as any);
   }
   isNothing() {
     return true;
@@ -79,7 +79,8 @@ export class Just<A> extends Monad<A> {
     return this.value;
   }
   match<B>(matcher: MaybeMatcher<A, B>): Maybe<NonNullable<B>> {
-    return maybe(matcher.just(this.value as NonNullable<A>));
+    const m = matcher.just || (identity as any);
+    return maybe(m(this.value as NonNullable<A>));
   }
   isNothing() {
     return false;

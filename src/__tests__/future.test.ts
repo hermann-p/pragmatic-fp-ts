@@ -74,11 +74,11 @@ describe("Future", () => {
       expect(value).toBe(2);
     });
 
-    it.only("should catch errors", async () => {
+    it("should catch errors", async () => {
       const num = l.futureEither(1);
       const boom1 = () => Promise.reject("boom") as any;
       const boom2 = () => {
-        throw new Error("boom");
+        throw "boom";
       };
 
       expect(await num._(boom1).getMonad()).toBeInstanceOf(l.Left);
@@ -87,8 +87,26 @@ describe("Future", () => {
       expect(await num.filter(boom2).getMonad()).toBeInstanceOf(l.Left);
 
       const error1 = await num._(boom1, "bad stuff!").getMonad();
+      const error2 = await num._(boom2, "bad stuff!").getMonad();
+      const error3 = await num._(boom1).getMonad();
+      const error4 = await num._(boom2).getMonad();
 
       expect(error1.getReason()).toEqual("bad stuff!");
+      expect(error2.getReason()).toEqual("bad stuff!");
+      expect(error3.getReason()).toEqual("boom");
+      expect(error4.getReason()).toEqual("boom");
+    });
+
+    const syncMatcher = { right: l.add(1), left: () => 0 };
+    const asyncMatcher = { right: (n: number) => Promise.resolve(n + 1), left: () => 0 };
+
+    it("should match success types", async () => {
+      const num = l.futureEither(1).match(syncMatcher);
+      expect(await num.getValue()).toEqual(2);
+    });
+    it("should match success types with promises", async () => {
+      const num = l.futureEither(1).match(asyncMatcher);
+      expect(await num.getValue()).toEqual(2);
     });
   });
 
@@ -165,7 +183,7 @@ describe("Future", () => {
       expect(value).toBe(2);
     });
 
-    it.only("should catch errors", async () => {
+    it("should catch errors", async () => {
       const num = l.futureMaybe(1);
       const boom1 = () => Promise.reject("boom") as any;
       const boom2 = () => {
@@ -176,6 +194,26 @@ describe("Future", () => {
       expect(await num.filter(boom1).getMonad()).toBeInstanceOf(l.Nothing);
       expect(await num._(boom2).getMonad()).toBeInstanceOf(l.Nothing);
       expect(await num.filter(boom2).getMonad()).toBeInstanceOf(l.Nothing);
+    });
+
+    const syncMatcher = { just: l.add(1), nothing: () => 0 };
+    const asyncMatcher = { just: (n: number) => Promise.resolve(n + 1), nothing: () => 0 };
+
+    it("should match success types", async () => {
+      const num = l.futureMaybe(1).match(syncMatcher);
+      expect(await num.getValue()).toEqual(2);
+    });
+    it("should match success types with promises", async () => {
+      const num = l.futureMaybe(1).match(asyncMatcher);
+      expect(await num.getValue()).toEqual(2);
+    });
+    it("should match error types", async () => {
+      const num = l.futureMaybe(l.nothing<number>()).match(syncMatcher);
+      expect(await num.getValue()).toEqual(0);
+    });
+    it("should match error types with promises", async () => {
+      const num = l.futureMaybe(l.nothing<number>()).match(asyncMatcher);
+      expect(await num.getValue()).toEqual(0);
     });
   });
 });

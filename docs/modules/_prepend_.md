@@ -14,7 +14,7 @@
 
 ▸ **prepend**<**A**>(`el`: A, `coll`: A[]): *A[]*
 
-*Defined in [src/prepend.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/prepend.ts#L5)*
+*Defined in [src/prepend.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/prepend.ts#L5)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **prepend**(`head`: string, `tail`: string): *string*
 
-*Defined in [src/prepend.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/prepend.ts#L6)*
+*Defined in [src/prepend.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/prepend.ts#L6)*
 
 **Parameters:**
 
@@ -44,7 +44,7 @@ Name | Type |
 
 ▸ **prepend**<**A**>(`el`: A): *function*
 
-*Defined in [src/prepend.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/prepend.ts#L7)*
+*Defined in [src/prepend.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/prepend.ts#L7)*
 
 **Type parameters:**
 

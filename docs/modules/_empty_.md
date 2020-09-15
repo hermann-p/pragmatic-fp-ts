@@ -14,7 +14,7 @@
 
 ▸ **empty**<**T**>(`val`: T): *T*
 
-*Defined in [src/empty.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/empty.ts#L3)*
+*Defined in [src/empty.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/empty.ts#L3)*
 
 **Type parameters:**
 

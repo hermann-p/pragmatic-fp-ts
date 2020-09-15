@@ -1,11 +1,11 @@
-import { Effect, isNil, getValue, Mappable, Predicate } from "./main";
+import { Effect, identity, isNil, getValue, Mappable, Predicate } from "./main";
 import { Monad, MonadType, NilError, InvalidValueError } from "./types";
 
 export type Either<R, L = Error> = Left<R, L> | Right<R, L>;
 
-type EitherMatcher<R, L, B> = {
-  left: (err: L) => B;
-  right: (val: R) => B;
+export type EitherMatcher<R, L, B> = {
+  left?: (err: L) => B;
+  right?: (val: R) => B;
 };
 export class Left<R, L = Error> extends Monad<R> {
   readonly errorValue: L;
@@ -35,7 +35,7 @@ export class Left<R, L = Error> extends Monad<R> {
     return alt;
   }
   match<B>(matcher: EitherMatcher<R, L, B>): Either<NonNullable<B>, L | Error> {
-    return either<B, L>(matcher.left(this.errorValue));
+    return matcher.left ? either<B, L>(matcher.left(this.errorValue)) : (this as any);
   }
   isLeft() {
     return true;
@@ -95,7 +95,8 @@ export class Right<R extends NonNullable<any>, L = Error> extends Monad<R> {
     return this.value;
   }
   match<B>(matcher: EitherMatcher<R, L, B>): Either<NonNullable<B>, L> {
-    return either(matcher.right(this.value)) as any;
+    const m = matcher.right ?? (identity as any);
+    return either(m(this.value)) as any;
   }
   isLeft() {
     return false;
@@ -139,3 +140,11 @@ export function isRight<R = any, L = Error>(el: unknown): el is Right<R, L> {
 export function isEither<R = any, L = Error>(el: unknown): el is Either<R, L> {
   return isLeft<R>(el) || isRight<L>(el);
 }
+
+export const throwLeftAsError = {
+  right: (data: any) => data,
+  left: (reason: Error | string) => {
+    throw reason instanceof Error ? reason : new Error(reason);
+    return reason as any;
+  },
+};

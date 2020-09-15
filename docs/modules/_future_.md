@@ -24,7 +24,7 @@
 
 Ƭ **FutureEither**: *[Future](../classes/_future_.future.md)‹T, [Either](_either_.md#either)‹T, Error››*
 
-*Defined in [src/Future.ts:90](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/Future.ts#L90)*
+*Defined in [src/Future.ts:121](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/Future.ts#L121)*
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 Ƭ **FutureMaybe**: *[Future](../classes/_future_.future.md)‹T, [Maybe](_maybe_.md#maybe)‹T››*
 
-*Defined in [src/Future.ts:94](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/Future.ts#L94)*
+*Defined in [src/Future.ts:125](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/Future.ts#L125)*
 
 ## Functions
 
@@ -40,7 +40,7 @@ ___
 
 ▸ **futureEither**<**T**>(`value`: T): *[FutureEither](_future_.md#futureeither)‹T›*
 
-*Defined in [src/Future.ts:91](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/Future.ts#L91)*
+*Defined in [src/Future.ts:122](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/Future.ts#L122)*
 
 **Type parameters:**
 
@@ -60,7 +60,7 @@ ___
 
 ▸ **futureMaybe**<**T**>(`value`: T): *[FutureMaybe](_future_.md#futuremaybe)‹T›*
 
-*Defined in [src/Future.ts:95](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/Future.ts#L95)*
+*Defined in [src/Future.ts:126](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/Future.ts#L126)*
 
 **Type parameters:**
 

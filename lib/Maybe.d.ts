@@ -1,9 +1,9 @@
 import { Effect, Mappable, Predicate } from "./main";
 import { Monad } from "./types";
 export declare type Maybe<A> = Just<A> | Nothing<A>;
-declare type MaybeMatcher<A, B> = {
-    just: Mappable<NonNullable<A>, B>;
-    nothing: () => B;
+export declare type MaybeMatcher<A, B> = {
+    just?: Mappable<NonNullable<A>, B>;
+    nothing?: () => B;
 };
 export declare class Nothing<A> extends Monad<A> {
     _<B>(_: Mappable<A, B>): Maybe<NonNullable<B>>;
@@ -37,4 +37,3 @@ export declare const maybe: <U, T = NonNullable<U>>(value: U | Monad<U>) => Mayb
 export declare const isJust: (x: unknown) => boolean;
 export declare const isNothing: (x: unknown) => boolean;
 export declare const isMaybe: (x: unknown) => boolean;
-export {};

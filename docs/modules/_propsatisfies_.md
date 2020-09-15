@@ -19,7 +19,7 @@
 
 Ƭ **Input**: *any[] | [Dictionary](_types_.md#dictionary)*
 
-*Defined in [src/propSatisfies.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/propSatisfies.ts#L4)*
+*Defined in [src/propSatisfies.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/propSatisfies.ts#L4)*
 
 ___
 
@@ -27,7 +27,7 @@ ___
 
 Ƭ **Path**: *string | number | string | number[]*
 
-*Defined in [src/propSatisfies.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/propSatisfies.ts#L3)*
+*Defined in [src/propSatisfies.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/propSatisfies.ts#L3)*
 
 ## Functions
 
@@ -35,7 +35,7 @@ ___
 
 ▸ **propSatisfies**(`path`: [Path](_propsatisfies_.md#path), `pred`: [Predicate](_types_.md#predicate)‹any›, `input`: [Input](_propsatisfies_.md#input)): *boolean*
 
-*Defined in [src/propSatisfies.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/propSatisfies.ts#L6)*
+*Defined in [src/propSatisfies.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/propSatisfies.ts#L6)*
 
 **Parameters:**
 
@@ -49,7 +49,7 @@ Name | Type |
 
 ▸ **propSatisfies**(`path`: [Path](_propsatisfies_.md#path), `pred`: [Predicate](_types_.md#predicate)‹any›): *function*
 
-*Defined in [src/propSatisfies.ts:11](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/propSatisfies.ts#L11)*
+*Defined in [src/propSatisfies.ts:11](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/propSatisfies.ts#L11)*
 
 **Parameters:**
 
@@ -70,7 +70,7 @@ Name | Type |
 
 ▸ **propSatisfies**(`path`: [Path](_propsatisfies_.md#path)): *function*
 
-*Defined in [src/propSatisfies.ts:15](https://github.com/hermann-p/pragmatic-fp-ts/blob/ff16101/src/propSatisfies.ts#L15)*
+*Defined in [src/propSatisfies.ts:15](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/propSatisfies.ts#L15)*
 
 **Parameters:**
 

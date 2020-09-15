@@ -1,18 +1,20 @@
 import {
   either,
   Either,
-  getValue,
+  EitherMatcher,
   getValueOr,
   isLeft,
   isNothing,
   left,
   maybe,
   Maybe,
+  MaybeMatcher,
   nothing,
+  NilError,
 } from "./main";
 import { Effect, Mappable, Monad, UnboxPromise } from "./types";
 
-export class Future<T, M extends Monad<T>> {
+export class Future<T, M extends Either<T> | Maybe<T>> {
   readonly value: Promise<M>;
   readonly bindDefault: Mappable<any, M>;
   readonly bindError: Mappable<any, M>;
@@ -26,7 +28,7 @@ export class Future<T, M extends Monad<T>> {
   _<U, TO = NonNullable<UnboxPromise<U>>>(
     f: Mappable<T, U | Promise<U>>,
     errorHint?: string | Error
-  ): Future<TO, M extends Either<T> ? Either<TO> : Maybe<TO>> {
+  ): M extends Either<T> ? FutureEither<TO> : FutureMaybe<TO> {
     const toError = errorHint ? () => this.bindError(errorHint as any) : this.bindError;
     const applyBinding: Mappable<M, Promise<Monad<NonNullable<U>>>> = async (m: M) => {
       if (isNothing(m) || isLeft(m)) {
@@ -35,33 +37,41 @@ export class Future<T, M extends Monad<T>> {
       try {
         const v = m.getValue();
         const applied = f(v);
-        return (((applied instanceof Promise
-          ? applied.catch(this.bindError)
-          : Promise.resolve(applied)) as unknown) as Promise<Monad<NonNullable<U>>>).then((bound) =>
-          (m.bind as any)(() => bound, errorHint)
-        );
+        if (applied instanceof Promise) {
+          return applied
+            .then((appliedValue) => (m as Monad<T>)._(() => appliedValue))
+            .catch((err) => {
+              console.log(err, toError(err));
+              return toError(err);
+            });
+        } else {
+          return (m._ as any)(() => applied, errorHint);
+        }
       } catch (err) {
-        return this.bindError(toError) as any;
+        return toError(err) as any;
       }
     };
     const rm = this.value.then(applyBinding);
-    return new Future(this.bindDefault as any, this.bindError as any, rm as any);
+    return new Future(this.bindDefault as any, this.bindError as any, rm as any) as any;
   }
 
-  filter(pred: Mappable<T, boolean | Promise<Boolean>>, errorHint?: string | Error): Future<T, M> {
+  filter(
+    pred: Mappable<T, boolean | Promise<Boolean>>,
+    errorHint?: string | Error
+  ): M extends Either<T> ? FutureEither<T> : FutureMaybe<T> {
     return new Future(
       this.bindDefault,
       this.bindError,
       this.value
         .then(async (m) => {
-          const filterResult = await (m.bind(pred) as any).getValue();
+          const filterResult = await ((m as Monad<T>).bind(pred) as any).getValue();
           return (m.filter as any)(() => filterResult, errorHint);
         })
         .catch(this.bindError)
     ) as any;
   }
 
-  effect(f: Effect<T>): Future<T, M> {
+  effect(f: Effect<T>): M extends Either<T> ? FutureEither<T> : FutureMaybe<T> {
     return new Future(
       this.bindDefault,
       this.bindError,
@@ -69,21 +79,42 @@ export class Future<T, M extends Monad<T>> {
     ) as any;
   }
 
-  effectAsync(f: Effect<T>): Future<T, M> {
+  match<
+    B = T,
+    MT = M extends Either<T> ? EitherMatcher<T, Error, B> : MaybeMatcher<T, B>,
+    TO = NonNullable<UnboxPromise<B>>
+  >(matcher: MT): M extends Either<any> ? FutureEither<TO> : FutureMaybe<TO> {
+    const match = this.value
+      .then((m) => (m as any).match(matcher as any))
+      .then(this.bindDefault)
+      .catch(this.bindError);
+    return new Future(this.bindDefault as any, this.bindError as any, match as any) as any;
+  }
+
+  effectAsync(f: Effect<T>): M extends Either<T> ? FutureEither<T> : FutureMaybe<T> {
     this.value.then((m) => m.effect(f));
-    return this;
+    return this as any;
   }
 
   getValueOr(alt: T) {
     return this.value.then(getValueOr(alt));
   }
 
-  getValue() {
-    return this.value.then(getValue);
+  async getValue() {
+    return (await this.value).getValue();
   }
 
   getMonad(): Promise<M> {
     return this.value;
+  }
+
+  async getReason() {
+    const m = await this.value;
+    if (isLeft(m)) {
+      return (m as Either<any>).getReason();
+    } else if (isNothing(m)) {
+      return new NilError("Nothing()");
+    } else throw new Error(`Can not get reason from ${m}`);
   }
 }
 
