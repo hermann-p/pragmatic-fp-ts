@@ -12,6 +12,11 @@ describe("Future", () => {
       expect(await num.getValue()).toBe(1);
     });
 
+    it("should provide default values", async () => {
+      expect(await l.futureEither<number>(null as any).getValueOr(1)).toBe(1);
+      await expect(l.futureEither(null as any).getValue()).rejects.toBeTruthy();
+    });
+
     it("should lift promises", async () => {
       const num = l.futureEither(Promise.resolve(1));
       expect(await num.getValue()).toBe(1);
@@ -108,6 +113,15 @@ describe("Future", () => {
       const num = l.futureEither(1).match(asyncMatcher);
       expect(await num.getValue()).toEqual(2);
     });
+
+    it("should rethrow errors", async () => {
+      await expect(
+        l
+          .futureEither(l.left<number>(new Error()))
+          .match(l.throwLeftAsError)
+          .getValue()
+      ).rejects.toBeInstanceOf(Error);
+    });
   });
 
   describe("maybeFuture", () => {
@@ -119,6 +133,11 @@ describe("Future", () => {
     it("should lift promises", async () => {
       const num = l.futureMaybe(Promise.resolve(1));
       expect(await num.getValue()).toBe(1);
+    });
+
+    it("should provide default values", async () => {
+      expect(await l.futureMaybe<number>(null as any).getValueOr(1)).toBe(1);
+      await expect(l.futureMaybe(null as any).getValue()).rejects.toBeTruthy();
     });
 
     it("should chain bind functions", async () => {

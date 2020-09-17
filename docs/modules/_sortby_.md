@@ -14,7 +14,7 @@
 
 ▸ **sortBy**<**A**>(`compare`: [Comparator](_types_.md#comparator)‹A›, `coll`: A[]): *A[]*
 
-*Defined in [src/sortBy.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/sortBy.ts#L3)*
+*Defined in [src/sortBy.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/sortBy.ts#L3)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **sortBy**<**A**>(`compare`: [Comparator](_types_.md#comparator)‹A›): *function*
 
-*Defined in [src/sortBy.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/sortBy.ts#L4)*
+*Defined in [src/sortBy.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/sortBy.ts#L4)*
 
 **Type parameters:**
 

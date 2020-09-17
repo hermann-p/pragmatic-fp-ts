@@ -15,7 +15,7 @@
 
 ▸ **doFlatten**(`elems`: any): *any[]*
 
-*Defined in [src/flatten.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/flatten.ts#L3)*
+*Defined in [src/flatten.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/flatten.ts#L3)*
 
 **Parameters:**
 
@@ -31,7 +31,7 @@ ___
 
 ▸ **flatten**<**A**>(`coll`: any[]): *A[]*
 
-*Defined in [src/flatten.ts:14](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/flatten.ts#L14)*
+*Defined in [src/flatten.ts:14](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/flatten.ts#L14)*
 
 **Type parameters:**
 

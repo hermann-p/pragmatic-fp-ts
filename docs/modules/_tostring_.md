@@ -14,7 +14,7 @@
 
 ▸ **toString**(`x`: any): *string*
 
-*Defined in [src/toString.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/toString.ts#L1)*
+*Defined in [src/toString.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/toString.ts#L1)*
 
 **Parameters:**
 

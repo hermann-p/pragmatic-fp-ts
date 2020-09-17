@@ -14,7 +14,7 @@
 
 ▸ **dropWhile**<**A**>(`pred`: [Predicate](_types_.md#predicate)‹A›, `coll`: A[]): *A[]*
 
-*Defined in [src/dropWhile.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/dropWhile.ts#L6)*
+*Defined in [src/dropWhile.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/dropWhile.ts#L6)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **dropWhile**<**A**>(`pred`: [Predicate](_types_.md#predicate)‹A›): *function*
 
-*Defined in [src/dropWhile.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/dropWhile.ts#L7)*
+*Defined in [src/dropWhile.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/dropWhile.ts#L7)*
 
 **Type parameters:**
 

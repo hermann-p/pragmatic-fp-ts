@@ -1,9 +1,9 @@
 import { Either, EitherMatcher, Maybe, MaybeMatcher } from "./main";
 import { Effect, Mappable, UnboxPromise } from "./types";
 export declare class Future<T, M extends Either<T> | Maybe<T>> {
-    readonly value: Promise<M>;
-    readonly bindDefault: Mappable<any, M>;
-    readonly bindError: Mappable<any, M>;
+    private readonly value;
+    private readonly bindDefault;
+    private readonly bindError;
     constructor(bindDefault: Mappable<any, M>, bindError: Mappable<any, M>, value: M | Promise<M>);
     _<U, TO = NonNullable<UnboxPromise<U>>>(f: Mappable<T, U | Promise<U>>, errorHint?: string | Error): M extends Either<T> ? FutureEither<TO> : FutureMaybe<TO>;
     filter(pred: Mappable<T, boolean | Promise<Boolean>>, errorHint?: string | Error): M extends Either<T> ? FutureEither<T> : FutureMaybe<T>;
@@ -15,8 +15,8 @@ export declare class Future<T, M extends Either<T> | Maybe<T>> {
     getMonad(): Promise<M>;
     getReason(): Promise<void | Error>;
 }
-declare type FutureEither<T> = Future<T, Either<T, Error>>;
+declare type FutureEither<T> = Future<NonNullable<T>, Either<NonNullable<T>, Error>>;
 export declare const futureEither: <T>(value: T) => FutureEither<T>;
-declare type FutureMaybe<T> = Future<T, Maybe<T>>;
+declare type FutureMaybe<T> = Future<NonNullable<T>, Maybe<NonNullable<T>>>;
 export declare const futureMaybe: <T>(value: T) => FutureMaybe<T>;
 export {};

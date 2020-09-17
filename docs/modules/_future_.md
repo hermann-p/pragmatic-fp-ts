@@ -17,22 +17,23 @@
 
 * [futureEither](_future_.md#const-futureeither)
 * [futureMaybe](_future_.md#const-futuremaybe)
+* [logLeft](_future_.md#const-logleft)
 
 ## Type aliases
 
 ###  FutureEither
 
-Ƭ **FutureEither**: *[Future](../classes/_future_.future.md)‹T, [Either](_either_.md#either)‹T, Error››*
+Ƭ **FutureEither**: *[Future](../classes/_future_.future.md)‹NonNullable‹T›, [Either](_either_.md#either)‹NonNullable‹T›, Error››*
 
-*Defined in [src/Future.ts:121](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/Future.ts#L121)*
+*Defined in [src/Future.ts:119](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/Future.ts#L119)*
 
 ___
 
 ###  FutureMaybe
 
-Ƭ **FutureMaybe**: *[Future](../classes/_future_.future.md)‹T, [Maybe](_maybe_.md#maybe)‹T››*
+Ƭ **FutureMaybe**: *[Future](../classes/_future_.future.md)‹NonNullable‹T›, [Maybe](_maybe_.md#maybe)‹NonNullable‹T›››*
 
-*Defined in [src/Future.ts:125](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/Future.ts#L125)*
+*Defined in [src/Future.ts:123](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/Future.ts#L123)*
 
 ## Functions
 
@@ -40,7 +41,7 @@ ___
 
 ▸ **futureEither**<**T**>(`value`: T): *[FutureEither](_future_.md#futureeither)‹T›*
 
-*Defined in [src/Future.ts:122](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/Future.ts#L122)*
+*Defined in [src/Future.ts:120](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/Future.ts#L120)*
 
 **Type parameters:**
 
@@ -60,7 +61,7 @@ ___
 
 ▸ **futureMaybe**<**T**>(`value`: T): *[FutureMaybe](_future_.md#futuremaybe)‹T›*
 
-*Defined in [src/Future.ts:126](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/Future.ts#L126)*
+*Defined in [src/Future.ts:124](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/Future.ts#L124)*
 
 **Type parameters:**
 
@@ -73,3 +74,19 @@ Name | Type |
 `value` | T |
 
 **Returns:** *[FutureMaybe](_future_.md#futuremaybe)‹T›*
+
+___
+
+### `Const` logLeft
+
+▸ **logLeft**(`m`: [Monad](../classes/_types_.monad.md)‹any›): *[Monad](../classes/_types_.monad.md)‹any›*
+
+*Defined in [src/Future.ts:127](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/Future.ts#L127)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`m` | [Monad](../classes/_types_.monad.md)‹any› |
+
+**Returns:** *[Monad](../classes/_types_.monad.md)‹any›*

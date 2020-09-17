@@ -14,7 +14,7 @@
 
 ▸ **T**(...`_`: any): *boolean*
 
-*Defined in [src/T.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/T.ts#L1)*
+*Defined in [src/T.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/T.ts#L1)*
 
 **Parameters:**
 

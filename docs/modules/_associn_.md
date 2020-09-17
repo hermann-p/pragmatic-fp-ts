@@ -18,7 +18,7 @@
 
 Ƭ **Path**: *string | number[]*
 
-*Defined in [src/assocIn.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/assocIn.ts#L4)*
+*Defined in [src/assocIn.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/assocIn.ts#L4)*
 
 ## Functions
 
@@ -26,7 +26,7 @@
 
 ▸ **assocIn**<**A**>(`path`: [Path](_associn_.md#path), `value`: any, `coll`: any[]): *A[]*
 
-*Defined in [src/assocIn.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/assocIn.ts#L5)*
+*Defined in [src/assocIn.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/assocIn.ts#L5)*
 
 **Type parameters:**
 
@@ -44,7 +44,7 @@ Name | Type |
 
 ▸ **assocIn**<**A**>(`path`: [Path](_associn_.md#path), `value`: any): *function*
 
-*Defined in [src/assocIn.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/assocIn.ts#L6)*
+*Defined in [src/assocIn.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/assocIn.ts#L6)*
 
 **Type parameters:**
 
@@ -69,7 +69,7 @@ Name | Type |
 
 ▸ **assocIn**<**A**>(`path`: [Path](_associn_.md#path)): *function*
 
-*Defined in [src/assocIn.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/assocIn.ts#L7)*
+*Defined in [src/assocIn.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/assocIn.ts#L7)*
 
 **Type parameters:**
 
@@ -101,7 +101,7 @@ Name | Type |
 
 ▸ **assocIn**<**A**>(`path`: [Path](_associn_.md#path), `value`: any, `dict`: A): *A*
 
-*Defined in [src/assocIn.ts:11](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/assocIn.ts#L11)*
+*Defined in [src/assocIn.ts:11](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/assocIn.ts#L11)*
 
 **Type parameters:**
 
@@ -119,7 +119,7 @@ Name | Type |
 
 ▸ **assocIn**<**A**>(`path`: [Path](_associn_.md#path), `value`: any): *function*
 
-*Defined in [src/assocIn.ts:16](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/assocIn.ts#L16)*
+*Defined in [src/assocIn.ts:16](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/assocIn.ts#L16)*
 
 **Type parameters:**
 

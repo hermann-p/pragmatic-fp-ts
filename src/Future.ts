@@ -15,9 +15,9 @@ import {
 import { Effect, Mappable, Monad, UnboxPromise } from "./types";
 
 export class Future<T, M extends Either<T> | Maybe<T>> {
-  readonly value: Promise<M>;
-  readonly bindDefault: Mappable<any, M>;
-  readonly bindError: Mappable<any, M>;
+  private readonly value: Promise<M>;
+  private readonly bindDefault: Mappable<any, M>;
+  private readonly bindError: Mappable<any, M>;
 
   constructor(bindDefault: Mappable<any, M>, bindError: Mappable<any, M>, value: M | Promise<M>) {
     this.bindDefault = bindDefault;
@@ -41,13 +41,14 @@ export class Future<T, M extends Either<T> | Maybe<T>> {
           return applied
             .then((appliedValue) => (m as Monad<T>)._(() => appliedValue))
             .catch((err) => {
-              console.log(err, toError(err));
               return toError(err);
-            });
+            })
+            .then(logLeft as any);
         } else {
-          return (m._ as any)(() => applied, errorHint);
+          return logLeft((m._ as any)(() => applied, errorHint));
         }
       } catch (err) {
+        console.log(err);
         return toError(err) as any;
       }
     };
@@ -84,10 +85,7 @@ export class Future<T, M extends Either<T> | Maybe<T>> {
     MT = M extends Either<T> ? EitherMatcher<T, Error, B> : MaybeMatcher<T, B>,
     TO = NonNullable<UnboxPromise<B>>
   >(matcher: MT): M extends Either<any> ? FutureEither<TO> : FutureMaybe<TO> {
-    const match = this.value
-      .then((m) => (m as any).match(matcher as any))
-      .then(this.bindDefault)
-      .catch(this.bindError);
+    const match = this.value.then((m) => (m as any).match(matcher as any)).then(this.bindDefault);
     return new Future(this.bindDefault as any, this.bindError as any, match as any) as any;
   }
 
@@ -118,10 +116,16 @@ export class Future<T, M extends Either<T> | Maybe<T>> {
   }
 }
 
-type FutureEither<T> = Future<T, Either<T, Error>>;
+type FutureEither<T> = Future<NonNullable<T>, Either<NonNullable<T>, Error>>;
 export const futureEither = <T>(value: T): FutureEither<T> =>
-  new Future<T, Either<T, Error>>(either, left, either(value));
+  new Future<NonNullable<T>, Either<NonNullable<T>, Error>>(either, left, either(value));
 
-type FutureMaybe<T> = Future<T, Maybe<T>>;
+type FutureMaybe<T> = Future<NonNullable<T>, Maybe<NonNullable<T>>>;
 export const futureMaybe = <T>(value: T): FutureMaybe<T> =>
-  new Future<T, Maybe<T>>(maybe, nothing, maybe(value));
+  new Future<NonNullable<T>, Maybe<NonNullable<T>>>(maybe, nothing, maybe(value));
+
+const logLeft = (m: Monad<any>) => {
+  if (isLeft(m)) console.log(m.getReason());
+
+  return m;
+};

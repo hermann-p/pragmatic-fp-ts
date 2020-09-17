@@ -14,7 +14,7 @@
 
 ▸ **get**<**A**>(`idx`: number, `coll`: A[]): *A*
 
-*Defined in [src/get.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/get.ts#L3)*
+*Defined in [src/get.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/get.ts#L3)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **get**<**A**>(`idx`: number): *function*
 
-*Defined in [src/get.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/get.ts#L4)*
+*Defined in [src/get.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/get.ts#L4)*
 
 **Type parameters:**
 
@@ -55,7 +55,7 @@ Name | Type |
 
 ▸ **get**<**V**, **K**>(`propName`: K, `dict`: V): *V[K]*
 
-*Defined in [src/get.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/get.ts#L5)*
+*Defined in [src/get.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/get.ts#L5)*
 
 **Type parameters:**
 
@@ -74,7 +74,7 @@ Name | Type |
 
 ▸ **get**<**K**>(`propName`: K): *function*
 
-*Defined in [src/get.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/get.ts#L6)*
+*Defined in [src/get.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/get.ts#L6)*
 
 **Type parameters:**
 

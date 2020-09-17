@@ -14,7 +14,7 @@
 
 ▸ **reject**<**A**>(`pred`: [Predicate](_types_.md#predicate)‹A›, `coll`: A[]): *A[]*
 
-*Defined in [src/reject.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/reject.ts#L3)*
+*Defined in [src/reject.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/reject.ts#L3)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **reject**<**A**>(`pred`: [Predicate](_types_.md#predicate)‹A›, `coll`: [Dictionary](_types_.md#dictionary)‹A›): *[Dictionary](_types_.md#dictionary)‹A›*
 
-*Defined in [src/reject.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/reject.ts#L4)*
+*Defined in [src/reject.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/reject.ts#L4)*
 
 **Type parameters:**
 
@@ -48,7 +48,7 @@ Name | Type |
 
 ▸ **reject**<**A**>(`pred`: [Predicate](_types_.md#predicate)‹A›): *function*
 
-*Defined in [src/reject.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/reject.ts#L8)*
+*Defined in [src/reject.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/reject.ts#L8)*
 
 **Type parameters:**
 
@@ -72,7 +72,7 @@ Name | Type |
 
 ▸ **reject**<**A**>(`pred`: [Predicate](_types_.md#predicate)‹A›): *function*
 
-*Defined in [src/reject.ts:9](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/reject.ts#L9)*
+*Defined in [src/reject.ts:9](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/reject.ts#L9)*
 
 **Type parameters:**
 

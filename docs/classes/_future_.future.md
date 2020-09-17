@@ -20,9 +20,9 @@
 
 ### Properties
 
-* [bindDefault](_future_.future.md#binddefault)
-* [bindError](_future_.future.md#binderror)
-* [value](_future_.future.md#value)
+* [bindDefault](_future_.future.md#private-binddefault)
+* [bindError](_future_.future.md#private-binderror)
+* [value](_future_.future.md#private-value)
 
 ### Methods
 
@@ -42,7 +42,7 @@
 
 \+ **new Future**(`bindDefault`: [Mappable](../modules/_types_.md#mappable)‹any, M›, `bindError`: [Mappable](../modules/_types_.md#mappable)‹any, M›, `value`: M | Promise‹M›): *[Future](_future_.future.md)*
 
-*Defined in [src/Future.ts:20](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/Future.ts#L20)*
+*Defined in [src/Future.ts:20](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/Future.ts#L20)*
 
 **Parameters:**
 
@@ -56,27 +56,27 @@ Name | Type |
 
 ## Properties
 
-###  bindDefault
+### `Private` bindDefault
 
 • **bindDefault**: *[Mappable](../modules/_types_.md#mappable)‹any, M›*
 
-*Defined in [src/Future.ts:19](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/Future.ts#L19)*
+*Defined in [src/Future.ts:19](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/Future.ts#L19)*
 
 ___
 
-###  bindError
+### `Private` bindError
 
 • **bindError**: *[Mappable](../modules/_types_.md#mappable)‹any, M›*
 
-*Defined in [src/Future.ts:20](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/Future.ts#L20)*
+*Defined in [src/Future.ts:20](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/Future.ts#L20)*
 
 ___
 
-###  value
+### `Private` value
 
 • **value**: *Promise‹M›*
 
-*Defined in [src/Future.ts:18](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/Future.ts#L18)*
+*Defined in [src/Future.ts:18](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/Future.ts#L18)*
 
 ## Methods
 
@@ -84,7 +84,7 @@ ___
 
 ▸ **_**<**U**, **TO**>(`f`: [Mappable](../modules/_types_.md#mappable)‹T, U | Promise‹U››, `errorHint?`: string | Error): *M extends Either<T, Error> ? FutureEither<TO> : FutureMaybe<TO>*
 
-*Defined in [src/Future.ts:28](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/Future.ts#L28)*
+*Defined in [src/Future.ts:28](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/Future.ts#L28)*
 
 **Type parameters:**
 
@@ -107,7 +107,7 @@ ___
 
 ▸ **effect**(`f`: [Effect](../modules/_types_.md#effect)‹T›): *M extends Either<T, Error> ? FutureEither<T> : FutureMaybe<T>*
 
-*Defined in [src/Future.ts:74](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/Future.ts#L74)*
+*Defined in [src/Future.ts:75](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/Future.ts#L75)*
 
 **Parameters:**
 
@@ -123,7 +123,7 @@ ___
 
 ▸ **effectAsync**(`f`: [Effect](../modules/_types_.md#effect)‹T›): *M extends Either<T, Error> ? FutureEither<T> : FutureMaybe<T>*
 
-*Defined in [src/Future.ts:94](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/Future.ts#L94)*
+*Defined in [src/Future.ts:92](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/Future.ts#L92)*
 
 **Parameters:**
 
@@ -139,7 +139,7 @@ ___
 
 ▸ **filter**(`pred`: [Mappable](../modules/_types_.md#mappable)‹T, boolean | Promise‹Boolean››, `errorHint?`: string | Error): *M extends Either<T, Error> ? FutureEither<T> : FutureMaybe<T>*
 
-*Defined in [src/Future.ts:58](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/Future.ts#L58)*
+*Defined in [src/Future.ts:59](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/Future.ts#L59)*
 
 **Parameters:**
 
@@ -156,7 +156,7 @@ ___
 
 ▸ **getMonad**(): *Promise‹M›*
 
-*Defined in [src/Future.ts:107](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/Future.ts#L107)*
+*Defined in [src/Future.ts:105](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/Future.ts#L105)*
 
 **Returns:** *Promise‹M›*
 
@@ -166,7 +166,7 @@ ___
 
 ▸ **getReason**(): *Promise‹void | [NilError](_types_.nilerror.md)‹››*
 
-*Defined in [src/Future.ts:111](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/Future.ts#L111)*
+*Defined in [src/Future.ts:109](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/Future.ts#L109)*
 
 **Returns:** *Promise‹void | [NilError](_types_.nilerror.md)‹››*
 
@@ -176,7 +176,7 @@ ___
 
 ▸ **getValue**(): *Promise‹T›*
 
-*Defined in [src/Future.ts:103](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/Future.ts#L103)*
+*Defined in [src/Future.ts:101](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/Future.ts#L101)*
 
 **Returns:** *Promise‹T›*
 
@@ -186,7 +186,7 @@ ___
 
 ▸ **getValueOr**(`alt`: T): *Promise‹T›*
 
-*Defined in [src/Future.ts:99](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/Future.ts#L99)*
+*Defined in [src/Future.ts:97](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/Future.ts#L97)*
 
 **Parameters:**
 
@@ -202,7 +202,7 @@ ___
 
 ▸ **match**<**B**, **MT**, **TO**>(`matcher`: MT): *M extends Either<any, Error> ? FutureEither<TO> : FutureMaybe<TO>*
 
-*Defined in [src/Future.ts:82](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/Future.ts#L82)*
+*Defined in [src/Future.ts:83](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/Future.ts#L83)*
 
 **Type parameters:**
 

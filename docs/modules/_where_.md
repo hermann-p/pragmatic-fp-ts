@@ -14,7 +14,7 @@
 
 ▸ **where**<**A**>(`pattern`: object, `dict`: A): *boolean*
 
-*Defined in [src/where.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/where.ts#L3)*
+*Defined in [src/where.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/where.ts#L3)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **where**<**P**>(`pattern`: P): *function*
 
-*Defined in [src/where.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/where.ts#L8)*
+*Defined in [src/where.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/where.ts#L8)*
 
 **Type parameters:**
 

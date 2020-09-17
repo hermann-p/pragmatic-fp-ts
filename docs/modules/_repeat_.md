@@ -14,7 +14,7 @@
 
 ▸ **repeat**<**A**>(`value`: A, `repetitions`: number): *A[]*
 
-*Defined in [src/repeat.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/repeat.ts#L1)*
+*Defined in [src/repeat.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/repeat.ts#L1)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **repeat**<**A**>(`value`: A): *function*
 
-*Defined in [src/repeat.ts:2](https://github.com/hermann-p/pragmatic-fp-ts/blob/44257be/src/repeat.ts#L2)*
+*Defined in [src/repeat.ts:2](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/repeat.ts#L2)*
 
 **Type parameters:**
 
