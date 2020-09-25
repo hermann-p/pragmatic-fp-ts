@@ -29,7 +29,7 @@ fn(-5) //: 6
 
 ▸ (`input`: A): *B*
 
-*Defined in [src/compose.ts:12](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/compose.ts#L12)*
+*Defined in [src/compose.ts:12](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/compose.ts#L12)*
 
 Composes unary functions from right to left, using infix/monadic binding style
 
@@ -77,7 +77,7 @@ Name | Type |
 
 \+ **new ComposeFunction**(`fn`: [Mappable](../modules/_types_.md#mappable)‹A, B›): *[ComposeFunction](_compose_.composefunction.md)*
 
-*Defined in [src/compose.ts:18](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/compose.ts#L18)*
+*Defined in [src/compose.ts:18](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/compose.ts#L18)*
 
 **Parameters:**
 
@@ -95,7 +95,7 @@ Name | Type |
 
 *Inherited from void*
 
-Defined in node_modules/typescript/lib/lib.es5.d.ts:302
+Defined in node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:302
 
 ___
 
@@ -105,7 +105,7 @@ ___
 
 *Inherited from void*
 
-Defined in node_modules/typescript/lib/lib.es5.d.ts:303
+Defined in node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:303
 
 ___
 
@@ -113,7 +113,7 @@ ___
 
 • **fn**: *[Mappable](../modules/_types_.md#mappable)‹A, B›*
 
-*Defined in [src/compose.ts:18](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/compose.ts#L18)*
+*Defined in [src/compose.ts:18](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/compose.ts#L18)*
 
 ___
 
@@ -123,7 +123,7 @@ ___
 
 *Inherited from void*
 
-Defined in node_modules/typescript/lib/lib.es5.d.ts:299
+Defined in node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:299
 
 ___
 
@@ -133,7 +133,7 @@ ___
 
 *Inherited from void*
 
-Defined in node_modules/typescript/lib/lib.es2015.core.d.ts:97
+Defined in node_modules/typedoc/node_modules/typescript/lib/lib.es2015.core.d.ts:97
 
 Returns the name of the function. Function names are read-only and can not be changed.
 
@@ -145,7 +145,7 @@ ___
 
 *Inherited from void*
 
-Defined in node_modules/typescript/lib/lib.es5.d.ts:298
+Defined in node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:298
 
 ___
 
@@ -153,7 +153,7 @@ ___
 
 ▪ **Function**: *FunctionConstructor*
 
-Defined in node_modules/typescript/lib/lib.es5.d.ts:316
+Defined in node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:316
 
 ## Methods
 
@@ -163,7 +163,7 @@ Defined in node_modules/typescript/lib/lib.es5.d.ts:316
 
 *Inherited from void*
 
-Defined in node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts:157
+Defined in node_modules/typedoc/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts:157
 
 Determines whether the given value inherits from this function if this function was used
 as a constructor function.
@@ -185,7 +185,7 @@ ___
 
 ▸ **_**<**C**>(`after`: [Mappable](../modules/_types_.md#mappable)‹C, A›): *[ComposeFunction](_compose_.composefunction.md)‹C, B›*
 
-*Defined in [src/compose.ts:14](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/compose.ts#L14)*
+*Defined in [src/compose.ts:14](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/compose.ts#L14)*
 
 **Type parameters:**
 
@@ -207,7 +207,7 @@ ___
 
 *Inherited from void*
 
-Defined in node_modules/typescript/lib/lib.es5.d.ts:278
+Defined in node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:278
 
 Calls the function, substituting the specified object for the this value of the function, and the specified array for the arguments of the function.
 
@@ -229,7 +229,7 @@ ___
 
 *Inherited from void*
 
-Defined in node_modules/typescript/lib/lib.es5.d.ts:293
+Defined in node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:293
 
 For a given function, creates a bound function that has the same body as the original function.
 The this object of the bound function is associated with the specified object, and has the specified initial parameters.
@@ -252,7 +252,7 @@ ___
 
 *Inherited from void*
 
-Defined in node_modules/typescript/lib/lib.es5.d.ts:285
+Defined in node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:285
 
 Calls a method of an object, substituting another object for the current object.
 
@@ -274,7 +274,7 @@ ___
 
 *Inherited from void*
 
-Defined in node_modules/typescript/lib/lib.es5.d.ts:296
+Defined in node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:296
 
 Returns a string representation of a function.
 

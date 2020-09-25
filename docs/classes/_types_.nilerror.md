@@ -27,7 +27,7 @@
 
 \+ **new NilError**(`message`: string): *[NilError](_types_.nilerror.md)*
 
-*Defined in [src/types.ts:30](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/types.ts#L30)*
+*Defined in [src/types.ts:30](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/types.ts#L30)*
 
 **Parameters:**
 
@@ -45,7 +45,7 @@ Name | Type | Default |
 
 *Inherited from void*
 
-Defined in node_modules/typescript/lib/lib.es5.d.ts:974
+Defined in node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:974
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 *Inherited from void*
 
-Defined in node_modules/typescript/lib/lib.es5.d.ts:973
+Defined in node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:973
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 *Overrides void*
 
-Defined in node_modules/typescript/lib/lib.es5.d.ts:975
+Defined in node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:975
 
 ___
 
@@ -75,4 +75,4 @@ ___
 
 ▪ **Error**: *ErrorConstructor*
 
-Defined in node_modules/typescript/lib/lib.es5.d.ts:984
+Defined in node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:984

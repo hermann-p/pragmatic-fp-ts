@@ -14,7 +14,7 @@
 
 ▸ **eqProps**<**V**, **K**>(`propName`: K, `a`: V, `b`: V): *boolean*
 
-*Defined in [src/eqProps.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/eqProps.ts#L5)*
+*Defined in [src/eqProps.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/eqProps.ts#L5)*
 
 **Type parameters:**
 
@@ -34,7 +34,7 @@ Name | Type |
 
 ▸ **eqProps**<**T**, **K**>(`propName`: K, `a`: T): *function*
 
-*Defined in [src/eqProps.ts:10](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/eqProps.ts#L10)*
+*Defined in [src/eqProps.ts:10](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/eqProps.ts#L10)*
 
 **Type parameters:**
 
@@ -61,7 +61,7 @@ Name | Type |
 
 ▸ **eqProps**<**K**>(`propName`: K): *function*
 
-*Defined in [src/eqProps.ts:14](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/eqProps.ts#L14)*
+*Defined in [src/eqProps.ts:14](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/eqProps.ts#L14)*
 
 **Type parameters:**
 

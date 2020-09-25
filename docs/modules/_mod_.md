@@ -14,7 +14,7 @@
 
 ▸ **mod**(`modulus`: number, `n`: number): *number*
 
-*Defined in [src/mod.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/mod.ts#L1)*
+*Defined in [src/mod.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/mod.ts#L1)*
 
 **Parameters:**
 
@@ -27,7 +27,7 @@ Name | Type |
 
 ▸ **mod**(`modulus`: number): *function*
 
-*Defined in [src/mod.ts:2](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/mod.ts#L2)*
+*Defined in [src/mod.ts:2](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/mod.ts#L2)*
 
 **Parameters:**
 

@@ -15,7 +15,7 @@
 
 ▸ **groupWith**<**A**>(`isEqual`: [Equality](_types_.md#equality)‹A›, `coll`: A[]): *A[][]*
 
-*Defined in [src/groupWith.ts:18](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/groupWith.ts#L18)*
+*Defined in [src/groupWith.ts:18](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/groupWith.ts#L18)*
 
 **Type parameters:**
 
@@ -32,7 +32,7 @@ Name | Type |
 
 ▸ **groupWith**<**A**>(`isEqual`: [Equality](_types_.md#equality)‹A›): *function*
 
-*Defined in [src/groupWith.ts:19](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/groupWith.ts#L19)*
+*Defined in [src/groupWith.ts:19](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/groupWith.ts#L19)*
 
 **Type parameters:**
 
@@ -60,7 +60,7 @@ ___
 
 ▸ **performGrouping**<**A**>(`cmp`: [Equality](_types_.md#equality)‹A›, `elems`: A[]): *A[][]*
 
-*Defined in [src/groupWith.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/groupWith.ts#L3)*
+*Defined in [src/groupWith.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/groupWith.ts#L3)*
 
 **Type parameters:**
 

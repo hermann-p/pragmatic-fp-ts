@@ -14,7 +14,7 @@
 
 ▸ **tap**<**A**, **M**>(`effect`: [Effect](_types_.md#effect)‹A›, `value`: [Monad](../classes/_types_.monad.md)‹A›): *M*
 
-*Defined in [src/tap.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/tap.ts#L3)*
+*Defined in [src/tap.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/tap.ts#L3)*
 
 **Type parameters:**
 
@@ -33,7 +33,7 @@ Name | Type |
 
 ▸ **tap**<**A**, **M**>(`effect`: [Effect](_types_.md#effect)‹A›): *function*
 
-*Defined in [src/tap.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/tap.ts#L7)*
+*Defined in [src/tap.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/tap.ts#L7)*
 
 **Type parameters:**
 
@@ -59,7 +59,7 @@ Name | Type |
 
 ▸ **tap**<**A**>(`effect`: [Effect](_types_.md#effect)‹A›, `value`: A): *A*
 
-*Defined in [src/tap.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/tap.ts#L8)*
+*Defined in [src/tap.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/tap.ts#L8)*
 
 **Type parameters:**
 
@@ -76,7 +76,7 @@ Name | Type |
 
 ▸ **tap**<**A**>(`effect`: [Effect](_types_.md#effect)‹A›): *function*
 
-*Defined in [src/tap.ts:9](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/tap.ts#L9)*
+*Defined in [src/tap.ts:9](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/tap.ts#L9)*
 
 **Type parameters:**
 

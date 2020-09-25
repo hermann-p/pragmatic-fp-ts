@@ -14,7 +14,7 @@
 
 ▸ **isFunction**<**F**>(`f`: F | any): *f is F*
 
-*Defined in [src/isFunction.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/isFunction.ts#L1)*
+*Defined in [src/isFunction.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/isFunction.ts#L1)*
 
 **Type parameters:**
 

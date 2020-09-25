@@ -43,5 +43,5 @@ export declare function isRight<R = any, L = Error>(el: unknown): el is Right<R,
 export declare function isEither<R = any, L = Error>(el: unknown): el is Either<R, L>;
 export declare const throwLeftAsError: {
     right: (data: any) => any;
-    left: (reason: string | Error) => any;
+    left: (reason: Error | string) => any;
 };

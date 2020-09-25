@@ -25,7 +25,7 @@
 
 Ƭ **FutureEither**: *[Future](../classes/_future_.future.md)‹NonNullable‹T›, [Either](_either_.md#either)‹NonNullable‹T›, Error››*
 
-*Defined in [src/Future.ts:119](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/Future.ts#L119)*
+*Defined in [src/Future.ts:119](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/Future.ts#L119)*
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 Ƭ **FutureMaybe**: *[Future](../classes/_future_.future.md)‹NonNullable‹T›, [Maybe](_maybe_.md#maybe)‹NonNullable‹T›››*
 
-*Defined in [src/Future.ts:123](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/Future.ts#L123)*
+*Defined in [src/Future.ts:123](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/Future.ts#L123)*
 
 ## Functions
 
@@ -41,7 +41,7 @@ ___
 
 ▸ **futureEither**<**T**>(`value`: T): *[FutureEither](_future_.md#futureeither)‹T›*
 
-*Defined in [src/Future.ts:120](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/Future.ts#L120)*
+*Defined in [src/Future.ts:120](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/Future.ts#L120)*
 
 **Type parameters:**
 
@@ -61,7 +61,7 @@ ___
 
 ▸ **futureMaybe**<**T**>(`value`: T): *[FutureMaybe](_future_.md#futuremaybe)‹T›*
 
-*Defined in [src/Future.ts:124](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/Future.ts#L124)*
+*Defined in [src/Future.ts:124](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/Future.ts#L124)*
 
 **Type parameters:**
 
@@ -81,7 +81,7 @@ ___
 
 ▸ **logLeft**(`m`: [Monad](../classes/_types_.monad.md)‹any›): *[Monad](../classes/_types_.monad.md)‹any›*
 
-*Defined in [src/Future.ts:127](https://github.com/hermann-p/pragmatic-fp-ts/blob/1e5cfe0/src/Future.ts#L127)*
+*Defined in [src/Future.ts:127](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/Future.ts#L127)*
 
 **Parameters:**
 
