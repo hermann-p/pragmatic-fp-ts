@@ -9,7 +9,7 @@ describe("intersects()", () => {
     expect(intersects(arrA)(arrB)).toBe(false);
   });
 
-  it.only("should find intersections", () => {
+  it("should find intersections", () => {
     expect(intersects(arrA, arrC)).toBe(true);
   });
 });
