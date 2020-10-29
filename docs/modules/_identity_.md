@@ -14,7 +14,7 @@
 
 ▸ **identity**<**A**>(`value`: A): *A*
 
-*Defined in [src/identity.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/identity.ts#L1)*
+*Defined in [src/identity.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/ae00bcd/src/identity.ts#L1)*
 
 **Type parameters:**
 

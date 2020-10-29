@@ -14,7 +14,7 @@
 
 ▸ **sequentialize**<**A**, **B**>(`fn`: function, `coll`: A[]): *Promise‹B[]›*
 
-*Defined in [src/sequentialize.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/sequentialize.ts#L3)*
+*Defined in [src/sequentialize.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/ae00bcd/src/sequentialize.ts#L3)*
 
 **Type parameters:**
 
@@ -40,7 +40,7 @@ Name | Type |
 
 ▸ **sequentialize**<**A**, **B**>(`fn`: function): *function*
 
-*Defined in [src/sequentialize.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/sequentialize.ts#L8)*
+*Defined in [src/sequentialize.ts:8](https://github.com/hermann-p/pragmatic-fp-ts/blob/ae00bcd/src/sequentialize.ts#L8)*
 
 **Type parameters:**
 

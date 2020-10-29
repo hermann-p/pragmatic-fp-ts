@@ -14,7 +14,7 @@
 
 ▸ **sort**<**A**>(`input`: A[]): *A[]*
 
-*Defined in [src/sort.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/sort.ts#L1)*
+*Defined in [src/sort.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/ae00bcd/src/sort.ts#L1)*
 
 **Type parameters:**
 

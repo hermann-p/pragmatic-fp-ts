@@ -92,6 +92,8 @@
 * ["insert"](modules/_insert_.md)
 * ["insertAll"](modules/_insertall_.md)
 * ["intersection"](modules/_intersection_.md)
+* ["intersects"](modules/_intersects_.md)
+* ["intersectsBy"](modules/_intersectsby_.md)
 * ["intersperse"](modules/_intersperse_.md)
 * ["into"](modules/_into_.md)
 * ["invert"](modules/_invert_.md)

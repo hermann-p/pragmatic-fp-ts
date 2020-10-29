@@ -22,7 +22,7 @@
 
 ▸ (`input`: A): *B*
 
-*Defined in [src/pipe.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/pipe.ts#L3)*
+*Defined in [src/pipe.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/ae00bcd/src/pipe.ts#L3)*
 
 **Parameters:**
 
@@ -63,7 +63,7 @@ Name | Type |
 
 \+ **new PipeFunction**(`fn`: [Mappable](../modules/_types_.md#mappable)‹A, B›): *[PipeFunction](_pipe_.pipefunction.md)*
 
-*Defined in [src/pipe.ts:9](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/pipe.ts#L9)*
+*Defined in [src/pipe.ts:9](https://github.com/hermann-p/pragmatic-fp-ts/blob/ae00bcd/src/pipe.ts#L9)*
 
 **Parameters:**
 
@@ -99,7 +99,7 @@ ___
 
 • **fn**: *[Mappable](../modules/_types_.md#mappable)‹A, B›*
 
-*Defined in [src/pipe.ts:9](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/pipe.ts#L9)*
+*Defined in [src/pipe.ts:9](https://github.com/hermann-p/pragmatic-fp-ts/blob/ae00bcd/src/pipe.ts#L9)*
 
 ___
 
@@ -171,7 +171,7 @@ ___
 
 ▸ **_**<**C**>(`nextFn`: [Mappable](../modules/_types_.md#mappable)‹B, C›): *[PipeFunction](_pipe_.pipefunction.md)‹A, C›*
 
-*Defined in [src/pipe.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/pipe.ts#L5)*
+*Defined in [src/pipe.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/ae00bcd/src/pipe.ts#L5)*
 
 **Type parameters:**
 

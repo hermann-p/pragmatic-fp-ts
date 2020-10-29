@@ -18,7 +18,7 @@
 
 Ƭ **ObjEffect**: *function*
 
-*Defined in [src/forEach.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/forEach.ts#L5)*
+*Defined in [src/forEach.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/ae00bcd/src/forEach.ts#L5)*
 
 #### Type declaration:
 
@@ -37,7 +37,7 @@ Name | Type |
 
 ▸ **forEach**<**A**>(`effect`: [Effect](_types_.md#effect)‹A›, `coll`: A[]): *A[]*
 
-*Defined in [src/forEach.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/forEach.ts#L6)*
+*Defined in [src/forEach.ts:6](https://github.com/hermann-p/pragmatic-fp-ts/blob/ae00bcd/src/forEach.ts#L6)*
 
 **Type parameters:**
 
@@ -54,7 +54,7 @@ Name | Type |
 
 ▸ **forEach**<**A**>(`effect`: [Effect](_types_.md#effect)‹A›, `coll`: [Dictionary](_types_.md#dictionary)‹A›): *[Dictionary](_types_.md#dictionary)‹A›*
 
-*Defined in [src/forEach.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/forEach.ts#L7)*
+*Defined in [src/forEach.ts:7](https://github.com/hermann-p/pragmatic-fp-ts/blob/ae00bcd/src/forEach.ts#L7)*
 
 **Type parameters:**
 
@@ -71,7 +71,7 @@ Name | Type |
 
 ▸ **forEach**<**A**>(`effect`: [Effect](_types_.md#effect)‹A›): *function*
 
-*Defined in [src/forEach.ts:11](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/forEach.ts#L11)*
+*Defined in [src/forEach.ts:11](https://github.com/hermann-p/pragmatic-fp-ts/blob/ae00bcd/src/forEach.ts#L11)*
 
 **Type parameters:**
 

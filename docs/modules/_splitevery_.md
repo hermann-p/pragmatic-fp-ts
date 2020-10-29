@@ -14,7 +14,7 @@
 
 ▸ **splitEvery**<**A**>(`n`: number, `coll`: A[]): *A[][]*
 
-*Defined in [src/splitEvery.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/splitEvery.ts#L1)*
+*Defined in [src/splitEvery.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/ae00bcd/src/splitEvery.ts#L1)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **splitEvery**<**A**>(`n`: number, `text`: string): *string[]*
 
-*Defined in [src/splitEvery.ts:2](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/splitEvery.ts#L2)*
+*Defined in [src/splitEvery.ts:2](https://github.com/hermann-p/pragmatic-fp-ts/blob/ae00bcd/src/splitEvery.ts#L2)*
 
 **Type parameters:**
 
@@ -48,7 +48,7 @@ Name | Type |
 
 ▸ **splitEvery**(`n`: number): *function*
 
-*Defined in [src/splitEvery.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/splitEvery.ts#L3)*
+*Defined in [src/splitEvery.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/ae00bcd/src/splitEvery.ts#L3)*
 
 **Parameters:**
 

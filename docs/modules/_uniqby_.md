@@ -14,7 +14,7 @@
 
 ▸ **uniqBy**<**A**, **B**>(`cmp`: [Mappable](_types_.md#mappable)‹A, B›, `a`: A[]): *A[]*
 
-*Defined in [src/uniqBy.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/uniqBy.ts#L3)*
+*Defined in [src/uniqBy.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/ae00bcd/src/uniqBy.ts#L3)*
 
 **Type parameters:**
 
@@ -33,7 +33,7 @@ Name | Type |
 
 ▸ **uniqBy**<**A**, **B**>(`cmp`: [Mappable](_types_.md#mappable)‹A, B›): *function*
 
-*Defined in [src/uniqBy.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/uniqBy.ts#L4)*
+*Defined in [src/uniqBy.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/ae00bcd/src/uniqBy.ts#L4)*
 
 **Type parameters:**
 

@@ -14,7 +14,7 @@
 
 ▸ **dropRepeats**<**A**>(`coll`: A[]): *A[]*
 
-*Defined in [src/dropRepeats.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/dropRepeats.ts#L5)*
+*Defined in [src/dropRepeats.ts:5](https://github.com/hermann-p/pragmatic-fp-ts/blob/ae00bcd/src/dropRepeats.ts#L5)*
 
 **Type parameters:**
 

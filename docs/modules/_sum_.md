@@ -14,7 +14,7 @@
 
 ▸ **sum**(`coll`: number[]): *number*
 
-*Defined in [src/sum.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/sum.ts#L3)*
+*Defined in [src/sum.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/ae00bcd/src/sum.ts#L3)*
 
 **Parameters:**
 

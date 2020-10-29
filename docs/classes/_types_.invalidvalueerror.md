@@ -27,7 +27,7 @@
 
 \+ **new InvalidValueError**(`moreDetails`: string): *[InvalidValueError](_types_.invalidvalueerror.md)*
 
-*Defined in [src/types.ts:40](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/types.ts#L40)*
+*Defined in [src/types.ts:40](https://github.com/hermann-p/pragmatic-fp-ts/blob/ae00bcd/src/types.ts#L40)*
 
 **Parameters:**
 

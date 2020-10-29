@@ -1,0 +1,75 @@
+# Pragmatic-fp-ts
+
+A library for functional programming in TypeScript.
+
+- Curried, argument-last, pure, total functions that never mutate any data
+- Lenses
+- Maybe/Either/Chain/Future monads.
+
+There&rsquo;s not enough JavaScript libraries to choose from. &#x2013; no one, never
+
+This is a quick implementation of most of the FP tools I need in may daily work.
+Typings are kept as as simple as possible, although this may include some dirty
+castings under the hood. Still, it is quite shiny when seen from the outside.
+
+## How to get
+
+It&rsquo;s on npmjs.com, so you should know the drill.
+
+- **npm:** npm install &#x2013;save pragmatic-fp-ts
+- **yarn:** yarn add pragmatic-fp-ts
+- Currently no single .min.js for easy import via browser tags exists. This is
+  because webpack and I dislike each other. I tried using the parcel bundler,
+  but the resulting bundle file size exploded while at the same time the .d.ts
+  files disappeared. Anyone bothers to help?
+
+<a id="orge1c3a5a"></a>
+
+# Breaking changes
+
+### 1.0
+
+- functions no longer return Maybe monads as default
+- some function names changed
+- `<Monad>.match()` no longer automatically catch errors, so they can be used as
+  to throw when absolutely needed without leaving the monads&rsquo; flow
+
+# Differences to `Ramda` / `lodash/fp`
+
+- written in TS from the beginning with emphasis on inferring types over just
+  being `any`
+- a very small subset of Ramda functions is not implemented (at the time of
+  writing, flavours of merge are the most noteworthy)
+- very little function names differ
+- `innerJoin` behaves more like one would expect from an inner database join
+- `compose` and `pipe` use monadic-style infix composition instead of just
+  accepting arguments. This allows for type-checked composition of an arbitrary
+  number of functions in contrast to ramda&rsquo;s &ldquo;list overloads&rdquo; (or lodash&rsquo;s &ldquo;it&rsquo;s
+  any!&rdquo;) approach
+- return types look much cleaner and are arguably more readable by avoiding
+  constructs like `Curry4<Map<Filter<...` and being more like `<A,B>(value: A) => B[]`
+- no support for fantasy-land objects/functors
+
+# Plans for the future
+
+- improve automatic type inference further
+- make use of TS4 variadic types to save boilerplate
+- implement helpful functions found in lodash/Clojure
+
+# Collaboration
+
+- If you miss any FP construct, feel free to open an issue or PR. It&rsquo;s probably
+  missing because I forgot to implement it/didn&rsquo;t need it yet. If it makes sense
+  to me to have it here, I&rsquo;ll implement it.
+- Comments/PRs are very welcome, especially if you want to improve the docs.
+
+# History
+
+- **1.3:** Added future monads
+- **1.2:** More additional functions
+- **1.1:** Deprecation of `<Monad>.bind` method-name, favouring `<Monad>._` to avoid confusion for OO-JS-programmers. Added `flow`, `pipe` and `compose` functions.
+- **1.0:** Added ~100 more functions, [breaking changes](#orge1c3a5a)
+
+# License
+
+MIT

@@ -78,6 +78,8 @@ export * from "./innerJoin";
 export * from "./insert";
 export * from "./insertAll";
 export * from "./intersection";
+export * from "./intersects";
+export * from "./intersectsBy";
 export * from "./intersperse";
 export * from "./into";
 export * from "./invert";

@@ -1,0 +1,14 @@
+site_name: pragmatic-fp-ts
+nav:
+  - Home: index.md
+  - FP Concepts:
+      - Composition: composition.md
+      - Lenses: lenses.md
+  - Function overview:
+      - Math: math.md
+      - Arrays: arrays.md
+      - Objects: objects.md
+  - Monads:
+      - Either/Maybe/Chain: monads.md
+      - Futures: futures.md
+theme: readthedocs

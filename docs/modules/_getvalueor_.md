@@ -14,7 +14,7 @@
 
 ▸ **getValueOr**<**T**>(`alt`: T, `candidate`: [MonadType](_types_.md#monadtype)‹T› | undefined): *T*
 
-*Defined in [src/getValueOr.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/getValueOr.ts#L3)*
+*Defined in [src/getValueOr.ts:3](https://github.com/hermann-p/pragmatic-fp-ts/blob/ae00bcd/src/getValueOr.ts#L3)*
 
 **Type parameters:**
 
@@ -31,7 +31,7 @@ Name | Type |
 
 ▸ **getValueOr**<**T**>(`alt`: T): *function*
 
-*Defined in [src/getValueOr.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/getValueOr.ts#L4)*
+*Defined in [src/getValueOr.ts:4](https://github.com/hermann-p/pragmatic-fp-ts/blob/ae00bcd/src/getValueOr.ts#L4)*
 
 **Type parameters:**
 

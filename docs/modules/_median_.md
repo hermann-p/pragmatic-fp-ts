@@ -14,7 +14,7 @@
 
 ▸ **median**(`ns`: number[]): *number*
 
-*Defined in [src/median.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/87551e7/src/median.ts#L1)*
+*Defined in [src/median.ts:1](https://github.com/hermann-p/pragmatic-fp-ts/blob/ae00bcd/src/median.ts#L1)*
 
 **Parameters:**
 
