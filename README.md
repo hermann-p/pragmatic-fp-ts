@@ -2,10 +2,10 @@
 
 A library for functional programming in TypeScript. Curried,
 argument-last, pure, total functions that never mutate any data,
-Maybe/Either/Chain monads.
+Maybe/Either/Chain monads, FutureEither/FutureMaybe monad-likes.
 
-> There's not enough JavaScript libraries to choose from.
-> -- <cite>no one, never</cite>
+> <cite>There's not enough JavaScript libraries to choose from.</cite>
+> -- no one, never
 
 This is a quick implementation of most of the FP tools I need in may
 daily work. Typings are kept as as simple as possible, although this
@@ -63,54 +63,31 @@ An elaborated readme will follow. Until then, you can see the
 # Plans for the future
 
 - auto-infer even more types (although it's already quite good)
-- add Futures
 - improve typing even more once TS implements variadic types
 - implement some more helpful functions found e.g. in lodash or
   Clojure
 
-# FAQ
-
-## What about MaybeAsync/EitherAsync?
-
-Not implemented yet, I'm sorry. Wanna make a PR? Until then, my suggested workaround:
-
-``` javascript
-// have some Promise returning a Maybe:
-const fnWithMaybe = () => Promise.resolve(Maybe("value"))
-
-// inside an async fn
-(await fnWithMaybe())
-  .bind(doStuff)
-  .filter(condition)
-  .getValue() // or whatever
-
-// or outside async fn
-fnWithMaybe()
-  .then(optional =>
-    optional
-      .bind(...)
-      .filter(...)
-      .getValue()
-  )
-
-// have some Promise returning a value:
-const fn = () => Promise.resolve("value")
-
-// inside async fn
-maybe(await fn())
-  .bind(doStuff)
-  .filter(condition)
-  .getValue() // ...
-
-// outside async fn
-fn()
-  .then(value =>
-    maybe(value)
-      .bind(...)
-  ) // etc
-```
-
 # History
+
+## 1.3.4
+
+Removed `mori` dependency. The runtime library is now completely self-contained.
+As a Clojure guy I relied on some of mori's functionality for the heavy lifting
+of deep get/set/update/equal operations.  
+Sadly, to use mori's high performance algorithms, data had to be cast to mori
+data and back to JS-data after finishing, crippling performance within large
+data sets, so these functions are now completely re-implemented in "plain
+TypeScript" with a recursive, queue-based approach to path-getting.  
+Deep equality implementation is based on
+[epoberezkin/fast-deep-equal](https://github.com/epoberezkin/fast-deep-equal)
+
+## 1.3
+
+Added quick intersection testing functions.
+
+## 1.2
+
+Implemented monadic Futures.
 
 ## 1.1
 
@@ -139,3 +116,7 @@ fn()
   It's probably missing because I forgot to implement it/didn't need
   it yet. If it makes sense to me to have it here, I'll implement it.
 - Comments/PRs are very welcome, especially if you want to improve the docs.
+
+# License
+
+MIT
