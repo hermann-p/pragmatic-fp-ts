@@ -146,6 +146,13 @@ describe("fns", () => {
       const dict = { foo: 1, bar: 2 };
       expect(l.dissoc("foo")(dict)).toEqual({ bar: 2 });
     });
+
+    it("should remove items from arrays", () => {
+      expect(l.dissoc(1)(["foo", "bar", "baz"])).toEqual(["foo", "baz"]);
+      expect(l.dissoc(0)([1])).toEqual([]);
+      expect(l.dissoc(19, [])).toEqual([]);
+      expect(l.dissoc(19, [1])).toEqual([1]);
+    });
   });
 
   describe("dissocIn()", () => {

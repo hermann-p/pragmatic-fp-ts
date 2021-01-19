@@ -1,13 +1,12 @@
-import mori from "mori";
-import { chain, getValue, getValueOr } from "./main";
+import { dissoc, getValue, getValueOr, updateIn } from "./main";
 
 // dissociates an element somewhere within a path
 
-type Lens = string[];
-export function dissocIn<A extends {} | any[]>(path: Lens, dict: A): A;
-export function dissocIn(path: Lens): <A extends {}>(dict: A) => A;
+type Path = (string | number)[];
+export function dissocIn<A extends {} | any[]>(path: Path, dict: A): A;
+export function dissocIn(path: Path): <A extends {}>(dict: A) => A;
 
-export function dissocIn<A extends {}>(path: Lens, dict?: A) {
+export function dissocIn<A extends {}>(path: Path, dict?: A) {
   if (arguments.length === 1) {
     return (theDict: A) => dissocIn(path, theDict);
   }
@@ -17,13 +16,5 @@ export function dissocIn<A extends {}>(path: Lens, dict?: A) {
   const prop = thePath[thePath.length - 1];
   const theDict = getValueOr({} as any, dict);
 
-  return chain(theDict)
-    .bind(mori.toClj)
-    .bind((d) =>
-      mori.updateIn(d, mori.toClj(pathPrefix), (el: any) =>
-        mori.dissoc(el, prop)
-      )
-    )
-    .bind(mori.toJs)
-    .getValue();
+  return updateIn(pathPrefix, dissoc(prop as any) as any, theDict);
 }

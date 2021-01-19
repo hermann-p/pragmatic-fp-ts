@@ -44,12 +44,7 @@ describe("Future", () => {
       const num = l.futureEither(1);
       expect(await num.filter(asyncOdd).getMonad()).toBeInstanceOf(l.Right);
       expect(await num.filter(asyncEven).getMonad()).toBeInstanceOf(l.Left);
-      expect(
-        await num
-          .filter(asyncEven)
-          ._(l.add(1))
-          .getMonad()
-      ).toBeInstanceOf(l.Left);
+      expect(await num.filter(asyncEven)._(l.add(1)).getMonad()).toBeInstanceOf(l.Left);
     });
 
     it("should bind effect", async () => {
@@ -65,7 +60,7 @@ describe("Future", () => {
       const num = l.futureEither("foo");
       let p: Promise<any> = null as any;
       const updateAsync = () => {
-        p = new Promise((resolve) => {
+        p = new Promise<void>((resolve) => {
           setTimeout(() => {
             value += 1;
             resolve();
@@ -116,10 +111,7 @@ describe("Future", () => {
 
     it("should rethrow errors", async () => {
       await expect(
-        l
-          .futureEither(l.left<number>(new Error()))
-          .match(l.throwLeftAsError)
-          .getValue()
+        l.futureEither(l.left<number>(new Error())).match(l.throwLeftAsError).getValue()
       ).rejects.toBeInstanceOf(Error);
     });
   });
@@ -155,24 +147,14 @@ describe("Future", () => {
       const num = l.futureMaybe(1);
       expect(await num.filter(odd).getMonad()).toBeInstanceOf(l.Just);
       expect(await num.filter(even).getMonad()).toBeInstanceOf(l.Nothing);
-      expect(
-        await num
-          .filter(even)
-          ._(l.add(1))
-          .getMonad()
-      ).toBeInstanceOf(l.Nothing);
+      expect(await num.filter(even)._(l.add(1)).getMonad()).toBeInstanceOf(l.Nothing);
     });
 
     it("should filter values with predicate promises", async () => {
       const num = l.futureMaybe(1);
       expect(await num.filter(asyncOdd).getMonad()).toBeInstanceOf(l.Just);
       expect(await num.filter(asyncEven).getMonad()).toBeInstanceOf(l.Nothing);
-      expect(
-        await num
-          .filter(asyncEven)
-          ._(l.add(1))
-          .getMonad()
-      ).toBeInstanceOf(l.Nothing);
+      expect(await num.filter(asyncEven)._(l.add(1)).getMonad()).toBeInstanceOf(l.Nothing);
     });
 
     it("should bind effect", async () => {
@@ -188,7 +170,7 @@ describe("Future", () => {
       const num = l.futureMaybe("foo");
       let p: Promise<any> = null as any;
       const updateAsync = () => {
-        p = new Promise((resolve) => {
+        p = new Promise<void>((resolve) => {
           setTimeout(() => {
             value += 1;
             resolve();

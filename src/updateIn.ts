@@ -1,5 +1,4 @@
-import m from "mori";
-import { chain, Dictionary, Endomorphism, getValueOr } from "./main";
+import { chain, Dictionary, Endomorphism, getValueOr, getIn, assocIn } from "./main";
 
 type ObjKey = string | number;
 export function updateIn<TInput extends Dictionary, A, B>(
@@ -15,9 +14,7 @@ export function updateIn<A>(
 
 export function updateIn(
   path: ObjKey[]
-): <A>(
-  fn: Endomorphism<A>
-) => <TInput extends Dictionary>(dict: TInput) => TInput;
+): <A>(fn: Endomorphism<A>) => <TInput extends Dictionary>(dict: TInput) => TInput;
 
 export function updateIn<TInput extends Dictionary, A>(
   path: ObjKey[],
@@ -26,9 +23,7 @@ export function updateIn<TInput extends Dictionary, A>(
 ) {
   if (arguments.length === 1) {
     return function (_fn: Endomorphism<A>, _dict?: TInput) {
-      return arguments.length === 1
-        ? updateIn(path, _fn)
-        : updateIn(path, _fn, _dict!);
+      return arguments.length === 1 ? updateIn(path, _fn) : updateIn(path, _fn, _dict!);
     };
   } else if (arguments.length === 2) {
     return (_dict: TInput) => updateIn(path, fn!, _dict);
@@ -37,8 +32,8 @@ export function updateIn<TInput extends Dictionary, A>(
   const p = getValueOr([], path);
   const d = getValueOr({} as any, dict);
   return chain(d)
-    .bind(m.toClj)
-    .bind((dd) => m.updateIn(dd, p, fn))
-    .bind(m.toJs)
+    .bind(getIn(p))
+    .bind(fn as any)
+    .bind((result) => assocIn(path, result, d))
     .getValueOr({});
 }

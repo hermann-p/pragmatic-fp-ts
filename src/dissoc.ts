@@ -1,27 +1,30 @@
-import mori from "mori";
-import { chain, getValue, getValueOr } from "./main";
+// Removes a key from an object or element from an array
 
-// Removes a key from an object
+const dissocArray = (idx: number, array: any[]) => [
+  ...array.slice(0, idx),
+  ...array.slice(idx + 1),
+];
 
-export function dissoc<A extends {}, K extends keyof A>(
-  propName: K,
-  dict: A
-): Omit<A, K>;
-export function dissoc<K extends string>(
-  propName: K
-): <A extends {}>(dict: A) => Omit<A, K>;
+const dissocObject = (propNAme: string, obj: { [key: string]: any }) => {
+  const result = {} as { [key: string]: any };
+  Object.keys(obj).forEach((k) => {
+    if (k !== propNAme) result[k] = obj[k];
+  });
+  return result as any;
+};
 
-export function dissoc<A extends {}, K extends keyof A>(propName: K, dict?: A) {
+export function dissoc<A extends {}, K extends keyof A>(propName: K, dict: A): Omit<A, K>;
+export function dissoc<K extends string>(propName: K): <A extends {}>(dict: A) => Omit<A, K>;
+
+export function dissoc<A>(idx: number, coll: A[]): A[];
+export function dissoc(idx: number): <A>(coll: A[]) => A[];
+
+export function dissoc(propName: number | string, dict?: any) {
   if (arguments.length === 1) {
-    return (theDict: A) => dissoc(propName, theDict);
+    return (theDict: any) => dissoc(propName, theDict);
   }
 
-  const thePropName = getValue(propName);
-  const theDict = getValueOr({} as any, dict);
-
-  return chain(theDict)
-    .bind(mori.toClj)
-    .bind((d) => mori.dissoc(d, thePropName))
-    .bind(mori.toJs)
-    .getValue();
+  return dict instanceof Array
+    ? dissocArray(propName as number, dict)
+    : dissocObject(propName as string, dict || {});
 }
