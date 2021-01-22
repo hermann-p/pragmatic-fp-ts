@@ -3,30 +3,25 @@
   "version": "1.3.4",
   "description": "Opinionated functional programming library with easy use in mind",
   "git-repository": "https://github.com/hermann-p/pragmatic-fp-ts",
+  "bugs": "https://github.com/hermann-p/pragmatic-fp-ts/issues",
   "main": "lib/main.js",
-  "files": [
-    "lib"
-  ],
-  "directories": {
-    "lib": "lib"
-  },
+  "browser": "dist/pragmatic-fp-ts.min.js",
+  "directories": "lib",
   "scripts": {
     "test": "jest --coverage",
-    "build": "tsc && typedoc --out docs src --exclude src/__tests__ ",
-    "dev": "tsc --watch"
+    "prepare": "npm run clean; npm run build && webpack",
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -fr dist lib"
   },
-  "keywords": [
-    "fp",
-    "ramda",
-    "typescript",
-    "sanctuary",
-    "monads",
-    "maybe"
-  ],
+  "keywords": ["fp", "ramda", "typescript", "sanctuary", "monads", "maybe"],
   "author": "hermann-p",
   "license": "MIT",
   "repository": "github:/hermann-p/pragmatic-fp-ts",
   "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-transform-modules-umd": "^7.12.1",
     "@types/jest": "^24.9.1",
     "@types/node": "^12.19.14",
     "@typescript-eslint/eslint-plugin": "^2.34.0",
@@ -34,10 +29,10 @@
     "@typescript-eslint/typescript-estree": "^2.34.0",
     "jest": "^26.6.3",
     "ts-jest": "^26.4.4",
-    "ts-node-dev": "^1.1.1",
-    "typedoc": "^0.15.8",
-    "typedoc-plugin-markdown": "^2.4.2",
-    "typescript": "^4.1.3"
+    "ts-loader": "^8.0.14",
+    "typescript": "^4.1.3",
+    "webpack": "^5.16.0",
+    "webpack-cli": "^4.4.0"
   },
   "dependencies": {}
 }

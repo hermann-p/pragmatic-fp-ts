@@ -54,8 +54,8 @@ describe("equals()", () => {
 
   it("should compare diffent items", () => {
     expect(eq(1, "a" as any)).toBe(false);
-    expect(eq([1, 2, 3], new Set([1, 2, 3]))).toBe(false);
-    expect(eq(new Set(), new Map())).toBe(false);
-    expect(eq(new Map(), new Set())).toBe(false);
+    expect(eq([1, 2, 3], new Set([1, 2, 3]) as any)).toBe(false);
+    expect(eq(new Set(), new Map() as any)).toBe(false);
+    expect(eq(new Map(), new Set() as any)).toBe(false);
   });
 });
