@@ -1,6 +1,6 @@
-.prettierrc.yaml
-.projectile
-.eslintrc.yaml
-jest.config.ts
-README.md
 coverage
+docs
+mkdocs
+src
+*config.*
+*.tgz
