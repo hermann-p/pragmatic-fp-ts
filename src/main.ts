@@ -25,6 +25,7 @@ export { constantly, constantly as always } from "./constantly";
 export * from "./converge";
 export { count, count as size } from "./count";
 export * from "./countBy";
+export * from "./cycle";
 export * from "./descend";
 export * from "./dissoc";
 export * from "./dissocIn";

@@ -18,11 +18,12 @@ It's on npmjs.com, so you should know the drill.
 
 - npm: `npm install --save pragmatic-fp-ts`
 - yarn: `yarn add pragmatic-fp-ts`
-- Currently no single .min.js for easy import via browser tags
-  exists. This is because webpack and I dislike each other. I tried
-  using the parcel bundler, but the resulting bundle file size
-  exploded while at the same time the .d.ts files disappeared. Anyone
-  bothers to help?
+
+Alternatively, include it in your webpage via ~jsdelivr~:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/pragmatic-fp-ts@1/dist/pragmatic-fp-ts.min.js"></script>
+```
 
 # Breaking changes
 
@@ -68,6 +69,14 @@ An elaborated readme will follow. Until then, you can see the
   Clojure
 
 # History
+
+## 1.4
+
+Add `cycle` to create infinite sequence and a naive dummy infinite array type.
+
+## 1.3.5
+
+Figured out how to setup webpack to create a browser bundle.
 
 ## 1.3.4
 
