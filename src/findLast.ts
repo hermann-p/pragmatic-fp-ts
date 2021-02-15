@@ -15,7 +15,7 @@ export function findLast<A>(condition: Predicate<A>, coll?: A[] | Dictionary<A>)
 
   return maybe(getValue(coll!))
     .bind(toCollection)
-    .bind(reverse)
+    .bind<A[]>(reverse)
     .bind((c) => c.find(condition) || null)
     .getValueOr(null as any);
 }
