@@ -114,6 +114,7 @@ export * from "./median";
 export * from "./memoizeWith";
 export * from "./min";
 export * from "./mod";
+export * from "./multimethod";
 export * from "./multiply";
 export * from "./negate";
 export * from "./none";
