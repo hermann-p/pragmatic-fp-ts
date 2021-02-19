@@ -15,5 +15,11 @@ describe("cycle()", () => {
       expect(n).toBe(idx);
       expect(c).toEqual("a");
     });
+
+    const seq2 = zip(cycle(["a"]), [0, 1, 2]);
+    seq2.forEach(([c, n], idx) => {
+      expect(n).toBe(idx);
+      expect(c).toEqual("a");
+    });
   });
 });
