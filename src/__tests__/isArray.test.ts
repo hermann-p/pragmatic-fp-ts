@@ -1,0 +1,16 @@
+import { isArray } from "../isArray";
+
+describe("isArray()", () => {
+  it("should detect arrays", () => {
+    expect(isArray([])).toBe(true);
+    expect(isArray([1, 2])).toBe(true);
+  });
+
+  it("should detect non-arrays", () => {
+    expect(isArray(true)).toBe(false);
+    expect(isArray(1)).toBe(false);
+    expect(isArray("string")).toBe(false);
+    expect(isArray({})).toBe(false);
+    expect(isArray(new Date())).toBe(false);
+  });
+});
