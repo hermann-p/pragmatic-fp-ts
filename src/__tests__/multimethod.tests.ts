@@ -39,11 +39,18 @@ describe("multimethods", () => {
       expect(tellRange(1, 0)).toEqual(natZero);
       expect(tellRange(12, -2)).toEqual(rngInt);
     });
+  });
 
+  describe("errors", () => {
     it("should throw on missing implementations", () => {
       const fn = defmulti((i: any, u: any) => "foo");
       defmethod(fn, "bar", (_i: any, _u: any) => "??");
       expect(() => fn(123, 456)).toThrow();
+    });
+
+    it("should throw when extending non-multimethods", () => {
+      const fn = function (_: string) {};
+      expect(() => defmethod(fn, "someKey", (_: any) => null)).toThrow();
     });
   });
 });
