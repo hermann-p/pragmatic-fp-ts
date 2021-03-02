@@ -1,11 +1,10 @@
 {
   "name": "pragmatic-fp-ts",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "Opinionated functional programming library with easy use in mind",
   "git-repository": "https://github.com/hermann-p/pragmatic-fp-ts",
   "bugs": "https://github.com/hermann-p/pragmatic-fp-ts/issues",
   "main": "lib/main.js",
-  "browser": "dist/pragmatic-fp-ts.min.js",
   "directories": "lib",
   "scripts": {
     "test": "jest --coverage",

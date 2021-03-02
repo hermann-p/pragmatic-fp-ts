@@ -20,4 +20,10 @@ describe("count()", () => {
     expect(count({})).toBe(0);
     expect(count({ foo: 1, bar: 2 })).toBe(2);
   });
+
+  it("should not be fooled by uncountables", () => {
+    expect(count(null as any)).toBe(0);
+    expect(count(1 as any)).toBe(0);
+    expect(count(true as any)).toBe(0);
+  });
 });
