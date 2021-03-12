@@ -16,6 +16,11 @@ describe("assoc()", () => {
 
     expect(assoc("bar")(2)(input)).toEqual(expected);
   });
+
+  it("is nil safe", () => {
+    expect(assoc("foo", 1, null as any)).toEqual({ foo: 1 });
+    expect(assoc(0, 1, null as any)).toEqual([1]);
+  });
 });
 
 describe("assocIn()", () => {
@@ -41,6 +46,14 @@ describe("assocIn()", () => {
 
   it("should associate deep within mixed array-object paths", () => {
     expect(assocIn([0, "foo", "bar"])(1)([{ foo: {} }])).toEqual([{ foo: { bar: 1 } }]);
+  });
+
+  it("is nil safe", () => {
+    expect(assocIn([0, "foo", "bar"], 1, [])).toEqual([{ foo: { bar: 1 } }]);
+    expect(assocIn([0, 0, "foo", "bar"], 1, [])).toEqual([[{ foo: { bar: 1 } }]]);
+    expect(assocIn(["foo", 0, "foo", "bar"], 1, null as any)).toEqual({
+      foo: [{ foo: { bar: 1 } }],
+    });
   });
 
   describe("performance", () => {

@@ -2,8 +2,10 @@ import { Dictionary, getValueOr, assoc } from "./main";
 import Q from "./tools/Queue";
 
 const _assocIn = (path: Q<string | number>, value: any, coll: any): any => {
-  const key = path.pop();
-  return assoc(key as any, path.isEmpty() ? value : _assocIn(path, value, coll[key]), coll);
+  const key = path.peek();
+  const nextColl = path.length > 1 && !coll ? (typeof key === "number" ? [] : {}) : coll;
+  path.pop();
+  return assoc(key as any, path.isEmpty() ? value : _assocIn(path, value, nextColl[key!]), coll);
 };
 
 type Path = (string | number)[];
@@ -29,6 +31,5 @@ export function assocIn(path: Path, value?: any, coll?: any) {
     return coll;
   }
 
-  const defaultValue = typeof p.peek() === "number" ? [] : {};
-  return coll ? _assocIn(p, value, coll) || defaultValue : defaultValue;
+  return _assocIn(p, value, coll);
 }
