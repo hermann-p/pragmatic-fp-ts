@@ -3,11 +3,11 @@ import { Dictionary, Mappable } from "./types";
 type TMultiMethod<A, B> = A extends any[] ? (...args: A) => B : Mappable<A, B>;
 
 // Implemented as interface + class only to have better TS types
-interface MultiMethod<ArgList extends any[], B> {
+export interface MultiMethod<ArgList extends any[], B> {
   (...args: ArgList): B;
 }
 
-class MultiMethod<ArgList extends any[], B> extends Function {
+export class MultiMethod<ArgList extends any[], B> extends Function {
   constructor(dispatch: TMultiMethod<ArgList, any>) {
     super();
     const methods: Dictionary<TMultiMethod<ArgList, B>> = {};
