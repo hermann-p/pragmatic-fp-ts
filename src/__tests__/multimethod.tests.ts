@@ -4,11 +4,11 @@ describe("multimethods", () => {
   describe("unary", () => {
     it("should dispatch on the dispatchFn", () => {
       const dispatch = (str?: string) =>
-        str?.length > 5 ? "long" : str?.length > 0 ? "short" : "empty";
+        (str?.length || 0) > 5 ? "long" : (str?.length || 0) > 0 ? "short" : "empty";
 
       const strLen = defmulti(dispatch);
-      defmethod(strLen, "long", (input: string) => "It was a long string");
-      defmethod(strLen, "short", (str) => "It was a short string: " + str.toUpperCase());
+      defmethod(strLen, "long", (_input: unknown) => "It was a long string");
+      defmethod(strLen, "short", (str) => "It was a short string: " + str?.toUpperCase());
       defmethod(strLen, "default", () => "No implementation found");
 
       expect(strLen("foo")).toEqual("It was a short string: FOO");
@@ -16,7 +16,7 @@ describe("multimethods", () => {
     });
 
     it("should throw on missing implementations", () => {
-      const fn = defmulti((i: any) => "foo");
+      const fn = defmulti((_i: any) => "foo");
       defmethod(fn, "bar", (_i: any) => "??");
       expect(() => fn(123)).toThrow();
     });
@@ -24,7 +24,7 @@ describe("multimethods", () => {
 
   describe("multi-ary", () => {
     it("should dispatch on the dispatchFn", () => {
-      const dispatch = (a: num, b: num) => Math.sign(a * b);
+      const dispatch = (a: number, b: number) => Math.sign(a * b);
 
       const tellRange = defmulti(dispatch);
       const rngInt = "Integers";
@@ -43,7 +43,7 @@ describe("multimethods", () => {
 
   describe("errors", () => {
     it("should throw on missing implementations", () => {
-      const fn = defmulti((i: any, u: any) => "foo");
+      const fn = defmulti((_i: any, _u: any) => "foo");
       defmethod(fn, "bar", (_i: any, _u: any) => "??");
       expect(() => fn(123, 456)).toThrow();
     });

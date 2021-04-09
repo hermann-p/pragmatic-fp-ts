@@ -23,5 +23,5 @@ export function subtractFrom(minuend: number, subtrahend?: number) {
     return (_subtrahend: number) => subtractFrom(minuend, _subtrahend);
   }
 
-  return subtract(subtrahend!, minuend);
+  return subtract(subtrahend || 0, minuend || 0);
 }
