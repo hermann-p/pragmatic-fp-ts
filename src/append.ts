@@ -18,9 +18,3 @@ export function append(el: unknown, coll?: unknown) {
     ? [...getValueOr([], coll!), getValue(el)]
     : (((getValueOr("", coll) as string) + (getValueOr("", el) as string)) as any);
 }
-
-const a = append("foo")("bar");
-const b = append("foo")(["bar"]);
-const c = append(1)([3, 2]);
-
-console.log({ a, b, c });
