@@ -5,9 +5,9 @@ import { getValue, getValueOr } from "./main";
 
 export function append<A>(el: A, coll: A[]): A[];
 export function append(tail: string, head: string): string;
-export function append<A extends string | any>(
+export function append<A>(
   tail: A
-): (head: A | A[]) => A extends string ? string : A[];
+): <B extends A extends string ? string | string[] : A[]>(head: B) => B extends string ? string : B;
 
 export function append(el: unknown, coll?: unknown) {
   if (arguments.length === 1) {
@@ -16,6 +16,11 @@ export function append(el: unknown, coll?: unknown) {
 
   return coll instanceof Array
     ? [...getValueOr([], coll!), getValue(el)]
-    : (((getValueOr("", coll) as string) +
-        (getValueOr("", el) as string)) as any);
+    : (((getValueOr("", coll) as string) + (getValueOr("", el) as string)) as any);
 }
+
+const a = append("foo")("bar");
+const b = append("foo")(["bar"]);
+const c = append(1)([3, 2]);
+
+console.log({ a, b, c });
