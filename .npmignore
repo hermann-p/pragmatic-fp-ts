@@ -4,3 +4,4 @@ mkdocs
 src
 *config.*
 *.tgz
+*.md
