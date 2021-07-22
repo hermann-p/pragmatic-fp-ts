@@ -27,6 +27,8 @@ export { count, count as size } from "./count";
 export * from "./countBy";
 export * from "./cycle";
 export * from "./descend";
+export { differenceWith as difference} from "./difference";
+export * from "./differenceWith"
 export * from "./dissoc";
 export * from "./dissocIn";
 export { dissocIn as dissocPath } from "./dissocIn";
