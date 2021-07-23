@@ -6,38 +6,30 @@ const updateArray = <A>(idx: number, fn: Endomorphism<A>, arr: A[]) => {
   return result;
 };
 
-export function update<TInput extends {}, K extends keyof TInput>(
-  propName: K,
-  fn: Endomorphism<TInput[K]>,
-  dict: TInput
-): TInput;
+export function update<K extends number, T>(idx: K, mappable: Endomorphism<T>, coll: T[]): T[];
+export function update<K extends keyof T, T extends Record<K, V>, V>(
+  key: K,
+  mappable: Endomorphism<V>,
+  coll: T
+): T;
 
-export function update<K extends string, A = any>(
-  propName: K,
-  fn: Endomorphism<A>
-): <TInput extends Record<K, A>>(dict: TInput) => TInput;
+export function update<K extends number, T>(key: K, mappable: Endomorphism<T>): (coll: T[]) => T[];
+export function update<K extends string, T>(
+  key: K,
+  mappable: Endomorphism<T>
+): <U extends Record<K, T>>(coll: U) => U;
 
+export function update<K extends number>(
+  key: K
+): <T>(mappable: Endomorphism<T>) => (coll: T[]) => T[];
 export function update<K extends string>(
-  propName: K
-): <A>(fn: Endomorphism<A>) => <TInput extends Record<K, A>>(dict: TInput) => TInput;
+  key: K
+): <T>(mappable: Endomorphism<T>) => <U extends Record<K, T>>(coll: U) => U;
 
-export function update<A>(index: number, fn: Endomorphism<A>, coll: A[]): A[];
+export function update(key: any, fn?: Endomorphism<any>, coll?: any) {
+  if (arguments.length === 1) return (fn_: any) => update(key, fn_);
+  else if (arguments.length === 2) return (coll_: any) => update(key, fn!, coll_);
 
-export function update<A>(index: number, fn: Endomorphism<A>): (coll: A[]) => A[];
-
-export function update(propName: number): <A>(fn: Endomorphism<A>) => (coll: A[]) => A[];
-
-export function update<A>(propName: any, fn?: Endomorphism<A>, dict?: any) {
-  if (arguments.length === 1) {
-    return function (_fn: Endomorphism<A>, _dict?: any) {
-      return arguments.length === 1 ? update(propName, _fn) : update(propName, _fn, _dict!);
-    };
-  } else if (arguments.length === 2) {
-    return (_dict: any) => update(propName, fn!, _dict);
-  }
-
-  const d = getValueOr({} as any, dict);
-  return d instanceof Array
-    ? updateArray(propName as number, fn!, d)
-    : { ...d, [propName]: fn!(d[propName]) };
+  const d = getValueOr({} as any, coll);
+  return d instanceof Array ? updateArray(key as number, fn!, d) : { ...d, [key]: fn!(d[key]) };
 }
