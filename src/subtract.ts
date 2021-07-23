@@ -15,8 +15,8 @@ export function dec(n: number) {
   return subtract(1, n);
 }
 
+export function subtractFrom(minuend: number): (subtrahend: number) => number;
 export function subtractFrom(minuend: number, subtrahend?: number): number;
-export function subtractFrom(minuend: number): (subtrahend?: number) => number;
 
 export function subtractFrom(minuend: number, subtrahend?: number) {
   if (arguments.length === 1) {
