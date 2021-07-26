@@ -21,6 +21,8 @@ export type SelectorPath = number | string | (number | string)[];
 
 export type ArgTypes<F extends Function> = F extends (...args: infer A) => any ? A : never;
 
+export type First<C> = C extends any[] ? C[0] : never;
+
 export type GetLength<original extends any[]> = original extends {
   length: infer L;
 }
