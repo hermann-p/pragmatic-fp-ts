@@ -67,6 +67,8 @@ An elaborated readme will follow. Until then, you can see the
 - improve typing even more once TS implements variadic types
 - implement some more helpful functions found e.g. in lodash or
   Clojure
+- greater use of transducers
+- introduce lazyness, gradually change from type-overload hell to abstractions
 
 # History
 
