@@ -1,3 +1,6 @@
+import * as transduce from "./transduce";
+export { transduce };
+
 export * from "./Chain";
 export * from "./Either";
 export * from "./Future";
