@@ -97,6 +97,7 @@ export * from "./isNil";
 export * from "./isNeg";
 export * from "./isNumber";
 export * from "./isPos";
+export * from "./isPrimitive";
 export * from "./isSome";
 export * from "./isString";
 export * from "./isZero";
