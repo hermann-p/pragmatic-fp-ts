@@ -70,6 +70,37 @@ An elaborated readme will follow. Until then, you can see the
 
 # History
 
+## 1.5
+
+### Transducers
+
+Although typing them is a bit of a PITA, transducers are a valuable addition for
+performance aware functional programmers. The first transducers implemented are:
+
+- map
+- filter
+- drop
+- take
+- flatMap
+- flatten
+
+which behave just like their non-transducing counterparts, as well as
+`transformList` which wraps the step of composing and applying a list of
+transducers over arrays.
+
+### Mutables
+
+Mutables are for those situations where a clean functional solution is
+inconvenient to implement. They wrap a value and expose methods to mutate that
+value as well as a value accessor. After soon as the value is accessed for the
+first time, subsequent calls to the mutating functions will raise an Exception
+so we can still consume all the data safely.
+
+### Misc
+
+Some minor bugfixes, extended functionality of `keys` and `values`, some
+improved typings, most notably for the `update` function.
+
 ## 1.4
 
 Add `cycle` to create infinite sequence and a naive dummy infinite array type.
