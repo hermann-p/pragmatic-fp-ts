@@ -120,6 +120,7 @@ export * from "./min";
 export * from "./mod";
 export * from "./multimethod";
 export * from "./multiply";
+export * from "./Mutable";
 export * from "./negate";
 export * from "./none";
 export * from "./nonePass";
