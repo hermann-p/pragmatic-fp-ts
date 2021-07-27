@@ -1,4 +1,4 @@
-import { butLast, flow, isArray, last, reduce } from "./main";
+import { butLast, flow, isArray, isFunction, last, reduce, toPairs } from "./main";
 import { Mappable, Predicate } from "./types";
 
 // Mutating conj! Expects empty new array input
@@ -23,7 +23,6 @@ type MapTransducer<TColl, TInput, TNext> = (
 export const map = <A, B, TColl>(fn: Mappable<A, B>): MapTransducer<TColl, A, B> => (
   reducing: Reducer<TColl, B>
 ) => (coll: TColl, input: A) => reducing(coll, fn(input));
-
 export const flatMap = <A, B>(fn: Mappable<A, B | B[]>) => (reducing: Reducer<any, any>) => (
   coll: any,
   input: any
@@ -67,15 +66,37 @@ export const insertM = <T>(inOrder: (a: T, b: T) => boolean, arr: T[], elem: T) 
   return arr;
 };
 
-type PList<A, B> = [...Parameters<(...args: A[]) => void>, B];
-export function transformList<A, B>(...args: PList<Transducer<any, any>, A[]>): B[];
-export function transformList<A, B>(...args: Transducer<any, any>[]): (coll: A[]) => B[];
+export function transformList<A = any, B = any>(...args: [...Transducer<any, any>[], A[]]): B[];
+export function transformList<A = any, B = any>(
+  ...args: Transducer<any, any>[]
+): (coll: A[]) => B[];
 export function transformList<A, B>(...args: any[]) {
   if (!Array.isArray(args[args.length - 1]))
     return (coll_: A[]) => transformList(...(args as any), coll_ as any);
+
   const xforms = butLast(args);
   const coll = last(args);
   const xform = flow(...(xforms.reverse() as any));
 
   return reduce(xform(conj), [], coll) as B[];
+}
+
+const intoObjM = (coll: any, [k, v]: [string | symbol, any]) => {
+  coll[k] = v;
+  return coll;
+};
+
+export function transformObj<A = any, B = any>(
+  ...transducers: Transducer<any, any>[]
+): (obj: A) => B;
+export function transformObj<A = any, B = any>(...args: [...Transducer<any, any>[], A]): B;
+export function transformObj<A, B>(...args: any[]) {
+  if (isFunction(args[args.length - 1]))
+    return (coll_: A) => transformObj(...(args as any), coll_ as any);
+
+  const xforms = butLast(args);
+  const coll = last(args);
+  const xform = flow(...(xforms.reverse() as any));
+
+  return reduce(xform(intoObjM), {}, toPairs(coll)) as B;
 }

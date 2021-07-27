@@ -74,7 +74,7 @@ describe("transducers", () => {
       });
 
       it("should treat mixed arrays correctly", () => {
-        expect(t.transformList(t.flatten, [1, [2, 3], 4])).toEqual([1, 2, 3, 4]);
+        expect(t.transformList(t.flatten)([1, [2, 3], 4])).toEqual([1, 2, 3, 4]);
       });
     });
 
@@ -84,6 +84,23 @@ describe("transducers", () => {
       expect(t.insertM(cmp, [1, 2, 3, 4], 5)).toEqual([1, 2, 3, 4, 5]);
       expect(t.insertM(cmp, [2, 3, 4, 5], 1)).toEqual([1, 2, 3, 4, 5]);
       expect(t.insertM(cmp, [1, 2, 3], 2)).toEqual([1, 2, 2, 3]);
+    });
+  });
+
+  describe("transduceObj()", () => {
+    it("should transduce objects by using kv-pairs", () => {
+      const input = { a: 1, b: 2, foo: 1, bar: 2, baz: 3, bazoo: 17, baba: 42 };
+      expect(
+        t.transformObj(
+          t.map(([k, v]) => [k, v + 1]),
+          t.filter(([k, _v]) => k.length > 1),
+          t.filter(([_k, v]) => v % 2 === 0)
+        )(input)
+      ).toEqual({
+        baz: 4,
+        bazoo: 18,
+        foo: 2,
+      });
     });
   });
 });
