@@ -1,5 +1,5 @@
-import * as t from "../transduce";
 import * as l from "../main";
+import * as t from "../transduce";
 
 describe("transducers", () => {
   describe("composition", () => {
@@ -64,6 +64,31 @@ describe("transducers", () => {
       });
     });
 
+    test("insert()", () => {
+      expect(t.transformList(t.map(l.inc), t.insert(2), t.map(l.inc))([2, 3, 4])).toEqual([
+        3,
+        4,
+        5,
+        6,
+      ]);
+    });
+
+    test("find()", () => {
+      expect(
+        t.transformList(
+          t.map(l.inc),
+          t.find((x) => x === 2),
+          t.map(l.inc),
+          [1, 2, 3]
+        )
+      ).toEqual([3]);
+    });
+
+    test("compact", () => {
+      const input = [1, 2, 3, null, undefined, NaN, l.nothing(), l.left("bad!"), 4, 5];
+      expect(t.transformList(t.compact, t.map(l.inc), input)).toEqual([2, 3, 4, 5, 6]);
+    });
+
     describe("flatten()", () => {
       it("should keep flat values", () => {
         expect(t.transformList(t.flatten, [1, 2, 3])).toEqual([1, 2, 3]);
@@ -78,6 +103,23 @@ describe("transducers", () => {
       });
     });
 
+    test("uniq()", () => {
+      expect(t.transformList(t.uniq)([1, 2, 3, 4, 4, 5, 6, 6, 7])).toEqual([1, 2, 3, 4, 5, 6, 7]);
+    });
+    test("uniqBy()", () => {
+      const coll = [
+        { id: 1, foo: "foo" },
+        { id: 2, foo: "bar" },
+        { id: 1, foo: "baz" },
+      ];
+      expect(t.transformList(t.uniqBy(l.prop("id")))(coll)).toEqual([
+        { id: 1, foo: "foo" },
+        { id: 2, foo: "bar" },
+      ]);
+    });
+  });
+
+  describe("reducers", () => {
     it("insertM", () => {
       const cmp = (a: number, b: number) => a < b;
       expect(t.insertM(cmp, [1, 2, 4, 5], 3)).toEqual([1, 2, 3, 4, 5]);

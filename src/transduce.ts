@@ -1,14 +1,14 @@
-import { butLast, flow, isArray, isFunction, last, reduce, toPairs } from "./main";
+import { butLast, flow, isArray, isFunction, isLeft, isNothing, last, reduce } from "./main";
 import { Mappable, Predicate } from "./types";
 
 // Mutating conj! Expects empty new array input
-export const conj = <A>(coll: A[], elem: A) => {
+export const conjM = <A>(coll: A[], elem: A) => {
   coll.push(elem);
   return coll;
 };
 
 // Mutating cons! Expects empty new array input
-export const cons = <A>(coll: A[], elem: A) => {
+export const consM = <A>(coll: A[], elem: A) => {
   coll.unshift(elem);
   return coll;
 };
@@ -54,7 +54,60 @@ export const drop = (n: number) => <TInput, TColl>(reducing: Reducer<TColl, TInp
   };
 };
 
-export const insertM = <T>(inOrder: (a: T, b: T) => boolean, arr: T[], elem: T) => {
+export const insert = <TInput>(elem: TInput) => <TColl>(reducing: Reducer<TColl, TInput>) => {
+  let inserted = false;
+  return (coll: TColl, input: TInput) => {
+    if (inserted) return reducing(coll, input);
+    else {
+      inserted = true;
+      return reducing(reducing(coll, elem), input);
+    }
+  };
+};
+
+export const uniq = <TColl, TNext>(reducing: Reducer<TColl, TNext>) => {
+  const set = new Set<TNext>();
+  return (coll: TColl, input: TNext) => {
+    if (set.has(input)) return coll;
+    else {
+      set.add(input);
+      return reducing(coll, input);
+    }
+  };
+};
+
+export const uniqBy = <TNext>(toKey: (val: TNext) => any) => <TColl>(
+  reducing: Reducer<TColl, TNext>
+) => {
+  const set = new Set();
+  return (coll: TColl, input: TNext) => {
+    const key = toKey(input);
+    if (set.has(key)) return coll;
+    else {
+      set.add(key);
+      return reducing(coll, input);
+    }
+  };
+};
+
+export const find = <TInput>(pred: Predicate<TInput>) => <TColl>(
+  reducing: Reducer<TColl, TInput>
+) => {
+  let found = false;
+  return (coll: TColl, input: TInput) => {
+    if (!found && pred(input)) return reducing(coll, input);
+    else return coll;
+  };
+};
+
+export const compact = filter(
+  (x: unknown) =>
+    x !== null &&
+    x !== undefined &&
+    (typeof x === "number" ? !isNaN(x as any) : true) &&
+    !isNothing(x) &&
+    !isLeft(x)
+)export const insertM = <T>(inOrder: (a: T, b: T) => boolean, arr: T[], elem: T) => {
   let l = 0;
   let r = arr.length;
   while (r > l) {
@@ -78,10 +131,10 @@ export function transformList<A, B>(...args: any[]) {
   const coll = last(args);
   const xform = flow(...(xforms.reverse() as any));
 
-  return reduce(xform(conj), [], coll) as B[];
+  return reduce(xform(conjM), [], coll) as B[];
 }
 
-const intoObjM = (coll: any, [k, v]: [string | symbol, any]) => {
+export const intoObjM = (coll: any, [k, v]: [string | symbol, any]) => {
   coll[k] = v;
   return coll;
 };
@@ -98,5 +151,5 @@ export function transformObj<A, B>(...args: any[]) {
   const coll = last(args);
   const xform = flow(...(xforms.reverse() as any));
 
-  return reduce(xform(intoObjM), {}, toPairs(coll)) as B;
+  return reduce(xform(intoObjM), {}, Object.entries(coll)) as B;
 }
