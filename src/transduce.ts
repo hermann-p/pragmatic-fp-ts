@@ -107,7 +107,9 @@ export const compact = filter(
     (typeof x === "number" ? !isNaN(x as any) : true) &&
     !isNothing(x) &&
     !isLeft(x)
-)export const insertM = <T>(inOrder: (a: T, b: T) => boolean, arr: T[], elem: T) => {
+);
+
+export const insertM = <T>(inOrder: (a: T, b: T) => boolean, arr: T[], elem: T) => {
   let l = 0;
   let r = arr.length;
   while (r > l) {
