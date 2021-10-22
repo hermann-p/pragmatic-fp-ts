@@ -76,7 +76,12 @@ export class Future<T, M extends Either<T> | Maybe<T>> {
     return new Future(
       this.bindDefault,
       this.bindError,
-      this.value.then((m) => m.effect(f)).catch(this.bindError)
+      this.value
+        .then(async (m) => {
+          await f(m.getValue());
+          return m;
+        })
+        .catch(this.bindError)
     ) as any;
   }
 

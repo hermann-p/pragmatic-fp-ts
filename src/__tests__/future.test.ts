@@ -1,3 +1,4 @@
+import { futureMaybe } from "../Future";
 import * as l from "../main";
 
 const even = (n: number) => n % 2 === 0;
@@ -70,8 +71,29 @@ describe("Future", () => {
       };
       expect(await num.effect(updateAsync).getValue()).toEqual("foo");
       expect(value).toBe(1);
-      await p; // eslint-disable-line
+      await p;
       expect(value).toBe(2);
+    });
+
+    it("should execute and await effects in order", async () => {
+      const results: any[] = [];
+      await futureMaybe(1)
+        .effect(async () => {
+          await new Promise((resolve) => setTimeout(resolve, 500));
+          results.push(1);
+        })
+        .effect(async () => {
+          results.push(2);
+        })
+        .effect(async () => {
+          await new Promise((resolve) => setTimeout(resolve, 100));
+          results.push(3);
+        })
+        .effect(async () => {
+          results.push(4);
+        })
+        .getValue();
+      expect(results).toEqual([1, 2, 3, 4]);
     });
 
     it("should catch errors", async () => {
