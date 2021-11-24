@@ -70,8 +70,7 @@ describe("Future", () => {
         return p;
       };
       expect(await num.effect(updateAsync).getValue()).toEqual("foo");
-      expect(value).toBe(1);
-      await p;
+
       expect(value).toBe(2);
     });
 
@@ -201,9 +200,13 @@ describe("Future", () => {
         return p;
       };
       expect(await num.effect(updateAsync).getValue()).toEqual("foo");
-      expect(value).toBe(1);
-      await p; // eslint-disable-line
+
       expect(value).toBe(2);
+    });
+
+    it("should become Nothing if effects throw", async () => {
+      const causeError = () => Promise.reject("error");
+      await expect(l.futureMaybe("test").effect(causeError).getValue()).rejects.toBeDefined();
     });
 
     it("should catch errors", async () => {
