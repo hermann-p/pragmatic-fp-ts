@@ -23,7 +23,7 @@ export type ArgTypes<F extends Function> = F extends (...args: infer A) => any ?
 
 export type First<C> = C extends any[] ? C[0] : never;
 
-export type GetLength<original extends any[]> = original extends {
+export type Length<original extends any[]> = original extends {
   length: infer L;
 }
   ? L
@@ -50,74 +50,14 @@ export class InvalidValueError extends Error {
   }
 }
 
-type Prev<T extends number> = [
-  -1,
-  0,
-  1,
-  2,
-  3,
-  4,
-  5,
-  6,
-  7,
-  8,
-  9,
-  10,
-  11,
-  12,
-  13,
-  14,
-  15,
-  16,
-  17,
-  18,
-  19,
-  20,
-  21,
-  22,
-  23,
-  24,
-  25,
-  26,
-  27,
-  28,
-  29,
-  30,
-  31,
-  32,
-  33,
-  34,
-  35,
-  36,
-  37,
-  38,
-  39,
-  40,
-  41,
-  42,
-  43,
-  44,
-  45,
-  46,
-  47,
-  48,
-  49,
-  50,
-  51,
-  52,
-  53,
-  54,
-  55,
-  56,
-  57,
-  58,
-  59,
-  60,
-  61,
-  62
-][T];
+export type Tail<T extends any[]> = T extends [arg: any, ...rest: infer U] ? U : [];
 
-export type GetLast<original extends any[]> = original[Prev<GetLength<original>>];
+export type Init<T extends any[]> = T extends [...head: infer U, rest: any] ? U : [];
+
+export type Last<original extends any[]> = original[Length<Tail<original>>];
+
+export type Prepend<T, U extends any[]> = [T, ...U];
+export type Append<T, U extends any[]> = [...U, T];
 
 type Transform<A, B extends Monad<A>> = (monad: Monad<A>) => B;
 export abstract class Monad<A> {
@@ -132,3 +72,5 @@ export abstract class Monad<A> {
     return transform(this);
   }
 }
+
+export type Nil = null | undefined;

@@ -1,4 +1,4 @@
-import { ArgTypes, GetLast } from "./main";
+import { ArgTypes, Last } from "./main";
 
 // TODO: once variadic arg types go live, add this in a single signature
 
@@ -43,6 +43,6 @@ export function partial<F extends (...args: any[]) => any>(
   fn: F,
   ...args: any[]
 ) {
-  return (lastArg: GetLast<ArgTypes<F>>): ReturnType<F> =>
+  return (lastArg: Last<ArgTypes<F>>): ReturnType<F> =>
     fn(...args, lastArg) as any;
 }
