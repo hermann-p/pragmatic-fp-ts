@@ -1,6 +1,6 @@
 {
   "name": "pragmatic-fp-ts",
-  "version": "1.5.3",
+  "version": "1.6.0",
   "description": "Opinionated functional programming library with easy use in mind",
   "git-repository": "https://github.com/hermann-p/pragmatic-fp-ts",
   "bugs": "https://github.com/hermann-p/pragmatic-fp-ts/issues",
