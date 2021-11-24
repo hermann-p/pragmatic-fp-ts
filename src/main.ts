@@ -49,6 +49,7 @@ export { eq, eq as eqShallow } from "./eq";
 export * from "./eqBy";
 export * from "./eqProps";
 export { equals as eqDeep, equals } from "./equals";
+export * from "./ErrorLog";
 export * from "./F";
 export * from "./filter";
 export * from "./filterKeys";
