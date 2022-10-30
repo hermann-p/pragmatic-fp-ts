@@ -1,6 +1,8 @@
 import * as transduce from "./transduce";
 export { transduce };
 
+export * as M from "./Monad";
+
 export * from "./Chain";
 export * from "./Either";
 export * from "./Future";

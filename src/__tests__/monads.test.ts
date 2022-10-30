@@ -1,19 +1,20 @@
+import * as l from "../main";
 import {
   Chain,
   chain,
-  Just,
-  Nothing,
-  maybe,
-  just,
-  nothing,
-  identity,
-  Left,
-  Right,
   either,
-  right,
+  identity,
+  Just,
+  just,
+  Left,
   left,
+  maybe,
+  Nothing,
+  nothing,
+  Right,
+  right,
+  M,
 } from "../main";
-import * as l from "../main";
 
 describe("monads", () => {
   describe("Maybe", () => {
@@ -103,6 +104,28 @@ describe("monads", () => {
     it("transforms Either to Maybe", () => {
       expect(left(1).to(maybe)).toBeInstanceOf(Nothing);
       expect(right(1).to(maybe)).toBeInstanceOf(Just);
+    });
+  });
+});
+
+describe("generic monad functions", () => {
+  describe("bind()", () => {
+    it("should map just", () => {
+      const j = M.bind((x: number) => x + 1)(just(1));
+      expect(j.isJust()).toBe(true);
+      expect(j.getValue()).toBe(2);
+    });
+    it("should map nothing", () => {
+      const j = M.bind((x: number) => x + 1)(nothing<number>());
+      expect(j.isNothing()).toBe(true);
+    });
+    it("should map right", () => {
+      const j = M.bind((x: number) => x + 1)(left<any, any>(1));
+      expect(j.isLeft()).toBe(true);
+    });
+    it("should map chain", () => {
+      const j = M.bind((x: number) => x + 1)(chain(1));
+      expect(j.getValue()).toBe(2);
     });
   });
 });
