@@ -23,13 +23,17 @@ function bindM(f: (_: any) => any) {
 }
 
 const of = (m: any) => (v: any) =>
-  m.isJust() || m.isNothing() ? maybe(v) : m.isLeft() || m.isRight() ? either(v) : chain(v);
+  (m.isJust && m.isJust(m)) || (m.isNothing && m.isNothing())
+    ? maybe(v)
+    : (m.isLeft && m.isLeft()) || (m.isRight && m.isRight())
+    ? either(v)
+    : chain(v);
 
 function lift<A>(_: Maybe<Monad<A>>): Maybe<A>;
 function lift<A>(_: Either<Monad<A>>): Either<A>;
 function lift<A>(_: Chain<Monad<A>>): Chain<A>;
 function lift(m: any) {
-  return of(m.getValueOr(undefined)) as any;
+  return of(m)(m.getValueOr(undefined)) as any;
 }
 
 export { bind, bindM, lift };

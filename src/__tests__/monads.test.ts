@@ -120,11 +120,42 @@ describe("generic monad functions", () => {
       expect(j.isNothing()).toBe(true);
     });
     it("should map right", () => {
+      const j = M.bind((x: number) => x + 1)(right<number, any>(1));
+      expect(j.isRight()).toBe(true);
+      expect(j.getValue()).toBe(2);
+    });
+    it("should map left", () => {
       const j = M.bind((x: number) => x + 1)(left<any, any>(1));
       expect(j.isLeft()).toBe(true);
     });
     it("should map chain", () => {
       const j = M.bind((x: number) => x + 1)(chain(1));
+      expect(j.getValue()).toBe(2);
+    });
+  });
+
+  describe("bindM()", () => {
+    it("should map just", () => {
+      const j = M.bindM((x: number) => just(x + 1))(just(1));
+      console.log({ j });
+      expect(j.isJust()).toBe(true);
+      expect(j.getValue()).toBe(2);
+    });
+    it("should map nothing", () => {
+      const j = M.bindM((x: number) => just(x + 1))(nothing<number>());
+      expect(j.isNothing()).toBe(true);
+    });
+    it("should map right", () => {
+      const j = M.bindM((x: number) => right(x + 1))(right<number, any>(1));
+      expect(j.isRight()).toBe(true);
+      expect(j.getValue()).toBe(2);
+    });
+    it("should map left", () => {
+      const j = M.bindM((x: number) => left(x + 1))(right<any, any>(1));
+      expect(j.isLeft()).toBe(true);
+    });
+    it("should map chain", () => {
+      const j = M.bindM((x: number) => chain(x + 1))(chain(1));
       expect(j.getValue()).toBe(2);
     });
   });
