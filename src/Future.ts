@@ -121,11 +121,11 @@ export class Future<T, M extends Either<T> | Maybe<T>> {
   }
 }
 
-type FutureEither<T> = Future<NonNullable<T>, Either<NonNullable<T>, Error>>;
+export type FutureEither<T> = Future<NonNullable<T>, Either<NonNullable<T>, Error>>;
 export const futureEither = <T>(value: T): FutureEither<T> =>
   new Future<NonNullable<T>, Either<NonNullable<T>, Error>>(either, left, either(value));
 
-type FutureMaybe<T> = Future<NonNullable<T>, Maybe<NonNullable<T>>>;
+export type FutureMaybe<T> = Future<NonNullable<T>, Maybe<NonNullable<T>>>;
 export const futureMaybe = <T>(value: T): FutureMaybe<T> =>
   new Future<NonNullable<T>, Maybe<NonNullable<T>>>(maybe, nothing, maybe(value));
 
