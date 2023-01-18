@@ -25,13 +25,6 @@ Alternatively, include it in your webpage via ~jsdelivr~:
 <script src="https://cdn.jsdelivr.net/npm/pragmatic-fp-ts@1/dist/pragmatic-fp-ts.min.js"></script>
 ```
 
-## Deno
-
-Alternate source format created automatically with
-[Denoify](https://github.com/garronej/denoify).
-
-'import * as f from 'http://github.com/hermann-p/pragmatic-fp-ts/deno_lib/main.ts'
-
 # Breaking changes
 
 ## 1.0

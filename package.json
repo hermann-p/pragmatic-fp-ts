@@ -1,6 +1,6 @@
 {
   "name": "pragmatic-fp-ts",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "description": "Opinionated functional programming library with easy use in mind",
   "git-repository": "https://github.com/hermann-p/pragmatic-fp-ts",
   "bugs": "https://github.com/hermann-p/pragmatic-fp-ts/issues",
@@ -9,11 +9,18 @@
   "scripts": {
     "test": "jest --coverage",
     "prepare": "npm run clean; npm run build && webpack",
-    "build": "tsc --downlevelIteration",
+    "build": "tsc --downlevelIteration && denoify --src src",
     "dev": "tsc --watch",
     "clean": "rm -fr dist lib"
   },
-  "keywords": ["fp", "ramda", "typescript", "sanctuary", "monads", "maybe"],
+  "keywords": [
+    "fp",
+    "ramda",
+    "typescript",
+    "sanctuary",
+    "monads",
+    "maybe"
+  ],
   "author": "hermann-p",
   "license": "MIT",
   "repository": "github:/hermann-p/pragmatic-fp-ts",
@@ -26,6 +33,7 @@
     "@typescript-eslint/eslint-plugin": "^2.34.0",
     "@typescript-eslint/parser": "^2.34.0",
     "@typescript-eslint/typescript-estree": "^2.34.0",
+    "denoify": "^1.4.5",
     "jest": "^26.6.3",
     "ts-jest": "^26.5.6",
     "ts-loader": "^8.3.0",
