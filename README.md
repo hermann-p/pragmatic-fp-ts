@@ -30,7 +30,7 @@ Alternatively, include it in your webpage via ~jsdelivr~:
 Alternate source format created automatically with
 [Denoify](https://github.com/garronej/denoify).
 
-`import * as f from "http://github.com/hermann-p/pragmatic-fp-ts/deno_lib/main.ts"`
+`import * as f from "https://github.com/hermann-p/pragmatic-fp-ts/raw/master/deno_lib/main.ts"`
 
 # Breaking changes
 
