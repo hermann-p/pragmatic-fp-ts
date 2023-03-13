@@ -1,6 +1,6 @@
 {
   "name": "pragmatic-fp-ts",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "description": "Opinionated functional programming library with easy use in mind",
   "git-repository": "https://github.com/hermann-p/pragmatic-fp-ts",
   "bugs": "https://github.com/hermann-p/pragmatic-fp-ts/issues",
@@ -13,14 +13,7 @@
     "dev": "tsc --watch",
     "clean": "rm -fr dist lib"
   },
-  "keywords": [
-    "fp",
-    "ramda",
-    "typescript",
-    "sanctuary",
-    "monads",
-    "maybe"
-  ],
+  "keywords": ["fp", "ramda", "typescript", "sanctuary", "monads", "maybe"],
   "author": "hermann-p",
   "license": "MIT",
   "repository": "github:/hermann-p/pragmatic-fp-ts",
