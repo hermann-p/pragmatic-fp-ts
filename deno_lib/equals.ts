@@ -1,7 +1,6 @@
-import { Buffer } from "buffer DENOIFY: UNKNOWN NODE BUILTIN";
 import { getValue, isMonad, when } from "./main.ts";
 
-// Deep compare two values. Buffer comparison not implemented.
+// Deep compare two values. B-u-f-f-e-r comparison not implemented.
 // adopted from https://github.com/epoberezkin/fast-deep-equal
 const _equals = (a: any, b: any) => {
   if (a === b) return true;
