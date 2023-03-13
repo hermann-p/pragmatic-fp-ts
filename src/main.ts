@@ -160,6 +160,7 @@ export * from "./some";
 export * from "./somePass";
 export * from "./sort";
 export * from "./sortBy";
+export * from "./sortWith";
 export * from "./split";
 export * from "./splitAt";
 export * from "./splitEvery";
