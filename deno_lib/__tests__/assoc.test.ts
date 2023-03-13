@@ -1,6 +1,6 @@
 import { assoc, assocIn, chain } from "../main.ts";
 import { mkDataList } from "./helpers.ts";
-import { performance } from "https://deno.land/std@0.173.0/node/perf_hooks.ts";
+import { performance } from "perf_hooks DENOIFY: UNKNOWN NODE BUILTIN";
 
 describe("assoc()", () => {
   it("associates in arrays", () => {

@@ -60,7 +60,7 @@ export class Right<R extends NonNullable<any>, L = Error> extends Monad<R> {
       const bound = either(getValue(result));
       return bound.isLeft() && hint ? left(hint) : bound;
     } catch (err) {
-      return left<NonNullable<B>, Error>(err);
+      return left<NonNullable<B>, Error>(err as Error);
     }
   }
   bind = this._;
@@ -69,7 +69,7 @@ export class Right<R extends NonNullable<any>, L = Error> extends Monad<R> {
       const result = fn(this);
       return either(getValue(result));
     } catch (err) {
-      return left<NonNullable<B>, L>(err);
+      return left<NonNullable<B>, L>(err as unknown as L);
     }
   }
   filter(fn: Predicate<R>, hint?: L): Either<NonNullable<R>, L | Error> {
@@ -78,7 +78,9 @@ export class Right<R extends NonNullable<any>, L = Error> extends Monad<R> {
         ? (this as any)
         : left<NonNullable<R>>(hint instanceof Error ? hint : new InvalidValueError(hint as any));
     } catch (err) {
-      return left<NonNullable<R>>(new Error(`Exception while filtering: ${err.text}`));
+      return left<NonNullable<R>>(
+        new Error(`Exception while filtering: ${(err as Error).message}`)
+      );
     }
   }
 

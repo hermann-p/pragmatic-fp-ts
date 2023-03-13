@@ -10,3 +10,4 @@ jsxBracketSameLine: false
 arrowParens: "always"
 parser: "typescript"
 endOfLine: "lf"
+noUseBeforeDefine: false

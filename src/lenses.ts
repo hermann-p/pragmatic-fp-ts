@@ -1,12 +1,4 @@
-import {
-  assoc,
-  assocIn,
-  Dictionary,
-  Endomorphism,
-  getIn,
-  nth,
-  prop,
-} from "./main";
+import { assoc, assocIn, Dictionary, Endomorphism, getIn, nth, prop } from "./main";
 
 type LensGetter<TData, TValue> = (data: TData) => TValue;
 type LensSetter<TData, TValue> = (value: TValue, data: TData) => TData;
@@ -26,13 +18,8 @@ export function lens<TData, TValue>(
   };
 }
 
-export function view<TData, TValue>(
-  lens: Lens<TData, TValue>,
-  data: TData
-): TValue;
-export function view<TData, TValue>(
-  lens: Lens<TData, TValue>
-): (data: TData) => TValue;
+export function view<TData, TValue>(lens: Lens<TData, TValue>, data: TData): TValue;
+export function view<TData, TValue>(lens: Lens<TData, TValue>): (data: TData) => TValue;
 
 export function view<TData, TValue>(lens: Lens<TData, TValue>, data?: TData) {
   if (arguments.length === 1) {
@@ -42,11 +29,7 @@ export function view<TData, TValue>(lens: Lens<TData, TValue>, data?: TData) {
   return lens.view(data!);
 }
 
-export function set<TData, TValue>(
-  lens: Lens<TData, TValue>,
-  value: TValue,
-  data: TData
-): TData;
+export function set<TData, TValue>(lens: Lens<TData, TValue>, value: TValue, data: TData): TData;
 export function set<TData, TValue>(
   lens: Lens<TData, TValue>,
   value: TValue
@@ -55,16 +38,10 @@ export function set<TData, TValue>(
   lens: Lens<TData, TValue>
 ): (value: TValue) => (data: TData) => TData;
 
-export function set<TData, TValue>(
-  lens: Lens<TData, TValue>,
-  value?: TValue,
-  data?: TData
-) {
+export function set<TData, TValue>(lens: Lens<TData, TValue>, value?: TValue, data?: TData) {
   if (arguments.length === 1) {
     return function (value_: TValue, data_?: TData) {
-      return arguments.length === 1
-        ? set(lens, value_)
-        : set(lens, value_, data_!);
+      return arguments.length === 1 ? set(lens, value_) : set(lens, value_, data_!);
     };
   } else if (arguments.length === 2) {
     return (data_: TData) => set(lens, value!, data_);
@@ -100,9 +77,7 @@ export function over<TData, TValue>(
   return lens.set(fn!(lens.view(data!)), data!);
 }
 
-export function lensProp<TValue = any, TData extends {} = Dictionary>(
-  propName: string
-) {
+export function lensProp<TValue = any, TData extends {} = Dictionary>(propName: string) {
   const getter = prop<TValue>(propName);
   const setter = assoc(propName) as any;
   return lens<TData, TValue>(getter, setter);
@@ -115,7 +90,7 @@ export function lensIndex<T = any>(idx: number) {
 }
 
 type LensPath = (string | number)[];
-export function lensPath<TValue = any, TData = any>(path: LensPath) {
+export function lensPath<TValue = any, TData extends any[] | Dictionary<any> = any>(path: LensPath) {
   const getter = getIn(path);
   const setter = assocIn(path) as any;
   return lens<TData, TValue>(getter, setter);

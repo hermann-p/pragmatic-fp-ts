@@ -160,6 +160,7 @@ export * from "./some.ts";
 export * from "./somePass.ts";
 export * from "./sort.ts";
 export * from "./sortBy.ts";
+export * from "./sortWith.ts";
 export * from "./split.ts";
 export * from "./splitAt.ts";
 export * from "./splitEvery.ts";

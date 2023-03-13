@@ -1,4 +1,4 @@
-import { Buffer } from "https://deno.land/std@0.173.0/node/buffer.ts";
+import { Buffer } from "buffer DENOIFY: UNKNOWN NODE BUILTIN";
 import { getValue, isMonad, when } from "./main.ts";
 
 // Deep compare two values. Buffer comparison not implemented.

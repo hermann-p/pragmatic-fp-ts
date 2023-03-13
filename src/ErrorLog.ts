@@ -16,7 +16,7 @@ function ErrorLog<T>(expr: T, errors: Array<Error> = []) {
       try {
         return ErrorLog(f(expr), errors);
       } catch (err) {
-        return ErrorLog(alt, [...errors, err]);
+        return ErrorLog(alt, [...errors, err as Error]);
       }
     },
     effect: (f: Effect<T>): ErrorLog<T> => {
@@ -24,7 +24,7 @@ function ErrorLog<T>(expr: T, errors: Array<Error> = []) {
         f(expr);
         return ErrorLog(expr, errors);
       } catch (err) {
-        return ErrorLog(expr, [...errors, err]);
+        return ErrorLog(expr, [...errors, err as Error]);
       }
     },
     getErrors: () => errors,
@@ -40,7 +40,7 @@ export interface FutureErrorLog<T> {
   try: <U>(f: Mappable<T, U>, alt: UnboxPromise<U>) => FutureErrorLog<U>;
   getErrors: () => Promise<Error[]>;
   getValue: () => Promise<UnboxPromise<T>>;
-  getValueOr: <U>(alt: U) => Promise<NonNullable<UnboxPromise<T>> | UnboxPromise<U>>;
+  getValueOr: <U extends T>(alt: U) => Promise<NonNullable<UnboxPromise<T>>>;
   hasErrors: () => Promise<boolean>;
 }
 const FutureErrorLog = <T>(
@@ -61,8 +61,9 @@ const FutureErrorLog = <T>(
       );
     },
     getErrors: () => errors,
-    getValue: () => (exprP as unknown) as Promise<UnboxPromise<T>>,
-    getValueOr: async <U>(alt: U) => (await exprP) || (alt instanceof Promise ? await alt : alt),
+    getValue: () => exprP as unknown as Promise<UnboxPromise<T>>,
+    getValueOr: async (alt: T | Promise<T>) =>
+      (await exprP) || ((alt instanceof Promise ? await alt : (alt as any)) as any),
     hasErrors: () => errors.then((e) => e.length > 0),
   };
 };
