@@ -1,9 +1,10 @@
 import { all } from "./all";
 import { Either, isLeft, isRight, left, right } from "./Either";
 import { getValueOr } from "./getValueOr";
+import { isDataObject } from "./isDataObject";
+import { isFunction } from "./isFunction";
 import { isNil } from "./isNil";
 import { isNumber } from "./isNumber";
-import { isDataObject } from "./isDataObject";
 import { isString } from "./isString";
 import { map } from "./map";
 import { values } from "./values";
@@ -24,10 +25,27 @@ const typeError = (validator: NameTag | string, x: unknown) => {
   return new Error(`expected ${expectedType}, got ${receivedType} ${x}`);
 };
 
-const Validator = <T>(validate: ValidatorFn<T>): Validator<T> =>
-  assignName(getName(validate), (x: unknown) =>
-    validate(x) ? right(x as T) : left<T, Error>(typeError(validate, x))
-  );
+type ValidatorOptions = {
+  decode?: boolean | ((_: string) => any);
+};
+
+const parseData = (x: unknown, decode: ValidatorOptions["decode"]) => {
+  const parse = isFunction(decode)
+    ? (decode as (_: string) => any)
+    : decode === true
+    ? (JSON.parse as (_: string) => any)
+    : undefined;
+  return isString(x) && parse ? parse(x) : x;
+};
+
+const Validator = <T>(
+  validate: ValidatorFn<T>,
+  { decode }: ValidatorOptions = { decode: false }
+): Validator<T> =>
+  assignName(getName(validate), (x: unknown) => {
+    const xx = decode ? parseData(x, decode) : x;
+    return validate(xx) ? right(xx as T) : left<T, Error>(typeError(validate, x));
+  });
 
 const assignName = <T>(value: string, x: T): T & NameTag => {
   Object.defineProperty(x, nameProp, { value });
@@ -95,7 +113,7 @@ const record = <T extends Record<string, any>>(schema: {
 
 const dictionary = <T>(decode: ValidatorFn<T>): Validator<Record<string, T>> => {
   const dictType = `Dictionary<${getName(decode)}>`;
-  return assignName(dictType, (x: unknown): x is Record<string, T> => {
+  return assignName(dictType, (x: unknown): Either<Record<string, T>> => {
     const decodeDict = (o: any) =>
       Object.fromEntries(Object.entries(o).map(([k, v]) => [k, decode(v)]));
     return isDataObject(x) ? liftValue(decodeDict(x)) : left(typeError(dictType, x));
