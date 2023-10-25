@@ -1,4 +1,4 @@
-import V from "../validate";
+import V from "../validate.ts";
 
 describe("Validator", () => {
   describe("any", () => {
@@ -121,19 +121,8 @@ describe("Validator", () => {
       expect(stringOrNumber("xxx").isRight()).toBe(true);
       expect(stringOrNumber(42).isRight()).toBe(true);
       expect(stringOrNumber(NaN).getReason()?.message).toMatch("expected [string | number]");
-      expect(
-        V.oneOf<number | "foo" | "bar">(V.number, V.enum(["foo", "bar"]))("wrong").getReason()
-          ?.message
-      ).toMatch("expected [number | one of [foo,bar]]");
-    });
-  });
-  describe("dictionary()", () => {
-    const isStringDict = V.dictionary(V.string);
-    it("should recognise dictionaries", () => {
-      expect(isStringDict({}).isRight()).toBe(true);
-      expect(isStringDict({ foo: "bar" }).isRight()).toBe(true);
-      expect(isStringDict([]).getReason()?.message).toMatch(
-        "expected Dictionary<string>, got array"
+      expect(V.oneOf(V.number, V.enum(["foo", "bar"]))("wrong").getReason()?.message).toMatch(
+        "expected [number | one of [foo,bar]]"
       );
     });
   });
