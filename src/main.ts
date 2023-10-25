@@ -1,5 +1,7 @@
 import * as transduce from "./transduce";
 export { transduce };
+import Validator from "./validate";
+export { Validator };
 
 export * as M from "./Monad";
 
@@ -95,6 +97,7 @@ export * from "./invert";
 export * from "./invertObj";
 // export * from "./invoke";
 export * from "./isArray";
+export * from "./isDataObject";
 export * from "./isEmpty";
 export * from "./isFunction";
 export * from "./isIn";
