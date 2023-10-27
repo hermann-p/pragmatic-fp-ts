@@ -91,8 +91,10 @@ const array = <T>(validate: Validator<T>) => {
   const contentType = `Array<${getName(validate as any)}>`;
   return assignName(
     contentType,
-    (x: unknown): Either<T[], Error> =>
-      Array.isArray(x) ? liftValue(x.map(validate)) : left(typeError(contentType, x))
+    (x: unknown, { decode }: ValidatorOptions = { decode: false }): Either<T[], Error> => {
+      const xx = decode ? parseData(x, decode) : x;
+      return Array.isArray(xx) ? liftValue(xx.map(validate)) : left(typeError(contentType, x));
+    }
   );
 };
 
@@ -103,21 +105,28 @@ const record = <T extends Record<string, any>>(schema: {
     .map(([k, v]) => `${k}: ${getName(v)}`)
     .join(", ");
   const recordType = `Record<{${recordDataType}}>`;
-  return assignName(recordType, (x: unknown): Either<T, Error> => {
-    const validateRecord = (y: any) =>
-      Object.fromEntries(Object.entries(schema).map(([k, decode]) => [k, decode(y[k])]));
-
-    return isDataObject(x) ? liftValue(validateRecord(x)) : left(typeError(recordType, x));
-  });
+  return assignName(
+    recordType,
+    (x: unknown, { decode }: ValidatorOptions = { decode: false }): Either<T, Error> => {
+      const validateRecord = (y: any) =>
+        Object.fromEntries(Object.entries(schema).map(([k, decode]) => [k, decode(y[k])]));
+      const xx = decode ? parseData(x, decode) : x;
+      return isDataObject(xx) ? liftValue(validateRecord(xx)) : left(typeError(recordType, x));
+    }
+  );
 };
 
-const dictionary = <T>(decode: ValidatorFn<T>): Validator<Record<string, T>> => {
-  const dictType = `Dictionary<${getName(decode)}>`;
-  return assignName(dictType, (x: unknown): Either<Record<string, T>> => {
-    const decodeDict = (o: any) =>
-      Object.fromEntries(Object.entries(o).map(([k, v]) => [k, decode(v)]));
-    return isDataObject(x) ? liftValue(decodeDict(x)) : left(typeError(dictType, x));
-  });
+const dictionary = <T>(validate: Validator<T>): Validator<Record<string, T>> => {
+  const dictType = `Dictionary<${getName(validate)}>`;
+  return assignName(
+    dictType,
+    (x: unknown, { decode }: ValidatorOptions = { decode: false }): Either<Record<string, T>> => {
+      const decodeDict = (o: any) =>
+        Object.fromEntries(Object.entries(o).map(([k, v]) => [k, validate(v)]));
+      const xx = decode ? parseData(x, decode) : x;
+      return isDataObject(xx) ? liftValue(decodeDict(xx)) : left(typeError(dictType, x));
+    }
+  );
 };
 
 export const from = <T>(name: string, validate: (_: unknown) => _ is T) =>

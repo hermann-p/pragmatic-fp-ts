@@ -1,5 +1,7 @@
 import * as transduce from "./transduce.ts";
 export { transduce };
+import Validator from "./validate.ts";
+export { Validator };
 
 export * as M from "./Monad.ts";
 
@@ -95,6 +97,7 @@ export * from "./invert.ts";
 export * from "./invertObj.ts";
 // export * from "./invoke/index.ts";
 export * from "./isArray.ts";
+export * from "./isDataObject.ts";
 export * from "./isEmpty.ts";
 export * from "./isFunction.ts";
 export * from "./isIn.ts";

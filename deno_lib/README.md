@@ -79,6 +79,11 @@ An elaborated readme will follow. Until then, you can see the
 
 # History
 
+## 1.10
+
+Type-generating Validator returning `Either` monads with detailed, extensive
+parsing error messages on failure.
+
 ## 1.5
 
 ### Transducers
