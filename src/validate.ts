@@ -22,7 +22,7 @@ const typeName = (x: unknown): string =>
 const typeError = (validator: NameTag | string, x: unknown) => {
   const expectedType = isString(validator) ? validator : getName(validator);
   const receivedType = typeName(x);
-  return new Error(`expected ${expectedType}, got ${receivedType} ${x}`);
+  return new Error(`expected ${expectedType}, got ${receivedType} ${JSON.stringify(x)}`);
 };
 
 type ValidatorOptions = {
